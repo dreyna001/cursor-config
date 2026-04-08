@@ -18,22 +18,40 @@ From PowerShell, in this repo root:
 
 That copies `rules\`, `skills\`, and `environment.json` into `%USERPROFILE%\.cursor\` (creates folders if missing). Existing files with the same name are overwritten.
 
-## New GitHub remote (first time)
+## Push to GitHub (first time)
 
-1. On GitHub: **New repository** (e.g. `cursor-config`), empty, no README (this repo already has one).
-2. In this folder:
+Git user in this repo is configured as **dreyna001**. The repo is already initialized with branch **main**.
+
+### Option A — GitHub CLI (recommended)
+
+1. Install [GitHub CLI](https://cli.github.com/) if needed (`winget install GitHub.cli`).
+2. Log in once (browser or token):
+
+```powershell
+gh auth login
+```
+
+3. From this folder, create the remote repo and push:
 
 ```powershell
 cd "C:\Users\dreyn\OneDrive\Desktop\Cursor\cursor-config"
-git init
-git add .
-git commit -m "Initial cursor rules and skills"
-git branch -M main
-git remote add origin https://github.com/<your-user>/cursor-config.git
+.\publish-to-github.ps1
+```
+
+That creates a **private** repo `cursor-config` under your GitHub user, sets `origin`, and pushes `main`.
+
+### Option B — GitHub website
+
+1. Create an empty repository named `cursor-config` under your account (no README).
+2. Then:
+
+```powershell
+cd "C:\Users\dreyn\OneDrive\Desktop\Cursor\cursor-config"
+git remote add origin https://github.com/dreyna001/cursor-config.git
 git push -u origin main
 ```
 
-Replace `<your-user>` and the repo URL with yours.
+Adjust the URL if your GitHub username is not `dreyna001`.
 
 ## Workflow
 
