@@ -1,0 +1,25 @@
+---
+description: Release workflow for Docker projects to GHCR and GitHub
+alwaysApply: true
+---
+
+# Docker Release Workflow
+
+When a task touches any Docker deployment project in this repository:
+
+- Treat releases as two required artifacts:
+  1. source code pushed to GitHub
+  2. built container image(s) pushed to GHCR
+- Keep deployment/runtime contract values in sync across code, compose/systemd, examples, and docs.
+- Never hardcode credentials/tokens in Dockerfiles, compose files, scripts, or logs.
+- Run relevant tests/lint checks before publishing images.
+- Build location is host-aware with explicit target platform for deployment parity:
+  - If host OS is Windows, build from WSL.
+  - If host OS is Linux, build directly on that Linux host.
+  - `docker buildx build --platform linux/amd64 -t ghcr.io/<owner>/<image>:<tag> <context>`
+- Push immutable tags (version or commit SHA) and optionally add moving tags (`latest`).
+- Verify pushed artifacts after publish:
+  - `docker pull ghcr.io/<owner>/<image>:<tag>`
+  - capture image digest for release notes/traceability.
+
+Current team workflow intent for this repo: on Windows hosts, build image(s) in WSL; on Linux hosts, build on the Linux host; then push built image(s) to GHCR, then commit and push source changes to GitHub.

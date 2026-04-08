@@ -1,0 +1,13 @@
+---
+description: Python style and conventions for this repository
+globs: "**/*.py"
+alwaysApply: false
+---
+
+# Python Coding Standards
+
+- Match **existing module style**: imports, naming, typing, and error-handling patterns in the touched package (`onprem_service`, `onprem_rag`, `onprem_llm_sdk`, etc.).
+- Prefer **explicit types** on public APIs and non-obvious internals; keep helpers focused and testable.
+- **Dependencies:** add or pin only what the change needs; prefer stdlib or existing stack choices.
+- **No broad bare `except`:** catch specific exceptions; log and re-raise or handle with a documented outcome.
+- Keep **docstrings** proportional to project norms—avoid verbose commentary on obvious code; preserve useful existing comments.
