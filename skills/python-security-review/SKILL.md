@@ -1,6 +1,6 @@
 ---
 name: python-security-review
-description: Reviews Python changes for realistic, evidence-backed security risks. Use when reviewing pull requests or code paths involving untrusted input, subprocesses, secrets, auth, config, file operations, API calls, or deployment/runtime contract changes.
+description: Review Python changes for security risks around input, subprocesses, secrets, auth, file I/O, APIs, and deployment.
 ---
 
 # Python Security Review

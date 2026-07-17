@@ -1,6 +1,6 @@
 ---
 description: Core engineering expectations for all changes in this repository
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Core Engineering Standards

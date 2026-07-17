@@ -1,26 +1,42 @@
 ---
 name: write-python-tests
-description: Adds or updates Python tests focused on behavior and regressions. Use when introducing or modifying Python logic, debugging issues, or enforcing runtime contract behavior and failure handling.
+description: Add Python 3.12 tests for behavior, regressions, runtime contracts, and failure handling.
 ---
 
 # Write Python Tests
 
-## Use This When
-- Adding tests for new logic.
-- Updating tests after behavior changes.
-- Adding regression coverage for bug fixes.
-- Enforcing runtime contract behavior and failure handling.
+Use this skill when adding or updating Python tests.
 
 ## Workflow
+
 1. Define behavior to prove, not implementation details.
 2. Cover normal path, edge cases, and failure cases.
-3. Use the repository's existing test framework; if absent, prefer `unittest` unless `pytest` is already established.
-4. Keep tests deterministic and fast; avoid real network calls, external services, or sleeps unless explicitly required.
-5. Mock or stub external APIs and model calls.
-6. Add contract tests when environment variables, model names, payload fields, ports, or paths change.
-7. Keep assertions specific and behavior-focused.
+3. Target Python 3.12 unless explicitly told otherwise.
+4. Use the repository's existing test framework.
+5. If no framework exists, prefer `unittest` unless `pytest` is already established.
+6. Keep tests deterministic and fast.
+7. Avoid real network calls, external services, model calls, or sleeps unless explicitly required.
+8. Mock or stub external APIs and model calls.
+9. Add contract tests when env vars, model names, payload fields, ports, paths, or schemas change.
+10. Keep assertions specific and behavior-focused.
+
+## Coverage Bias
+
+Prioritize:
+- malformed input
+- missing input
+- empty input
+- duplicate input
+- replay behavior
+- idempotency
+- partial failure
+- parse failures
+- timeout and retry behavior
+- contract drift
 
 ## Output
-- Behaviors covered.
-- Important untested areas.
-- How to run tests.
+
+Return:
+- behaviors covered
+- important untested areas
+- how to run tests

@@ -1,0 +1,11 @@
+---
+description: Tests and docs when behavior or contracts change
+alwaysApply: false
+---
+
+# Testing and Documentation Standards
+
+- **Behavior changes** warrant tests: happy path, representative failure modes, and regressions for parsers, validators, and retries.
+- When changing **runtime contracts** (env vars, ports, request/response shapes, file layouts), update **examples**, operator docs, and any runbooks in the same change.
+- Prefer **deterministic tests**: inject clocks, fake HTTP, or stubs instead of live network or real models in unit tests unless explicitly integration-scoped.
+- New features should include **how to verify** (command or test name) in PR description or adjacent doc when non-obvious.

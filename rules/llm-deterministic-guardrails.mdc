@@ -1,6 +1,6 @@
 ---
 description: Deterministic guardrails for LLM analysis, structured output, and parsing
-alwaysApply: true
+alwaysApply: false
 ---
 
 # LLM Analysis and Output Guardrails

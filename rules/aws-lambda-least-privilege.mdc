@@ -1,6 +1,6 @@
 ---
 description: AWS Lambda and serverless least-privilege and consistency
-alwaysApply: true
+alwaysApply: false
 ---
 
 # AWS / Lambda Least Privilege and Consistency

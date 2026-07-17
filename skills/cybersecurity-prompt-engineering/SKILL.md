@@ -1,6 +1,6 @@
 ---
 name: cybersecurity-prompt-engineering
-description: Designs and reviews cybersecurity-focused LLM prompts for structured outputs, grounded reasoning, and safe automation. Use when creating or updating prompts, output schemas, repair prompts, RAG-grounded instructions, or analyst-assistant prompt workflows for threat hunting, vulnerability assessment, incident triage, detection engineering, or security reporting.
+description: Design cybersecurity LLM prompts, schemas, repair prompts, and RAG-grounded analyst workflows.
 ---
 
 # Cybersecurity Prompt Engineering

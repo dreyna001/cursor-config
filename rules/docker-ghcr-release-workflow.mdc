@@ -1,6 +1,6 @@
 ---
 description: Release workflow for Docker projects to GHCR and GitHub
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Docker Release Workflow

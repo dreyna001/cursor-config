@@ -1,6 +1,6 @@
 ---
 description: Secure-by-default patterns for services, systemd, install scripts, and containers
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Secure-by-Default Infra and Ops

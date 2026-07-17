@@ -1,6 +1,6 @@
 ---
 description: Tests and docs when behavior or contracts change
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Testing and Documentation Standards

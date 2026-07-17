@@ -1,6 +1,6 @@
 ---
 description: Keep env, ports, paths, and LLM/runtime knobs consistent across code and docs
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Deployment and Runtime Contract Sync

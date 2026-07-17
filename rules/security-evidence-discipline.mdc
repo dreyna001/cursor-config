@@ -1,6 +1,6 @@
 ---
 description: Security posture, evidence handling, and safe handling of untrusted input
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Security and Evidence Discipline

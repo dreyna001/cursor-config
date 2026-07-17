@@ -1,0 +1,13 @@
+---
+description: Deterministic guardrails for LLM analysis, structured output, and parsing
+alwaysApply: false
+---
+
+# LLM Analysis and Output Guardrails
+
+- Separate **direct evidence** (case/alert/artifact data), **advisory context** (KB, RAG, runbooks, doctrine), and **inference**. Do not let retrieved or instructional text become claimed observations unless the case data supports it.
+- Prefer explicit **output contracts** (required keys, allowed values, `unknown` for missing facts). Downstream automation must not rely on prose outside the contract.
+- **Parse → validate → repair (optional) → fail or degrade explicitly.** Do not silently accept malformed JSON or policy violations for automated paths.
+- Prefer **low temperature** and schema-oriented instructions where repeatability matters; document when free-form output is intentional.
+- **Allowlists and validators** (e.g. technique IDs, enums) belong in code or versioned data, not only in prompt prose.
+- Preserve **raw model output** or clear metadata when humans must review failures; avoid dropping diagnostic text without a structured reason field.

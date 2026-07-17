@@ -1,6 +1,6 @@
 ---
 description: Code quality, errors, retries, and operational resilience
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Code Quality and Resilience Standards
