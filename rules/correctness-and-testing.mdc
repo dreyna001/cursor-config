@@ -1,6 +1,6 @@
 ---
 description: Correctness and test quality requirements
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Correctness And Testing

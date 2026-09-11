@@ -1,25 +1,20 @@
 ---
-description: Release workflow for Docker projects to GHCR and GitHub
+description: Conditional release workflow for projects that publish Docker images to GHCR
 alwaysApply: false
 ---
 
-# Docker Release Workflow
+# Docker GHCR Release Workflow
 
-When a task touches any Docker deployment project in this repository:
+Apply this rule only when the user, project configuration, or existing release workflow requires publishing Docker images to GitHub Container Registry. Preserve another established registry or release mechanism; do not select GHCR merely because the project uses Docker.
 
-- Treat releases as two required artifacts:
-  1. source code pushed to GitHub
-  2. built container image(s) pushed to GHCR
-- Keep deployment/runtime contract values in sync across code, compose/systemd, examples, and docs.
-- Never hardcode credentials/tokens in Dockerfiles, compose files, scripts, or logs.
-- Run relevant tests/lint checks before publishing images.
-- Build location is host-aware with explicit target platform for deployment parity:
-  - If host OS is Windows, build from WSL.
-  - If host OS is Linux, build directly on that Linux host.
-  - `docker buildx build --platform linux/amd64 -t ghcr.io/<owner>/<image>:<tag> <context>`
-- Push immutable tags (version or commit SHA) and optionally add moving tags (`latest`).
-- Verify pushed artifacts after publish:
-  - `docker pull ghcr.io/<owner>/<image>:<tag>`
-  - capture image digest for release notes/traceability.
+When GHCR publishing is required:
 
-Current team workflow intent for this repo: on Windows hosts, build image(s) in WSL; on Linux hosts, build on the Linux host; then push built image(s) to GHCR, then commit and push source changes to GitHub.
+- Treat the source revision and built container image as linked release artifacts.
+- Read the existing workflow before choosing the image name, registry owner, tags, build context, or target platform.
+- Never hardcode credentials or tokens in Dockerfiles, compose files, scripts, commands, or logs.
+- Run the relevant tests and lint checks before publishing.
+- Use the established host-aware build path. On Windows, use WSL when the repository's Linux-container workflow requires it; on Linux, build directly.
+- Set `--platform` from the actual deployment target; do not assume `linux/amd64` when the target differs.
+- Push an immutable version or commit-SHA tag. Add a moving tag such as `latest` only when the established release workflow requires it.
+- Pull or inspect the published image and record its digest for release traceability.
+- Push source changes only when the authorized release task includes the repository release.

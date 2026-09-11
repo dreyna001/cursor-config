@@ -21,6 +21,7 @@ Follow these rules:
 * Keep forms accessible and predictable.
 * Avoid unnecessary `useMemo`, `useCallback`, and abstraction.
 * Do not introduce new UI/state libraries unless required.
+* For cybersecurity portals, follow **Federal SOC Dark**: read `development-stack/references/PORTAL_THEME.md` and open `development-stack/references/federal-soc-dark-reference.html` from the installed skill folder.
 * Keep frontend types aligned with backend API schemas.
 * Remove dead code, unused imports, console logs, and duplicate logic.
 * Prefer simple, readable, production-ready code.

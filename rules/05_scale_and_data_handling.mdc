@@ -5,8 +5,7 @@ alwaysApply: false
 
 # Scale And Data Handling
 
-- Default to **`Polars`** for dataframe work and keep examples `Polars`-first.
-- Default input and output examples to **CSV**; do not introduce another format unless scale, performance, schema fidelity, or downstream integration clearly justifies it.
+- Follow `01_ml_foundations` for dataframe and file-format defaults.
 - Prefer **lazy execution** where appropriate, especially for large file scans and derived feature pipelines.
 - Prefer **column pruning** and **early filtering** to reduce memory and I/O pressure.
 - Avoid row-wise Python loops when vectorized, expression-based, or batch operations are available.

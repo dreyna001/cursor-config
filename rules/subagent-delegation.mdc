@@ -1,0 +1,13 @@
+---
+description: Delegate bounded implementation and exploration to focused subagents
+alwaysApply: true
+---
+
+# Subagent Delegation
+
+- Delegate bounded implementation to **`implementer`** at **`composer-2.5-fast`**.
+- Delegate exploration or gap mapping to **`explore`** or **`generalPurpose`** at **`composer-2.5-fast`**.
+- Use the applicable review skill for code or security review.
+- Implement trivial work directly when delegation would add more overhead than value.
+- The parent integrates and verifies subagent output before treating work as done.
+- Stop and report scope or architecture conflicts instead of silently expanding the task.

@@ -5,7 +5,7 @@ description: Implement Python 3.12 features or runtime contract changes with min
 
 # Implement Python Feature
 
-Use this skill when adding or changing Python behavior.
+Use this skill when adding or changing Python behavior. When invoked as the **`implementer`** subagent, follow this skill in addition to the implementer prompt.
 
 ## Out Of Scope
 
@@ -42,19 +42,15 @@ For LLM-driven or external-output paths:
 
 ## Runtime Contract Changes
 
-If contract values change, update linked artifacts in the same change:
+If contract values change, update the affected linked artifacts in the same change:
 - runtime code
 - tests
 - README and deployment docs
 - `.env.example` or `config.env.example`
 - compose files or systemd units
-- SAM, CloudFormation, or other infra templates
+- applicable deployment or infrastructure templates
 - smoke-test instructions or scripts
 
 ## Output
 
-Return:
-- what changed
-- why
-- dependencies added, if any
-- verification steps and results
+Follow the global **Implementation Contract** handoff format. Also state why and any dependencies added.

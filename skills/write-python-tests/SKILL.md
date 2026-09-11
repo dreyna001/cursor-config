@@ -13,7 +13,7 @@ Use this skill when adding or updating Python tests.
 2. Cover normal path, edge cases, and failure cases.
 3. Target Python 3.12 unless explicitly told otherwise.
 4. Use the repository's existing test framework.
-5. If no framework exists, prefer `unittest` unless `pytest` is already established.
+5. If no framework exists, prefer pytest.
 6. Keep tests deterministic and fast.
 7. Avoid real network calls, external services, model calls, or sleeps unless explicitly required.
 8. Mock or stub external APIs and model calls.

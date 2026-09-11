@@ -12,6 +12,6 @@ alwaysApply: false
 - Prefer **one adapter per system or API surface** rather than scattering calls throughout the codebase.
 - Keep environment-specific details such as URLs, tenants, field mappings, and credentials out of workflow code.
 - Make adapters explicit for systems such as SIEM, SOAR, ticketing, GRC, CMDB, vuln scanners, asset platforms, threat-intel feeds, cloud APIs, and identity platforms.
-- Separate **read**, **writeback**, and **action-taking** operations even when they hit the same vendor system.
+- Apply the risk classes and execution boundaries defined in `cybersecurity-approval-policy-gates`.
 - Expose clear typed failures so orchestration can distinguish retryable, validation, auth, and policy errors.
 - Add adapter tests with fake responses or fixtures; do not rely on live vendor systems for basic contract coverage.

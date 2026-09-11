@@ -5,11 +5,11 @@ description: Shape fuzzy requirements into scoped acceptance criteria and small 
 
 # Requirements Shaping And Diff Planning
 
-Use this skill before coding on non-trivial work.
+Use this skill when requirements are fuzzy, the user requests a plan, or unresolved choices could materially affect correctness, compatibility, security, or safety. Do not invoke it merely because a well-scoped task is non-trivial.
 
 ## Quick Start
 
-Follow this sequence:
+Shape only the parts of the task that remain unclear:
 
 1. Determine whether the work is **greenfield** or a **change to an existing repo**.
 2. Collect only the environment pins that affect correctness and are still unknown.
@@ -19,11 +19,10 @@ Follow this sequence:
    - out-of-scope
    - assumptions
    - risks and unknowns
-5. Ask targeted edge and corner questions before implementation.
+5. Ask targeted questions only for unresolved decisions that could materially change the result.
 6. Convert the answers into functional and non-functional acceptance criteria.
 7. Maintain an unknowns or hard-stops list.
-8. Plan 3-6 small, independently testable diffs.
-9. Stop after the plan and wait for approval before coding diff 1.
+8. Plan the smallest independently testable diff or sequence of diffs proportional to the task.
 
 ## Architecture Level
 
@@ -69,7 +68,7 @@ Define:
 - functional requirements with pass or fail checks
 - non-functional requirements with pass or fail checks
 
-Do not start implementation until success can be evaluated concretely.
+Do not start implementation while a correctness-impacting acceptance criterion remains undefined.
 
 ## Hard Stops
 
@@ -80,9 +79,9 @@ Stop and ask before coding if:
 - an unknown could change security or safety posture
 - the environment assumptions are still unclear
 
-## Diff Plan Format
+## Diff Plan
 
-For each planned diff, include:
+For each necessary diff, identify:
 
 - objective
 - exact files to touch
@@ -91,20 +90,18 @@ For each planned diff, include:
 - acceptance criteria
 - rollback or migration note if behavior or contracts change
 
-## Execution Loop
+## Planning Boundary
 
-- Do not code until the plan is approved.
-- Implement one diff at a time.
-- Touch only the listed files unless the user approves a plan change.
-- Add or update deterministic tests for each diff.
-- Run the planned verification commands.
-- Report pass or fail results briefly.
-- Ask permission before moving to the next diff.
+- Stop after the plan when the user requested planning only or an unresolved consequential choice requires approval.
+- Otherwise, proceed within the authorized task once scope and acceptance criteria are clear.
+- Do not request approval between ordinary implementation increments.
+- Ask before expanding scope, making a consequential external change, or choosing among materially different product, architecture, security, or compatibility outcomes.
+- Keep implementation aligned with the plan, but adjust locally when evidence shows a smaller correct path.
 
 ## Default Dependency Posture
 
 - Prefer the standard library and existing dependencies.
-- Do not add new third-party packages without approval.
+- Add a third-party package only when the current task requires it and existing mechanisms are insufficient; explain the need.
 
 ## Preferred Outcome
 

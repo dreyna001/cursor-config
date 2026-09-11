@@ -1,6 +1,6 @@
 ---
 description: Security review baseline
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Security

@@ -23,6 +23,8 @@ project/
 
 Adapt the baseline to the actual project shape:
 
+- Keep entrypoints focused on orchestration and put detailed work in simple helpers or components.
+- Add files only when they make the current workflow easier to read or test.
 - Python code lives under `src/<package_name>/`; use package imports, not root-relative module imports.
 - Tests live under `tests/` and should import the installed/package path.
 - Operator and architecture docs live under `docs/`, organized by purpose.
@@ -38,6 +40,6 @@ On-prem Python service overlay:
 - Keep host installers and operator helper commands under `scripts/`; keep service units under `deploy/systemd/`.
 - Keep runtime host paths documented but not treated as repo folders: `/opt/...`, `/etc/...`, `/var/...`, SFTP/NFS drop paths, model-weight paths, wheelhouses, logs, reports, and generated dependency manifests.
 - Keep local model runtime, RAG index paths, SFTP/NFS ingest paths, config examples, systemd units, and docs synchronized when entrypoints or package data paths move.
-- Do not commit production notables, model weights, RAG SQLite/FAISS indexes, wheelhouses, secrets, or customer-specific manifests; use `data/` only for small fixtures and sample payloads.
+- Do not commit production notables, model weights, generated vector indexes, wheelhouses, secrets, or customer-specific manifests; use `data/` only for small fixtures and sample payloads.
 
 For migrations, move in small verifiable diffs: package imports/tests first, deployment paths second, scripts/data/docs last.

@@ -1,6 +1,6 @@
 ---
 description: Deterministic logic vs LLM responsibilities and bounded model use
-alwaysApply: true
+alwaysApply: false
 ---
 
 # Rule: Deterministic Logic vs LLM Responsibilities
@@ -23,7 +23,7 @@ When designing an LLM step:
 - State what the LLM is not allowed to do.
 - Define the input facts.
 - Define the output schema.
-- Define fallback behavior.
+- Define required failure or degradation behavior.
 
 Avoid:
 - vague prompts
