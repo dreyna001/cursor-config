@@ -22,6 +22,8 @@ Follow this sequence:
 
 If the prompt output is consumed by downstream code, keep the prompt, parser, validator, repair prompt, examples, tests, and docs in sync in the same change.
 
+Apply the [shared LLM output guardrails](../../rules/llm-deterministic-guardrails.mdc) to the actual provider request and downstream context, not only the wording of the prompt.
+
 ## Core Principles
 
 - Keep `direct evidence`, `advisory context`, and `inference` separate.

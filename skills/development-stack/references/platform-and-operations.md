@@ -19,7 +19,7 @@ Apply only the sections for technologies the project actually uses. Verify insta
 ## gVisor And Containers
 
 - Use gVisor for untrusted or agent-generated workloads only when the target platform supports it and compatibility has been tested.
-- Keep OCI images minimal, non-root, reproducible, and pinned by immutable release identity. Separate build-time credentials from runtime images.
+- Keep OCI images minimal, non-root, reproducible, and pinned by immutable release identity. Separate build-time credentials from runtime images. Released applications need reproducible direct and transitive dependency resolution consumed by the build, such as a lockfile or equivalent pinned build inputs; do not impose application lock semantics on published library dependency ranges.
 - Define CPU, memory, process, filesystem, network, and execution-time limits for untrusted work.
 
 ## systemd, vLLM, And LiteLLM

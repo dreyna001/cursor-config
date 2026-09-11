@@ -7,9 +7,13 @@ Apply only the sections for technologies the project actually uses. Inspect inst
 - Keep route handlers thin: validate input, authorize, call application logic, and map the result to an explicit response contract.
 - Use Pydantic models at trust boundaries and SQLAlchemy models for persistence. Do not make one model serve every layer when their contracts differ.
 - Decide `extra`, strictness, aliases, and serialization deliberately for each external contract. Keep validators deterministic and free of I/O.
-- Use dependency injection for request-scoped dependencies and lifespan hooks for shared resources. Do not create clients or pools per request.
-- Avoid blocking calls in async paths. Bound request bodies, outbound calls, concurrency, and timeouts.
+- Use dependency injection for request-scoped dependencies and lifespan hooks for shared resources. Do not create clients or pools per request. Keep shared services scoped to the application instance; lifecycle changes warrant checks that two applications remain isolated and resources close on shutdown.
+- Avoid blocking calls in async paths. Inspect the entire called path for synchronous database, parsing, and filesystem work; offload it through the established bounded execution mechanism. Bound request bodies, outbound calls, concurrency, and timeouts.
 - Return stable error contracts without leaking secrets or internal exception details.
+
+## Structured Model Boundaries
+
+Apply to direct model calls as well as agent frameworks. Follow the shared [LLM output guardrails](../../../rules/llm-deterministic-guardrails.mdc) for API-enforced schemas, deterministic identity mapping, bounded context handoffs, and evaluation evidence. Preserve each supported provider's actual capabilities; do not silently downgrade a requested strict contract.
 
 ## PydanticAI And Pydantic Graph
 

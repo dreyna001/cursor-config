@@ -12,6 +12,8 @@ alwaysApply: false
 
 - Flag god classes or functions, long methods, deep nesting, duplicated logic, magic values, leaky abstractions, boolean parameter explosion, hidden side effects, misleading comments, and overengineering.
 
+- Assess responsibility boundaries and testability rather than imposing a fixed line-count limit. A small diff does not justify accumulating unrelated responsibilities in one module; extract a cohesive responsibility only when needed by the current change.
+
 # Dead And Stale Code
 
 - Flag unused functions, classes, imports, variables, unreachable branches, obsolete configs, stale feature flags, deprecated wrappers, zombie tests, and commented-out legacy logic.

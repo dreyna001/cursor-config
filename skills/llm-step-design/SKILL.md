@@ -26,6 +26,8 @@ Design an LLM step that adds value without taking ownership of deterministic dec
 8. Keep the prompt constrained to provided facts.
 9. Keep the scope narrow enough to explain in one sentence.
 
+For machine-consumed responses, apply the [shared LLM output guardrails](../../rules/llm-deterministic-guardrails.mdc), including API enforcement, application-owned identity, context handoffs, and first-pass evaluation.
+
 ## Output format
 
 Return these sections:
