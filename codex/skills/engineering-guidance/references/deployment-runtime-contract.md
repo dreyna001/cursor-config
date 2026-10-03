@@ -1,0 +1,13 @@
+---
+description: Keep env, ports, paths, and LLM/runtime knobs consistent across code and docs
+alwaysApply: false
+---
+
+# Deployment and Runtime Contract Sync
+
+When changing how the system runs or integrates:
+
+- Update the same contract values everywhere they appear: `config.env` / env examples, compose or systemd units, install scripts, SDK defaults, and operator docs (README, runbooks).
+- Treat as a single contract: base URLs, ports, model identifiers, paths to indexes or data dirs, feature flags, and payload field names consumed by callers.
+- Avoid drift between “example” configs and production-oriented defaults; call out intentional differences in comments or docs.
+- If you add a new required setting, add it to examples, validation (where applicable), and docs in the same change.

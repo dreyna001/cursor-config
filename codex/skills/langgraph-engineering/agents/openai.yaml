@@ -1,0 +1,4 @@
+interface:
+  display_name: "LangGraph Engineering"
+  short_description: "Design and review durable LangGraph workflows"
+  default_prompt: "Use $langgraph-engineering to design, implement, or review the requested LangGraph workflow with explicit state and recovery guarantees."

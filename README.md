@@ -1,6 +1,6 @@
 # cursor-config
 
-Canonical copy of Cursor **user-level** rules and skills. Edit here, commit, push to GitHub, then install on other machines.
+Canonical versioned source for the user's global Cursor configuration and Codex instructions and skills. Cursor assets keep their existing layout; Codex assets live under `codex/` and install through native user-level entry points.
 
 ## Layout
 
@@ -8,6 +8,10 @@ Canonical copy of Cursor **user-level** rules and skills. Edit here, commit, pus
 - `skills/` — user skills (`%USERPROFILE%\.cursor\skills\`)
 - `skills-cursor/` — Cursor-managed skills (`%USERPROFILE%\.cursor\skills-cursor\`)
 - `environment.json` — optional Cursor environment config
+- `codex/global-instructions.md` — global Codex instructions, linked to `$CODEX_HOME/AGENTS.md` (default `~/.codex/AGENTS.md`)
+- `codex/skills/` — portable Codex user skills, linked individually under `~/.agents/skills/`
+- `codex/install-manifest.json` — the expected global Codex skill inventory
+- `codex/global_setup.py` — read-only planning, local installation/sync, and app-server verification
 
 ## Refresh this repo from the current PC
 
@@ -35,3 +39,32 @@ cd cursor-config
 ```
 
 Project-specific rules stay in each repo's `.cursor/` folder. This repo is for global Cursor config you want versioned and portable.
+
+## Install global Codex configuration
+
+Use Python 3.12 or newer. From this checkout, preview the local changes first:
+
+```sh
+python3 codex/global_setup.py plan
+```
+
+Then install or sync the current canonical sources into the local Codex home:
+
+```sh
+python3 codex/global_setup.py sync --apply
+python3 codex/global_setup.py verify
+```
+
+The setup links `codex/global-instructions.md` to the native global `AGENTS.md` path and links each skill package separately into `~/.agents/skills/`. It leaves unowned skill names and platform-managed `.system` and plugin skills in place. When it replaces an existing global instruction file or a same-name skill, it moves the original into a dated `~/.codex/backups/cursor-config-migration-*` directory and records file hashes in a backup manifest. Re-running the command is safe; after pulling source updates, run `sync --apply` again.
+
+To check discovery across projects without making a model or provider call, query the installed Codex app-server from two unrelated working directories:
+
+```sh
+python3 codex/global_setup.py verify --runtime \
+  --cwd /path/to/project-one \
+  --cwd /path/to/project-two
+```
+
+The runtime check also checks the canonical `codex/` source directory, confirms every managed skill appears once with user scope and its complete description, and reports discovery errors. A global `AGENTS.override.md` must be reviewed before installation because it can override `AGENTS.md`.
+
+This local setup does not configure Codex Cloud environments. Cloud setup can be handled separately if needed.
