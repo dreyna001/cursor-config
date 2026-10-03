@@ -42,6 +42,10 @@ Project-specific rules stay in each repo's `.cursor/` folder. This repo is for g
 
 ## Install global Codex configuration
 
+The Codex collection contains 52 custom skills. Overlapping planning, debugging, cybersecurity, and review workflows share retained entry points; tool-specific production guidance lives in ten conditional references, with official vendor sources, rather than additional skills. The engineering router links directly to those references for existing integrations; stack-selection defaults are not prerequisites for routine implementation.
+
+Model routing follows the user/session choice. A Sol 6.1 high or Astra high primary can work directly; bounded independent work can use subagents when that improves speed or quality. This follows OpenAI's [subagent guidance](https://learn.chatgpt.com/docs/agent-configuration/subagents) and [Astra skill-writing guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra). Repository instructions should add project constraints without copying or overriding this global routing policy.
+
 Use Python 3.12 or newer. From this checkout, preview the local changes first:
 
 ```sh

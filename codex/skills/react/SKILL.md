@@ -21,3 +21,9 @@ Follow these rules:
 * Keep frontend types aligned with backend API schemas.
 * Remove dead code, unused imports, console logs, and duplicate logic.
 * Prefer simple, readable, production-ready code.
+
+## Tool references
+
+- When building or deploying a Vite app, read [Vite production practices](references/vite-production.md).
+- When adding or maintaining Vitest unit/component tests, read [Vitest practices](references/vitest-production.md).
+- When adding or maintaining Playwright browser tests, read [Playwright practices](references/playwright-production.md).

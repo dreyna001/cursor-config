@@ -22,6 +22,7 @@ Do not skip directly from seeing an error to editing code.
 - Read the relevant implementation before changing it.
 - Gather evidence before forming a conclusion.
 - Distinguish the symptom from the underlying cause.
+- Separate observed facts from hypotheses; mark unavailable details as unknown and do not invent logs, fields, events, or environment facts.
 - Change the smallest amount of code necessary.
 - Follow existing project patterns.
 - Do not refactor unrelated code while debugging.
@@ -61,6 +62,8 @@ Inspect:
 - External boundaries involved in the failure.
 
 Avoid broad speculative edits.
+
+For Python issues, inspect the declared, installed, and deployed interpreter versions and compare them with the failing environment. For external or model calls, inspect timeout, retry, backoff, and parse-failure behavior.
 
 ### 3. Identify the Root Cause
 
@@ -137,3 +140,5 @@ Before finishing:
 - Regression coverage exists when appropriate.
 - Relevant verification passes.
 - No unnecessary retries, fallbacks, guards, or compatibility paths were introduced.
+
+Report the root cause, the correction made, remaining unknowns or risks, and the verification performed.

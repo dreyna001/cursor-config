@@ -33,6 +33,13 @@ Use this bounded flow unless the use case clearly requires another shape:
 9. Define repair behavior for parse, schema, or policy failures.
 10. Add tests for prompt output, parsing, validation, policy, repair, and fallback behavior.
 
+## Capability Scope And Delivery
+
+- Plan by the backend capability being delivered; use autonomy levels only as a secondary label for control, risk, and governance.
+- Deliver capabilities incrementally: grounded generation, validation, bounded read-only execution, summarization, then approval-gated writeback or actions.
+- For a single-call workflow, keep intermediate context deterministic and in memory. Add persistence only when multi-step execution, replay, or audit requires it.
+- Keep the default bounded and investigative, with human approval for consequential actions.
+
 ## LLM Step Design
 
 For each LLM step, define:

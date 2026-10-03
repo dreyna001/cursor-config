@@ -6,12 +6,12 @@ description: "Review APIs, schemas, storage, queues, retries, replay behavior, a
 
 ## Focus
 
-- breaking contract changes and weak schema validation
-- inconsistent response or error shapes
-- missing idempotency, pagination, or versioning
-- duplicate sources of truth and inconsistent serialization
-- unsafe migrations, weak constraints, orphaned records
-- retries, duplicate delivery, ordering assumptions, and clock issues
+- breaking contract changes, weak schema validation, and inconsistent response or error shapes
+- missing idempotency, pagination, or versioning; inconsistent serialization; and unclear migration paths
+- duplicate sources of truth, unsafe migrations, weak constraints, orphaned records, and data drift
+- transaction boundaries, soft-delete correctness, and storage lifecycle behavior
+- retries, duplicate delivery, ordering or clock assumptions, retry amplification, and replay-sensitive behavior
+- lost updates, double processing, unsafe consumers, deadlocks, and partial failures
 
 ## Output
 
