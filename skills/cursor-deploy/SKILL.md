@@ -1,67 +1,32 @@
 ---
 name: cursor-deploy
-description: "Deploy applications to AWS. Triggers on phrases like: deploy to AWS, host on AWS, run this on AWS, AWS architecture, estimate AWS cost, generate infrastructure. Analyzes any codebase and deploys to optimal AWS services."
+description: "Plan or implement AWS application deployment infrastructure; use for hosting requests that need service selection, cost, security, and operations guidance."
 ---
+# AWS Deployment
 
-# Deploy on AWS
-
-Take any application and deploy it to AWS with minimal user decisions.
-
-## Philosophy
-
-**Minimize cognitive burden.** User has code, wants it on AWS. Pick the most
-straightforward services. Don't ask questions with obvious answers.
+Use this skill when the user asks to design or implement an AWS deployment. Preserve an existing repository's framework, infrastructure owner, and deployment conventions. Do not turn an architecture request into a live deployment.
 
 ## Workflow
 
-1. **Analyze** - Scan codebase for framework, database, dependencies
-2. **Recommend** - Select AWS services, concisely explain rationale
-3. **Estimate** - Show monthly cost before proceeding
-4. **Generate** - Write IaC code with [security defaults](references/security.md) applied
-5. **Deploy** - Run security checks, then execute with user confirmation
+1. Inspect the application, manifests, existing IaC, runtime, data stores, and operational requirements. If the target is AWS GovCloud and the FedRAMP level is not already stated, ask whether it is Low, Moderate, or High before recommending or generating that infrastructure. Apply the authorization-ready rule for the answer. Do not choose the level.
+2. Recommend a small service set with the reasons, tradeoffs, and any assumptions. Treat the service matrix in [defaults](references/defaults.md) as a starting point, not current provider truth.
+3. Verify service availability, lifecycle, feature support, and version-sensitive configuration in current official AWS documentation for the target region/partition.
+4. Estimate costs with current prices and explicit usage assumptions before generating infrastructure. Use the AWS Pricing Calculator or a pricing integration only if it is actually available. If current prices cannot be verified, say so and provide an assumption-based estimate rather than inventing precision.
+5. Generate Terraform for new or changed cloud resources, using the project's documented root. Do not add another IaC format. Apply the security principles in [security defaults](references/security.md) and follow the source links in the relevant reference.
+6. Run the repository's tests, formatters, and available IaC/security checks. Distinguish unrun checks and provider behavior.
+7. Prepare a plan for review. Applying infrastructure, changing accounts, or making external deployment changes requires the user's explicit authorization immediately before that action.
 
-## Defaults
+## Decision Principles
 
-See [defaults.md](references/defaults.md) for the complete service selection matrix.
-
-Core principle: Default to **dev-sized** (cost-conscious: small instance sizes, minimal redundancy, and non-HA/single-AZ defaults) unless user says "production-ready".
-
-## MCP Servers
-
-### awsknowledge
-
-Consult for architecture decisions. Use when choosing between AWS services
-or validating that a service fits the use case. Helps answer "what's the
-right AWS service for X?"
-
-Key topics: `general` for architecture, `amplify_docs` for static sites/SPAs,
-`cdk_docs` and `cdk_constructs` for IaC patterns.
-
-### awspricing
-
-Get cost estimates. **Always present costs before generating IaC** so user
-can adjust before committing. See [cost-estimation.md](references/cost-estimation.md)
-for query patterns.
-
-### awsiac
-
-Consult for IaC best practices. Use when writing CDK/CloudFormation/Terraform
-to ensure patterns follow AWS recommendations.
-
-## Principles
-
-- Concisely explain why each service was chosen
-- Always show cost estimate before generating code
-- Apply [security defaults](references/security.md) automatically (encryption, private subnets, least privilege)
-- Run IaC security scans (cfn-nag, checkov) before deployment
-- Don't ask "Lambda or Fargate?" - just pick the obvious one
-- If genuinely ambiguous, then ask
-- **Never recommend AWS App Runner** — it is in maintenance mode. Use ECS Express Mode instead.
-- When user explicitly requests a managed application platform or signals low infrastructure involvement, route to Elastic Beanstalk
+- Keep user constraints and existing architecture ahead of these defaults. When a service choice materially affects cost, availability, data residency, or operations and the preference is not stated, explain the options and ask only for the decision needed.
+- Use dev-sized, low-cost configurations for development when appropriate; do not apply them to production without checking reliability requirements.
+- Show cost assumptions and excluded costs; include traffic, compute, storage, network transfer, logs, backups, and managed services where applicable.
+- Keep secrets out of source and images. Use least-privilege identities, encryption, private networking where supported, and explicit rollback or recovery guidance.
+- Do not assume any AWS-specific MCP server, pricing connector, shell command, or SDK is present. Check available tools, repository dependencies, and local documentation before using them.
 
 ## References
 
-- [Service defaults](references/defaults.md)
+- [Service selection starting points](references/defaults.md)
+- [Cost estimation](references/cost-estimation.md)
 - [Security defaults](references/security.md)
-- [Cost estimation patterns](references/cost-estimation.md)
-- [Elastic Beanstalk skill](../elastic-beanstalk/SKILL.md)
+- [Elastic Beanstalk details](../cursor-elastic-beanstalk/SKILL.md)

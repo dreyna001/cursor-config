@@ -1,8 +1,7 @@
 ---
 name: ml-model-training
-description: Train traditional ML models with Polars-first prep, proper evaluation, and saved classification or regression artifacts.
+description: "Train traditional ML models with Polars-first prep, proper evaluation, and saved classification or regression artifacts."
 ---
-
 # Skill: ML Model Training
 
 ## When to use

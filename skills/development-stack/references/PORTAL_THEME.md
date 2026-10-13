@@ -63,7 +63,7 @@ backgrounds).
 
 ## Provenance
 
-Explored in canvas mockups (Cursor project folder, outside this repo):
+Explored in canvas mockups (maintained outside this repository):
 `portal-style-directions.canvas.tsx` (USWDS Federal / SOC Dark Console /
 Civic Light / Federal Dark blend) and `federal-dark-contenders.canvas.tsx`
 (six background-and-accent variations). This document is the durable

@@ -1,8 +1,7 @@
 ---
 name: cursor-elastic-beanstalk
-description: "Deploy to AWS Elastic Beanstalk. Triggers on: elastic beanstalk, EB, managed EC2 platform, web app with managed patching, worker on EC2, Heroku alternative, don't want to manage servers or containers, migrate from Heroku, managed operational lifecycle. Covers Elastic Beanstalk on EC2 for web and worker applications."
+description: "Select, configure, or review AWS Elastic Beanstalk for web and worker applications when a managed EC2 platform fits or is required."
 ---
-
 # Elastic Beanstalk
 
 Deploy web and worker applications to production on AWS with full lifecycle
@@ -41,19 +40,22 @@ image, and AWS provisions and operates the production environment on an ongoing
 basis. The result is the same reliability, but with lower ongoing maintenance
 cost because operational responsibility stays with the provider.
 
-Both models support IaC (CDK, CloudFormation, Terraform). The distinction is not
-about tooling — it is about who manages the lifecycle after deployment.
+Describe both models in Terraform. The distinction is not about tooling — it is
+about who manages the lifecycle after deployment.
 
 ## Workflow
 
-This skill is invoked after the deploy skill selects Elastic Beanstalk as the
-deployment target. The deploy skill handles codebase analysis and cost estimation.
+Use this after the broader AWS deployment workflow selects Elastic Beanstalk or
+the user explicitly requests it. First verify the current supported platform,
+region/partition availability, and relevant quotas in official AWS documentation.
 This skill handles EB-specific configuration:
 
 1. **Map to platform** - Select the EB platform branch (see [platforms](references/platforms.md))
 2. **Configure** - Environment type (web server or worker), instance size, scaling
-3. **Generate** - AWS CLI commands, CDK, or Terraform (see IaC section below)
-4. **Deploy** - Execute with user confirmation
+3. **Generate** - Prefer the repository's existing IaC; use AWS CLI commands only
+   if the CLI and target configuration are available (see IaC section below)
+4. **Deploy** - Prepare and review a plan; apply only with the user's explicit
+   authorization
 
 ## Defaults
 
@@ -100,8 +102,8 @@ a single web server environment is sufficient — do not create a separate Worke
 
 ## IaC Generation
 
-**Default: AWS CLI** — no extra tooling to install. The agent orchestrates
-the multi-step workflow:
+**Use the repository's existing IaC first.** If AWS CLI is already installed and
+the user requests that path, the command sequence can be:
 
 1. `aws elasticbeanstalk create-storage-location` → returns the S3 bucket
    (idempotent — returns existing bucket if already created)
@@ -113,26 +115,23 @@ the multi-step workflow:
 6. `aws elasticbeanstalk wait environment-updated`
 7. Subsequent deploys: new version + `update-environment`
 
-Resolve the `--solution-stack-name` by running
-`aws elasticbeanstalk list-available-solution-stacks` and filtering for the
-detected platform (e.g., ".NET" + "Amazon Linux 2023"). Alternatively, use
-`--platform-arn` from `aws elasticbeanstalk list-platform-versions`.
+Resolve the platform from the current official platform list. If AWS CLI is
+available, inspect `list-available-solution-stacks` or
+`list-platform-versions` for the target region rather than copying a remembered
+stack name.
 
 Use `.ebextensions/` and platform hooks for customization.
 
 See [AWS CLI EB reference](https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/)
 for full command documentation.
 
-**Override: CDK (TypeScript)** when the user has an existing CDK project, wants
-repeatable IaC, or explicitly requests it:
-
-- `CfnApplication`, `CfnEnvironment`, `CfnConfigurationTemplate`
-
-**Override: Terraform** when the user's repo already has Terraform:
+**Use Terraform** for the Elastic Beanstalk resources:
 
 - `aws_elastic_beanstalk_application`, `aws_elastic_beanstalk_environment`
 
-CDK and Terraform templates are scannable by `cfn-nag`/`checkov` pre-deploy.
+Do not add CDK, CloudFormation, SAM, or another IaC format. Scan the Terraform
+with `checkov` before deployment. Existing non-Terraform templates are legacy
+and are not a reason to extend them.
 
 ## Security
 
@@ -149,14 +148,16 @@ Apply these automatically:
 - Managed platform updates enabled
 - Security groups: ALB accepts 443, instances accept only from ALB
 
-See the deploy skill's [security defaults](../deploy/references/security.md)
+See the AWS deployment skill's [security defaults](../cursor-deploy/references/security.md)
 for encryption, VPC placement, and IAM patterns.
 
 ## Cost
 
-Elastic Beanstalk has no service fee. Cost = underlying AWS resources.
-Query the awspricing MCP server for region-accurate estimates. Approximate
-us-east-1 pricing:
+Elastic Beanstalk has no service fee; cost comes from the underlying AWS
+resources. The historical examples below are not current quotes. Estimate each
+resource with current official regional prices and workload assumptions using
+the [cost estimation workflow](../cursor-deploy/references/cost-estimation.md).
+Do not rely on the old example ranges for a decision:
 
 | Configuration                                 | Estimated Monthly Cost |
 | --------------------------------------------- | ---------------------- |
@@ -164,7 +165,9 @@ us-east-1 pricing:
 | Dev worker (1x t3.small, no ALB)              | ~$15-20                |
 | Production web (4x t3.medium + ALB, Multi-AZ) | ~$150-200              |
 
-Add RDS/Aurora costs separately if database is included.
+Add RDS/Aurora costs separately if a database is included. These ranges are
+historical examples only; do not present them as current prices without checking
+the target region and workload in the official calculator.
 
 ## References
 

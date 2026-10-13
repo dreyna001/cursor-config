@@ -1,0 +1,4 @@
+interface:
+  display_name: "LLM Evidence Regression"
+  short_description: "Preserve valid evidence while correcting LLM failures"
+  default_prompt: "Use $llm-evidence-regression to fix an evidence or output-contract failure and check that supported decisions and facts survive."

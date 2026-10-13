@@ -1,11 +1,12 @@
 ---
 name: review-reliability-performance
-description: Review resilience, failure handling, efficiency, scaling, retries, integrations, and hot paths.
+description: "Review resilience, failure handling, efficiency, scaling, retries, integrations, and hot paths."
 ---
-
 # Review Reliability And Performance
 
 Use this skill for resilience, scaling, and performance-focused review.
+
+For production HTTP quotas, readiness, or resource bounds review, read [API abuse and exposure](../cursor-rules/references/api-abuse-and-exposure.md) and, only for its named repositories, [project HTTP security checkpoints](../cursor-rules/references/api-project-checkpoints.md). Apply their production scope and distinguish source/template findings from live deployment evidence.
 
 ## Reliability Checks
 

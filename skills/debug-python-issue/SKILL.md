@@ -1,18 +1,18 @@
 ---
 name: debug-python-issue
-description: Debug Python 3.12 crashes, bad outputs, timeouts, retries, parsing failures, and regressions with minimal fixes.
+description: "Debug Python interpreter, package, crash, timeout, retry, parsing, and regression failures with version-aware minimal fixes; not for non-Python or general recovery work."
 ---
 
 # Debug Python Issue
 
-Use this skill when diagnosing Python failures or regressions.
+Use this skill when diagnosing Python failures or regressions. For non-Python failures or general recovery work, use [debugging and error recovery](../debugging-and-error-recovery/SKILL.md).
 
 ## Workflow
 
 1. Capture exact symptom, expected behavior, and observed behavior.
 2. Trace relevant code path before editing.
 3. Identify likely failure points.
-4. Evaluate against Python 3.12 behavior unless told otherwise.
+4. Inspect the declared, installed, and deployed interpreter versions and compare them with the failing environment. Do not assume a Python version the project does not use.
 5. Separate direct evidence from inference.
 6. Mark uncertain items as `unknown`.
 7. Reproduce with existing tests, logs, scripts, or minimal fixtures when possible.

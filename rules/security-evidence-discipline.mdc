@@ -5,7 +5,4 @@ alwaysApply: false
 
 # Security and Evidence Discipline
 
-- **Do not fabricate** IOCs, events, IDs, or findings. Mark unsupported factual claims as `unknown` or omit per contract.
-- **Evidence vs inference:** label or separate analyst conclusions from raw source material; do not present inference as ground truth.
-- Preserve raw evidence or diagnostic metadata when humans must review failures.
-- Fail closed for policy or action paths. Non-consequential analysis may degrade only with an explicit, observable reason.
+Read and apply [security-evidence-discipline](../skills/cursor-rules/references/security-evidence-discipline.md). Keep this rule as the activation stub; do not copy the reference body here.

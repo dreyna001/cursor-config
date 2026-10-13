@@ -1,8 +1,7 @@
 ---
 name: cybersecurity-approval-policy-gates
-description: Design policy gates, allowlists, approvals, and safe execution boundaries for cybersecurity workflows.
+description: "Design policy gates, allowlists, approvals, and safe execution boundaries for cybersecurity workflows."
 ---
-
 # Cybersecurity Approval And Policy Gates
 
 Use this skill when a cybersecurity workflow may move from analysis into execution, writeback, state changes, or actions.

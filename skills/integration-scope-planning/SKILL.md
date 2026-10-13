@@ -1,8 +1,7 @@
 ---
 name: integration-scope-planning
-description: Decide which external integrations are required now, later, or not at all for the current block.
+description: "Decide which external integrations are required now, later, or not at all for the current block."
 ---
-
 # Integration Scope Planning
 
 Use this skill when:

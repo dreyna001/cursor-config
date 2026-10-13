@@ -1,8 +1,3 @@
----
-description: Local AWS development and test safety with mocked clients or LocalStack
-alwaysApply: false
----
-
 # AWS Local Testing
 
 Apply this when creating, modifying, or testing code that uses AWS services, AWS SDK clients, Lambda handlers, infrastructure templates, local development setup, or CI workflows.

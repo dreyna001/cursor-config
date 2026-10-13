@@ -1,8 +1,3 @@
----
-description: AWS Lambda and serverless least-privilege and consistency
-alwaysApply: false
----
-
 # AWS / Lambda Least Privilege and Consistency
 
 - Grant IAM permissions **narrowly** to what the function needs (specific actions, resources, and conditions). Avoid `*` on resources unless justified and documented.

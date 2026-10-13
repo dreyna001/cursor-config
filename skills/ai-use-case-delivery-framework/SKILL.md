@@ -1,8 +1,7 @@
 ---
 name: ai-use-case-delivery-framework
-description: Guides stakeholder-to-MVP delivery of AI and LLM use cases across AWS, on-prem, or hybrid environments. Use when discovering a new AI use case, assessing readiness, defining governance gates, planning a pilot, or deciding whether to iterate, scale, or stop.
+description: "Shape AI and LLM use cases from discovery through a measurable MVP pilot and scale decision."
 ---
-
 # AI Use Case Delivery Framework
 
 Use this skill when shaping an AI or LLM use case from stakeholder discussion through MVP, pilot, and scale decision.

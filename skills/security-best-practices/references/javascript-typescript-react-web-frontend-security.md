@@ -513,6 +513,8 @@ Notes:
 
 Severity: Medium
 
+Review the approved authentication SDK and cache policy in context. SDK-managed storage such as MSAL's configured `sessionStorage` is not a finding solely because it uses Web Storage; inspect XSS defenses, persistence, logout/account changes, and credential destinations. Do not prescribe a cookie/BFF migration without a demonstrated defect and authorized architecture scope. [MSAL cache guidance](https://learn.microsoft.com/en-us/entra/msal/javascript/browser/caching).
+
 Required:
 
 * SHOULD avoid storing session identifiers or long-lived tokens in `localStorage` (and generally in Web Storage) because XSS can exfiltrate them.
@@ -524,7 +526,7 @@ Required:
 
 Insecure patterns:
 
-* `localStorage.setItem('token', ...)` / `sessionStorage.setItem('token', ...)` for auth tokens.
+* App-managed `localStorage.setItem('token', ...)` / `sessionStorage.setItem('token', ...)` outside the approved SDK/cache policy, especially for long-lived credentials.
 * Persisting refresh tokens in `localStorage`.
 * Treating data from Web Storage as trusted.
 
@@ -535,7 +537,7 @@ Detection hints:
 
 Fix:
 
-* Move to HTTPOnly cookies (server change) + CSRF protections, or use short-lived in-memory tokens.
+* Correct the demonstrated exposure through the approved SDK/session mechanism and storage policy. A server-side cookie change requires an authorized architecture change and CSRF protections; in-memory storage must support the chosen redirect/popup flow.
 * Reduce token scope and lifetime.
 
 Notes:

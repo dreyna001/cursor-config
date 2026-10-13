@@ -1,15 +1,20 @@
 ---
 name: terraform-cloud-deployment-standard
-description: Design, implement, or review customer-deployable cloud infrastructure with Terraform. Use when a capability adds or changes AWS, Azure, GCP, government-cloud, or hybrid infrastructure; when creating a deployment path; or when checking whether infrastructure is safe, repeatable, and easy for customers to operate.
+description: "Design or review customer cloud infrastructure in Terraform, including secure defaults, repeatable operations, and verification."
 ---
-
 # Terraform Cloud Deployment Standard
 
 Apply this standard to every capability that creates or changes cloud resources. Preserve an established repository's Terraform conventions unless they conflict with a safety requirement below.
 
+Before creating or changing an AWS GovCloud instance, ask whether the FedRAMP authorization is Low, Moderate, or High when that level is not already stated. Do not choose a level. Apply the authorization-ready rule for the stated level.
+
+For production HTTP ingress design, changes, or review, read [authorization-ready applications](../cursor-rules/references/authorization-ready-apps.md) and [API abuse and exposure](../cursor-rules/references/api-abuse-and-exposure.md). Verify per-client/per-route quotas at the edge and application; a shared stage throttle is not equivalent. Preserve local developer/test configurations and existing customer-owned resources; the checklist does not authorize deployment or infrastructure migration.
+
 ## Required design
 
-1. Use Terraform as the only cloud infrastructure owner for the deployment path. Do not split ownership with SAM, CloudFormation, console steps, or application scripts.
+When production ingress serves browser content or authenticated data, also apply [application security](../cursor-rules/references/security.md) for response-header, cache, and file-serving policies at the owning edge. Treat missing live configuration as unknown; do not infer a deployed vulnerability from an absent template.
+
+1. Use Terraform exclusively for every new or changed cloud resource across all projects and providers. Do not create or extend SAM, CloudFormation, Bicep, ARM, Pulumi, CDK, console provisioning, or infrastructure-creating scripts. Existing alternate IaC is legacy; do not migrate its deployed resources without an explicitly scoped migration. Application builds, artifact publication, and read-only verification are outside this provisioning restriction.
 2. Give each customer deployment path one documented root module and one clear entry point.
 3. Put reusable resources in focused leaf modules. Keep customer choices and composition in the root.
 4. Use encrypted remote state with locking, versioning, restricted access, and a documented bootstrap process. Never store secrets in committed state configuration.

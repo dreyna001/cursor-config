@@ -1,11 +1,7 @@
 ---
 name: cursor-aws-architecture-diagram
-description: "Generate validated AWS architecture diagrams as draw.io XML using official AWS4 icon libraries. Use this skill whenever the user wants to create, generate, or design AWS architecture diagrams, cloud infrastructure diagrams, or system design visuals. Also triggers for requests to visualize existing infrastructure from CloudFormation, CDK, or Terraform code. Supports two modes: analyze an existing codebase to auto-generate diagrams, or brainstorm interactively from scratch. Exports .drawio files with optional PNG/SVG/PDF export via draw.io desktop CLI."
-argument-hint: "[describe your architecture or say 'analyze' to scan codebase]"
-allowed-tools: Bash, Write, Read, Glob, Grep
-user-invocable: true
+description: "Create AWS or mixed-cloud architecture diagrams from requirements or infrastructure code; use when producing draw.io diagrams or exports."
 ---
-
 You are an AWS architecture diagram generator that produces draw.io XML files with official AWS4 icons. The diagrams you produce MUST match the style of official AWS Reference Architecture diagrams — professional title and subtitle, teal numbered step badges with a right sidebar legend, 48x48 service icons inside colored category containers, clean Helvetica typography, and clear data flow.
 
 ## Workflow
@@ -18,8 +14,8 @@ You are an AWS architecture diagram generator that produces draw.io XML files wi
 2. Extract services, relationships, VPC structure, and data flow direction
 3. If NO AWS infrastructure files found, scan for non-AWS technologies: Dockerfiles, database configs, API integrations, ML frameworks (pytorch, tensorflow, coreml), message brokers (kafka, rabbitmq). Map discovered technologies using `references/general-icons.md`
 4. For MIXED architectures (AWS + non-AWS): use AWS icons for AWS services, general icons for non-AWS. Same layout rules apply.
-5. Confirm discovered architecture with user before generating
-6. Ask which diagram type best represents the architecture
+5. Summarize the discovered architecture and clarify only material ambiguities before generating
+6. Choose the diagram type that best answers the user's request; ask only if multiple choices would change the result materially
 
 **Mode B — Brainstorming:** If the user describes an architecture or says "brainstorm"/"design"/"from scratch":
 
@@ -43,7 +39,7 @@ These are independent of Mode and apply after mode selection:
 2. Read `references/style-guide.md` for colors, fonts, and dark mode
 3. Read `references/xml-templates-structure.md` for XML code blocks
 4. Read `references/layout-guidelines.md` for spacing and edge routing
-5. Use the example entries in the table below only as conceptual guidance for edge routing and layout patterns; do not open or read any `.drawio` files as reference.
+5. Use only the selected skill-owned example as a layout reference when helpful. Do not inspect the user's existing `.drawio` files unless they ask you to match or modify them.
 
 **Example selection** — pick the most relevant example for the user's architecture:
 
@@ -63,17 +59,11 @@ These are independent of Mode and apply after mode selection:
 
 ### Step 4: Validate and Export
 
-1. Write the `.drawio` file to `./docs/`
-2. PostToolUse hook validates XML automatically (see `references/post-processing.md` for the fixer pipeline)
-3. If validation fails, fix errors and rewrite
-4. Run badge overlap fixer: `python3 ${PLUGIN_ROOT}/scripts/lib/fix_step_badges.py ./docs/<filename>.drawio`
-5. After validation passes, generate preview URL:
-
-   ```bash
-   python3 ${PLUGIN_ROOT}/scripts/lib/drawio_url.py ./docs/<filename>.drawio --open
-   ```
-
-6. If export format requested, run draw.io CLI (see `references/cli-export.md`)
+1. Write the `.drawio` file to the user-requested path or the repository's existing diagram/documentation directory. Use `./docs/` only when no project convention or requested path applies.
+2. Validate that the file is well-formed XML, has unique cell IDs, valid edge targets, and supported shape names. See `references/post-processing.md` for manual checks; this skill does not install an automatic write hook or fixer scripts.
+3. If validation fails, fix the XML and validate it again.
+4. If the user requested an export format, check whether the draw.io desktop CLI is available and use `references/cli-export.md`. Otherwise provide the editable `.drawio` file without installing software.
+5. Keep the editable `.drawio` source when exporting; do not delete it unless the user explicitly asks for export-only output.
 
 ## Defaults
 
@@ -93,7 +83,7 @@ These are independent of Mode and apply after mode selection:
 
 - **XML validation failure**: Fix reported errors (malformed tags, missing IDs, invalid shapes), rewrite the file, re-validate
 - **Shape not found**: Check `references/aws4-shapes-services.md` for valid `mxgraph.aws4.*` names
-- **draw.io CLI not found**: Write `.drawio` file only, skip export, inform user to install draw.io desktop
+- **draw.io CLI not found**: Provide the `.drawio` file and state that optional export was unavailable; do not install software unless requested
 - **Invalid edge source/target**: Verify all `source=` and `target=` IDs reference existing `mxCell` elements
 - **Double hyphens in XML comments**: `--` is illegal inside `<!-- -->` per XML spec; use single hyphens or rephrase
 - **Special characters**: Escape `&amp;`, `&lt;`, `&gt;`, `&quot;` in attribute values
@@ -173,34 +163,25 @@ For detailed spacing rules, edge routing patterns, and placement tables, see `re
 
 ## File Naming
 
-Each diagram gets a **descriptive filename** in kebab-case, placed in `./docs/` (e.g., `docs/healthcare-appointment-agent.drawio`, `docs/3-tier-vpc-webapp.drawio`). Always create a new file unless the user explicitly asks to update an existing diagram.
+Each diagram gets a **descriptive filename** in kebab-case, placed in the user-requested path or repository's established diagram directory. Use `./docs/` as a fallback when there is no convention. Always create a new file unless the user explicitly asks to update an existing diagram.
 
 ## Output
 
-1. Create the `docs/` directory if it does not exist
+1. Select the output directory from the user's request or repository conventions; create `docs/` only when it is the appropriate fallback
 2. Derive the filename from the user's prompt (see File Naming above)
 3. **Always create new files** unless the user explicitly asks to update an existing diagram
-4. Save the diagram to `./docs/<descriptive-name>.drawio`
-5. After writing, the PostToolUse hook will automatically:
-   a. Validate the XML (structure, AWS shapes, edges, geometry)
-   b. If validation passes, generate a draw.io preview URL
-6. If validation fails, fix the errors and rewrite the file
-7. **Only after validation passes**, generate the browser preview link by running:
-
-   ```bash
-   python3 ${PLUGIN_ROOT}/scripts/lib/drawio_url.py ./docs/<filename>.drawio --open
-   ```
-
-   This compresses the XML and opens `app.diagrams.net` with the diagram loaded instantly. Do NOT run this if validation failed.
-8. If the user requested an export format (png, svg, pdf):
+4. Save the diagram to `<selected-directory>/<descriptive-name>.drawio`
+5. Validate the XML manually using available parsing tools and the checks above. The previous Cursor plugin's automatic hook and scripts are not part of this Codex skill.
+6. If validation fails, fix the errors and validate again.
+7. If the user requested an export format (png, svg, pdf):
    a. Check if draw.io desktop CLI is available
-   b. Export with `--embed-diagram` to `./docs/<filename>.drawio.<format>`
-   c. Delete the intermediate `.drawio` file on success
-9. **Always present to the user**:
+   b. Export with `--embed-diagram` beside the source as `<filename>.drawio.<format>`
+   c. Keep the editable `.drawio` source unless the user requested export-only output
+8. **Present to the user**:
    - File path
    - Diagram type and services included
    - Validation status
-   - The draw.io preview URL (clickable link to open in browser)
+   - A preview URL only when a supported current tool actually produced one
    - A recommended alt text (concise, under 100 characters, describing the diagram's purpose — not "diagram of...")
 
 ## CRITICAL: XML Well-Formedness

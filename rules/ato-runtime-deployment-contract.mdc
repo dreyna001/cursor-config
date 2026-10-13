@@ -1,0 +1,8 @@
+---
+description: ATO runtime and deployment contract for the ai-enabled-ato repository
+alwaysApply: false
+---
+
+# ATO Runtime and Deployment Contract
+
+Read and apply [ato-runtime-deployment-contract](../skills/cursor-rules/references/ato-runtime-deployment-contract.md). Keep this rule as the activation stub; do not copy the reference body here.

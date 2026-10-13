@@ -1,8 +1,3 @@
----
-description: Experiment hygiene, artifact tracking, and reproducibility expectations for ML work
-alwaysApply: false
----
-
 # Experiment And Reproducibility
 
 - Set **fixed random seeds** where the library supports them.

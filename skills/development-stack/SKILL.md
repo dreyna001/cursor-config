@@ -1,13 +1,21 @@
 ---
 name: development-stack
-description: Preferred stack selection and contextual implementation practices. Use when choosing a language, framework, data store, LLM platform, frontend, deployment technology, or IaC, or when implementing or reviewing technologies explicitly listed here; preserve established repository choices.
+description: "Choose or review application, data, LLM, frontend, deployment, and infrastructure technologies while preserving established project choices."
 ---
-
 # Development Stack
 
 Use the selection defaults only when the task requires a technology choice. Read [references/stack-boundaries.md](references/stack-boundaries.md) before introducing a central component into a project that does not already use it.
 
 For routine work in a repository that already uses a listed technology, do not reconsider the stack. Load only the relevant implementation-practice reference routed from `stack-boundaries.md`, and follow the repository's established patterns first.
+
+For production integration changes, read only the matching reference:
+
+- [OpenSearch and FAISS](references/retrieval-search-production.md) for retrieval, indexing, or index lifecycle changes.
+- [Local embeddings](references/local-embeddings-production.md) for Sentence Transformers or Transformers embedding and reranking changes.
+- [Azure Functions and Storage](references/azure-functions-storage-production.md) for Functions, Blob Storage, or Storage Queue execution changes.
+- [Cosmos DB and Azure AI Search](references/azure-cosmos-search-production.md) for the selected service's persistence or retrieval contracts.
+- [Authlib](references/authlib-oidc-production.md) for OIDC login or JOSE/JWT bearer-token verification.
+- [MSAL and Entra](references/msal-entra-production.md) for browser/backend authentication and authorization changes.
 
 Pick **Shared** defaults first, then the **On-prem** or **Cloud** profile that matches the deployment target. Do not mix profiles without a concrete requirement.
 

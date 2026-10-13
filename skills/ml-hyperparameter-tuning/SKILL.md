@@ -1,8 +1,7 @@
 ---
 name: ml-hyperparameter-tuning
-description: Tune traditional ML models with bounded search spaces, correct CV boundaries, and baseline-aware selection.
+description: "Tune traditional ML models with bounded search spaces, correct CV boundaries, and baseline-aware selection."
 ---
-
 # Skill: ML Hyperparameter Tuning
 
 ## When to use

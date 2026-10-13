@@ -1,8 +1,7 @@
 ---
 name: operator-documentation-journey
-description: Simplify operator, deployer, and user documentation into a root-README-first Path A/B/C journey. Use for deployment runbooks, docs indexes, documentation contract tests, or an end-to-end operator journey; preserve safety and operational contracts.
+description: "Create or review operator and deployment documentation organized as a clear README-first journey."
 ---
-
 # Operator Documentation Journey
 
 Simplify and consolidate existing documentation. Do not add net documentation unless the requested behavior has no current home. Preserve executable commands, gates, contracts, and failure behavior.

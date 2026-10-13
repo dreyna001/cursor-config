@@ -1,0 +1,4 @@
+interface:
+  display_name: "Security Best Practices"
+  short_description: "Security reviews and secure-by-default guidance"
+  default_prompt: "Apply version-aware secure-by-default guidance to the requested code or configuration scope. Use a focused security-review skill only when the user requests an audit."

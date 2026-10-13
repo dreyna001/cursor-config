@@ -1,0 +1,8 @@
+---
+description: Production HTTP API abuse and exposure controls for quotas, health, sessions, and public routes
+alwaysApply: false
+---
+
+# API Abuse and Exposure
+
+Read and apply [api-abuse-and-exposure](../skills/cursor-rules/references/api-abuse-and-exposure.md). Keep this rule as the activation stub; do not copy the reference body here.

@@ -1,8 +1,7 @@
 ---
 name: ml-baselines
-description: Establish dummy, linear, and lightweight tree baselines before complex traditional ML models.
+description: "Establish dummy, linear, and lightweight tree baselines before complex traditional ML models."
 ---
-
 # Skill: ML Baselines
 
 ## When to use

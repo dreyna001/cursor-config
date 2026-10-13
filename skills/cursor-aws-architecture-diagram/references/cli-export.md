@@ -41,7 +41,7 @@ Key flags:
 
 ## File Naming
 
-Use double extensions: `architecture.drawio.png`, `architecture.drawio.svg`, `architecture.drawio.pdf`. This signals the file contains embedded diagram XML. Opening in draw.io recovers the editable diagram. After a successful export, delete the intermediate `.drawio` file since the exported file contains the full diagram.
+Use double extensions: `architecture.drawio.png`, `architecture.drawio.svg`, `architecture.drawio.pdf`. This signals the file contains embedded diagram XML. Opening in draw.io recovers the editable diagram. Keep the `.drawio` source after export unless the user explicitly requests export-only output.
 
 ## Opening the Result
 

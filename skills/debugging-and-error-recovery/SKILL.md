@@ -1,11 +1,10 @@
 ---
 name: debugging-and-error-recovery
-description: Diagnose failures systematically, fix the underlying cause with the smallest correct change, and prove the original failure is resolved.
+description: "Diagnose non-Python or mixed-stack failures, fix the underlying cause with the smallest correct change, and prove the original failure is resolved; use debug-python-issue for Python-only failures."
 ---
-
 # Debugging and Error Recovery
 
-Use this skill when behavior is failing, tests are broken, errors are occurring, or the cause of a defect is unknown.
+Use this skill when behavior is failing, tests are broken, errors are occurring, or the cause of a defect is unknown. For Python-only interpreter, package, crash, timeout, retry, parsing, or regression failures, use [debug Python issue](../debug-python-issue/SKILL.md).
 
 ## Goal
 
@@ -23,6 +22,7 @@ Do not skip directly from seeing an error to editing code.
 - Read the relevant implementation before changing it.
 - Gather evidence before forming a conclusion.
 - Distinguish the symptom from the underlying cause.
+- Separate observed facts from hypotheses; mark unavailable details as unknown and do not invent logs, fields, events, or environment facts.
 - Change the smallest amount of code necessary.
 - Follow existing project patterns.
 - Do not refactor unrelated code while debugging.
@@ -62,6 +62,8 @@ Inspect:
 - External boundaries involved in the failure.
 
 Avoid broad speculative edits.
+
+For Python issues, inspect the declared, installed, and deployed interpreter versions and compare them with the failing environment. For external or model calls, inspect timeout, retry, backoff, and parse-failure behavior.
 
 ### 3. Identify the Root Cause
 
@@ -138,3 +140,5 @@ Before finishing:
 - Regression coverage exists when appropriate.
 - Relevant verification passes.
 - No unnecessary retries, fallbacks, guards, or compatibility paths were introduced.
+
+Report the root cause, the correction made, remaining unknowns or risks, and the verification performed.

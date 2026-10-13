@@ -1,8 +1,7 @@
 ---
 name: ml-imbalance
-description: Handle class imbalance with correct training boundaries, class weights, thresholds, PR tradeoffs, and resampling.
+description: "Handle traditional ML class imbalance with correct training boundaries, class weights, thresholds, PR tradeoffs, and resampling."
 ---
-
 # Skill: ML Imbalance
 
 ## When to use

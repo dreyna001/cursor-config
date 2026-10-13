@@ -1,8 +1,3 @@
----
-description: Adaptive project layout standards for Python, deployment, docs, scripts, data, and UI assets
-alwaysApply: false
----
-
 # Project Layout Standards
 
 Default new or reorganized Python projects to a professional `src/` layout unless the existing project has a deliberate, stable alternative.

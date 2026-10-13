@@ -808,7 +808,7 @@ Required:
 
 * MUST treat outbound requests to user-provided URLs as high risk.
 * SHOULD validate and restrict destinations (allowlist hosts/domains) for any user-influenced URL fetch.
-* SHOULD block access to localhost/private IP ranges/link-local and cloud metadata endpoints.
+* SHOULD block cloud metadata and unapproved localhost/private/link-local destinations reachable through untrusted URL input. Preserve operator-configured, explicitly approved private integrations; a private address alone does not establish SSRF. Verify the allowed host, TLS identity, redirect/resolution behavior, and credential scope.
 * MUST restrict protocols to http/https.
 * SHOULD set timeouts and carefully control redirects. ([OWASP Cheat Sheet Series][23])
 
