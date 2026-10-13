@@ -1,8 +1,3 @@
----
-description: Correctness and test quality requirements
-alwaysApply: false
----
-
 # Correctness And Testing
 
 - Verify boundary conditions, malformed input handling, and empty or missing inputs.

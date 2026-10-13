@@ -1,6 +1,10 @@
 # Service Defaults
 
-Default AWS service selections. Override only when user explicitly requests alternatives.
+These are starting-point examples, not universal defaults. Inspect the project and
+user constraints, then verify current service support, lifecycle, regional
+availability, and feature behavior in official AWS documentation before making a
+recommendation. Follow an explicit user request unless it conflicts with a real
+technical or safety constraint.
 
 ## Compute
 
@@ -13,7 +17,9 @@ Default AWS service selections. Override only when user explicitly requests alte
 | API-only (no web UI)                                  | Fargate + ALB        | "serverless" → API Gateway + Lambda; "managed platform" or "Elastic Beanstalk" → Elastic Beanstalk    |
 | Existing Heroku/Render/Railway app migrating to AWS   | Elastic Beanstalk    | "container orchestration" or "ECS" → Fargate + ALB; "serverless" → Lambda                             |
 
-> **⚠️ App Runner is in maintenance mode** — AWS has moved App Runner to maintenance mode. Do **not** recommend App Runner for new workloads. Use **ECS Express Mode** instead.
+Service lifecycle and newer deployment options change over time. Verify their
+current AWS support status before choosing between them; this reference does not
+make a lifecycle claim.
 
 ### Why Fargate over Lambda for web frameworks
 
@@ -28,8 +34,8 @@ Less configuration than S3 + CloudFront. Git-based deployments work out of the b
 Use S3 + CloudFront when user needs fine-grained control over caching, edge functions,
 or has existing CloudFront infrastructure.
 
-Use `amplify_docs` topic in awsknowledge MCP for framework-specific guidance
-(React, Next.js, Vue, Angular, etc.).
+For framework-specific guidance, consult the current official AWS Amplify
+documentation and the project's existing framework configuration.
 
 ### Why Elastic Beanstalk for managed platform deployments
 
@@ -75,17 +81,11 @@ or specific compliance requirements that need fixed instance sizing.
 
 ## IaC
 
-| Default          | Override Trigger                       |
-| ---------------- | -------------------------------------- |
-| CDK (TypeScript) | "terraform" → Terraform                |
-|                  | "cloudformation" → CloudFormation YAML |
-|                  | "sam" → SAM                            |
-
-### Why CDK
-
-Most expressive, best IDE support, generates CloudFormation. TypeScript provides
-type safety without requiring Python/Java knowledge. If user's repo already has
-`terraform/` or `cdk.json`, match existing choice.
+Use Terraform for every new or changed cloud resource. Use the project's
+documented Terraform root. Do not add CDK, CloudFormation, SAM, or another IaC
+format. Existing non-Terraform templates are legacy and are not a reason to
+extend them. Application builds and artifact publication may keep their
+existing tools.
 
 ## Sizing (Dev vs Production)
 

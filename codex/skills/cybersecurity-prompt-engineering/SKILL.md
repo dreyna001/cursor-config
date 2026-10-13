@@ -1,10 +1,12 @@
 ---
 name: cybersecurity-prompt-engineering
-description: "Design cybersecurity LLM prompts, schemas, repair prompts, and RAG-grounded analyst workflows."
+description: "Design cybersecurity LLM prompts, structured output schemas, repair prompts, and RAG context instructions; use for model-call contracts, not workflow orchestration."
 ---
 # Cybersecurity Prompt Engineering
 
 Use this skill when designing, editing, or reviewing cybersecurity-oriented LLM prompts that feed structured analysis, reporting, enrichment, or automation.
+
+For multi-step orchestration, adapters, policy gates, approvals, and bounded tool execution, use [Cybersecurity Workflow Design](../cybersecurity-workflow-design/SKILL.md). This skill owns the model-call contract.
 
 ## Quick Start
 
@@ -23,14 +25,26 @@ If the prompt output is consumed by downstream code, keep the prompt, parser, va
 
 Apply the shared [LLM deterministic guardrails](../engineering-guidance/references/llm-deterministic-guardrails.md) at the actual provider request and downstream context, not only in prompt wording.
 
+Apply [LLM boundaries](../engineering-guidance/references/llm-boundaries.md) to user text, retrieved content, and tool results. Do not copy its checks into the prompt.
+
+For corrections to evidence, schema or grounding behavior, use
+[llm-evidence-regression](../llm-evidence-regression/SKILL.md) to pair unsupported
+controls with supported findings and decisions that must survive.
+
 ## Core Principles
 
 - Keep `direct evidence`, `advisory context`, and `inference` separate.
 - Treat KB text, runbooks, retrieved context, and analyst doctrine as guidance unless case evidence confirms them.
 - Prefer deterministic, schema-oriented instructions over open-ended prose.
 - Preserve provenance for grounded context when available.
-- Use `unknown` for unsupported factual fields.
-- Reject or suppress unsupported IDs, enum values, and schema fields.
+- Mark only unsupported factual fields `unknown` as the contract requires;
+  preserve independently supported observations, inferences and decisions.
+- Reject unsupported IDs and enum assignments without silently deleting the
+  supplied observation. Retain nonempty unsupported shapes for bounded repair or
+  visible failure; revise an inadequate contract only with task/evidence support.
+- Distinguish a scoped zero-result search from an unqueried, unavailable or failed
+  source. Preserve query/source status; an empty collection alone cannot establish
+  that an action never occurred.
 - Fail loudly on parse, contract, or configuration errors.
 - Do not silently degrade malformed output into downstream automation.
 
@@ -88,7 +102,11 @@ The prompt should explicitly forbid invention of:
 - exploitability claims
 - telemetry sources
 
-Unsupported values must be dropped or marked `unknown` according to the contract.
+Do not present unsupported values as observations. Mark the affected factual
+field `unknown` or omit it as the contract requires, while preserving independent
+supported evidence and raw nonempty metadata for diagnosis/repair. Qualified
+hypotheses and proposed investigations may mention unobserved candidates without
+claiming they were observed; their qualification must stay attached to the claim.
 
 ### 5. Add validators and allowlists when applicable
 
@@ -132,7 +150,9 @@ Follow this contract exactly:
 - allowed identifier formats: <list>
 - if evidence is missing, use "unknown"
 - if no items are supported, return an empty list where required
-- do not invent IDs, entities, timestamps, hosts, users, tools, or findings
+- do not invent observed IDs, entities, timestamps, hosts, users, tools, or findings
+- keep qualified hypotheses and future investigations separate from observations
+- preserve independently supported evidence; retain invalid raw output for repair
 - do not include markdown
 - do not include explanatory text outside the JSON object
 ```
@@ -149,7 +169,7 @@ Treat the inputs as three distinct classes:
 
 Advisory context may inform reasoning, but it must not be presented as direct evidence.
 Do not copy retrieved or doctrinal claims into evidence fields unless the case data supports them.
-If a conclusion cannot be supported by direct evidence, set the relevant field to "unknown" or omit it when the contract requires omission.
+If an observational claim lacks direct support, set that factual field to "unknown" or omit it when the contract requires omission. Keep independently supported facts and clearly qualified inferences or hypotheses in their appropriate fields.
 ```
 
 ## Grounded Context Pattern
@@ -195,6 +215,13 @@ Repair prompts should include:
 
 Repair prompts must not ask for a better guess.
 
+Keep supported facts and their source bindings in the repaired response. If an
+observation does not fit an IOC category, preserve it in an allowed evidence field
+when that mapping is supported; do not invent a category or erase it to pass.
+Use the configured repair bound and expose unavailable output separately from
+benign/unknown analytical decisions. Test malicious, benign and sparse/unknown
+controls together when those outcomes are part of the task.
+
 ## Domain Guidance
 
 ### Threat Hunting
@@ -232,7 +259,7 @@ When reviewing a cybersecurity prompt, verify:
 - the task is operationally clear
 - the output contract is explicit
 - evidence and advisory context are separated
-- unsupported values are dropped or marked `unknown`
+- unsupported observational assertions are omitted/unknown while supported facts and qualified hypotheses survive
 - grounded context is labeled and bounded
 - repair behavior is explicit
 - downstream consumers can safely parse the output

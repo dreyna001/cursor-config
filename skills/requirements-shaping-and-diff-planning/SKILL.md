@@ -1,8 +1,7 @@
 ---
 name: requirements-shaping-and-diff-planning
-description: Shape fuzzy requirements into scoped acceptance criteria and small testable implementation diffs.
+description: "Shape unresolved correctness, compatibility, security, or safety choices into scoped acceptance criteria and small testable diffs; not for 2-week MVP block planning or greenfield use-case framing."
 ---
-
 # Requirements Shaping And Diff Planning
 
 Use this skill when requirements are fuzzy, the user requests a plan, or unresolved choices could materially affect correctness, compatibility, security, or safety. Do not invoke it merely because a well-scoped task is non-trivial.
@@ -21,8 +20,16 @@ Shape only the parts of the task that remain unclear:
    - risks and unknowns
 5. Ask targeted questions only for unresolved decisions that could materially change the result.
 6. Convert the answers into functional and non-functional acceptance criteria.
-7. Maintain an unknowns or hard-stops list.
+7. Maintain an unknowns and decisions list, noting which work depends on each unresolved item.
 8. Plan the smallest independently testable diff or sequence of diffs proportional to the task.
+
+## Use-Case Boundaries
+
+- Identify the primary user or operator and the operational inputs and outputs.
+- Define the minimum deterministic logic and decide whether an LLM step is needed.
+- Classify integrations as required now, optional now, later, or out of scope.
+- Prefer file-based or manual import/export when it meets the current need; avoid deep bidirectional sync without a present requirement.
+- Keep the existing system of record unless changing it is required for the current block.
 
 ## Architecture Level
 
@@ -68,16 +75,7 @@ Define:
 - functional requirements with pass or fail checks
 - non-functional requirements with pass or fail checks
 
-Do not start implementation while a correctness-impacting acceptance criterion remains undefined.
-
-## Hard Stops
-
-Stop and ask before coding if:
-
-- an unknown could change correctness
-- an unknown could change compatibility
-- an unknown could change security or safety posture
-- the environment assumptions are still unclear
+Define pass/fail criteria for correctness-impacting behavior before implementing that behavior. Surface unresolved decisions and continue work that does not depend on them.
 
 ## Diff Plan
 
@@ -90,12 +88,14 @@ For each necessary diff, identify:
 - acceptance criteria
 - rollback or migration note if behavior or contracts change
 
+When returning a plan, summarize the goal and scope, user or operator, inputs and outputs, deterministic and LLM responsibilities, integration priority, risks and unknowns, acceptance criteria, and proposed diffs.
+
 ## Planning Boundary
 
-- Stop after the plan when the user requested planning only or an unresolved consequential choice requires approval.
-- Otherwise, proceed within the authorized task once scope and acceptance criteria are clear.
+- Return only the plan when the user requested planning only. Otherwise, proceed with the authorized task once its scope is clear.
+- If a consequential choice blocks part of the work, ask about that choice and continue independent work.
 - Do not request approval between ordinary implementation increments.
-- Ask before expanding scope, making a consequential external change, or choosing among materially different product, architecture, security, or compatibility outcomes.
+- Ask only when a scope expansion or consequential external change is not already authorized, or when a materially different product, architecture, security, or compatibility outcome remains undecided.
 - Keep implementation aligned with the plan, but adjust locally when evidence shows a smaller correct path.
 
 ## Default Dependency Posture

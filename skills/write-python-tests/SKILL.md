@@ -1,8 +1,7 @@
 ---
 name: write-python-tests
-description: Add Python 3.12 tests for behavior, regressions, runtime contracts, and failure handling.
+description: "Add Python 3.12 tests for behavior, regressions, runtime contracts, and failure handling."
 ---
-
 # Write Python Tests
 
 Use this skill when adding or updating Python tests.
@@ -32,6 +31,7 @@ Prioritize:
 - partial failure
 - parse failures
 - timeout and retry behavior
+- anonymous bursts against health, readiness, and other probe routes are limited
 - contract drift
 
 ## Output

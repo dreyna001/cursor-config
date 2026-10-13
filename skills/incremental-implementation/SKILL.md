@@ -1,8 +1,7 @@
 ---
 name: incremental-implementation
-description: Implement non-trivial changes in small, verified increments while minimizing scope, complexity, and unnecessary architectural change.
+description: "Implement non-trivial changes in small, verified increments while minimizing scope, complexity, and unnecessary architectural change."
 ---
-
 # Incremental Implementation
 
 Use this skill for non-trivial features, refactors, integrations, and changes spanning multiple concerns.

@@ -1,8 +1,7 @@
 ---
 name: project-layout-planning
-description: Plan or reorganize project layout for Python services, docs, scripts, data, deployment assets, or frontend apps.
+description: "Plan or reorganize project layout for Python services, docs, scripts, data, deployment assets, or frontend apps."
 ---
-
 # Project Layout Planning
 
 Use this skill when creating or reorganizing repository layout.

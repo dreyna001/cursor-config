@@ -1,8 +1,7 @@
 ---
 name: ml-evaluation
-description: Evaluate traditional ML with business metrics, thresholds, calibration, and cohort breakdowns.
+description: "Evaluate traditional ML with business metrics, thresholds, calibration, and cohort breakdowns."
 ---
-
 # Skill: ML Evaluation
 
 ## When to use

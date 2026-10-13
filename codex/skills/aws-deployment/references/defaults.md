@@ -81,17 +81,11 @@ or specific compliance requirements that need fixed instance sizing.
 
 ## IaC
 
-| Default          | Override Trigger                       |
-| ---------------- | -------------------------------------- |
-| CDK (TypeScript) | "terraform" → Terraform                |
-|                  | "cloudformation" → CloudFormation YAML |
-|                  | "sam" → SAM                            |
-
-### Why CDK
-
-Most expressive, best IDE support, generates CloudFormation. TypeScript provides
-type safety without requiring Python/Java knowledge. If user's repo already has
-`terraform/` or `cdk.json`, match existing choice.
+Use Terraform for every new or changed cloud resource. Use the project's
+documented Terraform root. Do not add CDK, CloudFormation, SAM, or another IaC
+format. Existing non-Terraform templates are legacy and are not a reason to
+extend them. Application builds and artifact publication may keep their
+existing tools.
 
 ## Sizing (Dev vs Production)
 

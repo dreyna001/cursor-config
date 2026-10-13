@@ -1,8 +1,7 @@
 ---
 name: capability-profile-architecture
-description: Design capability flags, feature profiles, rollout controls, and validation for modular products.
+description: "Design capability flags, feature profiles, rollout controls, and validation for modular products."
 ---
-
 # Capability Profile Architecture
 
 Use this skill when optional capabilities may vary by customer, environment, or rollout stage.

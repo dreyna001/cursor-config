@@ -1,11 +1,11 @@
 ---
 name: scope-and-diff-planning
-description: Clarifies vague work into a bounded MVP block, defines acceptance criteria, identifies required integrations, and plans small testable diffs before implementation. Use before non-trivial coding, new projects, fuzzy requirements, or 2-week MVP planning.
+description: "Plan a bounded 2-week MVP implementation block with acceptance criteria, required integrations, and small testable diffs; not for unresolved correctness/security choices or greenfield use-case framing."
 ---
 
 # Scope And Diff Planning
 
-Use this skill before non-trivial implementation or when scope is unclear.
+Use this skill to plan a 2-week MVP implementation block. For unresolved correctness, compatibility, security, or safety choices, use [requirements shaping](../requirements-shaping-and-diff-planning/SKILL.md). For a greenfield use-case review that must not impose a shared architecture, use [use-case scope review](../use-case-scope-review/SKILL.md).
 
 ## Workflow
 
@@ -20,11 +20,11 @@ Use this skill before non-trivial implementation or when scope is unclear.
    - optional now
    - later phase
    - out of scope
-8. Define in-scope, out-of-scope, assumptions, risks, and hard stops.
+8. Define in-scope, out-of-scope, assumptions, risks, and unknowns, noting which work depends on each unresolved item.
 9. Ask only correctness-impacting questions.
 10. Convert scope into functional and non-functional acceptance criteria.
-11. Plan 3-6 small, independently testable diffs.
-12. Stop after the plan unless the user explicitly asks to implement.
+11. Plan the smallest independently testable diffs proportional to the task.
+12. Return only the plan when the user requested planning only. Otherwise proceed once scope is clear, and continue work that does not depend on an unresolved consequential choice.
 
 ## Architecture Bias
 
@@ -64,7 +64,7 @@ Return:
 - required integrations
 - risks and unknowns
 - acceptance criteria
-- 3-6 diff plan
+- proposed diffs
 
 ## Preferred Outcome
 

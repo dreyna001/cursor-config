@@ -40,8 +40,8 @@ image, and AWS provisions and operates the production environment on an ongoing
 basis. The result is the same reliability, but with lower ongoing maintenance
 cost because operational responsibility stays with the provider.
 
-Both models support IaC (CDK, CloudFormation, Terraform). The distinction is not
-about tooling — it is about who manages the lifecycle after deployment.
+Describe both models in Terraform. The distinction is not about tooling — it is
+about who manages the lifecycle after deployment.
 
 ## Workflow
 
@@ -125,16 +125,13 @@ Use `.ebextensions/` and platform hooks for customization.
 See [AWS CLI EB reference](https://docs.aws.amazon.com/cli/latest/reference/elasticbeanstalk/)
 for full command documentation.
 
-**Override: CDK (TypeScript)** when the user has an existing CDK project, wants
-repeatable IaC, or explicitly requests it:
-
-- `CfnApplication`, `CfnEnvironment`, `CfnConfigurationTemplate`
-
-**Override: Terraform** when the user's repo already has Terraform:
+**Use Terraform** for the Elastic Beanstalk resources:
 
 - `aws_elastic_beanstalk_application`, `aws_elastic_beanstalk_environment`
 
-CDK and Terraform templates are scannable by `cfn-nag`/`checkov` pre-deploy.
+Do not add CDK, CloudFormation, SAM, or another IaC format. Scan the Terraform
+with `checkov` before deployment. Existing non-Terraform templates are legacy
+and are not a reason to extend them.
 
 ## Security
 

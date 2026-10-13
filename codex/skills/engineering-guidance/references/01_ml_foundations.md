@@ -1,8 +1,3 @@
----
-description: Traditional ML scope, preferred stack, and simplicity-first implementation defaults
-alwaysApply: false
----
-
 # ML Foundations
 
 - Treat this stack as **traditional ML** by default: tabular workflows and classical models, not deep learning unless explicitly requested.

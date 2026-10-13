@@ -1,15 +1,20 @@
 # Cost Estimation Patterns
 
-Use the **awspricing** MCP server to get accurate cost estimates before generating IaC.
+Use current official AWS prices and the AWS Pricing Calculator, or a pricing
+integration only if one is actually available in the current session. Do not
+assume an `awspricing` MCP server or present unverified prices as current.
 
 ## Workflow
 
 1. Identify all AWS services in the architecture
-2. Query pricing for each service
+2. Verify each service's current regional rates and billing dimensions
 3. Calculate monthly estimates based on expected usage
 4. Present total before proceeding
 
-## Service Codes
+## Service Codes (Reference Only)
+
+Confirm service codes and filter dimensions against current AWS price-list
+documentation before using them in a query.
 
 | Service           | Code                | Notes                                            |
 | ----------------- | ------------------- | ------------------------------------------------ |
@@ -27,18 +32,19 @@ Use the **awspricing** MCP server to get accurate cost estimates before generati
 | Secrets Manager   | `AWSSecretsManager` | Per secret per month                             |
 | Elastic Beanstalk | N/A (free service)  | No EB charge; query EC2, AWSELB for actual costs |
 
-## Fargate Pricing
+## Fargate Pricing Dimensions
 
-Fargate charges per vCPU-hour and per GB-hour. Query with usagetype filters:
+Fargate commonly charges based on vCPU and memory duration. Verify the current
+billing dimensions and regional price list before estimating. Example filter
+shapes (not a guaranteed current API contract):
 
 ```
 usagetype: "USE1-Fargate-vCPU-Hours:perCPU"  # vCPU pricing
 usagetype: "USE1-Fargate-GB-Hours"           # Memory pricing
 ```
 
-**Typical small app (0.5 vCPU, 1GB):**
-
-- us-east-1: ~$18/month running 24/7
+These dimensions explain the workload inputs to estimate; do not reuse an old
+monthly figure without recalculating it for the target region and usage.
 
 ## Aurora Serverless v2 Pricing
 
@@ -71,12 +77,13 @@ storage (GB-month), and I/O (standard config only).
 
 - ~$130-400/month depending on load
 
-## Elastic Beanstalk Pricing
+## Elastic Beanstalk Cost
 
 Elastic Beanstalk itself has no service fee. Cost equals the underlying AWS
 resources provisioned for the environment (EC2, ELB, EBS, CloudWatch).
-Query awspricing MCP server for region-accurate estimates. Approximate
-us-east-1 pricing:
+Estimate the actual EC2, load balancer, storage, network, and logging resources
+with current regional prices. The ranges below are historical illustrations,
+not current quotes:
 
 **Dev web (1x t3.small + ALB):** ~$35-40/month
 **Dev worker (1x t3.small, no ALB):** ~$15-20/month
@@ -84,7 +91,11 @@ us-east-1 pricing:
 
 Include EBS volume costs (8GB gp3 default: ~$1/month per instance).
 
-## Quick Reference Estimates
+## Historical Example Ranges
+
+The following amounts are carried over as rough illustrations only. Recalculate
+them using current official pricing and stated workload assumptions before
+sharing with a user or using them to choose an architecture.
 
 **Small web app (Fargate + Aurora Serverless v2 + ALB):**
 

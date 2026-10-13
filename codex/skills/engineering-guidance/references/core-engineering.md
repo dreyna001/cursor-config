@@ -1,8 +1,3 @@
----
-description: Core engineering standards for all code changes
-alwaysApply: false
----
-
 # Core Engineering
 
 - Preserve backward compatibility unless the task explicitly allows breaking changes.

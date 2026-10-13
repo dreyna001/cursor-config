@@ -1,9 +1,7 @@
 ---
-name: "pdf"
+name: pdf
 description: "Use for reading, creating, or reviewing PDFs when extraction, generation, rendering, or layout matters."
 ---
-
-
 # PDF Skill
 
 ## When to use
@@ -14,17 +12,17 @@ description: "Use for reading, creating, or reviewing PDFs when extraction, gene
 ## Workflow
 1. Prefer visual review: render PDF pages to PNGs and inspect them.
    - Use `pdftoppm` if available.
-   - If unavailable, install Poppler or ask the user to review the output locally.
+   - If unavailable, report that visual review could not run; do not install system tools unless requested.
 2. Use `reportlab` to generate PDFs when creating new documents.
 3. Use `pdfplumber` (or `pypdf`) for text extraction and quick checks; do not rely on it for layout fidelity.
 4. After each meaningful update, re-render pages and verify alignment, spacing, and legibility.
 
 ## Temp and output conventions
-- Use `tmp/pdfs/` for intermediate files; delete when done.
-- Write final artifacts under `output/pdf/` when working in this repo.
+- Follow the project's existing output conventions. Use a temporary directory for intermediate files and a project-approved destination for final artifacts.
+- Do not force `tmp/pdfs/` or `output/pdf/` on repositories that do not use them.
 - Keep filenames stable and descriptive.
 
-## Dependencies (install if missing)
+## Dependencies
 Prefer `uv` for dependency management.
 
 Python packages:
@@ -44,7 +42,7 @@ brew install poppler
 sudo apt-get install -y poppler-utils
 ```
 
-If installation isn't possible in this environment, tell the user which dependency is missing and how to install it locally.
+Use the project's existing environment first. If a dependency is missing and installation is outside the requested scope, report what could not be done and the dependency needed.
 
 ## Environment
 No required environment variables.

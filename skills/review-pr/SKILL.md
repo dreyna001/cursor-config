@@ -1,8 +1,7 @@
 ---
 name: review-pr
-description: Perform broad PR or code reviews covering correctness, security, reliability, maintainability, tests, docs, and deployment.
+description: "Perform broad PR or code reviews covering correctness, security, reliability, maintainability, tests, docs, and deployment."
 ---
-
 # Review PR
 
 Use this skill for broad review rather than a narrow domain-specific review.
@@ -32,7 +31,7 @@ Use this skill for broad review rather than a narrow domain-specific review.
 
 ## Targeted Verification
 
-Load only the relevant existing rule references: [API/data](../../rules/api-data-and-distributed.mdc) for state, queues, or list endpoints; [reliability](../../rules/reliability-and-performance.mdc) for external calls and concurrency; [maintainability](../../rules/maintainability-and-architecture.mdc) for responsibility boundaries; [testing](../../rules/correctness-and-testing.mdc) for verification claims. Use the applicable [stack practices](../development-stack/references/stack-boundaries.md) for framework-specific behavior.
+Load only relevant shared standards from [engineering guidance](../cursor-rules/SKILL.md) for API/data, reliability, maintainability, or testing concerns. Use the applicable [stack practices](../development-stack/references/stack-boundaries.md) for framework-specific behavior.
 
 - Trace material behavior across the actual API, service, database, worker, and adapter boundaries; inspecting each function in isolation is insufficient for races and lifecycle failures.
 - For each consequential finding, distinguish inspected code, reproduced behavior, and unverified assumptions. Check whether existing tests exercise the failure mechanism.

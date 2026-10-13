@@ -1,8 +1,7 @@
 ---
 name: ml-interpretability
-description: Explain traditional ML behavior with coefficients, feature importance, partial dependence, and approved tools.
+description: "Explain traditional ML behavior with coefficients, feature importance, partial dependence, and approved tools."
 ---
-
 # Skill: ML Interpretability
 
 ## When to use

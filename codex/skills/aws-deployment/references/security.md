@@ -147,12 +147,10 @@ Validate generated IaC before deployment:
 
 | Tool        | Purpose                                                      |
 | ----------- | ------------------------------------------------------------ |
-| **cfn-nag** | CloudFormation security linting (AWS-native)                 |
-| **checkov** | Multi-framework IaC scanner (CDK, CloudFormation, Terraform) |
-| **cdk-nag** | CDK-specific security checks via Aspects                     |
-| **tfsec**   | Terraform security scanner                                   |
+| **checkov** | Terraform security scanner                                  |
+| **tfsec**   | Terraform security scanner                                  |
 
-Recommend running `checkov` or `cfn-nag` on generated templates before `cdk deploy`.
+Recommend running `checkov` on generated Terraform before deployment.
 
 ### Quality Gates
 
@@ -184,6 +182,10 @@ VPC Flow Logs and ALB logs for production debugging and compliance.
 
 ## Production Hardening Checklist
 
+For browser delivery, authenticated responses, and file serving, also apply [application security](../../engineering-guidance/references/security.md). Verify security headers and sensitive cache policies at the actual serving layer, including CDN/proxy overrides and error responses; preserve the approved SSO and embedding flows.
+
+For production HTTP hosting or ingress work, read [authorization-ready applications](../../engineering-guidance/references/authorization-ready-apps.md) and [API abuse and exposure](../../engineering-guidance/references/api-abuse-and-exposure.md). Check the edge and app together, including login, health, and static serving. Shared gateway throttling and provider admission limits do not establish per-client HTTP protection. Keep local developer/test configurations outside this production checklist unless requested.
+
 When user requests "production" or "prod", additionally enable:
 
 - [ ] Multi-AZ for all stateful services
@@ -193,10 +195,11 @@ When user requests "production" or "prod", additionally enable:
 - [ ] RDS Performance Insights
 - [ ] Amazon DocumentDB profiler + audit logs exported to CloudWatch Logs
 - [ ] AWS WAF on ALB (if public-facing web app)
+- [ ] Per-client/per-route edge and app quotas, with separate anonymous budgets and coverage for all served routes, including health, login, and static files
 - [ ] GuardDuty (recommend, don't auto-enable)
-- [ ] Run `checkov` or `cfn-nag` before deployment
+- [ ] Run `checkov` on the Terraform before deployment
 
 ## Source References
 
 - Use current official AWS service, IAM, and VPC documentation.
-- For CDK, verify constructs against the package version and project patterns.
+- Verify Terraform resources against the provider version and the project's existing modules.

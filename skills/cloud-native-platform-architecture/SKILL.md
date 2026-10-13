@@ -1,8 +1,7 @@
 ---
 name: cloud-native-platform-architecture
-description: Design, review, or evolve production cloud applications across AWS, Azure, GCP, commercial cloud, government cloud, or hybrid environments. Use when selecting managed services, evaluating cross-platform parity, detecting duct-taped portability, separating customer configuration from product architecture, reviewing security and reliability, or deciding whether an existing cloud implementation should change without forcing future applications into the same topology.
+description: "Design or review production cloud architecture across AWS, Azure, GCP, government, and hybrid deployments; use for service selection, parity, portability, security, or reliability."
 ---
-
 # Cloud-Native Platform Architecture
 
 Preserve product behavior and control outcomes across platforms while allowing each application and cloud to use the architecture that best fits its requirements.

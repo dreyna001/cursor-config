@@ -1,8 +1,7 @@
 ---
 name: ml-preprocessing-and-features
-description: Build Polars-first preprocessing and feature flows for imputation, encoding, scaling, selection, and sklearn handoff.
+description: "Build Polars-first traditional ML preprocessing and feature flows for imputation, encoding, scaling, selection, and sklearn handoff."
 ---
-
 # Skill: ML Preprocessing And Features
 
 ## When to use

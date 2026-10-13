@@ -1,8 +1,7 @@
 ---
 name: ml-eda
-description: Perform Polars-first EDA for schema, missingness, cardinality, distributions, balance, time patterns, and split mismatch.
+description: "Perform Polars-first traditional ML EDA for schema, missingness, cardinality, distributions, balance, time patterns, and split mismatch."
 ---
-
 # Skill: ML EDA
 
 ## When to use

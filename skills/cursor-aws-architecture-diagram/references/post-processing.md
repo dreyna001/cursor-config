@@ -1,15 +1,20 @@
-# Post-Processing Pipeline
+# Manual XML and Layout Validation
 
-Deterministic fixers run automatically via the `validate-drawio.sh` PostToolUse hook, in this order:
+The source Cursor plugin used a PostToolUse hook and fixer scripts. Those hooks
+and scripts are not included in this Codex skill, so no automatic validation,
+layout correction, or preview generation occurs after a file write.
 
-1. **fix_nesting.py** — Sets Region `container=0`, re-parents children to root
-2. **fix_icon_colors.py** — Corrects service icon fillColor to match category
-3. **fix_step_badges.py** — Nudges overlapping step badges apart
-4. **fix_placement.py** — Moves external actors below the title block (y >= 140)
-5. **fix_legend_size.py** — Resizes legend panel to match diagram height
+Before handing off a diagram:
 
-All scripts are in `scripts/lib/`. The pipeline is orchestrated by `scripts/lib/post_process_drawio.py`, which chains them in sequence. No manual invocation is needed when using the PostToolUse hook.
+1. Parse the `.drawio` file as XML with an available XML parser or draw.io CLI.
+2. Check for unique `mxCell` IDs and ensure every edge source/target points to an
+   existing cell.
+3. Confirm shape names against `aws4-shapes-services.md` and
+   `aws4-shapes-resources.md`.
+4. Review that icon colors, container parentage, step badges, external actors,
+   and legend placement follow the relevant style and layout references.
+5. If an optional export was requested, export only when the draw.io desktop CLI
+   is already available; preserve the editable source file.
 
-The PostToolUse hook fires on all Edit/Write operations but exits immediately (<10ms) for non-.drawio files.
-
-**Dependency**: The pipeline requires `defusedxml` (`pip3 install defusedxml>=0.7.1`). If missing, the hook skips validation and shows an install prompt.
+If the needed parser or renderer is unavailable, state which checks could not be
+run. Do not claim that a hook, fixer, or preview URL ran when it did not.

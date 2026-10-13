@@ -8,11 +8,11 @@ Use this skill when the user asks to design or implement an AWS deployment. Pres
 
 ## Workflow
 
-1. Inspect the application, manifests, existing IaC, runtime, data stores, and operational requirements.
+1. Inspect the application, manifests, existing IaC, runtime, data stores, and operational requirements. If the target is AWS GovCloud and the FedRAMP level is not already stated, ask whether it is Low, Moderate, or High before recommending or generating that infrastructure. Apply the authorization-ready rule for the answer. Do not choose the level.
 2. Recommend a small service set with the reasons, tradeoffs, and any assumptions. Treat the service matrix in [defaults](references/defaults.md) as a starting point, not current provider truth.
 3. Verify service availability, lifecycle, feature support, and version-sensitive configuration in current official AWS documentation for the target region/partition.
 4. Estimate costs with current prices and explicit usage assumptions before generating infrastructure. Use the AWS Pricing Calculator or a pricing integration only if it is actually available. If current prices cannot be verified, say so and provide an assumption-based estimate rather than inventing precision.
-5. Generate IaC using the repository's existing owner and style. Apply the security principles in [security defaults](references/security.md) and follow the source links in the relevant reference.
+5. Generate Terraform for new or changed cloud resources, using the project's documented root. Apply the [Terraform cloud deployment standard](../terraform-cloud-deployment-standard/SKILL.md), including explicit create-or-reference choices for required deployable prerequisites. Do not add another IaC format. Apply the security principles in [security defaults](references/security.md) and follow the source links in the relevant reference.
 6. Run the repository's tests, formatters, and available IaC/security checks. Distinguish unrun checks and provider behavior.
 7. Prepare a plan for review. Applying infrastructure, changing accounts, or making external deployment changes requires the user's explicit authorization immediately before that action.
 

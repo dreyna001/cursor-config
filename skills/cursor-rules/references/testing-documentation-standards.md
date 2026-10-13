@@ -1,9 +1,3 @@
----
-description: Tests and docs when behavior or contracts change
-alwaysApply: false
-globs: "**/README.md,**/docs/**/*.md,**/tests/**/test_documentation_contract.py"
----
-
 # Testing and Documentation Standards
 
 Follow `correctness-and-testing` for general testing and runtime-contract requirements.

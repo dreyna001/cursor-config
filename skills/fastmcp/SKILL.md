@@ -1,8 +1,7 @@
 ---
 name: fastmcp
-description: Builds and reviews Python FastMCP servers, tools, resources, clients, and deployments. Use when implementing MCP integrations, exposing application capabilities through MCP, or working with FastMCP.
+description: "Build or review Python FastMCP tools, resources, clients, and deployments; use for MCP integration work."
 ---
-
 # FastMCP
 
 ## Workflow
@@ -18,7 +17,7 @@ description: Builds and reviews Python FastMCP servers, tools, resources, client
 - Keep business policy and orchestration in the application; MCP handles protocol, authorization, transport, and normalization.
 - Prefer a few capability-oriented tools over CRUD wrappers or one tool per query permutation.
 - Use explicit Pydantic-compatible inputs and structured outputs with stable error contracts.
-- Treat tool descriptions as model guidance, never as security enforcement.
+- Treat tool descriptions as model guidance, never as security enforcement. Tool-result injection checks stay in [LLM boundaries](../cursor-rules/references/llm-boundaries.md). This skill keeps transport, authorization, and budgets.
 - Validate every argument; bound time, concurrency, rows, bytes, and response size.
 - Keep credentials server-side. Redact secrets and sensitive payloads from errors, logs, and traces.
 - Make read-only, write, and consequential tools distinct. Require approval for consequential actions and fail closed on uncertain authorization.

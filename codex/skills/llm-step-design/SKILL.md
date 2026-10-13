@@ -27,6 +27,10 @@ Design an LLM step that adds value without taking ownership of deterministic dec
 
 For machine-consumed responses, apply the shared [LLM deterministic guardrails](../engineering-guidance/references/llm-deterministic-guardrails.md), including API enforcement, application-owned identity, context handoffs, and first-pass evaluation.
 
+When correcting evidence, schema or grounding behavior, use
+[llm-evidence-regression](../llm-evidence-regression/SKILL.md) to verify that supported
+facts and intended analytical decisions survive the correction.
+
 ## Output format
 
 Return these sections:
@@ -41,7 +45,10 @@ Return these sections:
 
 ## Constraints
 
-- Do not let the model override deterministic status or scoring logic unless explicitly required.
+- Keep application-owned execution, capability and policy status deterministic.
+  When the task explicitly asks the model for an analytical assessment, preserve
+  that assessment and its evidence separately rather than treating it as an
+  override of application status.
 - Do not use the LLM to compensate for missing domain rules.
 - Do not produce free-form output when structured output is appropriate.
 - Prefer a single bounded call over agentic multi-step behavior unless the prompt explicitly asks otherwise.

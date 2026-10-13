@@ -1,8 +1,3 @@
----
-description: Reporting expectations, deployability framing, and delivery-time ML communication standards
-alwaysApply: false
----
-
 # Delivery And Reporting
 
 - Always report **baseline vs candidate** performance.

@@ -1,8 +1,7 @@
 ---
 name: ml-problem-framing
-description: Frame traditional ML tasks by defining target, prediction unit, constraints, and success metrics.
+description: "Frame traditional ML tasks by defining target, prediction unit, constraints, and success metrics."
 ---
-
 # Skill: ML Problem Framing
 
 ## When to use

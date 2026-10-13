@@ -31,6 +31,7 @@ Prioritize:
 - partial failure
 - parse failures
 - timeout and retry behavior
+- anonymous bursts against health, readiness, and other probe routes are limited
 - contract drift
 
 ## Output

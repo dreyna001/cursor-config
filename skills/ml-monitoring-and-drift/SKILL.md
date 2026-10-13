@@ -1,8 +1,7 @@
 ---
 name: ml-monitoring-and-drift
-description: Monitor traditional ML production quality, data drift, prediction drift, label lag, and retraining signals.
+description: "Monitor traditional ML production quality, data drift, prediction drift, label lag, and retraining signals."
 ---
-
 # Skill: ML Monitoring And Drift
 
 ## When to use

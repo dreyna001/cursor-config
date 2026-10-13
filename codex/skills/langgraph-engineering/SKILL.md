@@ -1,11 +1,11 @@
 ---
 name: langgraph-engineering
-description: Design, implement, migrate, or review LangGraph applications with explicit state, durable execution, model/tool boundaries, and recovery. Use for LangGraph workflow engineering and migration reviews, not unrelated application changes or general framework comparisons.
+description: "Design, implement, migrate, or review LangGraph applications with explicit state, durable execution, model/tool boundaries, and recovery. Use for LangGraph workflow engineering and migration reviews, not unrelated application changes or general framework comparisons."
 ---
 
 # LangGraph Engineering
 
-When this skill is invoked for LangGraph work, read and apply [Original Conditional LangGraph Guidance](references/original-langgraph-guidance.md) together with the workflow below.
+When this skill is invoked for LangGraph work, read and apply [Core LangGraph Guidance](references/core-guidance.md) together with the workflow below.
 
 ## Establish the contract
 
@@ -39,6 +39,10 @@ For concurrency, cover both graph merges and database admission; graph-local con
 ## Review and verification
 
 Select checks for the requested change and existing project guarantees. When verification is requested, use offline/synthetic adapters first, then the actual persistence backend for transaction and recovery claims. Use live external systems only within the user's authorized scope.
+
+For database-backed action admission, provider usage accounting, or replay/reconciliation changes, also read [Durable admission and recovery](references/durable-admission-and-recovery.md). It focuses on transaction and fencing boundaries that must survive helper extraction.
+
+For bounded scheduler snapshots, lineage projections, or history/overflow logic, read [Bounded state transitions](references/bounded-state-transitions.md). It focuses on source-of-truth updates and serialized-size recovery at contract boundaries.
 
 Relevant failure cases include invalid node output, unintended duplicate routes, conflicting parallel updates, stale workers, lost acknowledgments, partial branch success, interrupted-node replay, exhausted retries, cancellation during synchronous calls, incompatible checkpoints, and private state exposed by streaming. Choose applicable cases; do not turn every change into a universal checklist or require new approvals for already authorized work.
 

@@ -1,0 +1,16 @@
+---
+description: Post-merge cleanup of completed temporary Git worktrees while preserving local work and active use
+alwaysApply: true
+---
+
+# Post-merge Worktree Cleanup
+
+- After performing or verifying an authorized merge into remote `main` (or the repository's documented integration branch), include cleanup of eligible temporary worktrees owned by the completed task in the handoff. This rule does not run a background job or authorize merging anything.
+- Fetch the configured remote and verify the candidate worktree's exact current HEAD is included in that remote integration branch. For squash or rebase merges, require verified merged-PR evidence and complete change coverage, including any commits added after the PR head. A deleted remote branch, stale local `main`, or an assumed merge is insufficient; preserve the worktree if proof is uncertain.
+- Enumerate registered worktrees and ownership first. Preserve the main checkout, permanent/shared worktrees, locked worktrees, pinned-chat worktrees, and worktrees needed by another task. Do not remove the current working checkout; hand off to a retained checkout through the supported workflow first, or preserve it.
+- Require a clean `git status --porcelain=v1 --untracked-files=all`: preserve all staged, unstaged, and untracked changes. Never stash, commit, reset, clean, unlock, or stop processes merely to make a worktree eligible for deletion.
+- Review ignored files as well. Preserve credentials, Terraform state/backend metadata, local databases, unique artifacts, recovery evidence, and other valuable local data. Proceed only if remaining ignored files are demonstrably reproducible or valuable files have already been safely preserved on persistent storage outside the worktree. Uncertainty means keep the worktree.
+- Confirm the owning chat/task has finished and no other chat, agent, terminal, development server, container mount, open-file use, or process still references the worktree. If ownership or active use cannot be established, preserve it and report the blocker.
+- For Codex-managed worktrees, use supported worktree archival with its recovery snapshot and preserve needed ignored files separately first. Do not bypass the manager or archive the chat itself merely to reclaim storage. If supported archival is unavailable, preserve the worktree.
+- For an ordinary Git worktree, remove it from a retained checkout using `git worktree remove <verified-absolute-path>` without `--force`, only after every check passes. Verify the registered path and repository boundary first; never delete the directory manually. Branch deletion requires separate authorization.
+- Preserve shared tool/provider caches outside worktrees and never follow provider symlinks to delete their targets. Report worktrees removed/archived, verification results, and worktrees retained with reasons.

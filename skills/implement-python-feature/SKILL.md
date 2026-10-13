@@ -1,8 +1,7 @@
 ---
 name: implement-python-feature
-description: Implement Python 3.12 features or runtime contract changes with minimal production-ready diffs.
+description: "Implement Python 3.12 features or runtime contract changes with minimal production-ready diffs."
 ---
-
 # Implement Python Feature
 
 Use this skill when adding or changing Python behavior. When invoked as the **`implementer`** subagent, follow this skill in addition to the implementer prompt.

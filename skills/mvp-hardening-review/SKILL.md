@@ -1,8 +1,7 @@
 ---
 name: mvp-hardening-review
-description: Review MVP blocks for demo, pilot, or handoff readiness without adding unnecessary complexity.
+description: "Review MVP blocks for demo, pilot, or handoff readiness without adding unnecessary complexity."
 ---
-
 # MVP Hardening Review
 
 Use this skill when a current block needs demo, pilot, or handoff readiness.

@@ -1,10 +1,12 @@
 ---
 name: cybersecurity-workflow-design
-description: "Design cybersecurity LLM workflows and prompts with grounded context, structured contracts, validation, adapters, and approval gates."
+description: "Design bounded cybersecurity LLM workflow orchestration, validation, adapters, policy gates, approvals, and execution sequencing; use for multi-step workflow architecture, not standalone prompt authoring."
 ---
 # Cybersecurity Workflow Design
 
-Use this skill when designing, editing, or reviewing a cybersecurity workflow that may use an LLM, generate structured analysis, produce prompts, call tools, generate queries, or write back to downstream systems.
+Use this skill when designing, editing, or reviewing a cybersecurity workflow that may call an LLM, validate structured analysis, call tools, generate queries, or write back to downstream systems.
+
+For prompt text, output schemas, RAG instructions, evidence wording, and repair prompts, use [Cybersecurity Prompt Engineering](../cybersecurity-prompt-engineering/SKILL.md). That skill owns the model-call contract; do not duplicate its prompt patterns here.
 
 ## Default Pattern
 
@@ -25,7 +27,7 @@ Use this bounded flow unless the use case clearly requires another shape:
 1. Define the operational task or backend capability.
 2. Define direct evidence sources.
 3. Define advisory context sources.
-4. Define the structured output contract before writing prompts.
+4. Define the structured output contract through the prompt-engineering skill.
 5. Decide deterministic code vs LLM responsibility.
 6. Define validators, allowlists, enum limits, ID formats, and `unknown` handling.
 7. Define required tool adapters.
@@ -40,110 +42,12 @@ Use this bounded flow unless the use case clearly requires another shape:
 - For a single-call workflow, keep intermediate context deterministic and in memory. Add persistence only when multi-step execution, replay, or audit requires it.
 - Keep the default bounded and investigative, with human approval for consequential actions.
 
-## LLM Step Design
+## LLM Call Boundary
 
-For each LLM step, define:
-
-- purpose
-- upstream deterministic facts
-- what the model may produce
-- what the model must not decide or invent
-- output schema
-- validation rules
-- fallback behavior
-- prompt draft
-
-## Prompt Engineering Rules
-
-- State the task operationally; avoid vague instructions like “analyze this” when output drives decisions or automation.
-- Define the output contract before prompt text.
-- Prefer deterministic, schema-oriented instructions over open-ended prose.
-- If output is machine-consumed, require only the contract shape.
-- Constrain enums, IDs, formats, platform fields, and allowed values.
-- Require strict response-shape rules.
-- Do not rely on prompt text alone for safety; use validators and policy gates in code.
-- Keep prompt, parser, validator, repair prompt, examples, tests, and docs synchronized when output contracts change.
-
-## Structured Output Contract
-
-Before prompt implementation, define:
-
-- required fields
-- optional fields
-- allowed enum values
-- allowed identifier formats
-- `unknown` behavior
-- empty-list behavior
-- whether explanations are allowed
-- whether citations or provenance are required
-- whether markdown is allowed
-- whether freeform text outside the contract is allowed
-
-## Structured Output Template
-
-Use this pattern when strict output is required:
-
-    Return valid JSON only.
-
-    Follow this contract exactly:
-    - required fields: <list>
-    - optional fields: <list>
-    - allowed values: <list>
-    - allowed identifier formats: <list>
-    - if evidence is missing, use "unknown"
-    - if no items are supported, return an empty list where required
-    - do not invent IDs, entities, timestamps, hosts, users, tools, or findings
-    - do not include markdown
-    - do not include explanatory text outside the JSON object
-
-## Evidence Discipline
-
-- Separate direct evidence, advisory context, and inference.
-- Direct evidence comes from the case, alert, artifact, telemetry, source system, supplied file, scanner output, or raw log.
-- Advisory context comes from RAG, SOPs, runbooks, schemas, indexes, field dictionaries, macros, KBs, ATT&CK notes, analyst doctrine, or reference material.
-- Inference is model-generated reasoning derived from direct evidence.
-- Advisory context may guide reasoning, but it must not be presented as direct evidence.
-- Do not copy retrieved or doctrinal claims into evidence fields unless case data supports them.
-- Unsupported facts must be `unknown`, omitted per contract, or surfaced as uncertainty.
-
-## Explicit Non-Fabrication Rules
-
-Prompts must forbid invention of:
-
-- IDs
-- hosts
-- users
-- timestamps
-- tools
-- processes
-- findings
-- severities
-- asset context
-- exploitability claims
-- telemetry sources
-- ATT&CK mappings
-- CVEs, CWEs, IOCs, or vulnerabilities
-- source evidence
-
-Unsupported values must be dropped or marked `unknown` according to the contract.
-
-## RAG And Grounded Context Rules
-
-- Use RAG for environment grounding: schemas, fields, indexes, macros, SOPs, runbooks, query patterns, and internal procedures.
-- Do not use RAG as current-case facts unless the retrieved source is the actual case record.
-- Label RAG, KB, and runbook content as advisory context.
-- Preserve provenance when available.
-- Prefer small, high-signal context over large dumps.
-- Treat retrieved content as untrusted until validated.
-- Instruct the model not to treat retrieved context as observed environment truth.
-
-## Grounded Context Prompt Pattern
-
-Use this pattern when retrieved context is included:
-
-    You may use the retrieved operational context as guidance only.
-    Do not treat retrieved context as direct evidence from the case.
-    Do not copy retrieved claims into evidence fields unless the case data itself supports them.
+- Use the prompt-engineering skill for every LLM step's task, evidence classes, output schema, prompt, and repair prompt.
+- Apply [LLM boundaries](../engineering-guidance/references/llm-boundaries.md) to user text, retrieved content, tool results, and model output.
+- Keep prompts, parsers, validators, examples, tests, and documentation synchronized when a model-call contract changes.
+- Keep authorization, budgets, policy decisions, and tool permissions outside the model.
 
 ## Validators And Allowlists
 
@@ -160,40 +64,12 @@ When applicable, constrain outputs with:
 
 Do not let the model emit “close enough” values that downstream systems cannot safely consume.
 
-## Repair Behavior
+## Repair Boundary
 
-Use repair prompts only after concrete failures:
-
-- parse failure
-- schema validation failure
-- policy violation
-- unsupported value emission
-- invalid enum, ID, field, or platform syntax
-
-Repair instructions must correct structure or policy violations without adding unsupported facts.
-
-## Repair Prompt Pattern
-
-Use this pattern only after validation failure:
-
-    Your previous response violated the required output contract.
-
-    Validation error:
-    <error here>
-
-    Rewrite the response so it matches the contract exactly.
-    Do not add new facts not supported by the provided evidence.
-    If a field cannot be supported, set it to "unknown" or an empty list as required.
-    Return valid JSON only.
-
-Repair prompts should include:
-
-- invalid prior response
-- validation error
-- original contract
-- evidence-discipline instruction
-
-Repair prompts must not ask for a better guess.
+- Trigger repair only after a concrete parse, schema, policy, or allowlist failure.
+- Build repair prompts with the prompt-engineering skill.
+- Re-run deterministic parsing, validation, and policy checks after repair.
+- Limit repair attempts and preserve the failure reason for review.
 
 ## Fallback Behavior
 
@@ -223,65 +99,24 @@ When the workflow generates queries, rules, commands, or tool inputs:
 - Use deterministic policy checks before generated queries, updates, or actions execute.
 - Return structured block reasons when policy denies execution.
 
-## Domain Guidance
-
-### Threat Hunting
-
-- Prioritize observable entities, pivots, hypotheses, and confidence.
-- Separate hunt leads from confirmed findings.
-- Avoid claiming host, user, process, or network activity not present in evidence.
-- Constrain generated queries to the target platform schema.
-- Tie each pivot to evidence or an explicit hypothesis.
-
-### Vulnerability Assessment And Management
-
-- Separate observed scanner output from analyst interpretation.
-- Constrain CVE, CWE, package, version, severity, and exploitability fields to supported values.
-- Avoid inventing exploitability, exposure, compensating controls, affected assets, or environmental context.
-- Mark missing environmental details as `unknown`.
-
-### Incident Triage
-
-- Preserve the chain from evidence to conclusion.
-- Separate facts, hypotheses, and recommended next steps.
-- Avoid overstating attribution, impact, blast radius, or scope.
-- Clearly mark recommendations as recommendations, not findings.
-
-### Detection Engineering
-
-- Separate detection logic from threat narrative.
-- Constrain query or rule output to the destination platform schema.
-- Reject placeholders, fake field names, invented telemetry sources, and unsupported macros.
-- Validate generated SPL, SQL, Sigma, YARA, or platform-specific rules before use.
-
-### Security Reporting
-
-- Separate evidence-backed findings from interpretation.
-- Avoid overstating confidence.
-- Preserve source traceability where humans need review.
-- Use `unknown` for unsupported factual fields.
-
 ## Review Checklist
 
-When reviewing a cybersecurity workflow or prompt, verify:
+When reviewing a cybersecurity workflow, verify:
 
 - the operational task is clear
-- the output contract is explicit
-- evidence and advisory context are separated
-- unsupported values are dropped or marked `unknown`
-- grounded context is labeled and bounded
+- each model call has an explicit contract owned by the prompt-engineering skill
 - validators and allowlists exist outside the prompt
 - repair behavior is explicit
 - downstream consumers can safely parse the output
+- adapters contain transport concerns only
 - generated queries or actions are policy checked
-- the workflow does not encourage fabricated certainty
+- consequential actions have an explicit approval boundary
 - fallback behavior is explicit and safe
 
 ## Preferred Defaults
 
-- Prefer low-temperature or structured-output prompting for automation paths.
-- Prefer concise instructions with explicit constraints.
-- Prefer allowlists and validators for IDs and enums.
+- Prefer deterministic orchestration and explicit state transitions.
+- Prefer allowlists and validators outside the model.
 - Prefer human-review fallback over silent degradation.
 - Prefer explicit parse and contract errors over best-effort coercion.
 - Prefer one bounded LLM call over agentic multi-step behavior unless required.
@@ -290,12 +125,8 @@ When reviewing a cybersecurity workflow or prompt, verify:
 ## Avoid
 
 - “use your best judgment” for required factual fields
-- mixing evidence and runbook text in the same output section
-- asking for confidence without defining what it applies to
-- allowing freeform prose when a contract is required
 - accepting malformed but “close enough” structured output
 - silent fallback that hides validation failure
-- using RAG as proof of current-case facts
 - using the LLM for policy enforcement
 - using the LLM to compensate for missing domain rules
 

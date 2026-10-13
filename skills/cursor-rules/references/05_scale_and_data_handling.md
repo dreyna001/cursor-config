@@ -1,8 +1,3 @@
----
-description: Large-scale data handling defaults for traditional ML pipelines and inference workloads
-alwaysApply: false
----
-
 # Scale And Data Handling
 
 - Follow `01_ml_foundations` for dataframe and file-format defaults.

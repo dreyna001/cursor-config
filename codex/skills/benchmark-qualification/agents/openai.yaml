@@ -1,0 +1,3 @@
+interface:
+  display_name: "Benchmark Qualification"
+  short_description: "Qualify benchmark runs before promoting model changes."

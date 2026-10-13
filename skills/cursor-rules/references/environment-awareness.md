@@ -1,8 +1,3 @@
----
-description: Environment awareness without lock-in; separate deployment from core logic
-alwaysApply: false
----
-
 # Rule: Environment Awareness Without Lock-In
 
 Design for the current deployment target while avoiding unnecessary coupling to provider-specific infrastructure in the core logic.

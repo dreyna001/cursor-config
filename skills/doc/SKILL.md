@@ -1,9 +1,7 @@
 ---
-name: "doc"
+name: doc
 description: "Use for reading, creating, or editing `.docx` documents when formatting or layout fidelity matters."
 ---
-
-
 # DOCX Skill
 
 ## When to use
@@ -14,19 +12,19 @@ description: "Use for reading, creating, or editing `.docx` documents when forma
 ## Workflow
 1. Prefer visual review (layout, tables, diagrams).
    - If `soffice` and `pdftoppm` are available, convert DOCX -> PDF -> PNGs.
-   - Or use `scripts/render_docx.py` (requires `pdf2image` and Poppler).
-   - If these tools are missing, install them or ask the user to review rendered pages locally.
+   - Or use the bundled renderer under this skill's `scripts/` directory (requires `pdf2image` and Poppler); resolve its installed path rather than assuming it is under the project working directory.
+   - If rendering tools are unavailable, extract text as a fallback and report that visual layout was not verified. Do not install system tools just for this step unless requested.
 2. Use `python-docx` for edits and structured creation (headings, styles, tables, lists).
 3. After each meaningful change, re-render and inspect the pages.
 4. If visual review is not possible, extract text with `python-docx` as a fallback and call out layout risk.
-5. Keep intermediate outputs organized and clean up after final approval.
+5. Keep intermediate outputs organized and clean them up after verification; preserve user artifacts.
 
 ## Temp and output conventions
-- Use `tmp/docs/` for intermediate files; delete when done.
-- Write final artifacts under `output/doc/` when working in this repo.
+- Follow the project's existing output conventions. Use a temporary directory for intermediate files and a project-approved destination for final artifacts.
+- Do not force `tmp/docs/` or `output/doc/` on repositories that do not use them.
 - Keep filenames stable and descriptive.
 
-## Dependencies (install if missing)
+## Dependencies
 Prefer `uv` for dependency management.
 
 Python packages:
@@ -46,7 +44,7 @@ brew install libreoffice poppler
 sudo apt-get install -y libreoffice poppler-utils
 ```
 
-If installation isn't possible in this environment, tell the user which dependency is missing and how to install it locally.
+Use already-installed dependencies and project environments first. If a dependency is missing and installation is outside the requested scope, report what could not be rendered and which dependency is needed.
 
 ## Environment
 No required environment variables.
@@ -62,10 +60,7 @@ PDF -> PNGs:
 pdftoppm -png $OUTDIR/$BASENAME.pdf $OUTDIR/$BASENAME
 ```
 
-Bundled helper:
-```
-python3 scripts/render_docx.py /path/to/file.docx --output_dir /tmp/docx_pages
-```
+Bundled helper: resolve `scripts/render_docx.py` relative to the installed `doc` skill directory, then pass the source file and output directory.
 
 ## Quality expectations
 - Deliver a client-ready document: consistent typography, spacing, margins, and clear hierarchy.

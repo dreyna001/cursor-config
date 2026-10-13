@@ -1,30 +1,19 @@
 ---
-description: Environment awareness without lock-in; separate deployment from core logic
+description: Environment awareness; separate deployment concerns and reuse local tool/provider caches
 alwaysApply: false
 ---
 
 # Rule: Environment Awareness Without Lock-In
 
-Design for the current deployment target while avoiding unnecessary coupling to provider-specific infrastructure in the core logic.
+Read and apply [environment-awareness](../skills/cursor-rules/references/environment-awareness.md). Keep this rule as the activation stub; do not copy the reference body here.
 
-Requirements:
-- It is acceptable to implement for one environment first.
-- Do not pretend the app is environment-neutral if core logic depends on provider-specific primitives.
-- Keep business logic understandable without reading cloud trigger code or local runtime wiring.
-- Isolate environment-specific concerns near the edges of the app.
-- Keep storage, job triggering, model backend calls, and secrets/config handling understandable as deployment concerns.
+## Local tool and Terraform provider caches
 
-When working on AWS or on-prem:
-- Be explicit about what is deployment-specific.
-- Be explicit about what is application logic.
-- Do not bury business rules inside Lambda handlers, shell wrappers, cron glue, or infrastructure callbacks.
-- Keep input/output shapes clear and stable.
-
-Do not force a universal adapter template.
-Do not introduce generic interfaces solely for portability theater.
-Portability should come from clean separation of concerns and simple code, not from premature abstraction.
-
-Avoid:
-- provider-specific assumptions leaking across the codebase
-- overengineering portability before it is needed
-- abstract factories, plugin systems, or generic adapter layers without demonstrated need
+- Before downloading or installing a tool or provider, check for a locally installed version and cached package matching the required version and platform.
+- For Terraform, inspect the active CLI configuration and reuse a matching provider from its configured cache. On dreyna's Linux profile, `/home/dreyna/.terraform.d/plugin-cache` is configured by `/home/dreyna/.terraformrc`; use `${HOME}/.terraform.d/plugin-cache` in portable guidance and honor existing `TF_CLI_CONFIG_FILE` and `TF_PLUGIN_CACHE_DIR` overrides.
+- Preserve provider version constraints and `.terraform.lock.hcl` checksum validation; never bypass pins or lockfile checks to reuse cached packages.
+- On Linux, Terraform 1.15.9 is stored at `/home/dreyna/.local/share/terraform/cli/1.15.9/terraform` and exposed at `/home/dreyna/.local/bin/terraform`; use it only when it matches the project's required version.
+- Serialize `terraform init` when it uses a shared provider cache because concurrent cache access is not guaranteed safe.
+- Never copy or commit provider binaries into project worktrees. Preserve `.tf`, `.terraform.lock.hcl`, `*.tfstate*`, credentials, and `.terraform` backend metadata.
+- Local Terraform state and cache data may use profile storage. In WSL, `/home/dreyna` is inside Ubuntu's current virtual disk; assess its free space separately from physical `C:` disk space. Keep valuable persistent files off temporary `D:`.
+- Do not delete `~/.cache` wholesale; it can contain custom recovery outputs and secrets. Use cache cleanup commands supported by the owning tool.

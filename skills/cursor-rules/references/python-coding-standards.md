@@ -1,9 +1,3 @@
----
-description: Python 3.12 style and conventions for this repository
-globs: "**/*.py"
-alwaysApply: false
----
-
 # Python Coding Standards
 
 - Target **Python 3.12** syntax, typing behavior, stdlib APIs, tests, and commands unless the user explicitly asks for another version.

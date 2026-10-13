@@ -1,8 +1,3 @@
----
-description: Maintainability, code smells, stale code, and architecture review rules
-alwaysApply: false
----
-
 # Maintainability And Architecture
 
 - Keep boundaries clear, contracts strong, and dependencies explicit.

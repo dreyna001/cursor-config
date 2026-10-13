@@ -1,8 +1,7 @@
 ---
 name: cybersecurity-integration-adapters
-description: Design thin adapters for cybersecurity systems such as SIEM, SOAR, ticketing, GRC, scanners, cloud APIs, and identity platforms.
+description: "Design thin adapters for cybersecurity systems such as SIEM, SOAR, ticketing, GRC, scanners, cloud APIs, and identity platforms."
 ---
-
 # Cybersecurity Integration Adapters
 
 Use this skill when connecting a cybersecurity workflow to an external system such as Splunk, ServiceNow, Archer, a scanner, a CMDB, a cloud API, or a threat-intel platform.
@@ -18,14 +17,26 @@ Follow this sequence:
 5. Keep auth, config, retries, and error translation inside the adapter.
 6. Keep workflow logic, policy checks, and approvals outside the adapter.
 7. Add fake-response or fixture tests for the adapter contract.
+8. For an inbound webhook, apply the checks below before parsing.
+
+For policy classification, allowlists, and approval boundaries, use [cybersecurity-approval-policy-gates](../cybersecurity-approval-policy-gates/SKILL.md). Keep those decisions outside the adapter.
+
+For Splunk SDK use, SPL search construction, or search-job lifecycle work, read [Splunk SDK and SPL production guidance](references/splunk-production.md).
 
 ## Core Rules
 
 - Treat adapters as **transport and normalization layers**, not orchestration layers.
 - Do not scatter vendor API calls throughout business logic.
 - Keep environment-specific details out of workflow code.
-- Expose typed errors so orchestration can distinguish retryable, auth, validation, and policy failures.
+- Expose typed errors so orchestration can distinguish retryable, authentication, validation, rate-limit, and not-found failures. Keep policy denials in the policy layer.
 - Separate one vendor integration into distinct operations when risk differs, such as read-only search vs writeback vs action.
+
+## Inbound Webhooks
+
+- Verify the signature against the raw request body before parsing.
+- Reject stale timestamps and repeated delivery IDs.
+- Fail closed; do not act before verification succeeds.
+- Apply outbound destination restrictions from the application security guidance separately.
 
 ## What To Define
 
@@ -62,7 +73,7 @@ Keep out of the adapter:
 ## Testing Guidance
 
 - use stubs, fixtures, or fake responses
-- cover success, auth failure, transient failure, validation failure, and malformed response cases
+- cover success, authentication failure, transient and rate-limit failures, validation failure, not-found responses, and malformed responses
 - avoid live-system dependence for basic contract tests
 
 ## Preferred Outcome

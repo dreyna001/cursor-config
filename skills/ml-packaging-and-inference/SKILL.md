@@ -1,8 +1,7 @@
 ---
 name: ml-packaging-and-inference
-description: Package traditional ML pipelines for deterministic inference, input validation, serialization, and batch scoring.
+description: "Package traditional ML pipelines for deterministic inference, input validation, serialization, and batch scoring."
 ---
-
 # Skill: ML Packaging And Inference
 
 ## When to use

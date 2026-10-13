@@ -1,8 +1,7 @@
 ---
 name: ml-error-analysis
-description: Diagnose traditional ML mistakes with false-positive, false-negative, cohort, label, and feature analysis.
+description: "Diagnose traditional ML mistakes with false-positive, false-negative, cohort, label, and feature analysis."
 ---
-
 # Skill: ML Error Analysis
 
 ## When to use

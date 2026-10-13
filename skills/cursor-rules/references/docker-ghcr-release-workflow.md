@@ -1,8 +1,3 @@
----
-description: Conditional release workflow for projects that publish Docker images to GHCR
-alwaysApply: false
----
-
 # Docker GHCR Release Workflow
 
 Apply this rule only when the user, project configuration, or existing release workflow requires publishing Docker images to GitHub Container Registry. Preserve another established registry or release mechanism; do not select GHCR merely because the project uses Docker.

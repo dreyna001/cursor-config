@@ -7,6 +7,7 @@ Read when a React project uses Playwright for browser-level user flows. Keep bro
 - Make setup and cleanup retry-safe. Playwright may replace a worker after a failure and rerun a test; a retry must not inherit or collide with the failed attempt's data. Prefer unique identifiers and controlled fixtures to serial ordering.
 - Capture traces on retry or failure when useful for diagnosis, rather than recording every passing test by default. Traces, screenshots, videos, and reports can include page content, URLs, request data, and auth state: restrict their retention and access, and sanitize artifacts before sharing them outside the trusted team.
 - Prefer user-visible locators and retrying assertions. A passing browser test demonstrates the covered user path only; it does not establish API authorization, cloud identity, or service availability beyond what the test environment exercised.
+- For material desktop UI or browser-flow changes, run focused checks in Chromium, Firefox, and WebKit using the existing harness; report unavailable engines instead of treating one browser as complete coverage.
 
 ## Official references
 

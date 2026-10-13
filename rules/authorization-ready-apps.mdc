@@ -1,0 +1,8 @@
+---
+description: Authorization-ready baseline for services, APIs, and public endpoints
+alwaysApply: false
+---
+
+# Authorization-ready applications
+
+Read and apply [authorization-ready-apps](../skills/cursor-rules/references/authorization-ready-apps.md). Keep this rule as the activation stub; do not copy the reference body here.

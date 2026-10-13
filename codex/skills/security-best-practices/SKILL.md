@@ -8,6 +8,8 @@ Identify the languages, frameworks, installed versions, and security-sensitive b
 
 This entrypoint controls scope and version handling when a copied reference uses broader or version-pinned wording.
 
+For browser/API, authentication, file, or external-fetch boundaries, also apply the shared [application security](../engineering-guidance/references/security.md) guidance. Preserve the approved authentication SDK and explicitly permitted private integrations; a framework example does not authorize a cookie/BFF migration, new security service, or blanket rejection of private endpoints.
+
 ## Version And Source Discipline
 
 - Treat reference version labels as snapshots, not project requirements.
@@ -19,6 +21,7 @@ This entrypoint controls scope and version handling when a copied reference uses
 ## Application
 
 - For implementation, apply secure defaults only to the code and configuration in scope.
+- For production HTTP APIs or ingress, read [API abuse and exposure](../engineering-guidance/references/api-abuse-and-exposure.md). Its route coverage and access controls apply even when a framework reference is narrower. Preserve existing local protections without retrofitting production deployment controls into developer/test instances unless requested.
 - For ordinary work, flag only clear, high-impact issues in touched or directly adjacent code; do not turn the task into an unsolicited audit.
 - For a requested audit, use the focused [security review](../review-security/SKILL.md) or [Python security review](../python-security-review/SKILL.md) skill and use these references as framework-specific support.
 - Findings must cite concrete evidence and distinguish confirmed vulnerabilities from controls that may exist outside the inspected boundary.

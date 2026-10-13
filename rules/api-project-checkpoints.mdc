@@ -1,0 +1,8 @@
+---
+description: Named-repository HTTP security checkpoints for ATO, threat hunting, and notable incident response
+alwaysApply: false
+---
+
+# Project HTTP Security Checkpoints
+
+Read and apply [api project checkpoints](../skills/cursor-rules/references/api-project-checkpoints.md) only when the current work is in `ai-enabled-ato`, `ai-enabled-threathunting`, or `llm_notable_analysis`. Keep this rule as the activation stub; do not copy the reference body here.

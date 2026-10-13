@@ -6,6 +6,8 @@ description: "Review resilience, failure handling, efficiency, scaling, retries,
 
 Use this skill for resilience, scaling, and performance-focused review.
 
+For production HTTP quotas, readiness, or resource bounds review, read [API abuse and exposure](../engineering-guidance/references/api-abuse-and-exposure.md) for the applicable controls and project checkpoints. Apply its production scope and distinguish source/template findings from live deployment evidence.
+
 ## Reliability Checks
 
 - missing timeouts

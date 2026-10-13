@@ -13,7 +13,7 @@ Apply only the sections for technologies the project actually uses. Inspect inst
 
 ## Structured Model Boundaries
 
-Apply to direct model calls as well as agent frameworks. Follow the shared [LLM output guardrails](../../../rules/llm-deterministic-guardrails.mdc) for API-enforced schemas, deterministic identity mapping, bounded context handoffs, and evaluation evidence. Preserve each supported provider's actual capabilities; do not silently downgrade a requested strict contract.
+Apply to direct model calls as well as agent frameworks. Follow the shared [LLM deterministic guardrails](../../cursor-rules/references/llm-deterministic-guardrails.md) for API-enforced schemas, deterministic identity mapping, bounded context handoffs, and evaluation evidence. Preserve each supported provider's actual capabilities; do not silently downgrade a requested strict contract.
 
 ## PydanticAI And Pydantic Graph
 

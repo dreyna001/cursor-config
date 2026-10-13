@@ -1,8 +1,3 @@
----
-description: Keep env, ports, paths, and LLM/runtime knobs consistent across code and docs
-alwaysApply: false
----
-
 # Deployment and Runtime Contract Sync
 
 When changing how the system runs or integrates:

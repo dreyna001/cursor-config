@@ -1,9 +1,3 @@
----
-description: Standard docs stack and bootstrap convention
-alwaysApply: false
-globs: "**/README.md,**/docs/**/*.md"
----
-
 # Docs Stack Convention
 
 - Default new projects and major subprojects to a `docs/` tree organized by purpose:

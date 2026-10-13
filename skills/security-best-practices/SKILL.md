@@ -1,13 +1,14 @@
 ---
 name: security-best-practices
-description: Apply version-aware framework security guidance for Python, JavaScript, TypeScript, or Go. Use when secure implementation guidance is requested or work touches a material framework security boundary; use focused review skills for a full audit.
+description: "Apply version-aware security guidance for Python, JavaScript, TypeScript, and Go; use focused review skills for audits."
 ---
-
 # Security Best Practices
 
 Identify the languages, frameworks, installed versions, and security-sensitive boundaries in the requested scope. Read only the matching general and framework references from `references/`.
 
 This entrypoint controls scope and version handling when a copied reference uses broader or version-pinned wording.
+
+For browser/API, authentication, file, or external-fetch boundaries, also apply the shared [application security](../cursor-rules/references/security.md) guidance. Preserve the approved authentication SDK and explicitly permitted private integrations; a framework example does not authorize a cookie/BFF migration, new security service, or blanket rejection of private endpoints.
 
 ## Version And Source Discipline
 
@@ -20,8 +21,9 @@ This entrypoint controls scope and version handling when a copied reference uses
 ## Application
 
 - For implementation, apply secure defaults only to the code and configuration in scope.
+- For production HTTP APIs or ingress, read [API abuse and exposure](../cursor-rules/references/api-abuse-and-exposure.md). Its route coverage and access controls apply even when a framework reference is narrower. Preserve existing local protections without retrofitting production deployment controls into developer/test instances unless requested.
 - For ordinary work, flag only clear, high-impact issues in touched or directly adjacent code; do not turn the task into an unsolicited audit.
-- For a requested audit, use the appropriate Cursor security review skill and use these references as framework-specific support.
+- For a requested audit performed in the current agent, use the focused [security code review](../security-code-review/SKILL.md) or [Python security review](../python-security-review/SKILL.md) skill and use these references as framework-specific support. The built-in `review-security` name is reserved for the Security Review subagent.
 - Findings must cite concrete evidence and distinguish confirmed vulnerabilities from controls that may exist outside the inspected boundary.
 - Fix root causes with the smallest correct change. Do not disable protections, broaden trust, or add speculative security infrastructure.
 - Preserve behavior unless a security requirement explicitly requires a breaking change; verify the relevant regression and security behavior.

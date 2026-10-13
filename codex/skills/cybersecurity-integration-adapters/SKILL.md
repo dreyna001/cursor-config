@@ -17,6 +17,7 @@ Follow this sequence:
 5. Keep auth, config, retries, and error translation inside the adapter.
 6. Keep workflow logic, policy checks, and approvals outside the adapter.
 7. Add fake-response or fixture tests for the adapter contract.
+8. For an inbound webhook, apply the checks below before parsing.
 
 For policy classification, allowlists, and approval boundaries, use [cybersecurity-approval-policy-gates](../cybersecurity-approval-policy-gates/SKILL.md). Keep those decisions outside the adapter.
 
@@ -29,6 +30,13 @@ For Splunk SDK use, SPL search construction, or search-job lifecycle work, read 
 - Keep environment-specific details out of workflow code.
 - Expose typed errors so orchestration can distinguish retryable, authentication, validation, rate-limit, and not-found failures. Keep policy denials in the policy layer.
 - Separate one vendor integration into distinct operations when risk differs, such as read-only search vs writeback vs action.
+
+## Inbound Webhooks
+
+- Verify the signature against the raw request body before parsing.
+- Reject stale timestamps and repeated delivery IDs.
+- Fail closed; do not act before verification succeeds.
+- Apply outbound destination restrictions from the application security guidance separately.
 
 ## What To Define
 

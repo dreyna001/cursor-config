@@ -1,8 +1,3 @@
----
-description: Data splitting, leakage prevention, and validation guardrails for traditional ML work
-alwaysApply: false
----
-
 # Data And Validation
 
 - Never fit preprocessors, encoders, imputers, selectors, or resamplers on the **full dataset before the split**.

@@ -1,8 +1,3 @@
----
-description: Technology selection precedence for greenfield work or projects without an established stack
-alwaysApply: false
----
-
 # Technology Selection
 
 - Inspect manifests, lockfiles, configuration, dependencies, and existing code before choosing technology.

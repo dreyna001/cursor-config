@@ -1,15 +1,15 @@
 ---
 name: use-case-scope-review
-description: Clarify a use case into a bounded MVP block without forcing a shared architecture or template.
+description: "Clarify a greenfield or new-use-case idea into a bounded MVP without forcing a shared architecture; not for existing-repo requirement shaping or 2-week implementation-block planning."
 ---
-
 # Use Case Scope Review
 
 Use this skill when:
 - starting a new use case
-- breaking a roadmap into 2-week blocks
-- turning a vague idea into a bounded MVP
-- checking whether scope is too broad
+- turning a vague idea into a bounded MVP without imposing a shared architecture
+- checking whether a greenfield scope is too broad
+
+For a 2-week implementation-block plan on an existing direction, use [scope and diff planning](../scope-and-diff-planning/SKILL.md). For unresolved correctness, compatibility, security, or safety choices, use [requirements shaping](../requirements-shaping-and-diff-planning/SKILL.md).
 
 ## Objective
 

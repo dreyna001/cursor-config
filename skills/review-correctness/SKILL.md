@@ -1,8 +1,7 @@
 ---
 name: review-correctness
-description: Review logic, state, boundaries, replay behavior, validation paths, and correctness test gaps.
+description: "Review logic, state, boundaries, replay behavior, validation paths, and correctness test gaps."
 ---
-
 # Review Correctness
 
 Use this skill for correctness-focused review.

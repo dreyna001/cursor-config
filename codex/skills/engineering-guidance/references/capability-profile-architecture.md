@@ -1,8 +1,3 @@
----
-description: Capability flags, validated feature profiles, and safe customer-specific configuration
-alwaysApply: false
----
-
 # Capability Profile Architecture
 
 - Treat product features as **named capabilities** with explicit flags, not hidden behavior differences.

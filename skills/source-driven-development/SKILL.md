@@ -1,8 +1,7 @@
 ---
 name: source-driven-development
-description: Implement code that depends on an external API, library, framework, SDK, or command-line tool using the installed version, authoritative sources, and established project usage instead of model memory.
+description: "Implement version-sensitive integrations using the project’s installed packages, authoritative sources, and established patterns."
 ---
-
 # Source-Driven Development
 
 Use evidence from the actual project and authoritative sources whenever implementation depends on an external API, library, framework, SDK, or command-line tool.

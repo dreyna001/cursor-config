@@ -1,8 +1,3 @@
----
-description: API, data, and distributed systems review rules
-alwaysApply: false
----
-
 # API, Data, And Distributed Systems
 
 - Require explicit schemas and consistent error or response shapes at boundaries.
