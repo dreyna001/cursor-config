@@ -140,5 +140,6 @@ Before finishing:
 - Regression coverage exists when appropriate.
 - Relevant verification passes.
 - No unnecessary retries, fallbacks, guards, or compatibility paths were introduced.
+- If the incident was a meaningful failure, failed approach, or user correction, follow `contextual-learning` after the authorized repair: regression test or stated reason it is unnecessary; lesson only if reusable across sessions and the task may write the shared store; skill or rule only as a user-approved proposal.
 
 Report the root cause, the correction made, remaining unknowns or risks, and the verification performed.

@@ -110,3 +110,4 @@ Before finishing:
 - No speculative architecture was introduced.
 - Every changed file has a direct reason to change.
 - The implementation is no larger than necessary.
+- After a meaningful failure or correction, follow `contextual-learning`: regression test or stated reason it is unnecessary; lesson only if reusable across sessions and the task may write the shared store; skill or rule only as a user-approved proposal.

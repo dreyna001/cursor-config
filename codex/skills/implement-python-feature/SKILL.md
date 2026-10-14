@@ -53,3 +53,7 @@ If contract values change, update the affected linked artifacts in the same chan
 ## Output
 
 Follow the global **Implementation Contract** handoff format. Also state why and any dependencies added.
+
+## After a meaningful failure or correction
+
+Follow `contextual-learning`. Require a regression test or a stated reason it is unnecessary. If the cause is reusable across sessions, retain a lesson through the global helper when the task may write the shared store. Propose a new skill or rule only with user approval; do not auto-create one. Report the test, lesson ID/status, or why neither applies.
