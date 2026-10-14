@@ -1,0 +1,25 @@
+---
+description: Keep one checkout per AI COE product and put throwaway test output in disposable cache or tmp
+alwaysApply: true
+---
+
+# AI COE Checkout And Cache Hygiene
+
+Keep one checkout per product under ~/ai-coe-projects. Use worktrees only while a branch is active, then remove them.
+
+Put throwaway test/qualification output in a cache or tmp dir that you delete after the run, not next to the repo forever.
+
+- Do not add a second clone under `C:\Users\Daniel.Reyna\ai-coe-projects` or `/mnt/c/Users/Daniel.Reyna/ai-coe-projects`.
+- When a worktree's branch is no longer active, remove it only after the post-merge worktree cleanup checks pass.
+- Keep reusable developer environments used for local testing before GPU-host work, including the on-prem CUDA/PyTorch `.venv`.
+
+```text
+# ❌ BAD
+~/ai-coe-projects/llm_notable_analysis
+~/ai-coe-projects/llm_notable_analysis_todo_audit   # leftover worktree
+~/ai-coe-projects/ai-enabled-ato/.e2e-stack/ssp-runs/run-*  # kept forever
+
+# ✅ GOOD
+~/ai-coe-projects/llm_notable_analysis
+~/.cache/ato-e2e-<run-id>/   # delete after the run
+```

@@ -1,0 +1,12 @@
+---
+description: Code quality, errors, retries, and operational resilience
+alwaysApply: false
+---
+
+# Code Quality and Resilience Standards
+
+- **Minimal, focused diffs:** change only what the task requires; avoid drive-by refactors and unrelated formatting churn.
+- **Typed errors and clear failure modes:** distinguish retryable (timeouts, 429, 5xx) from non-retryable (bad request, schema) where applicable.
+- **Retries:** bounded backoff; honor `Retry-After` when present; avoid unbounded loops and silent infinite waits on concurrency limits without a documented policy.
+- **Observability:** structured logs and correlation IDs for request paths that cross services or batches.
+- **Resource safety:** cap concurrency, payload size, or context where the stack can overload GPU/API/disk.

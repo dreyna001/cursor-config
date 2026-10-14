@@ -4,14 +4,35 @@ Canonical versioned source for the user's global Cursor configuration and Codex 
 
 ## Layout
 
-- `rules/` — global `.mdc` rule files (`%USERPROFILE%\.cursor\rules\`)
-- `skills/` — user skills (`%USERPROFILE%\.cursor\skills\`)
-- `skills-cursor/` — Cursor-managed skills (`%USERPROFILE%\.cursor\skills-cursor\`)
+- `rules/` — global `.mdc` rule files (`~/.cursor/rules/` on Linux, `%USERPROFILE%\.cursor\rules\` on Windows)
+- `skills/` — user skills (`~/.cursor/skills/`)
+- `skills-cursor/` — Cursor-managed skills (`~/.cursor/skills-cursor/`)
 - `environment.json` — optional Cursor environment config
 - `codex/global-instructions.md` — global Codex instructions, linked to `$CODEX_HOME/AGENTS.md` (default `~/.codex/AGENTS.md`)
 - `codex/skills/` — portable Codex user skills, linked individually under `~/.agents/skills/`
 - `codex/install-manifest.json` — the expected global Codex skill inventory
 - `codex/global_setup.py` — read-only planning, local installation/sync, and app-server verification
+
+## How Cursor uses this
+
+Cursor loads `~/.cursor/rules/*.mdc` from the user profile. `alwaysApply: true` rules are standing policy for every chat. Other rules apply when their `globs` match open files, or when the agent is told to load them. Project-specific rules stay in each application repo's `.cursor/rules/`.
+
+For coding, review, or refactoring, use the `cursor-rules` skill as the router and read only the matching references. Do not load the whole collection. Named skills under `skills/` are used when their description matches the task. `windows-agent-shell-fallback` is Cursor-only: if the Windows integrated shell is Constrained Language Mode, retry with `powershell.exe` or `wsl.exe`.
+
+On this WSL machine, after editing `rules/` or `skills/` here, copy them into both profiles:
+
+```sh
+cp -a rules/*.mdc ~/.cursor/rules/
+cp -a rules/*.mdc /mnt/c/Users/Daniel.Reyna/.cursor/rules/
+```
+
+On Windows, `.\install-to-user-cursor.ps1` copies `rules/`, `skills/`, and `skills-cursor/` into `%USERPROFILE%\.cursor\`.
+
+## How Codex uses this
+
+Codex does not read Cursor `.mdc` files. Its always-on harness is `codex/global-instructions.md`, installed as `~/.codex/AGENTS.md`. Skills come from `codex/skills/` and appear under `~/.agents/skills/` after `python3 codex/global_setup.py sync --apply`.
+
+For coding, review, or refactoring, use the `engineering-guidance` skill as the router and read only the matching references. Follow this file's install commands; do not assume Cursor tools exist in Codex.
 
 ## Refresh this repo from the current PC
 

@@ -1,0 +1,61 @@
+---
+description: Windows Agent shell fallback via powershell.exe and wsl.exe when integrated terminal fails
+alwaysApply: true
+---
+
+# Windows Agent Shell Fallback
+
+On Windows (especially managed/VDI hosts), Cursor's integrated Shell tool may run PowerShell in **Constrained Language Mode**. Symptoms:
+
+- `MethodInvocationNotSupportedInConstrainedLanguage` in output
+- Huge wrapper error spam around a small amount of real output
+- Commands partially succeed but exit codes/output are unreliable
+- WSL/bash selected instead of the intended default profile
+
+Do **not** treat this as "no terminal access." Retry with explicit host binaries instead of relying on the default integrated shell session.
+
+## Default command pattern
+
+**Windows / PowerShell work:**
+
+```powershell
+powershell.exe -NoProfile -Command "..."
+```
+
+**Linux / WSL work** (repos under `\\wsl.localhost\...` or `/home/...`):
+
+```powershell
+wsl.exe bash -lc "..."
+```
+
+**Simple Windows commands** when PowerShell wrapper noise is worst:
+
+```powershell
+cmd /c "..."
+```
+
+## When to switch to WSL
+
+Use `wsl.exe bash -lc '...'` when:
+
+- The workspace or task targets Linux paths (`/home/dreyna/...`)
+- Native shell commands fail or return unusable output
+- You need `git`, `python`, `npm`, `docker`, etc. from the Linux environment
+- Integrated terminal picked WSL/bash but agent execution is broken
+
+## Execution rules
+
+1. Run commands yourself; do not ask the user to run diagnostics you can run.
+2. If the first shell attempt fails, retry with `powershell.exe -NoProfile -Command` or `wsl.exe bash -lc` before concluding terminal access is unavailable.
+3. Prefer one clear command per invocation; avoid fragile nested quoting across PowerShell + cmd + bash.
+4. For file edits in WSL projects, either use editor tools on reachable paths or write via `wsl.exe bash -lc`.
+5. Report which runner worked (`powershell.exe`, `wsl.exe`, or `cmd /c`) when shell behavior was flaky.
+
+## Known-good probes
+
+```powershell
+powershell.exe -NoProfile -Command "Write-Output (Get-Location).Path"
+wsl.exe bash -lc "uname -a; pwd; whoami"
+```
+
+If these succeed, terminal access is working through the fallback path even when the default Shell tool wrapper is noisy.

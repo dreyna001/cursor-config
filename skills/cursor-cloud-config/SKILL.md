@@ -37,7 +37,7 @@ cd /home/dreyna/cursor-config
 ./install-to-user-cursor.ps1
 ```
 
-On this WSL machine, copy `rules/` into `~/.cursor/rules` and `skills/` into `~/.cursor/skills` after source edits when the PowerShell installer is not used.
+On this WSL machine, copy `rules/` into `~/.cursor/rules` and `skills/` into `~/.cursor/skills` after source edits when the PowerShell installer is not used. Also copy `rules/*.mdc` into `/mnt/c/Users/Daniel.Reyna/.cursor/rules` so Windows Cursor sees the same standing rules. Codex does not read those `.mdc` files; update `codex/global-instructions.md` and run `python3 codex/global_setup.py sync --apply` for Codex.
 
 ### Cloud mode
 
