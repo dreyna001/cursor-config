@@ -2,9 +2,6 @@
 
 This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.codex/AGENTS.md`). Do not load every skill. Use `engineering-guidance` as the router and read only the references that apply. Skills install from `codex/skills/` into `~/.agents/skills/` through `python3 codex/global_setup.py sync --apply`. Cursor `.mdc` files in `rules/` are not auto-loaded here; standing policies that apply in both harnesses are listed in this file. After changing this file or `codex/skills/`, run `python3 codex/global_setup.py plan`, then `sync --apply` and `verify`.
 
-- Do not use emojis in code, docs, commits, or assistant output.
-- Keep the current block small, production-shaped, and limited to the stated scope. Prefer small testable diffs.
-- End a delivery block in something another engineer can run, review, and explain.
 - Before creating or changing an AWS GovCloud instance, ask whether the FedRAMP authorization is Low, Moderate, or High when that level is not already stated. Do not choose a level. Apply the authorization-ready rule for the stated level.
 - Use Terraform exclusively for all new or changed cloud infrastructure across projects and clouds. Do not create or extend SAM, CloudFormation, Bicep, ARM, Pulumi, CDK, console provisioning, or infrastructure-creating scripts. Use the project's documented Terraform root; existing alternate IaC is legacy and is not authority to add another path. Application builds, artifact publication, and read-only verification may use their established tools. Existing resources require an explicitly scoped migration rather than implicit replacement.
 
