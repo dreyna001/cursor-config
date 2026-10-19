@@ -2,6 +2,10 @@
 
 Use this reference for interface layout, navigation, content hierarchy, and editing-state decisions across UI stacks. Adapt it to the user's task, the product's established patterns, and the available screen space; it guides decisions without prescribing an app-specific flow or feature set.
 
+For compact portals with multiple peer workspaces and no distinct home page, use
+[small portal routing](small-portal-routing.md) for route, sign-in, and
+remembered-destination decisions.
+
 ## Organize around the user's task
 
 - Give the primary task a clear place and hierarchy. Keep closely related context, content, status, and actions together, and avoid repeating the same identity or instruction across neighboring regions.
