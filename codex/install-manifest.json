@@ -7,8 +7,9 @@
     "skills": "$HOME/.agents/skills"
   },
   "schema_version": 1,
-  "skill_count": 55,
+  "skill_count": 56,
   "skills": [
+    "agentic-security-workflows",
     "ai-use-case-delivery-framework",
     "aws-architecture-diagram",
     "aws-deployment",

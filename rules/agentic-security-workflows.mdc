@@ -1,0 +1,9 @@
+---
+description: Use-case-specific rules for agentic threat hunting, incident investigation, and SSP authoring workflows
+alwaysApply: false
+---
+
+Read [agentic-security-workflows](../skills/agentic-security-workflows/SKILL.md)
+and only its matching use-case reference. Preserve the product's existing scope,
+evidence boundaries, version-bound human decisions, and deployment controls.
+Keep this file as an activation stub; do not duplicate the skill body.

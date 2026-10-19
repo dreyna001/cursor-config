@@ -8,6 +8,11 @@ Use this skill when designing, editing, or reviewing a cybersecurity workflow th
 
 For prompt text, output schemas, RAG instructions, evidence wording, and repair prompts, use [Cybersecurity Prompt Engineering](../cybersecurity-prompt-engineering/SKILL.md). That skill owns the model-call contract; do not duplicate its prompt patterns here.
 
+For agentic threat hunting, incident investigation, or SSP authoring, also use
+[Agentic Security Workflows](../agentic-security-workflows/SKILL.md) and only its
+matching use-case reference. It owns decision completeness, evidence review,
+version-bound analyst UX, and source-backed capability/backlog reviews.
+
 ## Default Pattern
 
 Use this bounded flow unless the use case clearly requires another shape:
