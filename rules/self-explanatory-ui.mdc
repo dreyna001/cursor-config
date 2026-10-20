@@ -1,0 +1,9 @@
+---
+description: Clear interface wording and actions for first-time users without added hints
+alwaysApply: false
+---
+
+# Self-explanatory UI
+
+Read and apply [self-explanatory-ui](../skills/self-explanatory-ui/SKILL.md)
+when creating or reviewing user-facing labels, instructions, states, and actions.

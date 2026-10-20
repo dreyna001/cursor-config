@@ -21,6 +21,8 @@ Use this skill as a conditional router for the engineering standards in `referen
 
 For general code changes, use the applicable parts of [core engineering](references/core-engineering.md), [correctness and testing](references/correctness-and-testing.md), [maintainability and architecture](references/maintainability-and-architecture.md), [reliability and performance](references/reliability-and-performance.md), and [requirements confidence](references/requirements-confidence.md). For interface layout, navigation, content hierarchy, or editing-state decisions across UI stacks, read [UI/UX organization](references/ui-ux-organization.md).
 
+For user-facing wording and first-use task clarity, use [self-explanatory UI](../self-explanatory-ui/SKILL.md).
+
 For APIs, persistence, queues, or distributed behavior, read [API, data, and distributed systems](references/api-data-and-distributed.md). For Python code, read [Python coding standards](references/python-coding-standards.md) after checking the target project's declared and deployed Python versions; preserve its established stack and conventions. For React, read [React](references/react.md). When frontend changes touch authentication, credential forwarding, browser persistence, uploads/previews or untrusted content rendering, also read [security](references/security.md) and its matching framework reference.
 
 For traditional ML standards, read only the relevant parts of [ML foundations](references/01_ml_foundations.md), [data and validation](references/02_data_and_validation.md), [experiments and reproducibility](references/03_experiment_and_reproducibility.md), [delivery and reporting](references/04_delivery_and_reporting.md), and [scale and data handling](references/05_scale_and_data_handling.md).
