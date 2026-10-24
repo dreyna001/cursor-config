@@ -16,3 +16,25 @@ Read when a React project uses Playwright for browser-level user flows. Keep bro
 - [Playwright local web server configuration](https://playwright.dev/docs/test-webserver)
 - [Playwright test retries](https://playwright.dev/docs/test-retries)
 - [Playwright trace configuration](https://playwright.dev/docs/api/class-testoptions#test-options-trace)
+
+## UI/UX change workflow
+
+Start with the permanent local UI baseline's **Workflow and popup regression
+coverage** section (or the app's released baseline fallback). Use this procedure
+for material UI/UX changes; keep the matrix proportional to the affected surfaces.
+
+1. Map the changed route, user role, state and intended behavior to existing
+   browser tests. Start the isolated local/test app with controlled records.
+2. Use Playwright to navigate, click, type and submit as a user would. Check the
+   visible result and important state/request outcomes, not just that clicks work.
+3. Exercise the relevant keyboard, error/retry, pending-request, repeated-action,
+   stale-response and unsaved-edit paths required by the central baseline.
+4. For visual/reflow changes, inspect screenshots and actual browser geometry,
+   including required desktop zoom levels and every affected popup/action. Follow
+   the requested desktop/mobile scope; do not add mobile work implicitly.
+5. Run relevant supported browser engines, save concise results and reproductions,
+   and identify untested roles/states. API-mocked browser tests are UI integration
+   evidence; reserve full-stack E2E claims for real isolated application boundaries.
+
+The baseline owns shared acceptance rules. This guide owns how to execute them;
+do not create a second visual standard or claim complete coverage from one test.

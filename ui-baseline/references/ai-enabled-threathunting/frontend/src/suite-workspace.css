@@ -1,4 +1,4 @@
-/* Suite Workspace UI v1.9.0. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.10.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
@@ -317,6 +317,10 @@
 
 /* Desktop zoom reflow is opt-in; touch/mobile and ordinary desktop stay unchanged. */
 @media screen and (max-width: 48rem) and (hover: hover) and (pointer: fine) {
+  .workspace-dialog-actions { flex-wrap: wrap; }
+  .workspace-dialog-actions > button { max-width: 100%; white-space: normal; }
+  .workspace-popup-viewport { max-width: calc(100vw - 2rem); }
+
   .workspace-typography .workspace-desktop-reflow,
   .workspace-typography .workspace-desktop-reflow.portal-frame:has(.ssp-assistant-page) {
     display: flex; flex-direction: column; width: 100%; height: auto; min-height: 100dvh; overflow: visible;

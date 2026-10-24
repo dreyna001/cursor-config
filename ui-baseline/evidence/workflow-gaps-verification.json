@@ -1,0 +1,2142 @@
+{
+  "version": "1.10.0",
+  "date": "2026-10-24",
+  "scope": "ATO and four IR variants; desktop only; no Narrator or mobile work",
+  "workflow": [
+    {
+      "name": "ato",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-ato/portal/node_modules/@playwright/test/cli.js",
+            "test",
+            "--config=/mnt/c/Users/Daniel.Reyna/Documents/Codex/2026-10-22/our-x20/work/workflow-fix-ato.config.mjs"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0,
+      "initial_exit_code": 0,
+      "cases": [
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-assistant-edits.spec.ts",
+          "test": "general assistant keeps chat advisory and publishes a reviewed private draft for the selected control",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-assistant-edits.spec.ts",
+          "test": "setup-owned edits open categorization and preserve prior summary without a second editor",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: whitespace cannot create a workspace",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated creation submits once and a failed save retains the entered name",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "simplifies SSP navigation while preserving review links and one contextual assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: failed list request recovers through Retry",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "supports private advice and complete SSP edit review in the dedicated assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-assistant-edits.spec.ts",
+          "test": "general assistant keeps chat advisory and publishes a reviewed private draft for the selected control",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps document drafts guarded, sources protected, and canonical edits in System Setup",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-assistant-edits.spec.ts",
+          "test": "setup-owned edits open categorization and preserve prior summary without a second editor",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps setup and review actions reachable across desktop widths without implicit writes",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "presents creation and management empty, error and retry states without changing assignments",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "simplifies SSP navigation while preserving review links and one contextual assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps session loading, sign-in errors and degraded readiness clear",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "supports private advice and complete SSP edit review in the dedicated assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps review URLs and guarded selections through refresh and system switches",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps document drafts guarded, sources protected, and canonical edits in System Setup",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "filters evidence files without changing the selected review batch",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps the account menu accessible and preserves drafts when dismissed",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "signs out through the account menu with the existing authenticated request",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps setup and review actions reachable across desktop widths without implicit writes",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "presents creation and management empty, error and retry states without changing assignments",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps session loading, sign-in errors and degraded readiness clear",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps review URLs and guarded selections through refresh and system switches",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "filters evidence files without changing the selected review batch",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps the account menu accessible and preserves drafts when dismissed",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "signs out through the account menu with the existing authenticated request",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "uses shared title roles when opening the ATO assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps an unsaved control draft and focus through assistant history navigation",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "suite accessibility: waiting and failed workspace states are announced",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: whitespace cannot create a workspace",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated creation submits once and a failed save retains the entered name",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: failed list request recovers through Retry",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-assistant-edits.spec.ts",
+          "test": "general assistant keeps chat advisory and publishes a reviewed private draft for the selected control",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "uses shared title roles when opening the ATO assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps an unsaved control draft and focus through assistant history navigation",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-assistant-edits.spec.ts",
+          "test": "setup-owned edits open categorization and preserve prior summary without a second editor",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "suite accessibility: waiting and failed workspace states are announced",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "simplifies SSP navigation while preserving review links and one contextual assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "supports private advice and complete SSP edit review in the dedicated assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: whitespace cannot create a workspace",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated creation submits once and a failed save retains the entered name",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps document drafts guarded, sources protected, and canonical edits in System Setup",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: failed list request recovers through Retry",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps setup and review actions reachable across desktop widths without implicit writes",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "presents creation and management empty, error and retry states without changing assignments",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps session loading, sign-in errors and degraded readiness clear",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps review URLs and guarded selections through refresh and system switches",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "filters evidence files without changing the selected review batch",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps the account menu accessible and preserves drafts when dismissed",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "signs out through the account menu with the existing authenticated request",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "uses shared title roles when opening the ATO assistant",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "keeps an unsaved control draft and focus through assistant history navigation",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "suite accessibility: waiting and failed workspace states are announced",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/security/ssp-workspace-ui.spec.ts",
+          "test": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "passed": true,
+          "log": "workflow-ato-0.log"
+        }
+      ]
+    },
+    {
+      "name": "s3_notable_pipeline",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/s3_notable_pipeline/frontend/analyst-portal/node_modules/@playwright/test/cli.js",
+            "test",
+            "--config=/mnt/c/Users/Daniel.Reyna/Documents/Codex/2026-10-22/our-x20/work/workflow-fix-s3_notable_pipeline.config.mjs"
+          ],
+          "exit_code": 1
+        }
+      ],
+      "exit_code": 0,
+      "initial_exit_code": 1,
+      "cases": [
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "reloaded-workflow.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline-0.log"
+        }
+      ],
+      "repeat_reason": "The first Chromium enlarged-text check lost its temporary probes during a full dev-page navigation; the unchanged targeted rerun passed."
+    },
+    {
+      "name": "s3_notable_pipeline_commercial",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/s3_notable_pipeline_commercial/frontend/analyst-portal/node_modules/@playwright/test/cli.js",
+            "test",
+            "--config=/mnt/c/Users/Daniel.Reyna/Documents/Codex/2026-10-22/our-x20/work/workflow-fix-s3_notable_pipeline_commercial.config.mjs"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0,
+      "initial_exit_code": 0,
+      "cases": [
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-s3_notable_pipeline_commercial-0.log"
+        }
+      ]
+    },
+    {
+      "name": "azure_notable_pipeline",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/azure_notable_pipeline/frontend/analyst-portal/node_modules/@playwright/test/cli.js",
+            "test",
+            "--config=/mnt/c/Users/Daniel.Reyna/Documents/Codex/2026-10-22/our-x20/work/workflow-fix-azure_notable_pipeline.config.mjs"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0,
+      "initial_exit_code": 0,
+      "cases": [
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-azure_notable_pipeline-0.log"
+        }
+      ]
+    },
+    {
+      "name": "llm_notable_analysis_onprem_systemd",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/node_modules/@playwright/test/cli.js",
+            "test",
+            "--config=/mnt/c/Users/Daniel.Reyna/Documents/Codex/2026-10-22/our-x20/work/workflow-fix-llm_notable_analysis_onprem_systemd.config.mjs"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0,
+      "initial_exit_code": 0,
+      "cases": [
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "chromium",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "keeps filtered page context through browser Back and Back to cases",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "retries a failed read without losing the filters or available rows",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/queue-evidence-recovery.spec.ts",
+          "test": "searches evidence and displays the exact full value on demand",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1280px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "firefox",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1440px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "applies suite sidebar and typography at 1920px",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: late filtered results cannot replace the latest search",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: repeated submit cannot duplicate a pending chat and errors allow recovery",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "retains accessible suite navigation with enlarged text",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: leaving a pending chat prevents its late reply appearing in a new conversation",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/workflow-resilience-audit.spec.ts",
+          "test": "adversarial: unavailable capability cannot submit a chat",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "uses the same sidebar and title roles in the assistant workspace",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: skip repeated navigation in list and assistant",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: case loading announces progress and matches loaded columns",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        },
+        {
+          "browser": "webkit",
+          "file": "e2e/suite-ui.spec.ts",
+          "test": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "passed": true,
+          "log": "workflow-llm_notable_analysis_onprem_systemd-0.log"
+        }
+      ]
+    }
+  ],
+  "types_and_focused_components": [
+    {
+      "name": "ato",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-ato/portal/node_modules/typescript/bin/tsc",
+            "--noEmit",
+            "-p",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-ato/portal/tsconfig.e2e.json"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "s3_notable_pipeline",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/s3_notable_pipeline/frontend/analyst-portal/node_modules/vitest/vitest.mjs",
+            "run",
+            "src/components/ContextUsageIndicator.test.tsx"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/s3_notable_pipeline/frontend/analyst-portal/node_modules/typescript/bin/tsc",
+            "--noEmit",
+            "--target",
+            "ES2022",
+            "--module",
+            "ESNext",
+            "--moduleResolution",
+            "bundler",
+            "--esModuleInterop",
+            "--skipLibCheck",
+            "e2e/desktop-accessibility.spec.ts",
+            "e2e/queue-evidence-recovery.spec.ts"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "s3_notable_pipeline_commercial",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/s3_notable_pipeline_commercial/frontend/analyst-portal/node_modules/vitest/vitest.mjs",
+            "run",
+            "src/components/ContextUsageIndicator.test.tsx"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/s3_notable_pipeline_commercial/frontend/analyst-portal/node_modules/typescript/bin/tsc",
+            "--noEmit",
+            "--target",
+            "ES2022",
+            "--module",
+            "ESNext",
+            "--moduleResolution",
+            "bundler",
+            "--esModuleInterop",
+            "--skipLibCheck",
+            "e2e/desktop-accessibility.spec.ts",
+            "e2e/queue-evidence-recovery.spec.ts"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "azure_notable_pipeline",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/azure_notable_pipeline/frontend/analyst-portal/node_modules/vitest/vitest.mjs",
+            "run",
+            "src/components/ContextUsageIndicator.test.tsx"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/azure_notable_pipeline/frontend/analyst-portal/node_modules/typescript/bin/tsc",
+            "--noEmit",
+            "--target",
+            "ES2022",
+            "--module",
+            "ESNext",
+            "--moduleResolution",
+            "bundler",
+            "--esModuleInterop",
+            "--skipLibCheck",
+            "e2e/desktop-accessibility.spec.ts",
+            "e2e/queue-evidence-recovery.spec.ts"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0
+    },
+    {
+      "name": "llm_notable_analysis_onprem_systemd",
+      "checks": [
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/node_modules/vitest/vitest.mjs",
+            "run",
+            "src/components/ContextUsageIndicator.test.tsx"
+          ],
+          "exit_code": 0
+        },
+        {
+          "command": [
+            "node",
+            "/home/dreyna/.local/share/codex-worktrees/suite-workflow-gaps-incident/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/node_modules/typescript/bin/tsc",
+            "--noEmit",
+            "--target",
+            "ES2022",
+            "--module",
+            "ESNext",
+            "--moduleResolution",
+            "bundler",
+            "--esModuleInterop",
+            "--skipLibCheck",
+            "e2e/desktop-accessibility.spec.ts",
+            "e2e/queue-evidence-recovery.spec.ts"
+          ],
+          "exit_code": 0
+        }
+      ],
+      "exit_code": 0
+    }
+  ],
+  "native_chromium": [
+    {
+      "name": "ato",
+      "exit_code": 0,
+      "test_count": 1,
+      "log": "native-ato-0.log",
+      "engine": "chromium"
+    },
+    {
+      "name": "s3_notable_pipeline",
+      "exit_code": 0,
+      "test_count": 1,
+      "log": "native-s3_notable_pipeline-0.log",
+      "engine": "chromium"
+    },
+    {
+      "name": "s3_notable_pipeline_commercial",
+      "exit_code": 0,
+      "test_count": 1,
+      "log": "native-s3_notable_pipeline_commercial-0.log",
+      "engine": "chromium"
+    },
+    {
+      "name": "azure_notable_pipeline",
+      "exit_code": 0,
+      "test_count": 1,
+      "log": "native-azure_notable_pipeline-0.log",
+      "engine": "chromium"
+    },
+    {
+      "name": "llm_notable_analysis_onprem_systemd",
+      "exit_code": 0,
+      "test_count": 1,
+      "log": "native-llm_notable_analysis_onprem_systemd-0.log",
+      "engine": "chromium"
+    }
+  ],
+  "native_firefox_webkit_samples": 90,
+  "native_firefox_webkit_failures": 0,
+  "limits": [
+    "Synthetic API/identity fixtures",
+    "Real backend persistence and real SSO not qualified",
+    "No actual screen-reader speech",
+    "Linux WebKit engine, not macOS Safari",
+    "Threat Hunt runtime excluded; documentation and shared inactive CSS roles only"
+  ]
+}
