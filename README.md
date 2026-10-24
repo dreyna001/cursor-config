@@ -13,6 +13,32 @@ Canonical versioned source for the user's global Cursor configuration and Codex 
 - `codex/install-manifest.json` — the expected global Codex skill inventory
 - `codex/global_setup.py` — read-only planning, local installation/sync, and app-server verification
 
+## Permanent local UI/UX baseline
+
+`ui-baseline/README.md` is the versioned, offline reading bundle for the suite UI
+standard, with its companion, source snapshots and alignment record. Install it
+at `$HOME/.agents/ui-baseline/` (`%USERPROFILE%\.agents\ui-baseline\` on Windows):
+
+```sh
+python3 scripts/sync_ui_baseline.py check
+python3 scripts/sync_ui_baseline.py install
+python3 scripts/sync_ui_baseline.py check --installed
+```
+
+Open the installed `README.md` first for every UI/UX task. The current workstation
+uses one physical Windows bundle through a WSL alias. Other machines use their
+own user-profile copy. No GitHub sign-in is required to read an installed bundle.
+
+Approved shared UI changes are incomplete until the three app releases (six
+frontends), versioned baseline/companion, this bundle and installed copies agree.
+Follow [Keeping one baseline](ui-baseline/README.md#keeping-one-baseline), including
+app-specific exceptions and rendered/workflow validation. Preserve newer approved
+login/account behavior, sidebar spacing, typography, colors, layouts and features.
+
+The [alignment analysis](ui-baseline/verification.md) records the reconciled
+differences and the prior 135 local browser checks; it does not claim live-cloud
+qualification. New changes need their own relevant validation record.
+
 ## How Cursor uses this
 
 Cursor loads `~/.cursor/rules/*.mdc` from the user profile. `alwaysApply: true` rules are standing policy for every chat. Other rules apply when their `globs` match open files, or when the agent is told to load them. Project-specific rules stay in each application repo's `.cursor/rules/`.
@@ -63,7 +89,7 @@ Project-specific rules stay in each repo's `.cursor/` folder. This repo is for g
 
 ## Install global Codex configuration
 
-The Codex collection contains 56 custom skills. Overlapping planning, debugging, cybersecurity, and review workflows share retained entry points; tool-specific production guidance lives in ten conditional references, with official vendor sources, rather than additional skills. The engineering router links directly to those references for existing integrations; stack-selection defaults are not prerequisites for routine implementation. The focused `llm-evidence-regression` workflow pairs unsupported rejection with supported evidence/decision retention, while keeping captured recovery separate from live model quality. The `boundary-failure-regressions` skill checks reproduced parser, API, timeout/cancellation, and persistence failures while protecting adjacent supported behavior.
+The Codex collection contains 58 custom skills. Overlapping planning, debugging, cybersecurity, and review workflows share retained entry points; tool-specific production guidance lives in ten conditional references, with official vendor sources, rather than additional skills. The engineering router links directly to those references for existing integrations; stack-selection defaults are not prerequisites for routine implementation. The focused `llm-evidence-regression` workflow pairs unsupported rejection with supported evidence/decision retention, while keeping captured recovery separate from live model quality. The `boundary-failure-regressions` skill checks reproduced parser, API, timeout/cancellation, and persistence failures while protecting adjacent supported behavior.
 
 Model routing follows the user/session choice. A Sol 6.1 high or Astra high primary can work directly; bounded independent work can use subagents when that improves speed or quality. This follows OpenAI's [subagent guidance](https://learn.chatgpt.com/docs/agent-configuration/subagents) and [Astra skill-writing guidance](https://developers.openai.com/blog/rethinking-skills-and-prompts-for-gpt-6-astra). Repository instructions should add project constraints without copying or overriding this global routing policy.
 

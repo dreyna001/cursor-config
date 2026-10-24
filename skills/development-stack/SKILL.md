@@ -4,6 +4,25 @@ description: "Choose or review application, data, LLM, frontend, deployment, and
 ---
 # Development Stack
 
+For UI/UX work, start at the permanent local baseline:
+`$HOME/.agents/ui-baseline/README.md` (Windows:
+`%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
+open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
+[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
+the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
+sign-in is required to read the installed reference. This is the single entry
+point for shared rules, adaptation, visual examples, exceptions and validation.
+Preserve newer approved login/account, sidebar, typography, colors, layouts,
+features and intended behavior; older HTML or guidance cannot override them.
+
+Approved shared UI changes are not complete until the versioned baseline,
+its visual companion, all three apps (six frontends), this configuration
+repository's reference bundle, and the permanent local baseline are synchronized.
+Follow the baseline's “Keeping one baseline” procedure, record app-specific
+exceptions and validation, and preserve newer approved behavior and styling.
+If any part cannot be updated or verified, report the remaining drift explicitly.
+
 Use the selection defaults only when the task requires a technology choice. Read [references/stack-boundaries.md](references/stack-boundaries.md) before introducing a central component into a project that does not already use it.
 
 For routine work in a repository that already uses a listed technology, do not reconsider the stack. Load only the relevant implementation-practice reference routed from `stack-boundaries.md`, and follow the repository's established patterns first.
@@ -66,7 +85,7 @@ Applies to on-prem and cloud unless a profile below overrides it.
 
 - **App stack:** React, TypeScript, and Vite.
 - **UI:** Tailwind CSS for styling; Radix UI for accessible interaction primitives.
-- **Visual theme:** **Federal SOC Dark** — see [references/PORTAL_THEME.md](references/PORTAL_THEME.md) and [references/federal-soc-dark-reference.html](references/federal-soc-dark-reference.html) in this skill folder.
+- **Visual theme:** Follow the permanent local UI/UX baseline and its visual adaptation rules. Preserve the destination app's approved behavior and styling; use the HTML as a companion, not an override.
 - **Unit tests:** Vitest.
 - **Browser E2E:** Playwright only when end-to-end coverage is justified.
 - **Portal extras (conditional):** `zod`, `react-router-dom`, Testing Library/jsdom, and OpenAPI client codegen when the UI is tightly bound to a typed API contract.

@@ -1,0 +1,176 @@
+/* Suite Workspace UI v1.4.0. Keep this file identical across suite frontends.
+   Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 600; font-display: swap; src: url("./assets/fonts/public-sans-600.woff2") format("woff2"); }
+@font-face { font-family: "Public Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("./assets/fonts/public-sans-700.woff2") format("woff2"); }
+
+:root {
+  --workspace-sidebar-background: #10141a;
+  --workspace-sidebar-border: #30363d;
+  --workspace-sidebar-brand-height: 5rem;
+  --workspace-sidebar-nav-min-height: 2.5rem;
+  --workspace-sidebar-nav-padding-block: .5rem;
+  --workspace-sidebar-nav-padding-inline: .75rem;
+  --workspace-sidebar-nav-gap: .625rem;
+  --workspace-sidebar-icon-size: 1rem;
+  --workspace-sidebar-section-gap: 1rem;
+  --workspace-sidebar-width: 16rem;
+  --workspace-nav-selected-background: #1b304b;
+  --workspace-nav-selected-foreground: #c2d5ef;
+  --workspace-nav-hover-background: #161f2c;
+  --workspace-nav-hover-foreground: #cbd8e8;
+  --workspace-nav-focus: #8cbcff;
+  --workspace-nav-radius: 4px;
+  --workspace-sidebar-padding-inline: 1rem;
+  --workspace-font-ui: "Public Sans", "Source Sans Pro", -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  --workspace-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  --workspace-font-size-11: 0.6875rem;
+  --workspace-font-size-12: 0.75rem;
+  --workspace-font-size-13: 0.8125rem;
+  --workspace-font-size-14: 0.875rem;
+  --workspace-font-size-16: 1rem;
+  --workspace-font-size-18: 1.125rem;
+  --workspace-font-size-20: 1.25rem;
+  --workspace-font-size-24: 1.5rem;
+  --workspace-font-size-28: 1.75rem;
+  --workspace-font-page-title: var(--workspace-font-size-28);
+  --workspace-font-section-title: var(--workspace-font-size-18);
+  --workspace-font-subsection-title: var(--workspace-font-size-16);
+  --workspace-font-group-title: var(--workspace-font-size-14);
+  --workspace-font-body: var(--workspace-font-size-14);
+  --workspace-font-control: var(--workspace-font-size-13);
+  --workspace-font-data: var(--workspace-font-size-12);
+  --workspace-font-caption: var(--workspace-font-size-11);
+}
+
+/* Screen presentation only: retain the existing print/export sizing contract. */
+@media screen {
+  .workspace-typography { font-family: var(--workspace-font-ui); font-size: var(--workspace-font-body); line-height: 1.55; }
+  .workspace-typography :is(button, input, select, textarea) { font-family: var(--workspace-font-ui); }
+  .workspace-typography :is(code, pre, kbd, samp, .font-mono) { font-family: var(--workspace-font-mono); }
+  .workspace-typography :is(h1, h2, h3, h4, h5, h6) { font-family: var(--workspace-font-ui); font-weight: 600; }
+  .workspace-typography h1 { font-size: var(--workspace-font-page-title); line-height: 1.3; }
+  .workspace-typography h2 { font-size: var(--workspace-font-section-title); line-height: 1.5; }
+  .workspace-typography h3 { font-size: var(--workspace-font-subsection-title); line-height: 1.5; }
+  .workspace-typography :is(h4, h5) { font-size: var(--workspace-font-group-title); line-height: 1.5; }
+  .workspace-typography h6 { font-size: var(--workspace-font-control); line-height: 1.5; }
+  .workspace-typography .workspace-page-title { font-size: var(--workspace-font-page-title); line-height: 1.3; }
+  .workspace-typography :is(.workspace-section-title, .workspace-toolbar-title) { font-size: var(--workspace-font-section-title); line-height: 1.5; }
+  .workspace-typography .folio-overline { font-size: var(--workspace-font-caption); }
+
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) {
+    box-sizing: border-box;
+    width: var(--workspace-sidebar-width);
+    min-width: 0;
+    flex-shrink: 0;
+    padding-inline: var(--workspace-sidebar-padding-inline);
+  }
+  .workspace-typography .vs-guided-shell { grid-template-columns: var(--workspace-sidebar-width) minmax(0, 1fr); }
+  .workspace-typography :is(.portal-sidebar nav a, .portal-sidebar nav button, .workspace-nav-link, .vs-desk-nav-item) { font-size: var(--workspace-font-control); }
+  .workspace-typography :is(.portal-brand, .workspace-sidebar-header, .workspace-sidebar-footer, .portal-sidebar-footer) { padding-inline: 0; }
+  .workspace-typography .portal-sidebar nav[aria-label="Primary"] { padding-inline: 0; }
+  .workspace-typography .portal-sidebar nav[aria-label="Management"] { margin-inline: 0; }
+
+  /* Navigation state is owned by routing; never infer it from text or position. */
+  .workspace-typography .workspace-nav-item { border-radius: var(--workspace-nav-radius); }
+  .workspace-typography .workspace-nav-item svg:not(.absolute) { color: currentColor; }
+  .workspace-typography .workspace-nav-item:hover {
+    background: var(--workspace-nav-hover-background);
+    color: var(--workspace-nav-hover-foreground);
+  }
+  .workspace-typography .workspace-nav-item[aria-current="page"],
+  .workspace-typography .workspace-nav-item[aria-current="page"]:hover {
+    background: var(--workspace-nav-selected-background);
+    color: var(--workspace-nav-selected-foreground);
+    border-color: transparent;
+    font-weight: 500;
+  }
+  .workspace-typography .workspace-nav-item[aria-current="page"] svg { color: currentColor; }
+  .workspace-typography .workspace-nav-item:focus-visible {
+    outline: 2px solid var(--workspace-nav-focus);
+    outline-offset: 2px;
+  }
+}
+
+/* Sidebar typography and account presentation v1.3.0; no main-content rules. */
+@media screen {
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) {
+    font-family: var(--workspace-font-ui);
+    font-size: var(--workspace-font-control);
+  }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) :is(button, input, select, textarea) { font-family: var(--workspace-font-ui); }
+  .workspace-typography :is(.portal-sidebar nav a, .portal-sidebar nav button, .workspace-sidebar nav a, .workspace-sidebar nav button, .vs-guided-sidebar .vs-desk-nav-item, .workspace-sidebar-scroll button:not([aria-label]), .portal-sidebar-footer > .workspace-nav-item) {
+    font-size: var(--workspace-font-control);
+    font-weight: 400;
+  }
+  .workspace-typography :is(.portal-sidebar nav, .workspace-sidebar nav) :is(a, button) span:not([aria-live]) { font-size: inherit; }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) .workspace-nav-item[aria-current="page"] { font-weight: 500; }
+  .workspace-typography :is(.portal-sidebar nav > p, .workspace-sidebar .workspace-chat-header button, .vs-unified-workspace-label, .vs-unified-current .vs-eyebrow) { font-size: var(--workspace-font-caption); font-weight: 600; }
+  .workspace-typography :is(.workspace-brand, .vs-unified-brand strong) { font-size: var(--workspace-font-size-14); font-weight: 600; }
+  .workspace-typography :is(.workspace-brand .text-xs, .vs-unified-brand strong > span, .workspace-sidebar-footer, .portal-sidebar-footer, .workspace-assistant-context, .vs-unified-current > button.vs-link) { font-size: var(--workspace-font-data); }
+
+  .workspace-typography .workspace-account { width: 100%; min-width: 0; }
+  .workspace-typography .workspace-account .workspace-account-trigger {
+    display: flex; align-items: center; gap: 10px; width: 100%; min-height: 56px;
+    padding: 8px; margin: 0; border: 0; border-radius: var(--workspace-nav-radius);
+    background: transparent; color: #bbc6d3; text-align: left; cursor: pointer;
+    font-family: var(--workspace-font-ui); font-size: var(--workspace-font-control); line-height: 1.4;
+  }
+  .workspace-typography .workspace-account .workspace-account-trigger:hover,
+  .workspace-typography .workspace-account .workspace-account-trigger[aria-expanded="true"] { background: var(--workspace-nav-hover-background); }
+  .workspace-typography .workspace-account .workspace-account-trigger:focus-visible,
+  .workspace-typography .workspace-account-signout:focus-visible { outline: 2px solid var(--workspace-nav-focus); outline-offset: 2px; }
+  .workspace-typography .workspace-account-avatar { display: grid; place-items: center; flex: 0 0 32px; min-width: 0; height: 32px; border-radius: 50%; background: #1b2532; color: #8cbcff; font-size: var(--workspace-font-data); font-weight: 600; }
+  .workspace-typography .workspace-account-label { display: flex; flex: 1; min-width: 0; flex-direction: column; gap: 3px; }
+  .workspace-typography .workspace-account-name { display: block; margin: 0; font-size: var(--workspace-font-control); font-weight: 600; color: #e6edf3; }
+  .workspace-typography .workspace-account-label .workspace-account-name { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .workspace-typography .workspace-account-caption { font-size: var(--workspace-font-data); font-weight: 400; color: #8b949e; }
+  .workspace-typography .workspace-account-chevron { flex-shrink: 0; color: #8b949e; }
+  .workspace-typography.workspace-account-panel { position: fixed; z-index: 1000; box-sizing: border-box; overflow: auto; padding: 12px; border: 1px solid #30363d; border-radius: 6px; background: #161b22; color: #bbc6d3; font-family: var(--workspace-font-ui); font-size: var(--workspace-font-data); line-height: 1.55; }
+  .workspace-typography .workspace-account-details { padding: 2px 4px 12px; overflow-wrap: anywhere; }
+  .workspace-typography .workspace-account-id { margin: 5px 0 0; font-size: var(--workspace-font-data); color: #8b949e; }
+  .workspace-typography .workspace-account-signout { display: flex; align-items: center; gap: 10px; width: 100%; min-height: 40px; padding: 8px 4px; border: 0; border-top: 1px solid #30363d; border-radius: 0; background: transparent; color: #bbc6d3; cursor: pointer; font-family: var(--workspace-font-ui); font-size: var(--workspace-font-control); font-weight: 400; }
+  .workspace-typography .workspace-account-signout:hover { color: #e6edf3; }
+}
+
+@media screen { .workspace-typography .workspace-sidebar-footer:empty { display: none; } }
+
+@media screen { .workspace-typography .vs-guided-sidebar-footer { padding-inline: 0; } }
+
+/* Shared sidebar geometry only. Keep each app's routes, guards and scroll regions. */
+@media screen {
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) {
+    background: var(--workspace-sidebar-background);
+    border-right-color: var(--workspace-sidebar-border);
+  }
+  .workspace-typography .vs-guided-sidebar { padding-block: 0; }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) .workspace-nav-item {
+    display: flex; align-items: center; box-sizing: border-box;
+    min-height: var(--workspace-sidebar-nav-min-height);
+    padding: var(--workspace-sidebar-nav-padding-block) var(--workspace-sidebar-nav-padding-inline);
+    margin-block: 0; gap: var(--workspace-sidebar-nav-gap); line-height: 1.25rem;
+  }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) .workspace-nav-item > .inline-flex { gap: var(--workspace-sidebar-nav-gap); }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) .workspace-nav-item > .inline-flex > .inline-flex { width: var(--workspace-sidebar-icon-size); flex-shrink: 0; }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) .workspace-nav-item svg:not(.absolute) {
+    width: var(--workspace-sidebar-icon-size); height: var(--workspace-sidebar-icon-size); flex-shrink: 0;
+  }
+  .workspace-typography :is(.workspace-nav, .workspace-sidebar-navigation) { display: flex; flex-direction: column; gap: .25rem; }
+  .workspace-typography .workspace-nav { margin-top: 0; }
+  .workspace-typography .vs-guided-sidebar .workspace-sidebar-navigation { min-height: 0; flex: 1; overflow-y: auto; overflow-x: hidden; padding: 4px; margin-inline: -4px; }
+  .workspace-typography .workspace-sidebar-header { min-height: 0; flex-shrink: 1; overflow-y: auto; padding: 4px; margin: -4px; }
+  .workspace-typography :is(.portal-brand, .workspace-brand, .vs-unified-brand) {
+    display: flex; align-items: center; flex-shrink: 0; box-sizing: border-box;
+    height: var(--workspace-sidebar-brand-height); min-height: var(--workspace-sidebar-brand-height);
+    padding-block: 0; padding-inline: .5rem; margin-block: 0;
+  }
+  .workspace-typography .workspace-sidebar-header .workspace-brand { margin-block: 0; }
+  .workspace-typography :is(.workspace-sidebar-footer, .portal-sidebar-footer, .vs-guided-sidebar-footer) {
+    flex-shrink: 0; padding-block: var(--workspace-sidebar-section-gap); padding-inline: 0;
+    border-top: 1px solid var(--workspace-sidebar-border);
+  }
+  .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) hr,
+  .workspace-typography .portal-sidebar nav[aria-label="Management"],
+  .workspace-typography .vs-unified-workspace-label { border-color: var(--workspace-sidebar-border); }
+}

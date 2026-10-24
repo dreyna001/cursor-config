@@ -63,3 +63,24 @@ This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.c
 - For Codex-managed worktrees, use supported worktree archival with its recovery snapshot and preserve needed ignored files separately first. Do not bypass the manager or archive the chat itself merely to reclaim storage. If supported archival is unavailable, preserve the worktree.
 - For an ordinary Git worktree, remove it from a retained checkout using `git worktree remove <verified-absolute-path>` without `--force`, only after every check passes. Verify the registered path and repository boundary first; never delete the directory manually. Branch deletion requires separate authorization.
 - Preserve shared tool/provider caches outside worktrees and never follow provider symlinks to delete their targets. Report worktrees removed/archived, verification results, and worktrees retained with reasons.
+
+## UI/UX baseline
+
+For UI/UX work, start at the permanent local baseline:
+`$HOME/.agents/ui-baseline/README.md` (Windows:
+`%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
+open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
+[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
+the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
+sign-in is required to read the installed reference. This is the single entry
+point for shared rules, adaptation, visual examples, exceptions and validation.
+Preserve newer approved login/account, sidebar, typography, colors, layouts,
+features and intended behavior; older HTML or guidance cannot override them.
+
+Approved shared UI changes are not complete until the versioned baseline,
+its visual companion, all three apps (six frontends), this configuration
+repository's reference bundle, and the permanent local baseline are synchronized.
+Follow the baseline's “Keeping one baseline” procedure, record app-specific
+exceptions and validation, and preserve newer approved behavior and styling.
+If any part cannot be updated or verified, report the remaining drift explicitly.

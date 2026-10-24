@@ -1,0 +1,61 @@
+# Repository guidance
+
+## Agentic threat-hunting workflow
+
+Use the installed `agentic-security-workflows` skill at
+`${HOME}/.agents/skills/agentic-security-workflows/SKILL.md` and its
+`references/threat-hunting.md` for agentic capability, evidence, approval and
+analyst-workflow changes. The October 19 source review in
+[docs/agentic-workflow-review.json](docs/agentic-workflow-review.json) is a
+historical snapshot of proposed work, not the current development queue. Use
+[docs/remaining-work.md](docs/remaining-work.md) for current status. Neither
+document changes the active engine, execution scope, limits or approval
+requirements.
+
+## Codex model and subagent routing
+
+Follow the user/session-selected model and reasoning settings and the central Codex model and subagent routing guidance. This repository defines no separate model or delegation override.
+
+## Project context and conditional learning
+
+- Use the existing global contextual-learning workflow with the compact
+  [project context](docs/project-context.md). This reference is a starting point;
+  verify relevant source, environment, versions and exclusions before applying a
+  lesson, and explain why it applies. Skip or narrow a mismatch while preserving
+  this project's safeguards.
+- Keep project commands and exceptions here; retain conditional reusable
+  principles through the global workflow's existing saving and review boundaries.
+  This integration grants no application, service, deployment or access authority.
+
+## Threat-hunt reporting
+
+- When creating or changing hunt report content or presentation, follow
+  [threat-hunt reporting guidance](docs/threat-hunt-reporting-guidance.md).
+- Use the `threat-hunt-reporting` skill when installed. Keep factual assessments,
+  approved scope, evidence provenance and event timelines distinct from model
+  confidence, investigation operations and presentation conventions.
+
+## UI verification
+
+- Test this application at desktop viewport sizes only. Do not run mobile viewport checks, device emulation, mobile screenshot capture, or mobile-specific development unless the user explicitly requests it.
+- Keep browser regression tests and ad hoc verification desktop-only. Preserve historical mobile artifacts as evidence; do not rerun them.
+
+## Suite terminology
+
+Before changing user-facing wording, follow the shared
+[Suite Vocabulary and Object Model](docs/suite-vocabulary-and-object-model.md).
+Use the agreed workspace and assistant names, preserve domain distinctions and
+existing API/storage contracts, and run `python3 scripts/check_suite_terminology.py`
+after UI copy changes. Shared definitions must retain the same version and content
+in all three repositories; record local exceptions in
+[the terminology audit](docs/suite-terminology-audit.md).
+
+## Shared workspace UI
+
+Read [the authoritative Suite Workspace UI Standard](../../README.md)
+before UI work. It defines precedence, adaptation, shared appearance and
+verification; the HTML companion is illustrative, not an independent authority.
+Keep released copies and shared `suite-workspace.css` identical across the suite.
+Run `python3 scripts/check_suite_ui.py` and relevant rendered/workflow checks.
+Preserve each app's layouts, accessible primitives, features, intended behavior,
+draft/review guards and print/export contracts. Document necessary exceptions.

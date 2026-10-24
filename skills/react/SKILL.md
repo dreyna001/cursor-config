@@ -4,6 +4,25 @@ description: "Create or review React components, hooks, UI states, Vite builds, 
 ---
 # React Skill
 
+For UI/UX work, start at the permanent local baseline:
+`$HOME/.agents/ui-baseline/README.md` (Windows:
+`%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
+open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
+[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
+the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
+sign-in is required to read the installed reference. This is the single entry
+point for shared rules, adaptation, visual examples, exceptions and validation.
+Preserve newer approved login/account, sidebar, typography, colors, layouts,
+features and intended behavior; older HTML or guidance cannot override them.
+
+Approved shared UI changes are not complete until the versioned baseline,
+its visual companion, all three apps (six frontends), this configuration
+repository's reference bundle, and the permanent local baseline are synchronized.
+Follow the baseline's “Keeping one baseline” procedure, record app-specific
+exceptions and validation, and preserve newer approved behavior and styling.
+If any part cannot be updated or verified, report the remaining drift explicitly.
+
 Use when creating, editing, or reviewing React frontend code.
 
 Follow these rules:
@@ -17,7 +36,6 @@ Follow these rules:
 * Keep forms accessible and predictable.
 * Avoid unnecessary `useMemo`, `useCallback`, and abstraction.
 * Do not introduce new UI/state libraries unless required.
-* For cybersecurity portals, follow **Federal SOC Dark**: read `development-stack/references/PORTAL_THEME.md` and open `development-stack/references/federal-soc-dark-reference.html` from the installed skill folder.
 * Keep frontend types aligned with backend API schemas.
 * Remove dead code, unused imports, console logs, and duplicate logic.
 * Prefer simple, readable, production-ready code.
@@ -29,7 +47,6 @@ Follow these rules:
 * Prefer existing primitives and semantic theme tokens/utilities for colors, surfaces, borders, spacing, typography, and focus states. Avoid hard-coded colors, one-off CSS, or duplicate buttons, badges, cards, and help controls when the shared component can express the need.
 * Keep hover, focus, active, disabled, loading, success, and error states consistent with the shared component patterns. Preserve readable contrast, visible focus, and responsive behavior.
 * Make local presentation changes locally. Change shared primitives or theme tokens only when the intended effect is shared across the app.
-* For cybersecurity portals, use the Federal SOC Dark reference linked above for the palette, typography, corner treatment, and status colors; keep its detailed values in that reference rather than creating local variants.
 * Keep expandable cards visually continuous: the trigger, single section title, status, and expanded content share one card outline. Avoid a separate bordered trigger followed by a second card that repeats the same title. When correcting one expandable section, check its sibling sections for the same pattern.
 
 ## Icons: Lucide React
