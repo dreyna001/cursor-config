@@ -1,0 +1,20 @@
+
+Running 15 tests using 1 worker
+
+  ✓   1 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (9.5s)
+  ✓   2 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (6.9s)
+  ✓   3 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (6.7s)
+  ✓   4 [chromium] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (4.3s)
+  ✓   5 [chromium] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (4.5s)
+  ✓   6 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (13.2s)
+  ✓   7 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (11.4s)
+  ✓   8 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (9.9s)
+  ✓   9 [firefox] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (5.5s)
+  ✓  10 [firefox] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (6.0s)
+  ✓  11 [webkit] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (8.3s)
+  ✓  12 [webkit] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (8.3s)
+  ✓  13 [webkit] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (8.9s)
+  ✓  14 [webkit] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (5.7s)
+  ✓  15 [webkit] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (5.4s)
+
+  15 passed (2.7m)

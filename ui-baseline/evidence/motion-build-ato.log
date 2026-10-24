@@ -1,0 +1,37 @@
+
+> ato-portal@0.1.0 build
+> tsc -b && vite build
+
+vite v7.3.6 building client environment for production...
+transforming...
+✓ 1824 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.62 kB │ gzip:   0.38 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2   14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2   14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2   14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2   14.66 kB
+dist/assets/index-DR2mJlJi.css               86.26 kB │ gzip:  15.31 kB
+dist/assets/index-Bg0UtWKx.js               861.95 kB │ gzip: 239.25 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 5.54s
+
+> ato-portal@0.1.0 test
+> vitest run src/components/PortalNavSidebar.test.tsx src/components/WorkspaceAccount.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.10 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/suite-motion-ato/portal[39m
+
+ [32m✓[39m src/components/PortalNavSidebar.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[33m 1033[2mms[22m[39m
+     [33m[2m✓[22m[39m shows the actual account and signs out only through its explicit action [33m 698[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m1 passed[39m[22m[90m (1)[39m
+[2m      Tests [22m [1m[32m3 passed[39m[22m[90m (3)[39m
+[2m   Start at [22m 23:44:57
+[2m   Duration [22m 4.38s[2m (transform 657ms, setup 293ms, import 1.01s, tests 1.03s, environment 1.85s)[22m
+

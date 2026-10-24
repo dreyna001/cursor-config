@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-Version: **1.6.1** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.7.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -14,6 +14,7 @@ source of shared rules.
   each app's intended behavior, layouts, features and newer approved work.
 - [Visual adaptation](#visual-adaptation): how to use the common design language
   without importing prototype behavior or replacing an established stack.
+- [Motion and reduced motion](#motion-and-reduced-motion): timings, feedback roles, popup scope and validation.
 - [Navigation](#navigation), [sidebar states](#sidebar-navigation-states),
   [typography](#typography), [account presentation](#shared-sidebar-account-and-text-roles)
   and [sidebar geometry](#shared-sidebar-geometry-and-interaction): normative shared rules.
@@ -213,6 +214,51 @@ The 14px field role follows the [Fluent web typography scale](https://fluent2.mi
 as a readable compact-UI choice, not a claim that WCAG mandates a pixel size.
 Use relative units and verify [200% text resizing](https://www.w3.org/WAI/WCAG22/Understanding/resize-text)
 without losing content or functionality. Avoid shrinking text to force content to fit.
+
+## Motion and reduced motion
+
+Motion is a shared contract, not an implicit framework default. The earlier
+parity checks verified appearance and interaction states but did not establish
+motion parity. This section closes that gap without changing layouts or workflows.
+
+- Equivalent hover/selection color transitions and disclosure rotations use
+  **150ms**, **cubic-bezier(0.4, 0, 0.2, 1)**, and **no delay** through
+  `--workspace-motion-duration` and `--workspace-motion-ease`.
+- Interpolate only color, background, border, shadow and opacity for ordinary
+  controls. Disclosure indicators may rotate; never animate widths, heights,
+  spacing, page layout, or workflow completion to manufacture visual parity.
+- Keyboard focus indicators appear immediately. Preserve focus rings, outlines,
+  final selected/open states and existing accessible names.
+- Existing popup enter/exit effects use the same 150ms/easing contract. Mark
+  portalled content `workspace-motion-surface workspace-motion-overlay` so its
+  transitions are covered outside the main workspace wrapper. Do not introduce
+  popup effects or new open/close behavior where none exists.
+- Loading spinners use **1s linear**; skeleton/loading pulses use **2s** with
+  **cubic-bezier(0.4, 0, 0.6, 1)**. Use the shared spinner/pulse tokens and roles;
+  do not add loading animations or loading delays to otherwise static controls.
+- IR's existing typing dots retain their distinct **1.2s ease-in-out** cycle and
+  **120ms** stagger through `--workspace-motion-typing-duration`. This is a
+  documented feedback role, not a different speed for the same ordinary control.
+- With `prefers-reduced-motion: reduce`, disable CSS animations, transitions and
+  smooth scrolling across the app, including portals and pseudo-elements. Keep
+  loading/status content visible and final disclosure/selection states intact;
+  typing dots become static. Honor preference changes without a reload. Do not
+  change API calls, polling, request cancellation, timers or measurement frames.
+- Verify both preference modes in Chromium, Firefox and WebKit. Check actual
+  navigation/disclosure roles, keyboard focus, portal scope, loading indicators,
+  unchanged geometry, and restoration when the preference changes back. Include
+  an explicit motion inventory and results; matching screenshots or source hashes
+  alone cannot establish animation parity.
+
+The preference follows [MDN prefers-reduced-motion](https://developer.mozilla.org/en-US/docs/Web/CSS/@media/prefers-reduced-motion)
+and [WCAG animation from interactions](https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions.html).
+These checks are not a claim of complete accessibility certification.
+
+Parity sign-off must identify which roles were measured: typography, palette,
+spacing, hover/selection, keyboard focus, disabled/loading states, overlays,
+motion and reduced motion. Record each as verified, an intentional exception,
+or unverified. Do not turn a source-hash match or a static screenshot check into
+a claim that every interaction and motion state was exercised.
 
 ## Scope and maintenance
 

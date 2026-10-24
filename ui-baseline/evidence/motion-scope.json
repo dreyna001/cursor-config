@@ -1,0 +1,54 @@
+[
+  {
+    "repository": "hunt",
+    "changed_files": [
+      "design-previews/20261018/unified/visual-reference.html",
+      "docs/suite-ui-standard.md",
+      "frontend/e2e/suite-ui.ts",
+      "frontend/src/investigation-desk.css",
+      "frontend/src/suite-workspace.css",
+      "scripts/check_suite_ui.py"
+    ],
+    "layout_palette_and_business_logic_preserved": true
+  },
+  {
+    "repository": "ato",
+    "changed_files": [
+      "docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html",
+      "docs/suite-ui-standard.md",
+      "portal/e2e/suite-ui.ts",
+      "portal/src/components/ssp-workspace/unified-controls.css",
+      "portal/src/suite-workspace.css",
+      "scripts/check_suite_ui.py"
+    ],
+    "layout_palette_and_business_logic_preserved": true
+  },
+  {
+    "repository": "incident",
+    "changed_files": [
+      "azure_notable_pipeline/frontend/analyst-portal/e2e/suite-ui.ts",
+      "azure_notable_pipeline/frontend/analyst-portal/src/components/StreamingAssistantMessage.tsx",
+      "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/select.tsx",
+      "azure_notable_pipeline/frontend/analyst-portal/src/index.css",
+      "azure_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+      "docs/suite-ui-standard.md",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-ui.ts",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/StreamingAssistantMessage.tsx",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/select.tsx",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/index.css",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/suite-workspace.css",
+      "s3_notable_pipeline/frontend/analyst-portal/e2e/suite-ui.ts",
+      "s3_notable_pipeline/frontend/analyst-portal/src/components/StreamingAssistantMessage.tsx",
+      "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/select.tsx",
+      "s3_notable_pipeline/frontend/analyst-portal/src/index.css",
+      "s3_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-ui.ts",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/StreamingAssistantMessage.tsx",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/select.tsx",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/src/index.css",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/src/suite-workspace.css",
+      "scripts/check_suite_ui.py"
+    ],
+    "layout_palette_and_business_logic_preserved": true
+  }
+]

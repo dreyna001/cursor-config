@@ -1,18 +1,18 @@
 {
-  "version": "1.6.1",
+  "version": "1.7.0",
   "prepared": "2026-10-23",
   "source_commits": {
-    "ai-enabled-threathunting": "563b9ced65fc12cf5dc155cd99a08823e6fbbe35",
-    "ai-enabled-ato": "6db791c4e664b533cfc91fc03826cd3e6967f148",
-    "llm_notable_analysis": "7e7a18a5ea48f07f16549b6a301cce6909b0dd0f"
+    "ai-enabled-threathunting": "15c7269b735e85536a1576a29352b7b0abae2fa3",
+    "ai-enabled-ato": "d1b5bc454b2ad911c4e5b9d414387e6f51cc9968",
+    "llm_notable_analysis": "d750c9d089053725e70de5850c3976c438e02a1e"
   },
   "files": [
     {
       "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592",
-      "local_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592"
+      "source_sha256": "ef6501495cb41eb36e23e3d787588f02d113a538c75883d46420375ebae25912",
+      "local_sha256": "ef6501495cb41eb36e23e3d787588f02d113a538c75883d46420375ebae25912"
     },
     {
       "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
@@ -53,29 +53,29 @@
       "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
       "repository": "ai-enabled-threathunting",
       "source_path": "frontend/src/suite-workspace.css",
-      "source_sha256": "ad231ac3fab304327bda6a28b28afec1ab27a364b7a747d9d0b47ac3b8cbdaee",
-      "local_sha256": "ad231ac3fab304327bda6a28b28afec1ab27a364b7a747d9d0b47ac3b8cbdaee"
+      "source_sha256": "9259cfdeea89282d661869c1b923154fb26f8106f2768a8c12a81103f9ed166c",
+      "local_sha256": "9259cfdeea89282d661869c1b923154fb26f8106f2768a8c12a81103f9ed166c"
     },
     {
       "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
       "repository": "ai-enabled-threathunting",
       "source_path": "scripts/check_suite_ui.py",
-      "source_sha256": "cb26182ca4853fdefb7dc9caba4667079861566b1cc083dc8582f36b24a9bb6d",
-      "local_sha256": "cb26182ca4853fdefb7dc9caba4667079861566b1cc083dc8582f36b24a9bb6d"
+      "source_sha256": "89256261ee218f8b3647711314523f4c4ae61e0396028a205f3ff33724283314",
+      "local_sha256": "89256261ee218f8b3647711314523f4c4ae61e0396028a205f3ff33724283314"
     },
     {
       "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
       "repository": "ai-enabled-threathunting",
       "source_path": "design-previews/20261018/unified/visual-reference.html",
-      "source_sha256": "a3aec5d9e9585b75d108d2be320078a19f5376167d5e2c957c9fabab70a84f7a",
-      "local_sha256": "a3aec5d9e9585b75d108d2be320078a19f5376167d5e2c957c9fabab70a84f7a"
+      "source_sha256": "2611f8f8e00b65b4d8a46d16f1926ff0b7dad5b331d6100ae07616377a41afa9",
+      "local_sha256": "2611f8f8e00b65b4d8a46d16f1926ff0b7dad5b331d6100ae07616377a41afa9"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
       "repository": "ai-enabled-ato",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592",
-      "local_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592"
+      "source_sha256": "ef6501495cb41eb36e23e3d787588f02d113a538c75883d46420375ebae25912",
+      "local_sha256": "ef6501495cb41eb36e23e3d787588f02d113a538c75883d46420375ebae25912"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
@@ -102,8 +102,8 @@
       "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
       "repository": "llm_notable_analysis",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592",
-      "local_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592"
+      "source_sha256": "ef6501495cb41eb36e23e3d787588f02d113a538c75883d46420375ebae25912",
+      "local_sha256": "ef6501495cb41eb36e23e3d787588f02d113a538c75883d46420375ebae25912"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
@@ -121,17 +121,17 @@
     },
     {
       "path": "README.md",
-      "local_sha256": "09501916840fc94190644f61c05cb08212170fc2801881ae9eb369745c9b33a1",
+      "local_sha256": "b923f7672c5c6721ff23d227388fca1bd6db6f0b65b74a497fdbdb69f563cc4c",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "28bdf71a81785158b5380f221b54f161fb9124188709eefdf2558917b14e77ed",
+      "local_sha256": "af58c3c2a68a32841e7b1a7711e2d4c7baf91ea4c1739eb22f376adbb7234212",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "a43ae60cf0b17f8016dfcd274b68b91a03dec2ec91e55a86cf61ce17bf2ea6ec",
+      "local_sha256": "8802817400134a7ac1054a04d8f5af2c3d01cfa138c1b5e9422e4842721f680e",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -325,6 +325,70 @@
     {
       "path": "evidence/ato-title-validation.json",
       "local_sha256": "6eba8dbb92a775afb1c21fca8342d80e8a1f6f00a37d43a3eb258b1ba3cce1e5"
+    },
+    {
+      "path": "evidence/motion-browser-ato.log",
+      "local_sha256": "4767419fe77c0543c8fda7aa6b0d3f3e4ad303484485db1ca278f3c74d4a1484"
+    },
+    {
+      "path": "evidence/motion-browser-azure_notable_pipeline.log",
+      "local_sha256": "26e5bf1c2ba57bfab448daf637e6cdbd6fa859e38fe3dbc4ef0389c694c923f9"
+    },
+    {
+      "path": "evidence/motion-browser-hunt.log",
+      "local_sha256": "1768d05bbf6d815d372c4fb61ecd135296e56e8123fcb3a9f9f8f37ce2c0ce0a"
+    },
+    {
+      "path": "evidence/motion-browser-llm_notable_analysis_onprem_systemd.log",
+      "local_sha256": "b46f94a295b8d67fc4051151d547f6cf7506e7248dd6c44447ef3e51c8b422fb"
+    },
+    {
+      "path": "evidence/motion-browser-results.json",
+      "local_sha256": "293200edd5da2ab95ea8fc11284be044a4c920ddf65573e6ca65f2bc4504009b"
+    },
+    {
+      "path": "evidence/motion-browser-s3_notable_pipeline.log",
+      "local_sha256": "c959672c12dea951cc100722cfd685e19df83f454f4e83e05097a7459cca4946"
+    },
+    {
+      "path": "evidence/motion-browser-s3_notable_pipeline_commercial.log",
+      "local_sha256": "ecd3f3e0a24ca551a25aec887a295d166a4152b36150dccc0e1b4554a9460b4c"
+    },
+    {
+      "path": "evidence/motion-build-ato.log",
+      "local_sha256": "6f858df2d63bb3baddec1f742d3f71e0c4c853ebaef5ca101b9fb49053cc2e9c"
+    },
+    {
+      "path": "evidence/motion-build-azure_notable_pipeline.log",
+      "local_sha256": "ae631546b5bcdaafd892f70d2e4973f61c03bdc9e18c3141d2c5fcd5586607e0"
+    },
+    {
+      "path": "evidence/motion-build-hunt.log",
+      "local_sha256": "2517cf158b937ca296cb04bf283024e3bff9fa936b14311dcd3bec55104ef09f"
+    },
+    {
+      "path": "evidence/motion-build-llm_notable_analysis_onprem_systemd.log",
+      "local_sha256": "e3e529d7df047cb8a76ada4e4e83fe6bd6550bf6d9639e44447e02028b86fa1c"
+    },
+    {
+      "path": "evidence/motion-build-results.json",
+      "local_sha256": "293200edd5da2ab95ea8fc11284be044a4c920ddf65573e6ca65f2bc4504009b"
+    },
+    {
+      "path": "evidence/motion-build-s3_notable_pipeline.log",
+      "local_sha256": "ca60840f8cf197e1421c43816fc770fa138010a250acf6baeec33717f6f7289e"
+    },
+    {
+      "path": "evidence/motion-build-s3_notable_pipeline_commercial.log",
+      "local_sha256": "435614fccefd0549985ff3eb97b78dce9253755521eba0d9f50305b45194b86c"
+    },
+    {
+      "path": "evidence/motion-scope.json",
+      "local_sha256": "c4a4a80e1a6cd3bc4c603a01dd8e9a59ec22845e8f3e4547c2a871a75431b21d"
+    },
+    {
+      "path": "evidence/verification-v1.6.1.md",
+      "local_sha256": "05e42b88f7f759c9447cc321db26f308c4f4472c7d4120e81795f9a28c18b924"
     }
   ]
 }

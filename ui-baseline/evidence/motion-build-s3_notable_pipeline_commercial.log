@@ -1,0 +1,45 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-CpwX866m.css                    67.44 kB │ gzip:  12.60 kB
+dist/assets/chevron-down-2DxzQ8H3.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/input-C8kSMX9v.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-BZocumEJ.js                      0.89 kB │ gzip:   0.43 kB
+dist/assets/CaseArchiveNoticeBanner-vWAlo3ok.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-BGyMbHRl.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-CPkkqWzB.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-CGI_6s4W.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-ygYRU1bQ.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-7hgGw1-F.js                  62.77 kB │ gzip:  19.86 kB
+dist/assets/CasesPage-B-eGoRbN.js                 82.91 kB │ gzip:  28.52 kB
+dist/assets/MarkdownMessage-CdnYj5wH.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-B0Oe9aNi.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-CQuOfN0O.js                    435.79 kB │ gzip: 134.16 kB
+✓ built in 7.35s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/auth/PortalAuth.test.tsx src/auth/productionAccountBoundary.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/suite-motion-incident/s3_notable_pipeline_commercial/frontend/analyst-portal[39m
+
+ [32m✓[39m src/auth/productionAccountBoundary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 272[2mms[22m[39m
+ [32m✓[39m src/auth/PortalAuth.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 343[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m11 passed[39m[22m[90m (11)[39m
+[2m   Start at [22m 23:45:02
+[2m   Duration [22m 4.35s[2m (transform 610ms, setup 497ms, import 1.35s, tests 615ms, environment 5.54s)[22m
+

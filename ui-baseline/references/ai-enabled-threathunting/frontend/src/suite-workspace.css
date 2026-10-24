@@ -1,4 +1,4 @@
-/* Suite Workspace UI v1.6.1. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.7.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
@@ -6,6 +6,11 @@
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("./assets/fonts/public-sans-700.woff2") format("woff2"); }
 
 :root {
+  --workspace-motion-duration: 150ms;
+  --workspace-motion-ease: cubic-bezier(0.4, 0, 0.2, 1);
+  --workspace-motion-spinner-duration: 1s;
+  --workspace-motion-pulse-duration: 2s;
+  --workspace-motion-typing-duration: 1.2s;
   --workspace-color-page: #0d1117;
   --workspace-color-surface: #161b22;
   --workspace-color-text: #bbc6d3;
@@ -225,4 +230,60 @@
   .workspace-typography :is(h1,h2,h3,h4,h5,h6,.workspace-page-title,.workspace-section-title,.workspace-toolbar-title):not(.folio-overline,.text-muted-foreground,.text-warning,.text-destructive,.text-success,[data-workspace-tone]) {
     color: var(--workspace-color-heading);
   }
+}
+
+/* Shared motion roles. Animate decoration only, never layout or workflow timing. */
+@media screen {
+  :is(.workspace-typography, .workspace-motion-surface) :is(button, a, input, select, textarea, summary, [role="button"], [role="tab"], [role="option"], [role="combobox"], .workspace-nav-item) {
+    transition-property: color, background-color, border-color, box-shadow, opacity;
+    transition-duration: var(--workspace-motion-duration);
+    transition-timing-function: var(--workspace-motion-ease);
+    transition-delay: 0s;
+  }
+  :is(.workspace-typography, .workspace-motion-surface) :is(.transition-colors, .transition-opacity, .transition-transform, .vs-disclosure-icon, .workspace-motion-disclosure) {
+    transition-duration: var(--workspace-motion-duration);
+    transition-timing-function: var(--workspace-motion-ease);
+    transition-delay: 0s;
+  }
+  :is(.workspace-typography, .workspace-motion-surface) :is(.transition-transform, .vs-disclosure-icon, .workspace-motion-disclosure) {
+    transition-property: transform;
+  }
+  /* Keyboard focus must be visible immediately, including ring/outline changes. */
+  :is(.workspace-typography, .workspace-motion-surface) :focus-visible {
+    transition: none;
+  }
+  .workspace-motion-overlay {
+    animation-duration: var(--workspace-motion-duration);
+    animation-timing-function: var(--workspace-motion-ease);
+    animation-delay: 0s;
+  }
+  :is(.workspace-typography, .workspace-motion-surface) :is(.animate-spin, .workspace-motion-spinner) {
+    animation: workspace-spin var(--workspace-motion-spinner-duration) linear infinite;
+  }
+  :is(.workspace-typography, .workspace-motion-surface) :is(.animate-pulse, .workspace-motion-pulse) {
+    animation: workspace-pulse var(--workspace-motion-pulse-duration) cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+  :is(.workspace-typography, .workspace-motion-surface) .workspace-motion-typing {
+    animation-name: workspace-typing;
+    animation-duration: var(--workspace-motion-typing-duration);
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: both;
+  }
+  @keyframes workspace-spin { to { transform: rotate(360deg); } }
+  @keyframes workspace-pulse { 50% { opacity: 0.5; } }
+  @keyframes workspace-typing {
+    0%, 80%, 100% { opacity: 0.35; transform: translateY(0); }
+    40% { opacity: 1; transform: translateY(-4px); }
+  }
+}
+
+/* App-wide so portalled menus/dialogs and pseudo-elements honor the same preference. */
+@media screen and (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+  .workspace-motion-typing { opacity: 1; }
 }
