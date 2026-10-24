@@ -1,0 +1,12 @@
+{
+  "version": "1.14.0",
+  "shared": "docs/suite-foundation-contract.json",
+  "preserved": [
+    "HttpOnly session cookies and CSRF/Origin mutation headers",
+    "Agency settings capture-phase draft history guard and save/continue registry",
+    "Generation stream idle deadline, event parser and cancellation; uncertain-upload reconciliation",
+    "Zod domain schemas, revision approvals and backend field error semantics",
+    "Existing memory-owned workspace state and draft providers"
+  ],
+  "deadlinePolicy": "30 seconds by default including body; explicit 220-second chat/long mutation and 120-second transfer budgets; only ATO generation stream owns its idle deadline."
+}

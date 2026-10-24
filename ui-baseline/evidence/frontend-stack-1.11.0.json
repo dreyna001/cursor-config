@@ -1,0 +1,2010 @@
+{
+  "date": "2026-10-24",
+  "baseline": "1.11.0",
+  "status": "Local working-tree implementation; not committed, merged or deployed",
+  "runtime": {
+    "node": "24.22.1",
+    "npm": "11.19.1",
+    "chromium": "156.0.8078.4",
+    "firefox": "157.0",
+    "webkit": "27.2"
+  },
+  "frontends": [
+    {
+      "app": "/home/dreyna/ai-coe-projects/ai-enabled-ato/portal",
+      "label": "ato",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.18
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 2.24
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 13.21
+      },
+      "name": "ATO",
+      "unitTestsPassed": 404,
+      "browser": {
+        "startTime": "2026-10-24T20:43:30.109Z",
+        "duration": 114891.324,
+        "expected": 36,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "servingMode": "Vite development server",
+      "scenarios": [
+        {
+          "title": "desktop zoom preserves full-width content and required creation controls",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 215,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "new assistant replies announce completion without announcing restored history",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 240,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "desktop zoom keeps every unsaved-draft action visible and preserves cancellation",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 269,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "simplifies SSP navigation while preserving review links and one contextual assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 217,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "supports private advice and complete SSP edit review in the dedicated assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 471,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps document drafts guarded, sources protected, and canonical edits in System Setup",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 552,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 647,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps setup and review actions reachable across desktop widths without implicit writes",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 760,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "presents creation and management empty, error and retry states without changing assignments",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 811,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps session loading, sign-in errors and degraded readiness clear",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 863,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps review URLs and guarded selections through refresh and system switches",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 889,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "filters evidence files without changing the selected review batch",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 918,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps the account menu accessible and preserves drafts when dismissed",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 964,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "signs out through the account menu with the existing authenticated request",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1004,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1033,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "uses shared title roles when opening the ATO assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1041,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps an unsaved control draft and focus through assistant history navigation",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1048,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: waiting and failed workspace states are announced",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1071,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1088,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1033,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "uses shared title roles when opening the ATO assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1041,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: waiting and failed workspace states are announced",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1071,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1088,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1026,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1033,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "uses shared title roles when opening the ATO assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1041,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: waiting and failed workspace states are announced",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1071,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "line": 1088,
+          "engines": [
+            "webkit"
+          ]
+        }
+      ],
+      "screenshot": "stack-ato-1440.png"
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/ai-enabled-threathunting/frontend",
+      "label": "hunt",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.13
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.93
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 2.69
+      },
+      "name": "Threat Hunt",
+      "unitTestsPassed": 196,
+      "browser": {
+        "startTime": "2026-10-24T20:46:24.339Z",
+        "duration": 95705.92700000001,
+        "expected": 65,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "servingMode": "production preview",
+      "scenarios": [
+        {
+          "title": "new hunt restores its scoped tab draft, preserves text on import, and submits optional outcomes with explicit UTC bounds",
+          "file": "unified-workspace.spec.ts",
+          "line": 51,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "failed create retains the full draft and logout clears account-scoped draft storage",
+          "file": "unified-workspace.spec.ts",
+          "line": 86,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a concern alone derives a title and prepares discovery without running searches",
+          "file": "unified-workspace.spec.ts",
+          "line": 102,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "intelligence alone derives its title without asserting a hypothesis",
+          "file": "unified-workspace.spec.ts",
+          "line": 115,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "configuration pages keep model settings deployment-owned and preserve the selected plan",
+          "file": "unified-workspace.spec.ts",
+          "line": 129,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "leaving a pending create does not let its late response replace the hunt being reviewed",
+          "file": "unified-workspace.spec.ts",
+          "line": 154,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a window-only intake draft survives queue navigation and refresh before any writing",
+          "file": "unified-workspace.spec.ts",
+          "line": 182,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "new hunt keeps its brief and investigation window in one column at desktop widths",
+          "file": "unified-workspace.spec.ts",
+          "line": 198,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "New Hunt retains its parent navigation selection and shared form roles",
+          "file": "unified-workspace.spec.ts",
+          "line": 244,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /connections",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /settings",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /settings?section=limits",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/new",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/plan",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/investigation",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/evidence",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/report",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/activity",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/advanced",
+          "file": "url-routing.spec.ts",
+          "line": 127,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "workspace tabs and browser Back/Forward keep the address and visible section in sync",
+          "file": "url-routing.spec.ts",
+          "line": 140,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "Settings sections keep their selection in the URL and browser history",
+          "file": "url-routing.spec.ts",
+          "line": 178,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "login preserves a deep link and ignores an unsafe external redirect target",
+          "file": "url-routing.spec.ts",
+          "line": 196,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a missing hunt can be retried and returned to the hunt list",
+          "file": "url-routing.spec.ts",
+          "line": 209,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a delayed response for the old hunt cannot replace the hunt opened from the queue",
+          "file": "url-routing.spec.ts",
+          "line": 221,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "browser Back asks before crossing hunts and dismiss keeps the unsaved draft",
+          "file": "url-routing.spec.ts",
+          "line": 262,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "browser Back accepts the discard confirmation and opens the earlier hunt",
+          "file": "url-routing.spec.ts",
+          "line": 280,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a bookmarked citation URL verifies its saved report snapshot and opens the evidence",
+          "file": "url-routing.spec.ts",
+          "line": 301,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a citation with a different saved report version fails closed without opening current evidence",
+          "file": "url-routing.spec.ts",
+          "line": 311,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "malformed snapshot query metadata fails closed until the analyst explicitly opens current evidence",
+          "file": "url-routing.spec.ts",
+          "line": 323,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "a copied snapshot query citation returns to its originating report",
+          "file": "url-routing.spec.ts",
+          "line": 334,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "url-routing.spec.ts",
+          "line": 355,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "uses shared heading roles across the Hunt review views",
+          "file": "url-routing.spec.ts",
+          "line": 364,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "url-routing.spec.ts",
+          "line": 355,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "uses shared heading roles across the Hunt review views",
+          "file": "url-routing.spec.ts",
+          "line": 364,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "url-routing.spec.ts",
+          "line": 347,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "url-routing.spec.ts",
+          "line": 355,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "uses shared heading roles across the Hunt review views",
+          "file": "url-routing.spec.ts",
+          "line": 364,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "opens completed hunts at Investigation Desk before the separate report",
+          "file": "workflow-smoke.spec.ts",
+          "line": 267,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "reviews saved questions inline, preserves filtering, and opens the exact evidence source",
+          "file": "workflow-smoke.spec.ts",
+          "line": 322,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "prioritizes the readable report, expands supporting detail, and follows evidence links",
+          "file": "workflow-smoke.spec.ts",
+          "line": 411,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "loads action history on demand, paginates, and preserves unknown usage",
+          "file": "workflow-smoke.spec.ts",
+          "line": 555,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "shows unresolved coverage and deferred candidates beyond the first three",
+          "file": "workflow-smoke.spec.ts",
+          "line": 593,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "continues polling a terminal hunt while its job is claimed, then stops at completed",
+          "file": "workflow-smoke.spec.ts",
+          "line": 628,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "continues polling a terminal hunt while its job is claimed, then stops at failed",
+          "file": "workflow-smoke.spec.ts",
+          "line": 628,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "shows quarantine guidance, keeps cancel, and stops polling a quarantined job",
+          "file": "workflow-smoke.spec.ts",
+          "line": 663,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "recovers discovery gateway timeout and polls the same hunt without a job",
+          "file": "workflow-smoke.spec.ts",
+          "line": 693,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "preserves new-hunt intake across the discard guard and creates the intended hunt",
+          "file": "workflow-smoke.spec.ts",
+          "line": 751,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps the hunt workspace navigation keyboard-accessible",
+          "file": "workflow-smoke.spec.ts",
+          "line": 806,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "signs in, lists hunts, and renders execution and report states",
+          "file": "workflow-smoke.spec.ts",
+          "line": 831,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps successful hunt results visible when the report read fails and retries the report",
+          "file": "workflow-smoke.spec.ts",
+          "line": 878,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "keeps an editable report available when the hunt results read fails and retries results",
+          "file": "workflow-smoke.spec.ts",
+          "line": 918,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "refreshes the hunt state after report finalization",
+          "file": "workflow-smoke.spec.ts",
+          "line": 977,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "accepts finalization observed at the same report version",
+          "file": "workflow-smoke.spec.ts",
+          "line": 1001,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "preserves a saved analyst edit when an older report read finishes late",
+          "file": "workflow-smoke.spec.ts",
+          "line": 1026,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "account details retain the full name, open above the row and dismiss with keyboard or outside interaction",
+          "file": "workspace-account.spec.ts",
+          "line": 26,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "account sign-out preserves an unsaved hunt when cancelled and clears it only after discard",
+          "file": "workspace-account.spec.ts",
+          "line": 65,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "account details stay out of printed workspace pages",
+          "file": "workspace-account.spec.ts",
+          "line": 84,
+          "engines": [
+            "chromium"
+          ]
+        }
+      ],
+      "screenshot": "stack-hunt-1440.png"
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal",
+      "label": "azure_notable_pipeline",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.76
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 2.57
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 12.95
+      },
+      "name": "IR / Azure Government",
+      "unitTestsPassed": 231,
+      "browser": {
+        "startTime": "2026-10-24T20:48:36.801Z",
+        "duration": 79245.265,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "servingMode": "Vite development server",
+      "scenarios": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 35,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 80,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "webkit"
+          ]
+        }
+      ],
+      "screenshot": "stack-azure_notable_pipeline-1440.png"
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal",
+      "label": "llm_notable_analysis_onprem_systemd",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.02
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.37
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 11.84
+      },
+      "name": "IR / on-premises",
+      "unitTestsPassed": 230,
+      "browser": {
+        "startTime": "2026-10-24T20:46:11.250Z",
+        "duration": 77616.265,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "servingMode": "Vite development server",
+      "scenarios": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 35,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 80,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "webkit"
+          ]
+        }
+      ],
+      "screenshot": "stack-llm_notable_analysis_onprem_systemd-1440.png"
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal",
+      "label": "s3_notable_pipeline",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.33
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 2.3
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 11.67
+      },
+      "name": "IR / AWS GovCloud",
+      "unitTestsPassed": 222,
+      "browser": {
+        "startTime": "2026-10-24T20:47:29.744Z",
+        "duration": 75264.97,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "servingMode": "Vite development server",
+      "scenarios": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 35,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 80,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "webkit"
+          ]
+        }
+      ],
+      "screenshot": "stack-s3_notable_pipeline-1440.png"
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal",
+      "label": "s3_notable_pipeline_commercial",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 2.46
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.33
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 7.95
+      },
+      "name": "IR / AWS commercial",
+      "unitTestsPassed": 258,
+      "browser": {
+        "startTime": "2026-10-24T20:48:18.689Z",
+        "duration": 75234.456,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      },
+      "servingMode": "Vite development server",
+      "scenarios": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 35,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "line": 80,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "chromium"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "firefox"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "line": 37,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "line": 47,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "line": 55,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "line": 62,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "line": 75,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "line": 100,
+          "engines": [
+            "webkit"
+          ]
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "line": 123,
+          "engines": [
+            "webkit"
+          ]
+        }
+      ],
+      "screenshot": "stack-s3_notable_pipeline_commercial-1440.png"
+    }
+  ],
+  "unitTestsPassed": 1541,
+  "browserTestsPassed": 221,
+  "additionalChecks": [
+    "Hunt Node 24.22.1 Alpine frontend Docker builder completed successfully",
+    "IR on-prem, GovCloud, commercial and Azure server-only secret probes passed; retired public shell/dotenv names rejected",
+    "Stack contract rejects a deliberately mismatched React version",
+    "Six installed dependency sets, exact manifests/locks and shared CSS/release documents match the stack contract",
+    "IR bootstrap scripts passed Bash and PowerShell syntax validation"
+  ],
+  "scope": {
+    "routes": [
+      "ATO /ssp and assistant/workspace dialogs",
+      "Hunt /hunts, /hunts/new, /hunts/:id/{plan,investigation,evidence,report,activity,advanced}, settings/login/history",
+      "All four IR /cases, /cases/:id, /assistant and conversation/capacity dialogs"
+    ],
+    "roles": "Synthetic analyst/workspace-owner fixtures, not every production authorization role",
+    "states": [
+      "default, empty and populated",
+      "keyboard skip/focus and modal containment",
+      "disabled, pending, error, retry and completion",
+      "delayed responses, duplicate submissions and unsaved-navigation cancellation",
+      "1280/1440/1920 desktop widths and enlarged text",
+      "native Chromium 100/200/400% zoom in ATO and all four IR variants"
+    ],
+    "boundaries": [
+      "Synthetic local API and identity fixtures; real SSO, production backends, provider/model calls and durable deployment behavior not qualified",
+      "Hunt native browser zoom not covered by this run; enlarged root text is covered separately",
+      "Native Firefox/WebKit zoom not rerun; ordinary desktop layout/keyboard/state checks passed in all three engines",
+      "WebKit is the Linux Playwright engine, not macOS Safari",
+      "Mobile and actual screen-reader speech were excluded",
+      "Production builds passed for all six; browser regression harnesses used source/dev for ATO/IR and compiled preview for Hunt. These timings are not a cross-app performance ranking",
+      "No complete backend Python 3.14 qualification or full production container deployment was performed"
+    ]
+  },
+  "holds": [
+    {
+      "package": "zod",
+      "current": "3.25.76",
+      "latest": "4.6.7",
+      "reason": "@zodios/core 10.9.6 declares a Zod 3 peer; generated schema/client chain retains that contract",
+      "exit": "Upgrade the compatible generation/runtime chain and pass schema/client/auth/error tests",
+      "pythonDependent": false
+    }
+  ],
+  "operationalDrift": [
+    "Inactive GitHub Actions files retain historical Node 22 selectors (and Azure Node 24 major). Repository policy excludes workflow maintenance without an explicit request. Update those selectors and requalify before any future reactivation.",
+    "Existing running app services and globally installed Node executables were not replaced. Restart/rebuild each app with its checked-in .nvmrc and new assets when applying the candidate."
+  ]
+}

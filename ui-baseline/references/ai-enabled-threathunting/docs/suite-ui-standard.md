@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-Version: **1.10.1** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.14.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -12,6 +12,9 @@ source of shared rules.
 
 - [Authority and scope](#authority-and-scope): precedence and preservation of
   each app's intended behavior, layouts, features and newer approved work.
+- [Shared components and drift prevention](#shared-components-and-drift-prevention): canonical source, approved variants and automated parity gates.
+- [Shared frontend foundations](#shared-frontend-foundations-and-independent-deployment): routing, transport, state, forms, validation and standalone builds.
+- [Frontend stack and Python compatibility](#frontend-stack-and-python-compatibility): current pins, toolchain alignment and documented holds.
 - [Visual adaptation](#visual-adaptation): how to use the common design language
   without importing prototype behavior or replacing an established stack.
 - [Interaction and accessibility](#interaction-and-accessibility): keyboard,
@@ -86,7 +89,8 @@ which links to this authority. The companion and its current distributed copies
 are generated artifacts. Preserve dated historical prototypes and release evidence.
 
 Shared appearance does not require identical pages, navigation structures,
-component libraries, control dimensions, table density, dialogs or workflow order.
+component compositions, table density, specialized inspectors or workflow order.
+Equivalent ordinary controls use the shared component contract below.
 Keep layouts, available features, event handlers, draft/review guards, identity,
 backend contracts and export content unchanged during a visual alignment.
 Document necessary exceptions alongside this contract; a visual mismatch alone
@@ -101,7 +105,8 @@ an Open source action. It is one reusable pattern, not a mandatory page layout.
 Retain document/PDF/image viewers, long editors, comparison desks, structured
 pickers, bulk actions and upload progress wherever the app needs them.
 
-Use the destination's established React, Tailwind, Radix and icon primitives.
+Use the shared suite React/Radix component source and the destination's established
+Tailwind and icon integration.
 Native HTML and Phosphor assets in the companion are examples, not replacement
 dependencies. Translate semantic roles: the companion's accent token is a primary
 action, while an app's accent token may be a hover fill. Scope screen CSS; do not
@@ -110,6 +115,327 @@ precise citations, paging, approval boundaries and genuine loading/error states.
 Never invent scores, health checks, identities or service capabilities to match
 the sample. The [suite vocabulary](suite-vocabulary-and-object-model.md) owns
 terminology and domain distinctions; wording skills support that contract.
+
+## Shared components and drift prevention
+
+Version 1.12 adopts the approved component choices across **all six frontends**.
+The canonical source is Hunt's `frontend/src/components/ui/`; the same files and
+`src/lib/utils.ts` are mirrored byte-for-byte into ATO and all four IR builds.
+The checked [component contract](suite-component-contract.json) records the file
+hashes. These files are one suite release, not six independently evolving forks.
+
+- **Buttons:** IR's 37px default height and 6px radius, ATO's blue-tinted secondary
+  hover, soft red destructive treatment, consistent visible keyboard focus.
+- **Fields:** ATO's 36px default height, 6px radius, opaque page background and
+  common high-contrast border; ordinary values are 14px. Native-select and popup
+  select triggers use the same field geometry. Keep native input semantics.
+- **Badges:** ATO's 12px tinted/bordered family with semantic status variants.
+  Hunt's optional status dot carries the same meaning; never rely on color alone.
+- **Confirmation dialogs:** IR's 520px maximum width and 8px radius, shared Radix
+  focus containment/restoration, accessible title/description, Cancel-first focus,
+  busy dismissal/duplicate-submit protection and inline actionable failures.
+  Existing larger inspectors keep their documented wide layout and callbacks.
+- These dimensions describe the default at a 16px root. Text and primary field/
+  button heights scale with enlarged text. Explicit compact/icon/composer and
+  wrapping layouts use the same shared implementation; they are not permission
+  to create an app-specific visual fork.
+
+The shared source set also includes the existing card, label, separator,
+skeleton, tabs, select and account primitives. Product layouts may supply width,
+placement and wrapping. Normal component appearance belongs to the shared CSS.
+`suite-components.css` makes equivalent controls render consistently under the
+ordinary Tailwind setup and Hunt's prefixed Tailwind/legacy CSS context.
+
+Use the shared primitives for new ordinary controls. The reviewed native-control
+inventory in each app's `suite-component-exceptions.json` preserves specialized
+navigation/record selectors, anchored non-modal context popups, native file and
+checkbox inputs, code editors, single-border assistant composers and app-specific login presentation. These are
+explicit scope exceptions, not six alternative implementations of generic fields.
+Do not mass-convert specialized controls or change their guards to satisfy a hash.
+
+**Required edit procedure:** change the canonical component, copy the exact bytes
+to all six builds, update the versioned contract and affected exception records,
+then run `scripts/check_suite_components.py` with both peer repositories.
+`scripts/check_suite_ui.py` includes that gate. New or changed native controls
+and app-local `.suite-button`/field/badge/dialog overrides fail the gate.
+Do not update expected hashes merely to accept a divergent app implementation.
+The shared-file Git attributes enforce LF line endings on Windows and Linux, so
+checkout conversion cannot silently create different source bytes.
+
+Run `npm run test:components` in each frontend. The identical
+`playwright.components.config.ts` starts a dedicated Vite fixture server to load
+`/e2e/fixtures/suite-components.html` in its actual CSS context. The component
+tests are explicitly enabled by this configuration and stay skipped in ordinary
+product journeys, whose server may serve only compiled assets. Compare
+the computed-style attachments within each browser engine across all six builds.
+The approved per-engine computed styles are also checked inside every frontend's
+component test, so an app-local generic CSS rule cannot quietly change a control
+while its shared source still matches. Update these expectations only after an
+approved visual change is verified across the suite.
+The fixture verifies hover/focus, disabled/readonly/invalid/required fields,
+dialog naming/focus/restoration, delayed failure/retry, duplicate submissions,
+constrained desktop fit, popup keyboard behavior, tabs and reduced motion.
+It uses simulated requests; also run the actual app workflow/role coverage below.
+Fixtures are test assets, not product routes or a production component explorer.
+The current [verification record](suite-foundation-verification.md) identifies
+actual browser/role/state coverage and the synthetic versus live boundaries.
+
+Shared component source parity does **not** prove every product screen looks or behaves identically. The shared foundation contract below now owns routing, transport, state, form and validation parity, with domain-specific adapters preserving each product's semantics.
+
+## Shared frontend foundations and independent deployment
+
+Version 1.14 hardens the standardized routing, HTTP transport, state conventions, forms and
+validation across all six frontends. The canonical source is Hunt's
+`frontend/src/lib/suite/`; each other frontend contains the **same source bytes**
+inside its own repository. The [foundation contract](suite-foundation-contract.json)
+records their hashes and the shared verification assets.
+
+**Each app builds and deploys independently.** There are no cross-repository
+imports, linked packages, shared runtime servers, or sibling-checkout build
+requirements. ATO needs only the ATO repository; Hunt needs only Hunt; each IR
+variant remains a standalone build within the IR repository. Peer checkouts are
+optional inputs to development-time drift checks, never application dependencies.
+
+- **Routing:** React Router 8.5.0 through the shared `routing.tsx` entrypoint and
+  BrowserRouter in all six apps. Route tables, allowlists, authentication redirects,
+  draft/review permission decisions and recovery destinations remain app-owned.
+  Hunt's event-driven navigation adapter now feeds this same browser engine and
+  preserves citation history state. Its pre-router Back/Forward guard restores
+  rejected history before a dirty editor can unmount. ATO's earlier capture guard
+  and save/continue logic remain intact. Back, Forward, deep links and rejected
+  navigation require real-browser tests; matching route source alone is inadequate.
+- **HTTP:** native Fetch through shared `fetchResponse`, `requestScope`, `ApiError`
+  and `readJson`. One cancellation/error model, deadline cleanup, validated JSON
+  decoding and **no automatic mutation retry**. App adapters supply endpoints,
+  identity headers, CSRF, error-body interpretation and domain response parsers.
+  The default deadline is 30 seconds across preparation, headers and response body.
+  IR chat and long mutations explicitly allow 220 seconds; signed uploads and
+  downloads allow 120 seconds. Hunt reads now use 30 seconds and mutations use
+  220 seconds. ATO SSP non-streaming reads use 30 seconds and mutations 220 seconds.
+  Only ATO generation streaming opts out, retaining its explicit heartbeat/idle
+  timeout and caller cancellation. No nested default may shorten an override.
+  Abort cancels browser transport/body reads; it does not prove server work stopped.
+  Preserve uncertain-write reconciliation and never automatically replay a mutation. Signed object
+  storage requests must never receive portal bearer tokens or CSRF headers.
+- **State:** React local state for component/route ownership and React Context for
+  state shared by descendants. Shared `createStateScope` provides memory-only
+  provider state with reactive subscriptions and an explicit restoration-only
+  snapshot accessor. IR queue draft persistence uses the snapshot accessor so
+  typing does not broadcast updates through the authenticated tree.
+  `useFormState` is the controlled
+  draft-state entrypoint. Derived values remain derived. Server data stays owned by
+  its existing request/polling controller; there is no suite-wide persisted server
+  cache. No Redux, Zustand, or query-cache package is required. Do not move private
+  case data into global storage. Existing authenticated lifetimes, polling,
+  cancellation, stale-response checks and Hunt's explicitly scoped tab drafts stay
+  app-owned. The shared latest-read controller cancels superseded ATO session
+  reads and Hunt queue reads; stale responses cannot overwrite newer state.
+  IR filter changes reset pagination before requesting data, so an old cursor
+  cannot trigger a redundant request. Contexts representing workflow callbacks are domain adapters, not
+  alternative global-state frameworks.
+- **Forms:** all native form surfaces render the same `SuiteForm`, retaining their
+  exact DOM, classes, labels, focus order and browser validation. It suppresses
+  duplicate pending async submissions and respects `aria-busy`. Existing handlers
+  still own field values, save/reconcile behavior, busy/error announcements and
+  reset decisions. Return async work to the form and handle failures visibly; a
+  timeout must not discard the draft or automatically repeat an accepted write.
+- **Validation:** Zod 3.25.76 in every frontend through the shared validation
+  entrypoint, with `parseWithSchema` and `validateFields`. Native required/type/
+  length constraints remain. Domain schemas and generated API contracts differ
+  because the products have different data; retain their meanings, refinements,
+  evidence preservation and rejection paths. Backend validation remains
+  authoritative. Generated browser modules contain schemas only, excluding unused Zodios/Axios
+  clients. Keep the checked-in schemas-only template in `generate:api`.
+  Zod stays on 3 while the installed generator requires it; Python 3.12 versus 3.14 does not create this hold.
+
+`suite-foundation-adapters.json` in each repository records the intentional product
+boundaries. Equivalent generic mechanisms must not fork. Change the canonical
+source, copy it to all six frontends, update the shared contract and run
+`scripts/check_suite_foundation.py` locally, optionally with both `--peer` paths.
+`check_suite_ui.py` includes this gate. It rejects changed shared bytes, direct
+Fetch/form/router/validation bypasses and file-linked deployment dependencies.
+Adding a state, form, query or HTTP framework requires a recorded decision and
+an update to the reviewed-package contract; it is not a silent app-local choice.
+Run `npm run test:foundation` in each frontend for its own standalone fixture;
+then run the product workflow and component checks. Record actual browser, role,
+route and state coverage in [the foundation verification record](suite-foundation-verification.md).
+
+
+### Fast feedback and release qualification
+
+During implementation, run the local source gate and focused unit/browser tests
+for the changed boundary. Use the installed Node/browser caches and the dedicated
+`test:foundation` / `test:components` commands; freeze application files during a
+browser qualification run so hot reload does not contaminate the result. Run the
+complete affected six-frontend matrix once the shared candidate is stable, and
+repeat affected checks only after a relevant change or unresolved failure. Do
+not shorten the final release matrix by hiding failures or dropping required
+roles/states.
+
+Responsiveness comparisons require the same compiled production serving mode,
+browser/viewport, data, workload and stated cold/warm cache conditions. A Vite
+source fixture is appropriate for component behavior; its startup or test runtime
+is not a production responsiveness benchmark. Report build time, harness time,
+network/server latency and interaction/render latency separately. The current qualification reports anonymous cold-start JavaScript payloads
+separately from behavior, request counts and render counts. It does not equate
+smaller assets with lower end-to-end workflow latency.
+
+### Production bundle budgets
+
+Run `npm run build` then `npm run check:performance` in each frontend. The local
+checker reads Vite's production manifest, counts each eager JavaScript asset once
+(including preloaded dependencies), excludes truly dynamic imports from that
+eager count, and separately bounds total JavaScript across all routes. Limits in
+`suite-performance-contract.json` use the measured 1.14 candidate with explicit
+headroom; they are payload limits, not latency guarantees. Update limits only
+with reviewed before/after network and bundle evidence, never merely to silence
+a failure. Also inspect actual browser requests: authentication or initial route
+logic can load dynamic chunks before the first usable screen.
+
+ATO page splitting must retain the eagerly registered agency-settings history
+guard. Hunt lazy renderer boundaries must leave the shell, drafts and workflow
+guards mounted. Delay a hidden panel until its first use, then retain it when
+visited so drafts survive. Keep shared data helpers separate from renderer
+modules so a static helper import cannot defeat the intended code split. New asynchronous screens need accessible loading and recoverable
+errors. Keep per-app identity, permissions, revisions and deploy independence.
+
+## Foundation decision review
+
+See the [current decision review and follow-up limits](suite-foundation-architecture-review.md) for the 1.14 candidate.
+
+An aligned implementation is a reviewed default, not proof of optimality. When
+asked to standardize, review or materially replace a foundation, compare the
+current implementations with a credible alternative before selecting a winner.
+Routine fixes do not reopen the whole stack.
+
+Record the requirement, concrete failure or cost, considered alternatives,
+security/workflow constraints, migration cost, measured evidence and reversal
+condition. Name evidence that is missing. Prefer a narrow experiment when the
+choice depends on performance or operator behavior. Do not assume the newest
+package, smallest dependency count, most popular library, or one app's existing
+implementation is inherently better.
+
+For these frontends, use the following questions:
+
+- Would React Router data APIs remove duplicated loading/navigation machinery,
+  and can they preserve every dirty-draft and authentication transition? Keep
+  the current declarative engine until those benefits justify a tested migration.
+- Does a query library reduce duplicated server-state lifecycle code enough to
+  justify explicit authenticated cache keys, logout invalidation, refresh policy,
+  cancellation and mutation-reconciliation rules? Never introduce a global cache
+  merely to make all apps list the same dependency.
+- Do complex forms need field arrays, granular subscriptions or extensive shared
+  validation that a form library demonstrably simplifies? Compare equivalent
+  typing/rendering and error/focus behavior before replacing working native forms.
+- Does the HTTP layer bound the actual operation being discussed: connection,
+  headers, body, stream idle time or server-side work? Cancelling a browser request
+  does not establish that a mutation was cancelled. Preserve uncertain-write
+  reconciliation and signed-upload credential boundaries.
+- Does a wrapper own useful common behavior or a stable boundary? Avoid adding
+  aliases, settings or indirection solely to make different business flows look
+  identical in source. Product schemas, permissions and workflows are allowed to
+  differ; equivalent generic behavior needs parity tests.
+
+Use the existing React, Development Stack, Source-Driven Development,
+Maintainability/Architecture, Reliability/Performance and Correctness/Testing
+guidance together. These cover the work; a new suite-specific skill for each
+library would duplicate policy. Keep selections and exact versions here, method
+guidance in the existing skills, and mechanical enforcement in executable gates.
+If a future repeated workflow is genuinely missing, add a focused skill only for
+that gap and link it from this entry point.
+
+
+## Frontend stack and Python compatibility
+
+Version 1.11 standardizes the implementation toolchain across ATO, Threat Hunt,
+and all four Incident Response frontends. The exact, offline-checkable pins are
+in [the frontend stack contract](suite-frontend-stack.json). The contract and
+the package manifests/lockfiles are released together. A newest-version lookup
+does not by itself qualify a release; upgrades must pass the checks below.
+
+The stable target verified against publisher metadata on **2026-10-24** is:
+
+- Node.js **24.22.1 LTS**, npm **11.19.1**; Node 26 is Current, not the selected LTS.
+- React and React DOM **19.3.1**, with matching React 19 type packages.
+- TypeScript **7.0.2**, Vite **8.3.5**, React Vite plugin **6.1.2**.
+- Tailwind CSS and its Vite plugin **4.3.3**; Radix primitives at the exact
+  component-specific versions in the contract; Lucide React **1.61.0**.
+- React Router **8.5.0**, imported from `react-router` (or `react-router/dom`
+  for DOM-specific APIs). The old `react-router-dom` compatibility package is
+  not the current major and must not be used as the latest-version indicator.
+- Vitest **5.0.5** and Playwright Test **1.64.1**. Where used, jsdom is **30.1.3**,
+  Testing Library React **16.3.3**, and jest-dom **7.0.1**.
+
+Use exact direct dependency pins, committed npm lockfiles, the same Node major,
+and the existing independently deployable builds. Do not create cross-repository
+runtime imports or install product-specific libraries where they have no use.
+All common packages that are present must match the contract. Run
+`python3 scripts/check_frontend_stack.py --installed` in each repository;
+`check_suite_ui.py` also checks declared and locked versions.
+
+Stack alignment preserves product behavior, security and layout. Tailwind may
+coexist with the approved custom CSS; Hunt excludes Tailwind Preflight and prefixes
+its utility layer to prevent new global resets. All six frontends mount the same React Router browser engine through the shared foundation entrypoint. Hunt retains its event-driven navigation adapter, route allowlist and workflow callbacks around that engine.
+Use Radix primitives for equivalent interactions while keeping the documented
+native dialogs, layout density, exports and customer identity providers intact.
+
+### Python is a separate compatibility axis
+
+The suite's intended backend direction is **Python 3.14**. A backend may remain
+on its declared, verified Python 3.12 runtime while its frontend is upgraded.
+Browser libraries execute in JavaScript, and Vite/TypeScript execute under Node;
+Python 3.12 alone is not a reason to lower React, Router, Tailwind or Vite versions.
+Node build stages and Python service stages remain separate. Do not change a
+backend runtime or cloud deployment merely to satisfy a frontend version target.
+
+A real coupling can exist in API/schema generation, Python browser-test bindings,
+offline installers, build scripts, native wheels, or hosting packages. Record the
+exact package, affected app/variant, tested version, concrete failing boundary,
+temporary pin, and removal condition. If Python 3.14 resolves that boundary,
+make the frontend recheck a named acceptance item of that app's Python migration.
+Recheck required SDKs, schema/client generation, browser tests and packaged static
+assets when either runtime changes. Use the target runtime's actual dependency
+declarations and qualification evidence rather than inferring status from a label.
+
+### Current compatibility hold
+
+**Zod 3.25.76** is retained in ATO and the Incident Response clients using
+`openapi-zod-client` / `@zodios/core`. The latest Zod is **4.6.7**, but the installed
+Zodios client declares `zod: ^3.x` and the generated schemas use that contract.
+This hold is independent of Python. Remove it when the client generation/runtime
+chain supports Zod 4 and schema, authorization/error, and generated-client tests
+pass. Do not use forced or legacy peer-dependency resolution to hide the mismatch.
+MSAL is product-specific; its selected common version is **5.26.0** wherever used.
+
+### Upgrade and evaluation acceptance
+
+- Verify stable publisher releases and their Node/browser/peer requirements;
+  inspect installed packages and caches before downloading. Do not select canary,
+  beta, RC or experimental APIs simply to obtain a larger version number.
+- Update manifests, locks, Node selectors, build images, generated clients where
+  applicable, the contract, release mirrors, companion and permanent baseline.
+  Record exceptions with an objective exit condition; do not silently fork pins.
+- Require type checks, production builds and relevant unit tests for all six
+  frontends. Browser checks must include the central interaction/accessibility,
+  popup/workflow, desktop zoom and reduced-motion requirements. Keep tests that
+  detect real regressions; update only stale API usage, ambiguous locators and
+  invalid timing assumptions. Preserve assertions of actual user outcomes.
+- Compare frontend performance using equivalent production builds, data volumes,
+  browser engines, viewport and cache policy. Record visible-content and paint
+  timing separately from automation dispatch/waiting and backend/model latency.
+- Isolated synthetic browser tests may use two workers after state independence
+  is verified. Keep real shared-state/provider workflows serialized until isolated.
+  Run a focused feedback lane and a broader release lane; never drop required
+  browser, zoom or guarded-flow coverage to make the result faster.
+- Record actual engine versions, routes, roles, states, skips and unavailable
+  checks. Native browser zoom is not font resizing; accessibility-tree assertions
+  are not screen-reader speech. Source/lock parity is not runtime qualification.
+
+Publisher references: [Node releases](https://nodejs.org/en/about/previous-releases),
+[React versions](https://react.dev/versions), [Vite releases](https://vite.dev/releases),
+[Router v8 migration](https://reactrouter.com/upgrading/v7),
+[npm registry package metadata](https://registry.npmjs.org/).
+
 
 ## Navigation
 
@@ -423,9 +749,9 @@ can select an existing compatible binary. The harness creates only an isolated,
 temporary browser profile and extension for native zoom. Keep the usual multi-engine
 interaction suite as a separate check; explicitly skipped native zoom is unverified.
 
-Release scope: ATO and all four Incident Response frontends implement these fixes.
-Threat Hunt receives the synchronized standard and stylesheet only; its runtime
-was explicitly excluded from this remediation. The reflow selector is opt-in and
+Version 1.9 remediation scope: ATO and all four Incident Response frontends implemented these fixes.
+Threat Hunt received the synchronized standard and stylesheet only in version 1.9; its runtime
+was explicitly excluded from that remediation. The reflow selector is opt-in and
 does not change Threat Hunt. Its native-zoom and conversational-feedback alignment
 is unverified for this release and must not be described as complete suite coverage.
 Existing shared typography, palette, account, sidebar and motion rules remain intact.
@@ -502,17 +828,15 @@ selection while retaining those implementations and their layout/behavior contra
   use their dedicated values above; do not replace them with old theme values.
 - Map semantic roles, not raw variable names: `accent` can mean primary action
   in the HTML and hover fill in an app. Status colors retain domain meanings.
-- Existing button/input dimensions, corner radii, contextual fills and focus
-  primitives remain app-owned where a newer shared rule has not been approved.
-  For example, ATO's secondary hover and Incident Response's contextual input
-  surfaces must not be replaced just to reproduce an earlier template.
+- Version 1.12 supersedes prior app-owned ordinary button/input/badge/dialog
+  decoration with the approved shared component contract. Specialized layouts
+  and the explicitly recorded native controls retain their documented scope.
 - Login pages, editors, tables, dialogs, inspectors and reports retain their
   established layouts and interactions. App/document-specific typography and
   print/PDF rules remain explicit exceptions to ordinary screen text roles.
 
-Further control-level alignment requires evidence from the current rendered
-apps and an intentional update to this contract. A difference by itself is not
-proof of a bug or permission to copy an older declaration.
+Further alignment outside the version 1.12 component scope requires rendered
+evidence and an intentional contract update. Preserve specialized product roles.
 
 ## Keeping one baseline
 
@@ -549,7 +873,7 @@ blocked, report precisely what remains out of sync. App-only behavior changes do
 not require forcing unrelated parity; record an exception when they affect a
 shared rule. These instructions do not grant new deployment or merge permission.
 
-Edit this canonical document and canonical `frontend/src/suite-workspace.css`
+Edit this canonical document, the shared component source/manifest and canonical `frontend/src/suite-workspace.css`
 together when a shared rule changes. Bump both versions, publish identical
 released copies to the other five frontends and two repositories, and regenerate
 the visual companion with `python3 design-previews/20261018/unified/build-visual-reference.py`.
@@ -561,8 +885,8 @@ and link here rather than repeating the palette, font scale or sidebar geometry.
 Run `python3 scripts/check_suite_ui.py` in each repo. Add `--peer <repo-root>`
 for the other two repos to verify released document/CSS/reference parity. This
 check proves source consistency, not usability: also run the existing rendered
-suite checks and app workflow regressions described above. Preserve the root
-text-size behavior and existing control bounding boxes when aligning decoration.
+suite checks and app workflow regressions described above. Preserve root text-size behavior and specialized layout constraints. Default
+component geometry follows the approved shared component contract.
 
 ## Reconciliation record — 2026-10-23
 

@@ -115,3 +115,17 @@ Verify every dialog's accessible name, all constrained desktop confirmation acti
 popup viewport fit, and relevant delayed/failed-request, retry, duplicate-submit and
 unsaved-navigation paths. Preserve each app's guards and desktop/mobile scope;
 record actual browser/role/state evidence and synthetic-versus-live test boundaries.
+
+## Reviewing an existing frontend foundation
+
+When the user requests standardization or architecture review, preservation of
+an existing stack is not evidence that it is the best choice. Compare current
+implementations with credible alternatives against the actual workflows,
+security boundaries, complexity, performance evidence and migration cost.
+Record the decision, uncertainty and conditions that would justify revisiting it.
+Do not infer quality from one app's incumbent implementation or from popularity.
+For the workspace suite, follow the permanent UI/UX baseline's **Foundation
+decision review** and shared-foundation contract. Keep apps independently
+buildable; cross-repository comparisons are development checks only.
+Use the existing source-driven, maintainability, reliability/performance and
+testing guidance for relevant concerns; do not create parallel policy skills.

@@ -1,0 +1,167 @@
+{
+  "version": "1.12.0",
+  "policy": "Reviewed existing specialized controls only. New generic actions/fields must use shared primitives. Inventory changes require review, reason and browser evidence; never silently rebaseline.",
+  "nativeControls": [
+    {
+      "path": "frontend/src/EvidenceInspector.tsx",
+      "tag": "button",
+      "sha256": "4f9d59ad1bb06d5473b203bd5dcfc6ecce103e6d296d966332b14b194e2295b1",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/EvidenceInspector.tsx",
+      "tag": "button",
+      "sha256": "9c9db936cfd18a9c33fce6941a5d82009627e8750c6c848049a4a1c6520bd5b6",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/EvidenceInspector.tsx",
+      "tag": "button",
+      "sha256": "aa5107a0fb367344acad2c772a8ac2bc3f5596b47e9398e5c894adc70cbf0613",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/EvidenceInspector.tsx",
+      "tag": "input",
+      "sha256": "a747c3983c487801754f07a6f0b25ced02546e86b5e8856dfea1b83057584b75",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "frontend/src/EvidenceInspector.tsx",
+      "tag": "input",
+      "sha256": "ef890824ad161734be75a5cff8a78000d28c41fc9584f565bf74bc8fb8796827",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "frontend/src/FindingsDesk.tsx",
+      "tag": "button",
+      "sha256": "e2d77c4b44a296281f8e79d7321d0ccc283f29367ca8a5c7733f651d28eaad5f",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/FindingsDesk.tsx",
+      "tag": "button",
+      "sha256": "e966c3f1d615dd49d1001b9942f47cafa514fd9620e995c56eb1ce99494a7e95",
+      "count": 2,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/FindingsDesk.tsx",
+      "tag": "button",
+      "sha256": "ffc16a5bee4034617b8756e8334bbd2d1b28d35993ae8b3188b0e64f025d112b",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/GuidedWorkspace.tsx",
+      "tag": "button",
+      "sha256": "47e48f979a36eb076403927ace68931a995e9f6c8b228909af342888ddc1cdbc",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/GuidedWorkspace.tsx",
+      "tag": "button",
+      "sha256": "8f7210e252dd031d029abf21efc2096c4846461447ee0d6f34bcbf2409ffda0e",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/GuidedWorkspace.tsx",
+      "tag": "button",
+      "sha256": "bd25165a52c54934d49f8ae355f8a496060b05265c537501d9623dc7a8b03c99",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/GuidedWorkspace.tsx",
+      "tag": "button",
+      "sha256": "fc914a70015a5a905649c40e725f3d986831d020c72986942ad7b8a3acc8241a",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/HuntPlanReview.tsx",
+      "tag": "button",
+      "sha256": "64745456c118e00a0ffc30db01616c6f1567363f83281c8a10966e6386761f4e",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/HuntPlanReview.tsx",
+      "tag": "input",
+      "sha256": "291bcf8c543ccd1d1654041f8e13c79f373da1940a5dc5d2e84c08825554f7ca",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "frontend/src/HuntPlanReview.tsx",
+      "tag": "textarea",
+      "sha256": "0d1617b237706c6fea59a44b6b1f533a44126ed722b0355643d2eb2364830004",
+      "count": 1,
+      "reason": "Monospaced source/JSON editor; preserve authored content and editor geometry."
+    },
+    {
+      "path": "frontend/src/HuntProgramPanel.tsx",
+      "tag": "input",
+      "sha256": "d73f5a9030fc55a259abc573a95244196c182d2ca42adb45944820f7ba7004b5",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "frontend/src/NewHuntForm.tsx",
+      "tag": "input",
+      "sha256": "f5b8b27c5f90667b07f5c93649de518f3d91b85458ccab48eabdd48566758aed",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "frontend/src/ReportOverview.tsx",
+      "tag": "button",
+      "sha256": "c5a078cd0e799561bb49841a00b5dfb210b85676f146d7ce7984344cf08907a7",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/SearchActivity.tsx",
+      "tag": "button",
+      "sha256": "d35e79d1f35dd9c028d5dd4412c4ac719ab346bdf13237735e63f48f147d549a",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/ThreatHuntApp.tsx",
+      "tag": "button",
+      "sha256": "0088d5190989a9b960659772e55cae8c87163932a2caf4102a0b00cbc6bd5dc5",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "frontend/src/ThreatHuntApp.tsx",
+      "tag": "input",
+      "sha256": "bbdf446f7c19b8b94535da0f496a9b1b12209fc2dd05d8328239aabf9af9431b",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "frontend/src/ThreatHuntApp.tsx",
+      "tag": "textarea",
+      "sha256": "4bb5dd08622cd7be5646bc182dfc236fee3d3bb47e4e25316a3931dfea6fdc0e",
+      "count": 1,
+      "reason": "Monospaced source/JSON editor; preserve authored content and editor geometry."
+    },
+    {
+      "path": "frontend/src/ThreatHuntApp.tsx",
+      "tag": "textarea",
+      "sha256": "90182398ccbc945bb5712819e5f443df65cfbcb6b30af42ae7a6e36d63ebde2a",
+      "count": 1,
+      "reason": "Monospaced source/JSON editor; preserve authored content and editor geometry."
+    }
+  ]
+}

@@ -1,0 +1,279 @@
+{
+  "version": "1.12.0",
+  "policy": "Reviewed existing specialized controls only. New generic actions/fields must use shared primitives. Inventory changes require review, reason and browser evidence; never silently rebaseline.",
+  "nativeControls": [
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "35250ef540b082db907b6297146e6251d661438471069773de5ab4eaaf211f08",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "d2ec599dcd5db89d585ed6745da18cdeab674e5bdf8b069dece822cc95edaf7e",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ChatAttachmentComposer.tsx",
+      "tag": "input",
+      "sha256": "9c9c8ec844e51432deaaa3a18a24d5e1eead01da40ae33d9e5a25326caab5c65",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "button",
+      "sha256": "1872a3740d3fc7c61e1edf00e8ca9aab3acf264d9b6bbf464fe8d7ce6489ea78",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "dialog-surface",
+      "sha256": "d6140db93d39977cbab0143ff87eb752ca6a55c5b4c041363c8e46ba29f2733a",
+      "count": 1,
+      "reason": "Anchored non-modal context popup; preserve its position and disclosure behavior rather than converting it into a confirmation modal."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9e49fb56259fae694b57b2ba12045cb3db7bdd989a439f0af305002b9b05e103",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9f5dea4791cd281859f1f296502bed03076027c639892618d4d4f52a57635b7c",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/case-detail/CaseAnalysisView.tsx",
+      "tag": "button",
+      "sha256": "e987bce97c5c1c97f5aa1a26698fa3e1c5e1a0af52c5e0493ab3749229e51e06",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "azure_notable_pipeline/frontend/analyst-portal/src/components/case-detail/CaseDetailUi.tsx",
+      "tag": "button",
+      "sha256": "3de65af7b9a090f1bc1f80bb1b607f4e78ad56f09a04b872d6f5ff55545735e8",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/App.tsx",
+      "tag": "button",
+      "sha256": "c749d517511a89c9edf925b9325fa5ebf51dd197e8d3fb25fdd548c63a368a7f",
+      "count": 1,
+      "reason": "Approved application-specific authentication form; preserve login presentation and flow."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "35250ef540b082db907b6297146e6251d661438471069773de5ab4eaaf211f08",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "d2ec599dcd5db89d585ed6745da18cdeab674e5bdf8b069dece822cc95edaf7e",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ChatAttachmentComposer.tsx",
+      "tag": "input",
+      "sha256": "77975f11211520811abeddb73a11df052501b50252ce5dd571ced506235d6334",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ChatAttachmentComposer.tsx",
+      "tag": "input",
+      "sha256": "aaca524eb980f9d01adef83399d59ff15cf107caae65ed873570fa678e103035",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ChatPanel.tsx",
+      "tag": "input",
+      "sha256": "2b2d9bf461da7e03365f6305e4a275e6c82d5c04f547d9a54a3bb77eacd8812f",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "button",
+      "sha256": "1872a3740d3fc7c61e1edf00e8ca9aab3acf264d9b6bbf464fe8d7ce6489ea78",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "dialog-surface",
+      "sha256": "d6140db93d39977cbab0143ff87eb752ca6a55c5b4c041363c8e46ba29f2733a",
+      "count": 1,
+      "reason": "Anchored non-modal context popup; preserve its position and disclosure behavior rather than converting it into a confirmation modal."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9e49fb56259fae694b57b2ba12045cb3db7bdd989a439f0af305002b9b05e103",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9f5dea4791cd281859f1f296502bed03076027c639892618d4d4f52a57635b7c",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/case-detail/CaseAnalysisView.tsx",
+      "tag": "button",
+      "sha256": "e987bce97c5c1c97f5aa1a26698fa3e1c5e1a0af52c5e0493ab3749229e51e06",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/case-detail/CaseDetailUi.tsx",
+      "tag": "button",
+      "sha256": "3de65af7b9a090f1bc1f80bb1b607f4e78ad56f09a04b872d6f5ff55545735e8",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "35250ef540b082db907b6297146e6251d661438471069773de5ab4eaaf211f08",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "d2ec599dcd5db89d585ed6745da18cdeab674e5bdf8b069dece822cc95edaf7e",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ChatAttachmentComposer.tsx",
+      "tag": "input",
+      "sha256": "54303fd1790318605d0159bc966f662d16af886549f7de72d4ef2e60bec53fef",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "button",
+      "sha256": "1872a3740d3fc7c61e1edf00e8ca9aab3acf264d9b6bbf464fe8d7ce6489ea78",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "dialog-surface",
+      "sha256": "d6140db93d39977cbab0143ff87eb752ca6a55c5b4c041363c8e46ba29f2733a",
+      "count": 1,
+      "reason": "Anchored non-modal context popup; preserve its position and disclosure behavior rather than converting it into a confirmation modal."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9e49fb56259fae694b57b2ba12045cb3db7bdd989a439f0af305002b9b05e103",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9f5dea4791cd281859f1f296502bed03076027c639892618d4d4f52a57635b7c",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/case-detail/CaseAnalysisView.tsx",
+      "tag": "button",
+      "sha256": "e987bce97c5c1c97f5aa1a26698fa3e1c5e1a0af52c5e0493ab3749229e51e06",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline/frontend/analyst-portal/src/components/case-detail/CaseDetailUi.tsx",
+      "tag": "button",
+      "sha256": "3de65af7b9a090f1bc1f80bb1b607f4e78ad56f09a04b872d6f5ff55545735e8",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "35250ef540b082db907b6297146e6251d661438471069773de5ab4eaaf211f08",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/CaseAttachPicker.tsx",
+      "tag": "button",
+      "sha256": "d2ec599dcd5db89d585ed6745da18cdeab674e5bdf8b069dece822cc95edaf7e",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ChatAttachmentComposer.tsx",
+      "tag": "input",
+      "sha256": "54303fd1790318605d0159bc966f662d16af886549f7de72d4ef2e60bec53fef",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "button",
+      "sha256": "1872a3740d3fc7c61e1edf00e8ca9aab3acf264d9b6bbf464fe8d7ce6489ea78",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ContextUsageIndicator.tsx",
+      "tag": "dialog-surface",
+      "sha256": "d6140db93d39977cbab0143ff87eb752ca6a55c5b4c041363c8e46ba29f2733a",
+      "count": 1,
+      "reason": "Anchored non-modal context popup; preserve its position and disclosure behavior rather than converting it into a confirmation modal."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9e49fb56259fae694b57b2ba12045cb3db7bdd989a439f0af305002b9b05e103",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/PortalSidebar.tsx",
+      "tag": "button",
+      "sha256": "9f5dea4791cd281859f1f296502bed03076027c639892618d4d4f52a57635b7c",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/case-detail/CaseAnalysisView.tsx",
+      "tag": "button",
+      "sha256": "e987bce97c5c1c97f5aa1a26698fa3e1c5e1a0af52c5e0493ab3749229e51e06",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/case-detail/CaseDetailUi.tsx",
+      "tag": "button",
+      "sha256": "3de65af7b9a090f1bc1f80bb1b607f4e78ad56f09a04b872d6f5ff55545735e8",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    }
+  ]
+}

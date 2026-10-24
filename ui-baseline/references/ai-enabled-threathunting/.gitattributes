@@ -1,0 +1,24 @@
+
+
+# Shared suite component sources must retain byte-identical LF endings.
+frontend/src/components/ui/* text eol=lf
+frontend/src/lib/utils.ts text eol=lf
+frontend/e2e/suite-components.spec.ts text eol=lf
+frontend/e2e/fixtures/suite-component* text eol=lf
+frontend/playwright.components.config.ts text eol=lf
+
+# Shared frontend foundation release (independent local copies).
+frontend/src/lib/suite/http.ts text eol=lf
+frontend/src/lib/suite/validation.ts text eol=lf
+frontend/src/lib/suite/state.tsx text eol=lf
+frontend/src/lib/suite/forms.tsx text eol=lf
+frontend/src/lib/suite/routing.tsx text eol=lf
+frontend/src/lib/suite/foundation.test.ts text eol=lf
+frontend/e2e/fixtures/suite-foundation.html text eol=lf
+frontend/e2e/fixtures/suite-foundation.tsx text eol=lf
+frontend/e2e/suite-foundation.spec.ts text eol=lf
+frontend/playwright.foundation.config.ts text eol=lf
+
+frontend/src/lib/suite/query.ts text eol=lf
+frontend/src/lib/suite/hardening.test.ts text eol=lf
+frontend/src/lib/suite/deferred-boundary.tsx text eol=lf

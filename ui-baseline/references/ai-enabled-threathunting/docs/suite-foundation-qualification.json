@@ -1,0 +1,1276 @@
+{
+  "version": "1.14.0",
+  "sourceState": "Local working-tree candidate; not committed, merged or deployed",
+  "counts": {
+    "unit": 1639,
+    "sharedBrowser": 162,
+    "productWorkflow": 341,
+    "queueRecovery": 48,
+    "realATO": 5,
+    "transportCombinations": 18,
+    "transportCases": 36
+  },
+  "unit": {
+    "ato": 419,
+    "hunt": 211,
+    "azure_notable_pipeline": 249,
+    "llm_notable_analysis_onprem_systemd": 246,
+    "s3_notable_pipeline": 239,
+    "s3_notable_pipeline_commercial": 275
+  },
+  "checks": [
+    {
+      "app": "/home/dreyna/ai-coe-projects/ai-enabled-ato/portal",
+      "label": "ato",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.38
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 2.44
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 45.6
+      }
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/ai-enabled-threathunting/frontend",
+      "label": "hunt",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.18
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.99
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 4.29
+      }
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal",
+      "label": "azure_notable_pipeline",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.03
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.28
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 35.28
+      }
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal",
+      "label": "llm_notable_analysis_onprem_systemd",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.23
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.43
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 53.72
+      }
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal",
+      "label": "s3_notable_pipeline",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.5
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.48
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 42.71
+      }
+    },
+    {
+      "app": "/home/dreyna/ai-coe-projects/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal",
+      "label": "s3_notable_pipeline_commercial",
+      "typecheck": {
+        "exitCode": 0,
+        "seconds": 1.45
+      },
+      "build": {
+        "exitCode": 0,
+        "seconds": 1.38
+      },
+      "test": {
+        "exitCode": 0,
+        "seconds": 39.19
+      }
+    }
+  ],
+  "sharedBrowser": [
+    {
+      "app": "ato",
+      "stats": {
+        "startTime": "2026-10-24T23:26:57.330Z",
+        "duration": 33049.452,
+        "expected": 27,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "hunt",
+      "stats": {
+        "startTime": "2026-10-24T23:26:55.200Z",
+        "duration": 33264.129,
+        "expected": 27,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "azure_notable_pipeline",
+      "stats": {
+        "startTime": "2026-10-24T23:27:29.571Z",
+        "duration": 34341.202000000005,
+        "expected": 27,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "llm_notable_analysis_onprem_systemd",
+      "stats": {
+        "startTime": "2026-10-24T23:27:31.664Z",
+        "duration": 34743.700000000004,
+        "expected": 27,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "s3_notable_pipeline",
+      "stats": {
+        "startTime": "2026-10-24T23:28:04.842Z",
+        "duration": 32491.081,
+        "expected": 27,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "s3_notable_pipeline_commercial",
+      "stats": {
+        "startTime": "2026-10-24T23:28:07.561Z",
+        "duration": 32345.497999999996,
+        "expected": 27,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "workflow": [
+    {
+      "app": "ato",
+      "stats": {
+        "startTime": "2026-10-24T23:13:32.237Z",
+        "duration": 149845.677,
+        "expected": 36,
+        "skipped": 5,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "hunt",
+      "stats": {
+        "startTime": "2026-10-24T23:26:25.032Z",
+        "duration": 277230.14999999997,
+        "expected": 185,
+        "skipped": 9,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "azure_notable_pipeline",
+      "stats": {
+        "startTime": "2026-10-24T23:20:19.597Z",
+        "duration": 76636.701,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "llm_notable_analysis_onprem_systemd",
+      "stats": {
+        "startTime": "2026-10-24T23:21:37.394Z",
+        "duration": 77658.39199999999,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "s3_notable_pipeline",
+      "stats": {
+        "startTime": "2026-10-24T23:22:55.917Z",
+        "duration": 80242.528,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "s3_notable_pipeline_commercial",
+      "stats": {
+        "startTime": "2026-10-24T23:24:17.354Z",
+        "duration": 73520.36099999999,
+        "expected": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "queueRecovery": [
+    {
+      "app": "azure_notable_pipeline",
+      "stats": {
+        "startTime": "2026-10-24T23:30:57.005Z",
+        "duration": 20456.342,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "llm_notable_analysis_onprem_systemd",
+      "stats": {
+        "startTime": "2026-10-24T23:31:18.191Z",
+        "duration": 17265.218,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "s3_notable_pipeline",
+      "stats": {
+        "startTime": "2026-10-24T23:31:36.303Z",
+        "duration": 17788.055,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    },
+    {
+      "app": "s3_notable_pipeline_commercial",
+      "stats": {
+        "startTime": "2026-10-24T23:31:54.830Z",
+        "duration": 17593.781,
+        "expected": 12,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0
+      }
+    }
+  ],
+  "transport": [
+    {
+      "engine": "chromium",
+      "frontend": 0,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          9.800000000745058,
+          200
+        ],
+        [
+          "abort",
+          500.19999999925494
+        ],
+        [
+          "headers",
+          7.800000000745058,
+          200
+        ],
+        [
+          "abort",
+          8.199999999254942
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "chromium",
+      "frontend": 1,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          4.300000000745058,
+          200
+        ],
+        [
+          "abort",
+          500.6000000014901
+        ],
+        [
+          "headers",
+          6.5,
+          200
+        ],
+        [
+          "abort",
+          7.200000002980232
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "chromium",
+      "frontend": 2,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          5.600000001490116,
+          200
+        ],
+        [
+          "abort",
+          500.30000000074506
+        ],
+        [
+          "headers",
+          5.5,
+          200
+        ],
+        [
+          "abort",
+          5.800000000745058
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "chromium",
+      "frontend": 3,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          3.900000002235174,
+          200
+        ],
+        [
+          "abort",
+          500.30000000074506
+        ],
+        [
+          "headers",
+          10.599999997764826,
+          200
+        ],
+        [
+          "abort",
+          12.699999999254942
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "chromium",
+      "frontend": 4,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          5.800000000745058,
+          200
+        ],
+        [
+          "abort",
+          500.19999999925494
+        ],
+        [
+          "headers",
+          8.699999999254942,
+          200
+        ],
+        [
+          "abort",
+          9.199999999254942
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "chromium",
+      "frontend": 5,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          3.7999999970197678,
+          200
+        ],
+        [
+          "abort",
+          500.3999999985099
+        ],
+        [
+          "headers",
+          21.399999998509884,
+          200
+        ],
+        [
+          "abort",
+          21.899999998509884
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "firefox",
+      "frontend": 0,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          30,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          9,
+          200
+        ],
+        [
+          "abort",
+          10
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "firefox",
+      "frontend": 1,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          12,
+          200
+        ],
+        [
+          "abort",
+          503
+        ],
+        [
+          "headers",
+          11,
+          200
+        ],
+        [
+          "abort",
+          12
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "firefox",
+      "frontend": 2,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          7,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          8,
+          200
+        ],
+        [
+          "abort",
+          9
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "firefox",
+      "frontend": 3,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          9,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          8,
+          200
+        ],
+        [
+          "abort",
+          8
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "firefox",
+      "frontend": 4,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          6,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          9,
+          200
+        ],
+        [
+          "abort",
+          10
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "firefox",
+      "frontend": 5,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          7,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          9,
+          200
+        ],
+        [
+          "abort",
+          9
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "webkit",
+      "frontend": 0,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          5
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "webkit",
+      "frontend": 1,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          500
+        ],
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          4
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "webkit",
+      "frontend": 2,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          6,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          5,
+          200
+        ],
+        [
+          "abort",
+          5
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "webkit",
+      "frontend": 3,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          8,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          5
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "webkit",
+      "frontend": 4,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          5,
+          200
+        ],
+        [
+          "abort",
+          502
+        ],
+        [
+          "headers",
+          5,
+          200
+        ],
+        [
+          "abort",
+          6
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    },
+    {
+      "engine": "webkit",
+      "frontend": 5,
+      "timeout": {
+        "kind": "timeout",
+        "name": "ApiError",
+        "message": "Request timed out."
+      },
+      "cancelled": {
+        "kind": "cancelled",
+        "name": "ApiError",
+        "message": "Request cancelled."
+      },
+      "events": [
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          501
+        ],
+        [
+          "headers",
+          4,
+          200
+        ],
+        [
+          "abort",
+          5
+        ]
+      ],
+      "requests": [
+        true,
+        true
+      ],
+      "transportClosed": [
+        true,
+        true
+      ]
+    }
+  ],
+  "payload": [
+    {
+      "app": "ato",
+      "beforeRawBytes": 892111,
+      "afterRawBytes": 479514,
+      "reductionPercent": 46.2,
+      "beforeGzipCalculated": 241779,
+      "afterGzipCalculated": 141755,
+      "scenario": "SECURITY PLAN WORKSPACE\n\nEvidence, document drafting, and review in one workspace.\n\nBuild the SSP fr"
+    },
+    {
+      "app": "hunt",
+      "beforeRawBytes": 812718,
+      "afterRawBytes": 611956,
+      "reductionPercent": 24.7,
+      "beforeGzipCalculated": 224624,
+      "afterGzipCalculated": 177707,
+      "scenario": "THREAT HUNTING\n\nThreat Hunt Workspace\n\nSign in to review and run hunts.\n\nUsername\nPassword\nSign in"
+    },
+    {
+      "app": "azure",
+      "beforeRawBytes": 459941,
+      "afterRawBytes": 399618,
+      "reductionPercent": 13.1,
+      "beforeGzipCalculated": 139956,
+      "afterGzipCalculated": 119671,
+      "scenario": "Sign-in is not configured\n\nContact your support team to set up organization sign-in."
+    },
+    {
+      "app": "onprem",
+      "beforeRawBytes": 707476,
+      "afterRawBytes": 390678,
+      "reductionPercent": 44.8,
+      "beforeGzipCalculated": 217408,
+      "afterGzipCalculated": 118435,
+      "scenario": "Sign in to Incident Response Workspace\n\nUse your assigned workspace account.\n\nUsername\nPassword\nSign"
+    },
+    {
+      "app": "gov",
+      "beforeRawBytes": 992237,
+      "afterRawBytes": 763799,
+      "reductionPercent": 23.0,
+      "beforeGzipCalculated": 291829,
+      "afterGzipCalculated": 222449,
+      "scenario": "Sign-in required\n\nA valid access token is required. Contact your support team, then reload the page."
+    },
+    {
+      "app": "commercial",
+      "beforeRawBytes": 570382,
+      "afterRawBytes": 510080,
+      "reductionPercent": 10.6,
+      "beforeGzipCalculated": 180906,
+      "afterGzipCalculated": 160723,
+      "scenario": "Sign-in required\n\nA valid access token is required. Contact your support team, then reload the page."
+    }
+  ],
+  "disposableATO": {
+    "runId": "run-dxqavg68",
+    "cleanupComplete": true,
+    "stats": {
+      "startTime": "2026-10-24T23:12:47.184Z",
+      "duration": 133321.188,
+      "expected": 5,
+      "skipped": 0,
+      "unexpected": 0,
+      "flaky": 0
+    }
+  },
+  "roleStateCoverage": [
+    {
+      "surface": "Shared fixture, six frontends",
+      "role": "Isolated test surface; no identity assertion",
+      "routes": [
+        "/e2e/fixtures/suite-components.html",
+        "/e2e/fixtures/suite-foundation.html"
+      ],
+      "states": [
+        "required/invalid",
+        "disabled/readonly",
+        "pending",
+        "failed/retry",
+        "dirty Back/Forward",
+        "new-session reset",
+        "deferred-panel failure"
+      ],
+      "engines": [
+        "Chromium",
+        "Firefox",
+        "WebKit"
+      ]
+    },
+    {
+      "surface": "ATO",
+      "role": "Synthetic authenticated editor; controlled owner identity in five isolated backend journeys",
+      "routes": [
+        "/ssp",
+        "/agency-document-settings",
+        "/profiles"
+      ],
+      "states": [
+        "sign-in/out",
+        "loading/failure",
+        "draft/review",
+        "save-and-continue",
+        "stale revision",
+        "partial upload and uncertain-response reconciliation"
+      ],
+      "engines": [
+        "Chromium",
+        "Firefox",
+        "WebKit (shared/navigation coverage)"
+      ]
+    },
+    {
+      "surface": "Hunt",
+      "role": "Fixture-authenticated analyst; enabled and guarded workflow actions",
+      "routes": [
+        "/hunts",
+        "/hunts/new",
+        "/hunts/:id/plan",
+        "/hunts/:id/evidence",
+        "/hunts/:id/report",
+        "/connections",
+        "/settings"
+      ],
+      "states": [
+        "loading/error/retry",
+        "plan approval/version guard",
+        "report edit/finalize",
+        "pending poll",
+        "retained evidence/citations",
+        "draft leave guards"
+      ],
+      "engines": [
+        "Chromium",
+        "Firefox and WebKit (shared/navigation coverage)"
+      ]
+    },
+    {
+      "surface": "IR, all four variants",
+      "role": "Fixture-authenticated analyst; provider/token behavior mocked",
+      "routes": [
+        "/cases",
+        "/cases/:id",
+        "/assistant"
+      ],
+      "states": [
+        "filters/pages/restoration",
+        "loading/error/retry",
+        "empty/readonly",
+        "pending chat",
+        "attachment controls",
+        "session invalidation"
+      ],
+      "engines": [
+        "Chromium",
+        "Firefox",
+        "WebKit"
+      ]
+    }
+  ],
+  "initialScreenComparison": [
+    {
+      "frontend": "ato",
+      "size": [
+        1440,
+        1000
+      ],
+      "differentPixelBounds": null,
+      "pixelIdentical": true
+    },
+    {
+      "frontend": "hunt",
+      "size": [
+        1440,
+        1000
+      ],
+      "differentPixelBounds": null,
+      "pixelIdentical": true
+    },
+    {
+      "frontend": "azure",
+      "size": [
+        1440,
+        1000
+      ],
+      "differentPixelBounds": null,
+      "pixelIdentical": true
+    },
+    {
+      "frontend": "onprem",
+      "size": [
+        1440,
+        1000
+      ],
+      "differentPixelBounds": null,
+      "pixelIdentical": true
+    },
+    {
+      "frontend": "gov",
+      "size": [
+        1440,
+        1000
+      ],
+      "differentPixelBounds": null,
+      "pixelIdentical": true
+    },
+    {
+      "frontend": "commercial",
+      "size": [
+        1440,
+        1000
+      ],
+      "differentPixelBounds": null,
+      "pixelIdentical": true
+    }
+  ]
+}

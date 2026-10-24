@@ -1,0 +1,2783 @@
+{
+  "version": "1.12.0",
+  "date": "2026-10-24",
+  "status": "Verified local working-tree implementation; not committed, merged or deployed",
+  "sharedFiles": 21,
+  "frontends": [
+    {
+      "app": "ATO",
+      "label": "ato",
+      "unitTestsPassed": 404,
+      "componentChecksPassed": 15,
+      "workflowChecksPassed": 36,
+      "componentCases": [
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ],
+      "workflowCases": [
+        {
+          "title": "desktop zoom preserves full-width content and required creation controls",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "new assistant replies announce completion without announcing restored history",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "desktop zoom keeps every unsaved-draft action visible and preserves cancellation",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "simplifies SSP navigation while preserving review links and one contextual assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "supports private advice and complete SSP edit review in the dedicated assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps document drafts guarded, sources protected, and canonical edits in System Setup",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps setup and review actions reachable across desktop widths without implicit writes",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "presents creation and management empty, error and retry states without changing assignments",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps session loading, sign-in errors and degraded readiness clear",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps review URLs and guarded selections through refresh and system switches",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "filters evidence files without changing the selected review batch",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the account menu accessible and preserves drafts when dismissed",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "signs out through the account menu with the existing authenticated request",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses shared title roles when opening the ATO assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps an unsaved control draft and focus through assistant history navigation",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: waiting and failed workspace states are announced",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "uses shared title roles when opening the ATO assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: waiting and failed workspace states are announced",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed",
+          "initialStatus": "failed",
+          "recheck": "components-ato-viewport-recheck.json",
+          "note": "Initial injected motion probe was removed by a Vite restart; targeted repeat on a stable server passed."
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "uses shared title roles when opening the ATO assistant",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: waiting and failed workspace states are announced",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: unsaved confirmation traps focus and keeps the draft",
+          "file": "security/ssp-workspace-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "app": "Hunt",
+      "label": "hunt",
+      "unitTestsPassed": 196,
+      "componentChecksPassed": 15,
+      "workflowChecksPassed": 184,
+      "componentCases": [
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ],
+      "workflowCases": [
+        {
+          "title": "reconnects to the same claimed active hunt after unmount and reload without cancelling it",
+          "file": "active-hunt-reconnect.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "discards a delayed poll snapshot started before a foreground cancellation",
+          "file": "active-hunt-reconnect.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "source records stay on bounded pages and render full JSON only for an opened record",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a later-page citation opens its exact source and related query in the inspector",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "report citations open exact records in Source records and return to the report",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "citation failure 404 is visible and never dispatches new work",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "citation failure 409 is visible and never dispatches new work",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "an oversized citation offers its complete export without a misleading refresh action",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "oversized source markers retain their ordinal and a complete export link",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "refreshing a stale later page resets its cursor and keeps the selected collection usable",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "summary size failures preserve complete evidence export access",
+          "file": "bounded-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses the approved Threat Hunt identity and logo across sign-in and the workspace",
+          "file": "brand-identity.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps current connection health visible and discloses sanitized technical details on demand",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps recorded settings separate from editable new-hunt limits and account controls",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps Connections readable and contained at 1280px",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps Settings sections readable and contained at 1280px",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps Connections readable and contained at 1440px",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps Settings sections readable and contained at 1440px",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps Connections readable and contained at 1920px",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps Settings sections readable and contained at 1920px",
+          "file": "configuration-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows current status, recovers after failure and does not overlap cached polls",
+          "file": "connection-status.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows actual generation history separately from provider reachability and preserves cached history on poll errors",
+          "file": "connection-status.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "marks cached health outdated and API outages unavailable",
+          "file": "connection-status.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "labels the local demo as unused and never presents synthetic checks as healthy",
+          "file": "connection-status.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "stops polling after session expiry",
+          "file": "connection-status.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the New hunt draft when navigating to Connections and back",
+          "file": "connection-status.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "main Evidence shows event content and expands the complete saved event inline",
+          "file": "evidence-provenance.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "saved evidence names its hunt question and producing Splunk search",
+          "file": "evidence-provenance.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "question and search filters compose with text search, include verified follow-ups, and reset cursors",
+          "file": "evidence-provenance.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "missing or conflicting row metadata is shown as unknown and can be filtered safely",
+          "file": "evidence-provenance.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a report citation opens a record outside active filters and raw identifiers remain in detail and export",
+          "file": "evidence-provenance.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps all four Evidence views and Report controls readable",
+          "file": "evidence-report-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "discloses optional filters without hiding their applied state or count scope",
+          "file": "evidence-report-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "opens the assessment editor above the saved report and preserves closed pending edits",
+          "file": "evidence-report-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "contains the Evidence and Report layouts at desktop width 1280",
+          "file": "evidence-report-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "contains the Evidence and Report layouts at desktop width 1440",
+          "file": "evidence-report-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "contains the Evidence and Report layouts at desktop width 1920",
+          "file": "evidence-report-simplification.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "failed hunts expose saved answers and bounded results without creating a report",
+          "file": "failed-hunt-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "cancelled hunts expose saved answers and bounded results without creating a report",
+          "file": "failed-hunt-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "an empty created hunt keeps the normal no-report state and does not request saved results",
+          "file": "failed-hunt-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "filters and exports records beyond the loaded page using all retained source/type choices",
+          "file": "global-evidence-facets.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "pages source choices without loading full evidence and selects the last retained source",
+          "file": "global-evidence-facets.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "failed source choices remain visibly unavailable while retained evidence is usable",
+          "file": "global-evidence-facets.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "an open exact record remains inspectable outside a global source filter",
+          "file": "global-evidence-facets.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "follow-up stays primary while optional source context and history open only when requested",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a saved source record can be cleared when the evidence list is unavailable",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "follow-up tools load on demand and a retry preserves its request identity without executing",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "continuation writing survives section switches and keeps the existing leave guard",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "recurring approval sends the saved program version and template hash without running a hunt",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "saved template recurrence details disclose limits and prevent schedules beyond one year",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "native collection requires a separate explicit approval and preserves the approved plan binding",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "native records require a separate analysis approval and appear with source citations in the saved report",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "disabled Entra connector shows its setup blocker without enabling collection",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "ambiguous follow-up restores question, selected context and request identity after reload",
+          "file": "hunt-programs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "inspector refresh resets a stale later-page cursor and returns to the first bounded page",
+          "file": "inspector-recovery.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a late point lookup cannot replace the analyst's newer evidence selection",
+          "file": "inspector-recovery.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "previous evidence page returns to the last visible group of the preceding API page",
+          "file": "inspector-recovery.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "submitting the same first-page search again reloads its bounded records",
+          "file": "inspector-recovery.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "same-revision refresh after a stale cursor reloads the first bounded page",
+          "file": "inspector-recovery.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "matches the approved queue/current-review workflow and retains drafts across the queue",
+          "file": "investigation-desk.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps desktop regions usable with the reference dataset",
+          "file": "investigation-desk.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "returning to Current review cancels a pending hunt switch without losing the current hunt",
+          "file": "investigation-desk.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps advanced edits off the review path while preserving drafts, evidence and citations",
+          "file": "investigation-desk.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "workspace dialogs trap keyboard focus, preserve the review and return focus on Escape",
+          "file": "investigation-desk.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct queue opening retains the queue and exposes a recoverable read failure",
+          "file": "investigation-desk.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "Hunt intent keeps long objectives readable on demand and opens the existing plan",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "summarizes a large plan and opens one question at a time",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows source mapping differences and falls back to the saved scope when mapping is absent",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the single-column plan, source table, and sticky decision bar usable at desktop widths",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps approved plan details fully readable and read-only",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "switches edit targets, preserves the draft across sections, and saves the exact reviewed version",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "Cancel restores all edits from before the first edit without writing",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows a stale-plan conflict and preserves the concurrently saved version",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "requires a change request note and keeps it separate from the approval note",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the legacy revision note in Advanced tools with accurate wording",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a newer saved plan rejects stale approve-and-start without executing",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps approval when starting fails and retries execution without approving again",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps advanced JSON accessible and blocks decisions when the draft is invalid",
+          "file": "plan-review.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains a safe known reason after reload without exposing provider content or starting a hunt",
+          "file": "planning-failure.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses a safe fallback for older failed hunts with no retained reason",
+          "file": "planning-failure.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "activity query clicks open exact retained records with bounded pages, field details and no rerun",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "recorded job opens in a separate tab and expired jobs preserve retained evidence without rerun",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "job link explains web_url_not_configured while retained results remain accessible",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "job link explains job_id_invalid while retained results remain accessible",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "job link explains job_context_missing while retained results remain accessible",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "switching searches removes the previous job link when the next SID is missing",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "aggregate searches show original grouped columns and counts instead of event claims",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "zero retained records does not imply an empty Splunk search",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "saved query metadata failures preserve retained evidence and retry access",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "source-search navigation preserves the original filters and selected evidence when returning",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "display controls keep columns and long events usable without fetching more records",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "the source browser uses the full workspace until a record is selected",
+          "file": "query-retained-results.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reviews approved process mappings and opens saved comparison citations from the desk and report",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "marks report-size fallback as details in hunt results",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows saved findings and a readable report with source links and consolidated caveats",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps canonical report citations linked while the result summary is still pending",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "requires an explicit current lookup when a report snapshot omits the source and preserves its citation across Hunts",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "restores the saved report citation after reload without fetching current evidence",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "holds a report citation when the saved report version changed during reload",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "an incoming evidence citation deep link still opens its source record",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps repeated accepted summaries linked to their distinct question identities at desktop width",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the guided assessment draft when moving between report and plan",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "opens loaded source records for citations beyond the saved report excerpt",
+          "file": "report-question-context.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses accessible report section tabs and source details stay tied to their section",
+          "file": "report-section-tabs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "requires explicit current lookup for a missing snapshot and retries the bounded request at the summary revision",
+          "file": "report-section-tabs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "supports arrow-key tab navigation and preserves an unsaved assessment while changing report sections",
+          "file": "report-section-tabs.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "edits only bounded new-hunt limits with the current settings version",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "stale settings edits stay visible until the user reloads current values",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the account's unsaved numeric draft across settings sections and utility routes, then clears it on sign out",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "clears account-scoped settings drafts when the authenticated session expires",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps editable Settings readable at 1280px",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps editable Settings readable at 1440px",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps editable Settings readable at 1920px",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps editable Settings within the desktop layout at 125% text",
+          "file": "runtime-settings.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "new hunt restores its scoped tab draft, preserves text on import, and submits optional outcomes with explicit UTC bounds",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "failed create retains the full draft and logout clears account-scoped draft storage",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a concern alone derives a title and prepares discovery without running searches",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "intelligence alone derives its title without asserting a hypothesis",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "configuration pages keep model settings deployment-owned and preserve the selected plan",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "leaving a pending create does not let its late response replace the hunt being reviewed",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a window-only intake draft survives queue navigation and refresh before any writing",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "new hunt keeps its brief and investigation window in one column at desktop widths",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "New Hunt retains its parent navigation selection and shared form roles",
+          "file": "unified-workspace.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /connections",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /settings",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /settings?section=limits",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/new",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/plan",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/investigation",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/evidence",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/report",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/activity",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "direct URL and refresh render /hunts/44444444-4444-4444-8444-444444444444/advanced",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "workspace tabs and browser Back/Forward keep the address and visible section in sync",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "Settings sections keep their selection in the URL and browser history",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "login preserves a deep link and ignores an unsafe external redirect target",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a missing hunt can be retried and returned to the hunt list",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a delayed response for the old hunt cannot replace the hunt opened from the queue",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "browser Back asks before crossing hunts and dismiss keeps the unsaved draft",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "browser Back accepts the discard confirmation and opens the earlier hunt",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a bookmarked citation URL verifies its saved report snapshot and opens the evidence",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a citation with a different saved report version fails closed without opening current evidence",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "malformed snapshot query metadata fails closed until the analyst explicitly opens current evidence",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "a copied snapshot query citation returns to its originating report",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses shared heading roles across the Hunt review views",
+          "file": "url-routing.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "url-routing.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "url-routing.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "url-routing.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "url-routing.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "uses shared heading roles across the Hunt review views",
+          "file": "url-routing.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "url-routing.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "url-routing.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "url-routing.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "url-routing.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "uses shared heading roles across the Hunt review views",
+          "file": "url-routing.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "opens completed hunts at Investigation Desk before the separate report",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reviews saved questions inline, preserves filtering, and opens the exact evidence source",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "prioritizes the readable report, expands supporting detail, and follows evidence links",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "loads action history on demand, paginates, and preserves unknown usage",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows unresolved coverage and deferred candidates beyond the first three",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "continues polling a terminal hunt while its job is claimed, then stops at completed",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "continues polling a terminal hunt while its job is claimed, then stops at failed",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shows quarantine guidance, keeps cancel, and stops polling a quarantined job",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "recovers discovery gateway timeout and polls the same hunt without a job",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "preserves new-hunt intake across the discard guard and creates the intended hunt",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps the hunt workspace navigation keyboard-accessible",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "signs in, lists hunts, and renders execution and report states",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps successful hunt results visible when the report read fails and retries the report",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps an editable report available when the hunt results read fails and retries results",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "refreshes the hunt state after report finalization",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "accepts finalization observed at the same report version",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "preserves a saved analyst edit when an older report read finishes late",
+          "file": "workflow-smoke.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "account details retain the full name, open above the row and dismiss with keyboard or outside interaction",
+          "file": "workspace-account.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "account sign-out preserves an unsaved hunt when cancelled and clears it only after discard",
+          "file": "workspace-account.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "account details stay out of printed workspace pages",
+          "file": "workspace-account.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reviews the Hunts list, utility actions, Advanced tools and saved usage",
+          "file": "workspace-utilities.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "clears Hunt and activity filters without leaving the saved workspace",
+          "file": "workspace-utilities.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps utility surfaces readable at desktop width 1280",
+          "file": "workspace-utilities.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps utility surfaces readable at desktop width 1440",
+          "file": "workspace-utilities.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "keeps utility surfaces readable at desktop width 1920",
+          "file": "workspace-utilities.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "app": "IR Azure",
+      "label": "azure_notable_pipeline",
+      "unitTestsPassed": 231,
+      "componentChecksPassed": 15,
+      "workflowChecksPassed": 30,
+      "componentCases": [
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ],
+      "workflowCases": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "app": "IR on-premises",
+      "label": "llm_notable_analysis_onprem_systemd",
+      "unitTestsPassed": 230,
+      "componentChecksPassed": 15,
+      "workflowChecksPassed": 30,
+      "componentCases": [
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ],
+      "workflowCases": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "app": "IR GovCloud",
+      "label": "s3_notable_pipeline",
+      "unitTestsPassed": 222,
+      "componentChecksPassed": 15,
+      "workflowChecksPassed": 30,
+      "componentCases": [
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ],
+      "workflowCases": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ]
+    },
+    {
+      "app": "IR commercial",
+      "label": "s3_notable_pipeline_commercial",
+      "unitTestsPassed": 258,
+      "componentChecksPassed": 15,
+      "workflowChecksPassed": 30,
+      "componentCases": [
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "shared defaults, hover, focus and field boundaries",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "popup and tabs retain keyboard behavior",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "constrained desktop dialog and enlarged content stay reachable",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "reduced motion retains controls and removes transitions",
+          "file": "suite-components.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ],
+      "workflowCases": [
+        {
+          "title": "desktop zoom preserves full-width cases, assistant and focused actions",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "chat waiting, failures and new replies expose live feedback without moving focus",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "desktop zoom keeps the named capacity popup inside the viewport",
+          "file": "desktop-accessibility.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "chromium",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "firefox",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1280px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1440px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "applies suite sidebar and typography at 1920px",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "retains accessible suite navigation with enlarged text",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "uses the same sidebar and title roles in the assistant workspace",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: skip repeated navigation in list and assistant",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: confirmation contains focus and preserves cancellation",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: case loading announces progress and matches loaded columns",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        },
+        {
+          "title": "suite accessibility: pending deletion retains modal guards and announces failure",
+          "file": "suite-ui.spec.ts",
+          "engine": "webkit",
+          "status": "passed"
+        }
+      ]
+    }
+  ],
+  "renderedSamples": 18,
+  "computedStyleDifferences": [],
+  "disposableBackend": {
+    "cases": [
+      {
+        "title": "uploads sourced style, saves immutable versions, previews read-only, and adopts explicitly",
+        "file": "workflows/ssp-agency-settings.spec.ts",
+        "engine": "chromium",
+        "status": "passed"
+      },
+      {
+        "title": "uploads, reviews, previews, approves, and downloads through the real application",
+        "file": "workflows/ssp-agency-template.spec.ts",
+        "engine": "chromium",
+        "status": "passed"
+      },
+      {
+        "title": "saves a draft before navigating and keeps stale drafts available for recovery",
+        "file": "workflows/ssp-save-continue.spec.ts",
+        "engine": "chromium",
+        "status": "passed"
+      },
+      {
+        "title": "keeps completed files and retries only a rejected middle file and untouched files",
+        "file": "workflows/ssp-upload-retry.spec.ts",
+        "engine": "chromium",
+        "status": "passed"
+      },
+      {
+        "title": "reconciles a committed upload after losing its response without resending it",
+        "file": "workflows/ssp-upload-retry.spec.ts",
+        "engine": "chromium",
+        "status": "passed"
+      }
+    ],
+    "cleanupComplete": true,
+    "boundaries": "Real isolated PostgreSQL + API + OIDC, deterministic synthetic provider; no production data or external model service."
+  },
+  "qualifiedExclusions": [
+    {
+      "title": "uploads sourced style, saves immutable versions, previews read-only, and adopts explicitly",
+      "file": "workflows/ssp-agency-settings.spec.ts",
+      "engine": "chromium",
+      "status": "skipped",
+      "app": "ATO",
+      "reason": "Requires disposable PostgreSQL/OIDC stack; covered separately by the five affected real-backend journeys."
+    },
+    {
+      "title": "uploads, reviews, previews, approves, and downloads through the real application",
+      "file": "workflows/ssp-agency-template.spec.ts",
+      "engine": "chromium",
+      "status": "skipped",
+      "app": "ATO",
+      "reason": "Requires disposable PostgreSQL/OIDC stack; covered separately by the five affected real-backend journeys."
+    },
+    {
+      "title": "saves a draft before navigating and keeps stale drafts available for recovery",
+      "file": "workflows/ssp-save-continue.spec.ts",
+      "engine": "chromium",
+      "status": "skipped",
+      "app": "ATO",
+      "reason": "Requires disposable PostgreSQL/OIDC stack; covered separately by the five affected real-backend journeys."
+    },
+    {
+      "title": "keeps completed files and retries only a rejected middle file and untouched files",
+      "file": "workflows/ssp-upload-retry.spec.ts",
+      "engine": "chromium",
+      "status": "skipped",
+      "app": "ATO",
+      "reason": "Requires disposable PostgreSQL/OIDC stack; covered separately by the five affected real-backend journeys."
+    },
+    {
+      "title": "reconciles a committed upload after losing its response without resending it",
+      "file": "workflows/ssp-upload-retry.spec.ts",
+      "engine": "chromium",
+      "status": "skipped",
+      "app": "ATO",
+      "reason": "Requires disposable PostgreSQL/OIDC stack; covered separately by the five affected real-backend journeys."
+    },
+    {
+      "title": "shared defaults, hover, focus and field boundaries",
+      "file": "suite-components.spec.ts",
+      "engine": "chromium",
+      "status": "failed",
+      "app": "Hunt",
+      "reason": "Component fixtures require the dedicated Vite fixture server; all 15 per-app component checks passed in that configuration."
+    },
+    {
+      "title": "confirmation traps focus, restores focus, guards duplicate submission and recovers from failure",
+      "file": "suite-components.spec.ts",
+      "engine": "chromium",
+      "status": "failed",
+      "app": "Hunt",
+      "reason": "Component fixtures require the dedicated Vite fixture server; all 15 per-app component checks passed in that configuration."
+    },
+    {
+      "title": "popup and tabs retain keyboard behavior",
+      "file": "suite-components.spec.ts",
+      "engine": "chromium",
+      "status": "failed",
+      "app": "Hunt",
+      "reason": "Component fixtures require the dedicated Vite fixture server; all 15 per-app component checks passed in that configuration."
+    },
+    {
+      "title": "constrained desktop dialog and enlarged content stay reachable",
+      "file": "suite-components.spec.ts",
+      "engine": "chromium",
+      "status": "failed",
+      "app": "Hunt",
+      "reason": "Component fixtures require the dedicated Vite fixture server; all 15 per-app component checks passed in that configuration."
+    },
+    {
+      "title": "reduced motion retains controls and removes transitions",
+      "file": "suite-components.spec.ts",
+      "engine": "chromium",
+      "status": "failed",
+      "app": "Hunt",
+      "reason": "Component fixtures require the dedicated Vite fixture server; all 15 per-app component checks passed in that configuration."
+    }
+  ],
+  "limitations": [
+    "Actual screen-reader speech was not captured; keyboard and accessibility semantics were checked.",
+    "Native browser zoom was checked in Chromium for ATO and four IR variants; Hunt retained its existing root-text enlargement coverage and the documented native-zoom exception.",
+    "Production identity/provider deployments and the full 20-minute all-controls ATO generation scenario are outside this UI-component qualification.",
+    "Routing implementations, HTTP clients, state ownership, form orchestration and validation are separate alignment work; existing guards and backend contracts are preserved."
+  ]
+}

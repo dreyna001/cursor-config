@@ -1,0 +1,36 @@
+{
+  "version": "1.14.0",
+  "basis": "Production Vite manifest, eager imports counted once, total JS separately. Limits allow 5% headroom over qualified candidate. Calculated gzip uses level 9; no latency claim.",
+  "frontends": {
+    "ai-enabled-ato": {
+      "portal": {
+        "eagerJavaScriptBytes": 504000,
+        "totalJavaScriptBytes": 944000
+      }
+    },
+    "ai-enabled-threathunting": {
+      "frontend": {
+        "eagerJavaScriptBytes": 643000,
+        "totalJavaScriptBytes": 862000
+      }
+    },
+    "llm_notable_analysis": {
+      "azure_notable_pipeline/frontend/analyst-portal": {
+        "eagerJavaScriptBytes": 420000,
+        "totalJavaScriptBytes": 1152000
+      },
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal": {
+        "eagerJavaScriptBytes": 411000,
+        "totalJavaScriptBytes": 840000
+      },
+      "s3_notable_pipeline/frontend/analyst-portal": {
+        "eagerJavaScriptBytes": 689000,
+        "totalJavaScriptBytes": 1115000
+      },
+      "s3_notable_pipeline_commercial/frontend/analyst-portal": {
+        "eagerJavaScriptBytes": 422000,
+        "totalJavaScriptBytes": 1158000
+      }
+    }
+  }
+}
