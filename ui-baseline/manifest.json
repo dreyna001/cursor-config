@@ -1,18 +1,18 @@
 {
-  "version": "1.6.0",
+  "version": "1.6.1",
   "prepared": "2026-10-23",
   "source_commits": {
-    "ai-enabled-threathunting": "c1d8e8f0cc086c6d2214eeb8e71207094291bd54",
-    "ai-enabled-ato": "39a313ac89f9beeab5fe5fe736819cafc586becb",
-    "llm_notable_analysis": "77a1ba7010c0a95d8b9af218fb2d3d54f93e1b5e"
+    "ai-enabled-threathunting": "563b9ced65fc12cf5dc155cd99a08823e6fbbe35",
+    "ai-enabled-ato": "6db791c4e664b533cfc91fc03826cd3e6967f148",
+    "llm_notable_analysis": "7e7a18a5ea48f07f16549b6a301cce6909b0dd0f"
   },
   "files": [
     {
       "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e",
-      "local_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e"
+      "source_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592",
+      "local_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592"
     },
     {
       "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
@@ -53,8 +53,8 @@
       "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
       "repository": "ai-enabled-threathunting",
       "source_path": "frontend/src/suite-workspace.css",
-      "source_sha256": "751d59f74674c1fb224701eedcd7b937ff7033b215d60dbc82fd3711580267f7",
-      "local_sha256": "751d59f74674c1fb224701eedcd7b937ff7033b215d60dbc82fd3711580267f7"
+      "source_sha256": "ad231ac3fab304327bda6a28b28afec1ab27a364b7a747d9d0b47ac3b8cbdaee",
+      "local_sha256": "ad231ac3fab304327bda6a28b28afec1ab27a364b7a747d9d0b47ac3b8cbdaee"
     },
     {
       "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
@@ -67,15 +67,15 @@
       "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
       "repository": "ai-enabled-threathunting",
       "source_path": "design-previews/20261018/unified/visual-reference.html",
-      "source_sha256": "9c25cfdf728dfc0dfb23c62fe755d6c57f41348516ead30c5a7976803b965942",
-      "local_sha256": "9c25cfdf728dfc0dfb23c62fe755d6c57f41348516ead30c5a7976803b965942"
+      "source_sha256": "a3aec5d9e9585b75d108d2be320078a19f5376167d5e2c957c9fabab70a84f7a",
+      "local_sha256": "a3aec5d9e9585b75d108d2be320078a19f5376167d5e2c957c9fabab70a84f7a"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
       "repository": "ai-enabled-ato",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e",
-      "local_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e"
+      "source_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592",
+      "local_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
@@ -102,8 +102,8 @@
       "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
       "repository": "llm_notable_analysis",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e",
-      "local_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e"
+      "source_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592",
+      "local_sha256": "f7e0ab14ebdfd4aed67d2e68e22fff81c1cedc3fb487519f0ca4db61eafb7592"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
@@ -121,17 +121,17 @@
     },
     {
       "path": "README.md",
-      "local_sha256": "6053fc5367724d93f41c9d93d3292e8a3ff8ae4f8eef762984648869f6de572a",
+      "local_sha256": "09501916840fc94190644f61c05cb08212170fc2801881ae9eb369745c9b33a1",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "fd10d0471e8e518fe70705a0b5989065e951dcd7b1b12ee41eb67123592780d8",
+      "local_sha256": "28bdf71a81785158b5380f221b54f161fb9124188709eefdf2558917b14e77ed",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "3f93fdd09efbd89fdfdcf9792790a4326eb34086604e9ae4a1618f2a23b573dc",
+      "local_sha256": "a43ae60cf0b17f8016dfcd274b68b91a03dec2ec91e55a86cf61ce17bf2ea6ec",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -301,6 +301,30 @@
     {
       "path": "evidence/text-role-check-s3_notable_pipeline_commercial.log",
       "local_sha256": "1002a23eb6ee02c65bf52b7a1377489a21425deb693411b2bf243a12397086f4"
+    },
+    {
+      "path": "evidence/ato-creation-title.png",
+      "local_sha256": "f63572ae49bbcba4f8c2ae0dde0ef6dd7a36f0a4b8dec946658889663f9cd2f3"
+    },
+    {
+      "path": "evidence/ato-title-browser.log",
+      "local_sha256": "b41664f1f7c852de5d42a0402caa536e3151725d8cabe6faae88e77510316205"
+    },
+    {
+      "path": "evidence/ato-title-build-checks.json",
+      "local_sha256": "ea9349b34acf9b8310485fb9e739f373b67d5f7ad65c63d558b6813b8d63db88"
+    },
+    {
+      "path": "evidence/ato-title-build.log",
+      "local_sha256": "8b73f734d025c8bd2c054a85b24da5dc13c1dc1c3cc22ced802acc669345552f"
+    },
+    {
+      "path": "evidence/ato-title-scope.json",
+      "local_sha256": "56ebf9ba10adad473a5ce238206d1b5ebe433af2ef23f0730075c0659833df56"
+    },
+    {
+      "path": "evidence/ato-title-validation.json",
+      "local_sha256": "6eba8dbb92a775afb1c21fca8342d80e8a1f6f00a37d43a3eb258b1ba3cce1e5"
     }
   ]
 }

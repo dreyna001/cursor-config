@@ -1,0 +1,28 @@
+[
+  {
+    "command": [
+      "npm",
+      "run",
+      "build"
+    ],
+    "exit_code": 0
+  },
+  {
+    "command": [
+      "npm",
+      "run",
+      "check:e2e-types"
+    ],
+    "exit_code": 2
+  },
+  {
+    "command": [
+      "npm",
+      "test",
+      "--",
+      "src/components/PortalNavSidebar.test.tsx",
+      "src/components/WorkspaceAccount.test.tsx"
+    ],
+    "exit_code": 0
+  }
+]

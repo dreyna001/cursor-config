@@ -1,0 +1,39 @@
+
+Running 17 tests using 1 worker
+
+  ✓   1 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:217:1 › simplifies SSP navigation while preserving review links and one contextual assistant (11.9s)
+  ✓   2 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:471:1 › supports private advice and complete SSP edit review in the dedicated assistant (3.0s)
+  ✓   3 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:552:1 › keeps document drafts guarded, sources protected, and canonical edits in System Setup (3.6s)
+  ✓   4 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:647:1 › focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit (4.5s)
+  ✓   5 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:760:1 › keeps setup and review actions reachable across desktop widths without implicit writes (5.6s)
+  ✓   6 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:811:1 › presents creation and management empty, error and retry states without changing assignments (3.1s)
+  ✓   7 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:863:1 › keeps session loading, sign-in errors and degraded readiness clear (2.6s)
+  ✓   8 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:889:1 › keeps review URLs and guarded selections through refresh and system switches (4.4s)
+  ✓   9 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:918:1 › filters evidence files without changing the selected review batch (2.3s)
+  ✓  10 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:964:1 › keeps the account menu accessible and preserves drafts when dismissed (2.0s)
+  ✓  11 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1004:1 › signs out through the account menu with the existing authenticated request (1.6s)
+  ✓  12 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1280px (4.3s)
+  ✓  13 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1440px (4.6s)
+  ✓  14 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1920px (4.2s)
+  ✓  15 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1033:1 › retains accessible suite navigation with enlarged text (4.4s)
+  ✓  16 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1041:1 › uses shared title roles when opening the ATO assistant (4.9s)
+  ✓  17 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1048:1 › keeps an unsaved control draft and focus through assistant history navigation (2.1s)
+
+  17 passed (1.3m)
+
+Running 12 tests using 1 worker
+
+  ✓   1 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:811:1 › presents creation and management empty, error and retry states without changing assignments (5.4s)
+  ✓   2 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1280px (4.8s)
+  ✓   3 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1440px (5.1s)
+  ✓   4 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1920px (4.7s)
+  ✓   5 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1033:1 › retains accessible suite navigation with enlarged text (5.0s)
+  ✓   6 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1041:1 › uses shared title roles when opening the ATO assistant (5.3s)
+  ✓   7 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:811:1 › presents creation and management empty, error and retry states without changing assignments (4.1s)
+  ✓   8 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1280px (4.6s)
+  ✓   9 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1440px (4.6s)
+  ✓  10 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1026:3 › applies suite sidebar and typography at 1920px (4.5s)
+  ✓  11 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1033:1 › retains accessible suite navigation with enlarged text (4.5s)
+  ✓  12 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1041:1 › uses shared title roles when opening the ATO assistant (4.9s)
+
+  12 passed (1.2m)
