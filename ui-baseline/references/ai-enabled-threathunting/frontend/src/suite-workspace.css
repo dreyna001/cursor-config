@@ -1,4 +1,4 @@
-/* Suite Workspace UI v1.5.0. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.6.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
@@ -15,6 +15,10 @@
   --workspace-color-primary: #1f6feb;
   --workspace-color-on-primary: #ffffff;
   --workspace-color-link: #8cbcff;
+  --workspace-color-placeholder: var(--workspace-color-muted);
+  --workspace-color-label: var(--workspace-color-text);
+  --workspace-font-weight-field: 400;
+  --workspace-font-weight-label: 500;
   --workspace-font-field: var(--workspace-font-size-14);
   --workspace-font-label: var(--workspace-font-size-13);
   --workspace-font-action: var(--workspace-font-size-12);
@@ -197,12 +201,26 @@
   ):not(.vs-code, .font-mono, [data-workspace-text-role="code"]) {
     /* Explicit role overrides old local text-xs/text-sm utilities consistently. */
     font-size: var(--workspace-font-field) !important;
+    font-weight: var(--workspace-font-weight-field) !important;
   }
   .workspace-typography :is(input, select, [role="combobox"]):not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="hidden"], [type="color"], [type="button"], [type="submit"], [type="reset"], .vs-code, .font-mono, [data-workspace-text-role="code"]) {
     line-height: 1.25rem;
   }
   .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"]) {
     font-size: var(--workspace-font-label) !important;
+  }
+  .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"], [data-workspace-text-role="action"]) {
+    font-weight: var(--workspace-font-weight-label) !important;
+  }
+  .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"], [data-workspace-text-role="action"], [data-workspace-tone], .text-warning, .text-destructive, .text-success) {
+    color: var(--workspace-color-label) !important;
+  }
+  .workspace-typography :is(input, textarea)::placeholder {
+    color: var(--workspace-color-placeholder) !important;
+    opacity: 1 !important;
+  }
+  .workspace-typography :is([role="combobox"][data-placeholder], .workspace-placeholder) {
+    color: var(--workspace-color-placeholder) !important;
   }
   .workspace-typography :is(h1,h2,h3,h4,h5,h6,.workspace-page-title,.workspace-section-title,.workspace-toolbar-title):not(.folio-overline,.text-muted-foreground,.text-warning,.text-destructive,.text-success,[data-workspace-tone]) {
     color: var(--workspace-color-heading);

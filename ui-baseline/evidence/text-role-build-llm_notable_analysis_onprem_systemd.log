@@ -1,0 +1,179 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2257 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.61 kB │ gzip:   0.37 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-DrheoCIQ.css                    64.64 kB │ gzip:  12.27 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-C4M7jbfS.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-BMHKxbMN.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/button-CxYfjUjY.js                     1.25 kB │ gzip:   0.63 kB
+dist/assets/CaseArchiveNoticeBanner-BOVmdQKC.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-WlIzrvd9.js            3.01 kB │ gzip:   1.12 kB
+dist/assets/EmptyState--nyu5383.js                 4.16 kB │ gzip:   1.29 kB
+dist/assets/ClosedTicketsPage-C8YtzjOk.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-BmAKcQH0.js                 13.51 kB │ gzip:   4.61 kB
+dist/assets/CaseDetailPage-CBNFLvwV.js            46.54 kB │ gzip:  13.76 kB
+dist/assets/HomePage-Dm5xGNwD.js                  65.17 kB │ gzip:  20.67 kB
+dist/assets/ui-vendor-Big3j90G.js                136.34 kB │ gzip:  44.89 kB
+dist/assets/markdown-vendor-CLmyFSSV.js          162.26 kB │ gzip:  49.37 kB
+dist/assets/index-DN983NuH.js                    378.29 kB │ gzip: 116.50 kB
+✓ built in 4.35s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/components/Layout.test.tsx src/App.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/text-role-parity-incident/llm_notable_analysis_onprem_systemd/frontend/analyst-portal[39m
+
+ [32m✓[39m src/App.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 623[2mms[22m[39m
+     [33m[2m✓[22m[39m logs out at /login without losing the remembered workspace [33m 347[2mms[22m[39m
+ [32m✓[39m src/components/Layout.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 509[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m10 passed[39m[22m[90m (10)[39m
+[2m   Start at [22m 21:35:45
+[2m   Duration [22m 2.08s[2m (transform 488ms, setup 198ms, import 925ms, tests 1.13s, environment 1.59s)[22m
+
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2257 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.61 kB │ gzip:   0.36 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-B4r3Kndi.css                    64.83 kB │ gzip:  12.28 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-C7iFlHmz.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-6N8URAF2.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/button-C_S6xfZg.js                     1.25 kB │ gzip:   0.63 kB
+dist/assets/CaseArchiveNoticeBanner-BqSbs7St.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-B9NCvGwF.js            3.01 kB │ gzip:   1.12 kB
+dist/assets/EmptyState-DWcCZ60d.js                 4.16 kB │ gzip:   1.29 kB
+dist/assets/ClosedTicketsPage-CIp5TChn.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-y5vogjYH.js                 13.51 kB │ gzip:   4.61 kB
+dist/assets/CaseDetailPage-CMqPlNtv.js            46.54 kB │ gzip:  13.76 kB
+dist/assets/HomePage-DLF6Ddag.js                  65.17 kB │ gzip:  20.67 kB
+dist/assets/ui-vendor-Big3j90G.js                136.34 kB │ gzip:  44.89 kB
+dist/assets/markdown-vendor-CLmyFSSV.js          162.26 kB │ gzip:  49.37 kB
+dist/assets/index-BWIYfdBe.js                    378.29 kB │ gzip: 116.50 kB
+✓ built in 4.53s
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2257 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.61 kB │ gzip:   0.36 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-DlHdVflp.css                    77.20 kB │ gzip:  13.83 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-BB-u99Mx.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-BKnuDyN3.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/button-g8Ha_BuQ.js                     1.25 kB │ gzip:   0.63 kB
+dist/assets/CaseArchiveNoticeBanner-BnW496XJ.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-H_cI0Z85.js            3.01 kB │ gzip:   1.12 kB
+dist/assets/EmptyState-CYtLIXdT.js                 4.16 kB │ gzip:   1.29 kB
+dist/assets/ClosedTicketsPage-CrFI2ANd.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-Bldo92ie.js                 13.51 kB │ gzip:   4.61 kB
+dist/assets/CaseDetailPage-DhOoUkzE.js            46.54 kB │ gzip:  13.76 kB
+dist/assets/HomePage-BzYWKVB0.js                  65.17 kB │ gzip:  20.67 kB
+dist/assets/ui-vendor-Big3j90G.js                136.34 kB │ gzip:  44.89 kB
+dist/assets/markdown-vendor-CLmyFSSV.js          162.26 kB │ gzip:  49.37 kB
+dist/assets/index-BFFUvp5x.js                    378.29 kB │ gzip: 116.50 kB
+✓ built in 7.79s
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2257 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.61 kB │ gzip:   0.37 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-rTDQCOK0.css                    77.19 kB │ gzip:  13.83 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-dveQSs02.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-KIlolPey.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/button-007D14-X.js                     1.25 kB │ gzip:   0.63 kB
+dist/assets/CaseArchiveNoticeBanner-CfETntjy.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-DHyjhWLG.js            3.01 kB │ gzip:   1.12 kB
+dist/assets/EmptyState-BhzjR06_.js                 4.16 kB │ gzip:   1.29 kB
+dist/assets/ClosedTicketsPage-q4KlVdwJ.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-BBA8GWxA.js                 13.51 kB │ gzip:   4.61 kB
+dist/assets/CaseDetailPage-Dla2Z97i.js            46.54 kB │ gzip:  13.76 kB
+dist/assets/HomePage-CPcbeOt8.js                  65.17 kB │ gzip:  20.67 kB
+dist/assets/ui-vendor-Big3j90G.js                136.34 kB │ gzip:  44.89 kB
+dist/assets/markdown-vendor-CLmyFSSV.js          162.26 kB │ gzip:  49.37 kB
+dist/assets/index-Dy8o0uLu.js                    378.29 kB │ gzip: 116.50 kB
+✓ built in 4.95s
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2257 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.61 kB │ gzip:   0.37 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-xQxHsfDM.css                    77.29 kB │ gzip:  13.83 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-CJc04r-R.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-9A2E06iF.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/button-Ca8FpoNg.js                     1.25 kB │ gzip:   0.63 kB
+dist/assets/CaseArchiveNoticeBanner-C5phTbPJ.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-DV7WpYtt.js            3.01 kB │ gzip:   1.12 kB
+dist/assets/EmptyState-xmQoO5zn.js                 4.16 kB │ gzip:   1.29 kB
+dist/assets/ClosedTicketsPage-DyFr2RTd.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-BJsmCfvE.js                 13.51 kB │ gzip:   4.61 kB
+dist/assets/CaseDetailPage-Dc3X_S9Q.js            46.54 kB │ gzip:  13.76 kB
+dist/assets/HomePage-C8Smzd3Y.js                  65.17 kB │ gzip:  20.67 kB
+dist/assets/ui-vendor-Big3j90G.js                136.34 kB │ gzip:  44.89 kB
+dist/assets/markdown-vendor-CLmyFSSV.js          162.26 kB │ gzip:  49.37 kB
+dist/assets/index-Ckjh4zyB.js                    378.29 kB │ gzip: 116.50 kB
+✓ built in 4.81s

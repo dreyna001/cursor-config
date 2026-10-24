@@ -28,3 +28,7 @@ prototype CSS or sample behavior over the approved application implementation.
 For shared visual changes, verify computed form roles, semantic colors, keyboard
 selection and control geometry against the central baseline. A passing size-scale
 check alone does not establish role parity. Preserve the recorded app exceptions.
+
+Equivalent text roles must share the baseline styling across independent apps.
+Check placeholder color/opacity and ordinary label emphasis explicitly; browser
+defaults are not a design token. Keep helper, status, metadata and action roles distinct.

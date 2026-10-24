@@ -1,0 +1,37 @@
+
+Running 17 tests using 1 worker
+
+  ✓   1 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:217:1 › simplifies SSP navigation while preserving review links and one contextual assistant (14.5s)
+  ✓   2 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:471:1 › supports private advice and complete SSP edit review in the dedicated assistant (4.8s)
+  ✓   3 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:552:1 › keeps document drafts guarded, sources protected, and canonical edits in System Setup (4.7s)
+  ✓   4 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:647:1 › focuses proposals without losing sibling drafts and keeps revision-bound decisions explicit (5.6s)
+  ✓   5 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:760:1 › keeps setup and review actions reachable across desktop widths without implicit writes (6.4s)
+  ✓   6 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:811:1 › presents creation and management empty, error and retry states without changing assignments (3.7s)
+  ✓   7 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:847:1 › keeps session loading, sign-in errors and degraded readiness clear (3.3s)
+  ✓   8 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:873:1 › keeps review URLs and guarded selections through refresh and system switches (5.5s)
+  ✓   9 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:902:1 › filters evidence files without changing the selected review batch (2.8s)
+  ✓  10 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:948:1 › keeps the account menu accessible and preserves drafts when dismissed (2.7s)
+  ✓  11 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:988:1 › signs out through the account menu with the existing authenticated request (2.0s)
+  ✓  12 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1280px (4.9s)
+  ✓  13 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1440px (5.0s)
+  ✓  14 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1920px (5.0s)
+  ✓  15 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1017:1 › retains accessible suite navigation with enlarged text (5.2s)
+  ✓  16 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1025:1 › uses shared title roles when opening the ATO assistant (5.6s)
+  ✓  17 [chromium] › e2e/security/ssp-workspace-ui.spec.ts:1032:1 › keeps an unsaved control draft and focus through assistant history navigation (3.0s)
+
+  17 passed (1.6m)
+
+Running 10 tests using 1 worker
+
+  ✓   1 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1280px (8.1s)
+  ✓   2 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1440px (5.8s)
+  ✓   3 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1920px (5.5s)
+  ✓   4 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1017:1 › retains accessible suite navigation with enlarged text (5.4s)
+  ✓   5 [firefox] › e2e/security/ssp-workspace-ui.spec.ts:1025:1 › uses shared title roles when opening the ATO assistant (6.4s)
+  ✓   6 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1280px (5.5s)
+  ✓   7 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1440px (5.6s)
+  ✓   8 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1010:3 › applies suite sidebar and typography at 1920px (5.1s)
+  ✓   9 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1017:1 › retains accessible suite navigation with enlarged text (5.3s)
+  ✓  10 [webkit] › e2e/security/ssp-workspace-ui.spec.ts:1025:1 › uses shared title roles when opening the ATO assistant (5.6s)
+
+  10 passed (1.1m)
