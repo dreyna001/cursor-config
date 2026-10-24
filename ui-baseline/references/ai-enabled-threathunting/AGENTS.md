@@ -52,7 +52,7 @@ in all three repositories; record local exceptions in
 
 ## Shared workspace UI
 
-Read [the authoritative Suite Workspace UI Standard](../../README.md)
+Read [the authoritative Suite Workspace UI Standard](docs/suite-ui-standard.md)
 before UI work. It defines precedence, adaptation, shared appearance and
 verification; the HTML companion is illustrative, not an independent authority.
 Keep released copies and shared `suite-workspace.css` identical across the suite.

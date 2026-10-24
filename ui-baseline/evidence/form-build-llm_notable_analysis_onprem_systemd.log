@@ -1,0 +1,47 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2257 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.61 kB │ gzip:   0.37 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-qPl5yy11.css                    76.36 kB │ gzip:  13.73 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-CzzmyDWq.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-D58RMUcr.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/button-CcReCHWe.js                     1.25 kB │ gzip:   0.63 kB
+dist/assets/CaseArchiveNoticeBanner-PZjyhP1F.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-Su1BoTW5.js            3.01 kB │ gzip:   1.12 kB
+dist/assets/EmptyState-CwDjvnB_.js                 4.16 kB │ gzip:   1.29 kB
+dist/assets/ClosedTicketsPage-D1BSPoSt.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-NhT660IN.js                 13.51 kB │ gzip:   4.61 kB
+dist/assets/CaseDetailPage-CbJuv1Gr.js            46.54 kB │ gzip:  13.75 kB
+dist/assets/HomePage-IW3MegwE.js                  65.17 kB │ gzip:  20.67 kB
+dist/assets/ui-vendor-Big3j90G.js                136.34 kB │ gzip:  44.89 kB
+dist/assets/markdown-vendor-CLmyFSSV.js          162.26 kB │ gzip:  49.37 kB
+dist/assets/index-CoOq-okH.js                    378.29 kB │ gzip: 116.50 kB
+✓ built in 6.49s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/components/Layout.test.tsx src/App.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/form-alignment-incident/llm_notable_analysis_onprem_systemd/frontend/analyst-portal[39m
+
+ [32m✓[39m src/App.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 791[2mms[22m[39m
+     [33m[2m✓[22m[39m logs out at /login without losing the remembered workspace [33m 372[2mms[22m[39m
+ [32m✓[39m src/components/Layout.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[33m 785[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m10 passed[39m[22m[90m (10)[39m
+[2m   Start at [22m 21:10:19
+[2m   Duration [22m 5.17s[2m (transform 703ms, setup 676ms, import 1.50s, tests 1.58s, environment 6.03s)[22m
+

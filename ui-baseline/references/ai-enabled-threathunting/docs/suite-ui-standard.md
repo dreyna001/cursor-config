@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-Version: **1.4.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.5.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -153,8 +153,9 @@ terminology and domain distinctions; wording skills support that contract.
 - Section / h2 and card titles: **18px**, weight 600, line-height 1.5.
 - Subsection / h3: **16px**, weight 600, line-height 1.5.
 - Group / h4–h5: **14px**, weight 600. h6: **13px**.
-- Body and assistant answers: **14px**. Primary navigation and form controls:
-  **13px**. Dense data and secondary metadata: **12px**. Optional captions and
+- Body, assistant answers and entered form values: **14px**. Primary navigation
+  and field labels: **13px**. Compact action text, dense data and secondary
+  metadata: **12px**. Optional captions and
   overlines: **11px**; keep decisions, errors and essential instructions readable.
 - **20px** and **24px** are available for emphasis, metrics or document hierarchy,
   not competing page/section title defaults. Keep semantic heading levels valid.
@@ -164,6 +165,40 @@ terminology and domain distinctions; wording skills support that contract.
   Existing `folio-overline` is an **11px** metadata-label role, even when h2.
 - Body text uses line-height 1.55; longer prose can retain its more generous
   line-height. Code and UI use separate font-family tokens.
+
+## Shared form text and color roles
+
+Each application owns its local stylesheet, fonts, dependencies and build. Matching
+CSS token names and values are a design contract, not a shared runtime library.
+No app imports from another app repository or needs another checkout to build or
+deploy. The baseline/configuration bundle is documentation and validation material;
+it is not a runtime dependency of any app.
+
+- Textual input values, native/custom select values, placeholders and ordinary
+  textarea content use **14px** (`--workspace-font-field`). Form labels use
+  **13px** (`--workspace-font-label`). The same role gets the same size in each app.
+- Compact action text retains **12px** (`--workspace-font-action`) to preserve
+  the existing button widths and density. Sidebar navigation/account roles remain
+  separately specified. Do not force table-cell links or metadata to form sizes.
+- Preserve control height, padding, border radius, layout grids, scroll regions,
+  validators, selection, disabled/read-only state and all submit/draft guards.
+  Inputs/selects retain a scalable 20px line box; long-editor/composer line heights
+  and explicit content/identifier monospace roles remain app-owned.
+- Checkboxes, radios, range/color/file pickers and hidden controls retain their
+  native geometry. Code/identifier editors marked `.vs-code`, `.font-mono` or
+  `data-workspace-text-role="code"` keep their explicit code typography. Metadata
+  labels may use `data-workspace-text-role="metadata"` when that is their real role.
+- Common page/raised surfaces, body/heading/muted text, borders, primary actions
+  and links use `--workspace-color-*` from the shared stylesheet. Ordinary titles
+  use the heading color. Explicit muted/overline and semantic warning/error/success
+  headings retain their meaning; contextual component surfaces are not page backgrounds.
+- Keep **Hunts selected on New Hunt** using the existing parsed route. This is a
+  current-destination indicator only; callbacks, draft protection and URLs stay intact.
+
+The 14px field role follows the [Fluent web typography scale](https://fluent2.microsoft.design/typography)
+as a readable compact-UI choice, not a claim that WCAG mandates a pixel size.
+Use relative units and verify [200% text resizing](https://www.w3.org/WAI/WCAG22/Understanding/resize-text)
+without losing content or functionality. Avoid shrinking text to force content to fit.
 
 ## Scope and maintenance
 
@@ -224,9 +259,8 @@ regressions. A syntax check alone does not prove rendered consistency.
 
 The latest approved implementation is the preservation baseline for this
 reconciliation. An older HTML snapshot must never overwrite newer login,
-account, typography, sidebar, color or accessibility work. This release makes
-no runtime changes to those implementations; the stylesheet version identifies
-the consolidated contract, not a redesign.
+account, typography, sidebar, color or accessibility work. Version 1.5 aligns the explicitly approved form-text roles and New Hunt
+selection while retaining those implementations and their layout/behavior contracts.
 
 - Preserve login routes, local/Entra authentication, identity claims and display
   fallbacks, account controls, session handling, sign-out and draft guards.
@@ -251,6 +285,39 @@ apps and an intentional update to this contract. A difference by itself is not
 proof of a bug or permission to copy an older declaration.
 
 ## Keeping one baseline
+
+### Approved shared UI changes: completion gate
+
+An approved shared UI change is incomplete until these are synchronized:
+
+1. Update the versioned suite baseline and shared stylesheet together where the
+   approved change affects their contract; keep the same released version across
+   Threat Hunting, ATO and all four Incident Response frontends.
+2. Regenerate the HTML companion and update the three app release copies,
+   terminology/theme exceptions and supporting references affected by the change.
+   Preserve newer approved login/account flows, spacing, typography, colors,
+   layouts, features and application-specific behavior.
+3. Refresh `ui-baseline/` in the `cursor-config` repository from those verified
+   releases, including this local reading edition, source snapshots, provenance
+   hashes and the alignment/validation record. Keep skills and rules pointing here;
+   do not create a competing numeric specification in a skill or template.
+4. Validate the bundle and all three app releases with
+   `python3 scripts/sync_ui_baseline.py check --app-root <hunt> --app-root <ato>
+   --app-root <incident> --ref origin/main` from `cursor-config`. Fetch the intended
+   approved refs first; use the working-tree default before a release is merged.
+   Run each app's existing source consistency checks and the rendered/workflow
+   checks required by the changed UI behavior. Record results and any deliberate
+   app-specific exception; fixture tests do not prove live identity deployment.
+5. Run `python3 scripts/sync_ui_baseline.py install` to refresh the permanent
+   user-profile copy, then `check --installed`. On this workstation, the WSL
+   path aliases the Windows folder, so update that shared physical copy once.
+   When Windows and WSL use separate copies, update and verify both.
+
+Do not declare shared UI work complete while an app, the versioned bundle or an
+installed copy still carries stale shared rules. If a release or verification is
+blocked, report precisely what remains out of sync. App-only behavior changes do
+not require forcing unrelated parity; record an exception when they affect a
+shared rule. These instructions do not grant new deployment or merge permission.
 
 Edit this canonical document and canonical `frontend/src/suite-workspace.css`
 together when a shared rule changes. Bump both versions, publish identical
@@ -282,3 +349,12 @@ text-size behavior and existing control bounding boxes when aligning decoration.
   template values; future alignment must be supported by rendered evidence.
 - Legacy claims that the HTML alone is the source of truth are superseded by
   the authority order above. Historical snapshots describe their original release.
+
+## Form and palette alignment — 2026-10-23
+
+The cross-app visual comparison found 12/13/14px form values and an unselected
+New Hunt parent destination. Version 1.5 makes the form-value/label/compact-action
+roles explicit, keeps the current layout and action density, and selects the
+existing Hunts destination during creation. The already-matching page, surface,
+heading and text palette now references the same shared tokens. Existing app
+workflows, contextual surfaces, statuses, account and login behavior are preserved.
