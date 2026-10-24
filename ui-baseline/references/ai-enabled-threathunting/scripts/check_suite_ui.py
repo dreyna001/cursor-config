@@ -27,6 +27,9 @@ def read_release(root: Path) -> tuple[str, str, str]:
     css = [p.joinpath("src/suite-workspace.css").read_text(encoding="utf-8") for p in paths]
     if len(set(css)) != 1 or f"Suite Workspace UI v{version[1]}." not in css[0]:
         raise ValueError(f"{root}: stylesheet copies or version disagree")
+    for required in ("--workspace-motion-duration: 150ms", "--workspace-motion-ease:", "--workspace-motion-spinner-duration:", "--workspace-motion-pulse-duration:", "--workspace-motion-typing-duration:", "prefers-reduced-motion: reduce", "animation: none !important", "transition: none !important"):
+        if required not in css[0]:
+            raise ValueError(f"{root}: missing shared motion contract: {required}")
     instructions = root.joinpath("AGENTS.md").read_text(encoding="utf-8")
     if "docs/suite-ui-standard.md" not in instructions or "authoritative" not in instructions:
         raise ValueError(f"{root}: AGENTS.md does not route to the central baseline")

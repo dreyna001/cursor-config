@@ -1,77 +1,48 @@
-# Three-app UI alignment verification — v1.6.1
+# Suite UI verification — v1.7.0
 
-## ATO creation-title correction — v1.6.1
+## Motion alignment
 
-The creation-page primary title now uses the existing 28px/600 page-title role
-and heading color #E6EDF3. It remains a level-one heading; ordinary card/section
-titles remain 18px. The only application change is that title and its unused
-component import. Shared CSS changes only its version comment.
+All three applications, including all four Incident Response variants, now use
+the shared motion contract: 150ms interaction/disclosure/popup transitions,
+immediate keyboard focus, 1s linear spinners, 2s loading pulses, and the existing
+1.2s staggered IR typing feedback. Reduced motion disables decorative CSS
+animation and transitions across the app, including portals and pseudo-elements.
+Status content, final open/selected states, request timing and layout are preserved.
 
-The new assertion first reproduced the old 18px result, then passed after the fix.
-Fresh local checks passed: ATO production build, 3 focused component tests
-and 29 browser tests. Chromium, Firefox and WebKit each verified
-the creation title at 1280/1440/1920px and 100%/200% text size with no horizontal
-overflow. Existing create-button validation and profile/error/retry checks passed.
-The separate end-to-end TypeScript check still reports the pre-existing
-SVGElement/HTMLElement mismatch in unchanged e2e/suite-ui.ts:69; this patch
-does not broaden into repairing that helper. The production TypeScript build passes.
-No live cloud/Entra or real persistence validation is claimed. The v1.6.0 suite
-evidence below remains historical; the unchanged apps were source-checked for
-this patch, not requalified with a new full browser run.
+The earlier checks established colors and states but missed motion parity. The
+baseline now requires a coverage record across typography, palette, spacing,
+hover/selection, focus, disabled/loading states, overlays and motion. Matching
+source hashes or still screenshots alone cannot establish complete UI parity.
 
-![Corrected ATO creation title](evidence/ato-creation-title.png)
+## Fresh verification
 
-See [fresh validation results](evidence/ato-title-validation.json),
-[build/type/component checks](evidence/ato-title-build.log) and
-[browser checks](evidence/ato-title-browser.log).
+- Six production builds and 233 focused/unit tests passed locally.
+- 140 browser tests passed across Chromium, Firefox and WebKit. The existing
+  shared UI checks now verify normal/reduced preference modes, runtime preference
+  changes, actual navigation/disclosure timing, immediate focus, portal-scope
+  CSS probes, spinner/pulse/typing roles, stopped animations and stable geometry.
+- Existing navigation, account, form, creation and workflow checks still pass.
+- ATO E2E TypeScript checking passes; its prior HTML/SVG helper error is fixed.
+- Source scope checks preserve existing non-motion CSS, layout, API/identity
+  handling, component behavior, dependencies and previous test assertions.
+- Shared documents, stylesheets, font assets and the generated companion are
+  synchronized. Each application keeps its own independent local implementation.
 
-## Prior v1.6.0 verification
+See [build results](evidence/motion-build-results.json),
+[browser results](evidence/motion-browser-results.json), and
+[scope checks](evidence/motion-scope.json). Detailed build/browser logs are in
+the evidence folder. [Earlier v1.6.1 verification](evidence/verification-v1.6.1.md)
+is historical evidence, not a claim that every current screen was requalified.
 
-The approved placeholder-color and ordinary-label role changes are implemented
-across Threat Hunting, ATO and all four Incident Response frontend variants.
-This is evidence for the shared roles and sampled workflows, not a claim that
-every page, customer theme, exported document or production identity path is identical.
+## Boundaries and intentional differences
 
-- Form values use 14px/400; ordinary labels use 13px/500 in #BBC6D3.
-- Placeholder text uses #8B949E at opacity 1, including custom combobox hints.
-- Compact action text stays 12px; action-style labels and semantic labels retain their roles.
-- New Hunt keeps the Hunts destination selected using the existing parsed route.
-- Common page, raised, heading, body, muted, border, action and link colors use
-  the same shared tokens. Semantic status colors and contextual surfaces remain intentional.
-- Existing grids, widths, control dimensions, navigation, draft/review guards,
-  authentication/identity handling and export contracts are preserved.
-- The six builds and focused unit tests passed locally. No GitHub Actions were requested. The browser records below cover
-  all six frontends in Chromium, Firefox and WebKit, including exact form roles,
-  colors, placeholder contrast/opacity, label emphasis, selection, keyboard account controls and enlarged text.
+Hunt's native disclosure, ATO's profile/provider disclosure and IR's expandable
+history keep their existing controls and final states. The IR typing indicator
+is an intentional task-specific feedback role. Existing popups retain their
+current shape/entry effect; native dialogs do not gain new effects. No workflow
+timer, auto-scroll measurement callback, backend operation or live record changed.
 
-## Visual evidence
-
-![Hunt labels and placeholders](evidence/hunt-new.png)
-![ATO labels and placeholders](evidence/ato-controls.png)
-![Incident Response filters](evidence/incident-cases.png)
-
-See [the measured styles](evidence/computed-styles.json),
-[build results](evidence/text-role-build-results.json) and
-[browser results](evidence/text-role-browser-results.json).
-The log files in `evidence/text-role-check-*.log` and `evidence/text-role-build-*.log`
-record the executed checks. Earlier v1.4 logs are retained as historical evidence.
-
-## Scope and decisions
-
-The follow-up comparison found browser-default placeholder gray and inconsistent label emphasis. The baseline now assigns
-explicit color/weight roles instead of relying on browser defaults or app-local choices. This follows the
-Fluent 14px body scale while preserving compact enterprise controls; WCAG does
-not prescribe a minimum CSS pixel size. Text enlargement is checked separately.
-
-The apps intentionally retain different workflows and content layouts: ATO's
-system/work/review groups, Hunt planning, and Incident Response conversation/case
-context. Code/identifier editors, native non-text controls, metadata, semantic
-warning/error/success headings and contextual surfaces retain documented exceptions.
-
-Visual previews and browser tests use synthetic API/identity fixtures. They do
-not qualify live cloud/Entra deployments, execute investigations or approve SSPs.
-No production workflows, permissions, backend APIs or live records were changed.
-
-The ATO creation-page title mismatch identified in the v1.6.0 audit is resolved by v1.6.1 as described above.
-
-Exact source commits and source/local checksums are in [manifest.json](manifest.json).
+Browser checks use synthetic API/identity fixtures. They do not qualify live
+cloud/Entra deployments, every customer theme, every possible route/state, all
+assistive technology, or full WCAG conformance. Remaining coverage must be
+reported explicitly rather than being treated as automatic parity.
