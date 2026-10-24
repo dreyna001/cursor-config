@@ -1,0 +1,15 @@
+
+Running 27 tests using 1 worker
+
+  ✓   1 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (7.6s)
+  ✓   2 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (8.1s)
+  ✓   3 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (6.8s)
+  ✓   4 [chromium] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (4.7s)
+  ✓   5 [chromium] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (4.3s)
+  ✓   6 [chromium] › e2e/suite-ui.spec.ts:62:1 › suite accessibility: skip repeated navigation in list and assistant (3.6s)
+  ✓   7 [chromium] › e2e/suite-ui.spec.ts:75:1 › suite accessibility: confirmation contains focus and preserves cancellation (2.7s)
+  ✓   8 [chromium] › e2e/suite-ui.spec.ts:100:1 › suite accessibility: case loading announces progress and matches loaded columns (1.9s)
+  ✓   9 [chromium] › e2e/suite-ui.spec.ts:123:1 › suite accessibility: pending deletion retains modal guards and announces failure (2.5s)
+  ✓  10 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (15.1s)
+  ✓  11 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (13.8s)
+  ✓  12 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (13.6s)

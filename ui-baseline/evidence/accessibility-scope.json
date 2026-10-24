@@ -1,0 +1,74 @@
+{
+  "baseline": "1.8.0",
+  "identical_six_stylesheets": true,
+  "existing_palette_typography_spacing_motion_unchanged": true,
+  "dependency_changes": false,
+  "repositories": {
+    "hunt": {
+      "changed_files": [
+        "AGENTS.md",
+        "design-previews/20261018/unified/build-visual-reference.py",
+        "design-previews/20261018/unified/visual-reference.html",
+        "docs/suite-ui-standard.md",
+        "frontend/e2e/suite-ui.ts",
+        "frontend/src/suite-workspace.css",
+        "scripts/check_suite_ui.py"
+      ],
+      "no_api_auth_infrastructure_changes": true
+    },
+    "ato": {
+      "changed_files": [
+        "AGENTS.md",
+        "docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html",
+        "docs/suite-ui-standard.md",
+        "portal/e2e/security/ssp-workspace-ui.spec.ts",
+        "portal/e2e/suite-ui.ts",
+        "portal/src/components/ssp-workspace/WorkspaceStatePanel.tsx",
+        "portal/src/suite-workspace.css",
+        "scripts/check_suite_ui.py",
+        "portal/src/components/ssp-workspace/WorkspaceStatePanel.test.tsx"
+      ],
+      "no_api_auth_infrastructure_changes": true
+    },
+    "incident": {
+      "changed_files": [
+        "AGENTS.md",
+        "azure_notable_pipeline/frontend/analyst-portal/e2e/suite-ui.spec.ts",
+        "azure_notable_pipeline/frontend/analyst-portal/e2e/suite-ui.ts",
+        "azure_notable_pipeline/frontend/analyst-portal/src/components/ChatPanel.tsx",
+        "azure_notable_pipeline/frontend/analyst-portal/src/components/ConfirmDialog.tsx",
+        "azure_notable_pipeline/frontend/analyst-portal/src/components/HomeChatWorkspace.tsx",
+        "azure_notable_pipeline/frontend/analyst-portal/src/components/Layout.tsx",
+        "azure_notable_pipeline/frontend/analyst-portal/src/components/LoadingSkeletons.tsx",
+        "azure_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+        "docs/suite-ui-standard.md",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-ui.spec.ts",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-ui.ts",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ChatPanel.tsx",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ConfirmDialog.tsx",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/HomeChatWorkspace.tsx",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/Layout.tsx",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/LoadingSkeletons.tsx",
+        "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/suite-workspace.css",
+        "s3_notable_pipeline/frontend/analyst-portal/e2e/suite-ui.spec.ts",
+        "s3_notable_pipeline/frontend/analyst-portal/e2e/suite-ui.ts",
+        "s3_notable_pipeline/frontend/analyst-portal/src/components/ChatPanel.tsx",
+        "s3_notable_pipeline/frontend/analyst-portal/src/components/ConfirmDialog.tsx",
+        "s3_notable_pipeline/frontend/analyst-portal/src/components/HomeChatWorkspace.tsx",
+        "s3_notable_pipeline/frontend/analyst-portal/src/components/Layout.tsx",
+        "s3_notable_pipeline/frontend/analyst-portal/src/components/LoadingSkeletons.tsx",
+        "s3_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-ui.spec.ts",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-ui.ts",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ChatPanel.tsx",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ConfirmDialog.tsx",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/HomeChatWorkspace.tsx",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/Layout.tsx",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/LoadingSkeletons.tsx",
+        "s3_notable_pipeline_commercial/frontend/analyst-portal/src/suite-workspace.css",
+        "scripts/check_suite_ui.py"
+      ],
+      "no_api_auth_infrastructure_changes": true
+    }
+  }
+}

@@ -52,3 +52,11 @@ Keep released copies and shared `suite-workspace.css` identical across the suite
 Run `python3 scripts/check_suite_ui.py` and relevant rendered/workflow checks.
 Preserve each app's layouts, accessible primitives, features, intended behavior,
 draft/review guards and print/export contracts. Document necessary exceptions.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.

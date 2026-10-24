@@ -30,9 +30,16 @@ def read_release(root: Path) -> tuple[str, str, str]:
     for required in ("--workspace-motion-duration: 150ms", "--workspace-motion-ease:", "--workspace-motion-spinner-duration:", "--workspace-motion-pulse-duration:", "--workspace-motion-typing-duration:", "prefers-reduced-motion: reduce", "animation: none !important", "transition: none !important"):
         if required not in css[0]:
             raise ValueError(f"{root}: missing shared motion contract: {required}")
+    for required in ("--workspace-color-control-border: #6e7b8d", ".workspace-skip-link", ".workspace-confirm-dialog::backdrop", "forced-colors: active"):
+        if required not in css[0]:
+            raise ValueError(f"{root}: missing shared accessibility role: {required}")
+    if "## Interaction and accessibility" not in doc or "loading-to-content" not in doc.lower():
+        raise ValueError(f"{root}: missing interaction/accessibility verification contract")
     instructions = root.joinpath("AGENTS.md").read_text(encoding="utf-8")
     if "docs/suite-ui-standard.md" not in instructions or "authoritative" not in instructions:
         raise ValueError(f"{root}: AGENTS.md does not route to the central baseline")
+    if "Interaction and accessibility" not in instructions:
+        raise ValueError(f"{root}: AGENTS.md does not require the interaction coverage checks")
     for relative in ("design-previews/20261018/unified/visual-reference.html", "docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html"):
         path = root / relative
         if not path.exists():

@@ -70,3 +70,11 @@ For documentation work, read [documentation layout and bootstrap](references/doc
 - For LangGraph workflow engineering, use the separate `$langgraph-engineering` skill as the primary workflow guide; read this collection only for an additional, directly relevant standard.
 - The original `subagent-delegation.mdc` rule is intentionally superseded: Codex model and delegation routing belongs to the current global `AGENTS.md`.
 - Do not use Cursor-only actions or assume Cursor tools are available in Codex.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.

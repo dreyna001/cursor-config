@@ -69,3 +69,11 @@ For documentation work, read [documentation layout and bootstrap](references/doc
 
 - For LangGraph workflow engineering, use the separate `langgraph-engineering` skill as the primary workflow guide; read this collection only for an additional, directly relevant standard.
 - For reproduced parser, API, timeout, cancellation, or durable-state regressions, use `boundary-failure-regressions`.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.

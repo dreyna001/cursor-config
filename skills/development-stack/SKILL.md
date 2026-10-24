@@ -202,3 +202,11 @@ When a portal or worker app is deployed to cloud, keep the app cloud-native:
 ## Handoff
 
 When a new stack choice was necessary, state the deployment profile (shared, on-prem, or cloud path), what was selected, why existing mechanisms were insufficient, and how the choice was verified. Do not produce a stack recommendation for routine changes that introduced no technology decision.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.

@@ -35,3 +35,11 @@ If any part cannot be updated or verified, report the remaining drift explicitly
 - For corrections to LLM evidence handling, output contracts, grounding guards or quality evaluations, use `llm-evidence-regression` to check unsupported rejection and supported fact/decision retention together. Apply it to those changes rather than unrelated LLM tasks.
 - For reproduced regressions in parsing, API error mapping, timeout/cancellation, or durable state, use `boundary-failure-regressions` to verify the actual trigger and adjacent supported behavior. If one regression also changes LLM evidence or output contracts, apply `llm-evidence-regression` to those aspects too. Routine features and documentation do not trigger the boundary skill.
 - Use the `langgraph-engineering` skill only when designing, implementing, migrating, or reviewing a LangGraph application.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.
