@@ -1,0 +1,7 @@
+
+Running 2 tests using 1 worker
+
+  ✓  1 [chromium] › e2e/desktop-accessibility.spec.ts:35:1 › desktop zoom preserves full-width cases, assistant and focused actions (12.4s)
+  ✓  2 [chromium] › e2e/desktop-accessibility.spec.ts:55:1 › chat waiting, failures and new replies expose live feedback without moving focus (10.2s)
+
+  2 passed (27.1s)

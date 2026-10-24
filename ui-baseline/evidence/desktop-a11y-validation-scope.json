@@ -1,0 +1,15 @@
+{
+  "release": "1.9.0",
+  "implementation_scope": ["ATO", "IR AWS GovCloud", "IR AWS commercial", "IR Azure", "IR on-prem"],
+  "excluded_runtime": ["Threat Hunt"],
+  "unit_tests_passed": 358,
+  "existing_browser_regressions_passed": 194,
+  "native_zoom_and_feedback_regressions": 10,
+  "normal_desktop_note": "Existing three-engine regressions passed before removing the appended reflow rule's pixel-density condition. Its remaining max-width condition is false at all ordinary desktop viewports used by those regressions; no normal-desktop declarations changed. Native zoom and feedback tests were rerun against the final rule.",
+  "native_zoom_engine": "Chromium",
+  "native_zoom_factors": [1, 2, 4],
+  "desktop_window_widths": [1280, 1440, 1920],
+  "mobile_changes_or_tests": false,
+  "unverified": ["Actual Narrator/NVDA/JAWS speech", "Native Firefox/WebKit page zoom", "Threat Hunt runtime alignment with the new desktop reflow and feedback rules"],
+  "preserved": ["Normal desktop layouts", "Application workflows and guards", "Shared palette", "Shared typography", "Existing motion and reduced-motion rules", "Independent repositories and dependencies"]
+}

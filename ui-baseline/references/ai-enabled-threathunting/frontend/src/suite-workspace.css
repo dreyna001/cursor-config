@@ -1,4 +1,4 @@
-/* Suite Workspace UI v1.8.0. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.9.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
@@ -313,4 +313,27 @@
   .workspace-typography :is(input, select, textarea, [role="combobox"], .workspace-field-boundary):not(:disabled, [aria-disabled="true"]) {
     border-color: CanvasText !important;
   }
+}
+
+/* Desktop zoom reflow is opt-in; touch/mobile and ordinary desktop stay unchanged. */
+@media screen and (max-width: 48rem) and (hover: hover) and (pointer: fine) {
+  .workspace-typography .workspace-desktop-reflow,
+  .workspace-typography .workspace-desktop-reflow.portal-frame:has(.ssp-assistant-page) {
+    display: flex; flex-direction: column; width: 100%; height: auto; min-height: 100dvh; overflow: visible;
+  }
+  .workspace-typography .workspace-desktop-reflow :is(.workspace-sidebar, .portal-sidebar) {
+    position: static; width: 100%; height: auto; max-height: none; flex: none; overflow: visible;
+    border-right: 0; border-bottom: 1px solid var(--workspace-sidebar-border);
+  }
+  .workspace-typography .workspace-desktop-reflow :is(.workspace-sidebar-header, .workspace-sidebar-navigation) {
+    flex-shrink: 0; max-height: none; overflow: visible;
+  }
+  .workspace-desktop-reflow > :is(main, .portal-workspace-column),
+  .workspace-desktop-reflow :is(#portal-content, .ssp-assistant-page, .assistant-conversation) {
+    width: 100%; min-width: 0; min-height: 0; height: auto; overflow: visible;
+  }
+  .workspace-desktop-reflow .workspace-content { padding-inline: 1rem; }
+  .workspace-desktop-reflow :is(.workspace-assistant-header, .workspace-conversation) { padding-inline: 1rem; }
+  .workspace-desktop-reflow :is(h1, h2, h3, p, label) { overflow-wrap: anywhere; }
+  .workspace-desktop-reflow button { max-width: 100%; white-space: normal; }
 }

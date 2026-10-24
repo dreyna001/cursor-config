@@ -1,0 +1,47 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-Dd3n-itk.css                    70.00 kB │ gzip:  13.10 kB
+dist/assets/chevron-down-CqIKeIh_.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/input-CXAOMNBb.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-D030tVkw.js                      0.89 kB │ gzip:   0.43 kB
+dist/assets/CaseArchiveNoticeBanner-CNictWNt.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-MYKl0BcU.js                 4.18 kB │ gzip:   1.31 kB
+dist/assets/sourceCompleteness-HsLAu6Nv.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-BNQpRLNN.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-Cq4ycnVG.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-Bcfw20F6.js                  63.77 kB │ gzip:  20.19 kB
+dist/assets/CasesPage-DjMsNg7r.js                 82.91 kB │ gzip:  28.52 kB
+dist/assets/MarkdownMessage-mlij__3Z.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-DCAuhw-8.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-BodFPc8E.js                    435.94 kB │ gzip: 134.21 kB
+✓ built in 5.65s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/components/ChatPanel.test.tsx src/components/HomeChatWorkspace.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/suite-desktop-a11y-incident/s3_notable_pipeline_commercial/frontend/analyst-portal[39m
+
+ [32m✓[39m src/components/HomeChatWorkspace.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 1525[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a blank draft out of history until a non-empty question is sent [33m 427[2mms[22m[39m
+ [32m✓[39m src/components/ChatPanel.test.tsx [2m([22m[2m33 tests[22m[2m)[22m[33m 3282[2mms[22m[39m
+     [33m[2m✓[22m[39m clears stale server session ids and retries as a new session [33m 354[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a completed upload in processing state until a later list reports ready [33m 1565[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m46 passed[39m[22m[90m (46)[39m
+[2m   Start at [22m 02:23:43
+[2m   Duration [22m 5.23s[2m (transform 1.04s, setup 346ms, import 1.58s, tests 4.81s, environment 1.76s)[22m

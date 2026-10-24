@@ -35,6 +35,11 @@ def read_release(root: Path) -> tuple[str, str, str]:
             raise ValueError(f"{root}: missing shared accessibility role: {required}")
     if "## Interaction and accessibility" not in doc or "loading-to-content" not in doc.lower():
         raise ValueError(f"{root}: missing interaction/accessibility verification contract")
+    for required in (".workspace-desktop-reflow", "(hover: hover)", "(pointer: fine)"):
+        if required not in css[0]:
+            raise ValueError(f"{root}: missing desktop-only reflow contract: {required}")
+    if "## Desktop zoom and conversational feedback" not in doc:
+        raise ValueError(f"{root}: missing native zoom and announcement contract")
     instructions = root.joinpath("AGENTS.md").read_text(encoding="utf-8")
     if "docs/suite-ui-standard.md" not in instructions or "authoritative" not in instructions:
         raise ValueError(f"{root}: AGENTS.md does not route to the central baseline")
