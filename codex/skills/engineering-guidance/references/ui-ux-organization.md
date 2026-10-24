@@ -57,3 +57,7 @@ remembered-destination decisions.
 - When many cards or sections stack vertically, bound the growing list region only when it would push closely related work out of reach; use a compact list cap and leave the rest of the page scrollable.
 - For a selection pane that stacks with related work, use the compact card-list cap as a starting point. When it sits side-by-side and the wider layout benefits from showing more choices, it can grow up to the full document or section-browser cap.
 - Choose scroll caps by context rather than applying one height everywhere. Use these as starting points, then adjust for content density, viewport height, and the nearby actions that need to stay visible: compact card lists around `min(24rem, 45dvh)`; large work panes around `min(38rem, 65dvh)`; full document or section browsers up to `min(48rem, 70dvh)`; menus and autocomplete results around `min(20rem, 50dvh)`; dialogs within `calc(100dvh - 2rem)`. Avoid fixed `vh` caps that can consume most of a short viewport.
+
+For shared visual changes, verify computed form roles, semantic colors, keyboard
+selection and control geometry against the central baseline. A passing size-scale
+check alone does not establish role parity. Preserve the recorded app exceptions.

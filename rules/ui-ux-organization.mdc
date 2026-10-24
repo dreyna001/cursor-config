@@ -25,3 +25,7 @@ exceptions and validation, and preserve newer approved behavior and styling.
 If any part cannot be updated or verified, report the remaining drift explicitly.
 
 Read and apply [ui-ux-organization](../skills/cursor-rules/references/ui-ux-organization.md). Keep this rule as the activation stub; do not copy the reference body here.
+
+For shared visual changes, verify computed form roles, semantic colors, keyboard
+selection and control geometry against the central baseline. A passing size-scale
+check alone does not establish role parity. Preserve the recorded app exceptions.

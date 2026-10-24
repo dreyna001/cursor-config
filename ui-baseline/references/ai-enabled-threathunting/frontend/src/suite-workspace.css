@@ -1,4 +1,4 @@
-/* Suite Workspace UI v1.4.0. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.5.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
@@ -6,6 +6,18 @@
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 700; font-display: swap; src: url("./assets/fonts/public-sans-700.woff2") format("woff2"); }
 
 :root {
+  --workspace-color-page: #0d1117;
+  --workspace-color-surface: #161b22;
+  --workspace-color-text: #bbc6d3;
+  --workspace-color-heading: #e6edf3;
+  --workspace-color-muted: #8b949e;
+  --workspace-color-border: #30363d;
+  --workspace-color-primary: #1f6feb;
+  --workspace-color-on-primary: #ffffff;
+  --workspace-color-link: #8cbcff;
+  --workspace-font-field: var(--workspace-font-size-14);
+  --workspace-font-label: var(--workspace-font-size-13);
+  --workspace-font-action: var(--workspace-font-size-12);
   --workspace-sidebar-background: #10141a;
   --workspace-sidebar-border: #30363d;
   --workspace-sidebar-brand-height: 5rem;
@@ -173,4 +185,26 @@
   .workspace-typography :is(.portal-sidebar, .workspace-sidebar, .vs-guided-sidebar) hr,
   .workspace-typography .portal-sidebar nav[aria-label="Management"],
   .workspace-typography .vs-unified-workspace-label { border-color: var(--workspace-sidebar-border); }
+}
+
+/* Shared form text roles. Geometry and semantic/status surfaces stay app-owned. */
+@media screen {
+  .workspace-typography :is(
+    input:not([type]), input[type="text"], input[type="search"], input[type="email"],
+    input[type="password"], input[type="url"], input[type="tel"], input[type="number"],
+    input[type="date"], input[type="datetime-local"], input[type="time"],
+    input[type="month"], input[type="week"], select, textarea, [role="combobox"]
+  ):not(.vs-code, .font-mono, [data-workspace-text-role="code"]) {
+    /* Explicit role overrides old local text-xs/text-sm utilities consistently. */
+    font-size: var(--workspace-font-field) !important;
+  }
+  .workspace-typography :is(input, select, [role="combobox"]):not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="hidden"], [type="color"], [type="button"], [type="submit"], [type="reset"], .vs-code, .font-mono, [data-workspace-text-role="code"]) {
+    line-height: 1.25rem;
+  }
+  .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"]) {
+    font-size: var(--workspace-font-label) !important;
+  }
+  .workspace-typography :is(h1,h2,h3,h4,h5,h6,.workspace-page-title,.workspace-section-title,.workspace-toolbar-title):not(.folio-overline,.text-muted-foreground,.text-warning,.text-destructive,.text-success,[data-workspace-tone]) {
+    color: var(--workspace-color-heading);
+  }
 }

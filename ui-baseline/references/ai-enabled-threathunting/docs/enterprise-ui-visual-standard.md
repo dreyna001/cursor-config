@@ -7,7 +7,7 @@ authoritative rules, current version, adaptation boundaries and reconciliation
 record. In an existing suite checkout, use `docs/suite-ui-standard.md` from that
 release. ATO and Incident Response carry identical released mirrors.
 
-The [unified HTML visual companion](../../../visual-reference.html) illustrates
+The [unified HTML visual companion](../design-previews/20261018/unified/visual-reference.html) illustrates
 the baseline and links back to it. Its embedded copy is generated, not a second
 editable specification. App requirements and intended behavior take precedence
 as defined by the standard. Historical previews are not current authority.

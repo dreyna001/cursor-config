@@ -1,6 +1,6 @@
 # ATO theme mapping
 
-The [Suite Workspace UI Standard](../../../README.md) is the authority for
+The [Suite Workspace UI Standard](suite-ui-standard.md) is the authority for
 current screen typography, palette, sidebar and equivalent control states.
 This file records ATO-specific mappings; it does not define a competing scale.
 The [generated visual companion](mockups/ssp-ui-explorations/10-unified-workspace-reference.html)

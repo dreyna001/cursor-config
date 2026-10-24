@@ -24,3 +24,7 @@ for examples; app theme documents record mappings and deliberate exceptions.
 Preserve the destination's layout, accessible primitives, component stack,
 features, identity, permissions, draft/review guards and exports. Do not paste
 prototype CSS or sample behavior over the approved application implementation.
+
+For shared visual changes, verify computed form roles, semantic colors, keyboard
+selection and control geometry against the central baseline. A passing size-scale
+check alone does not establish role parity. Preserve the recorded app exceptions.

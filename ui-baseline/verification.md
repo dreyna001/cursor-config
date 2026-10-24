@@ -1,61 +1,48 @@
-# Alignment analysis and verification
+# Three-app UI alignment verification — v1.5.0
 
-Recorded 2026-10-23 for Suite Workspace UI Standard **v1.4.0**.
+## Result
 
-**Yes—the three products were analyzed and aligned to one shared baseline.**
-The scope covered six frontends: Threat Hunting, ATO, and the AWS GovCloud,
-AWS commercial, Azure and on-premises variants of Incident Response.
+The remaining approved form-text and New Hunt selection changes are implemented
+across Threat Hunting, ATO and all four Incident Response frontend variants.
+This is evidence for the shared roles and sampled workflows, not a claim that
+every page, customer theme, exported document or production identity path is identical.
 
-## What the analysis resolved
+- Form values use 14px; labels use 13px; compact action text stays 12px.
+- New Hunt keeps the Hunts destination selected using the existing parsed route.
+- Common page, raised, heading, body, muted, border, action and link colors use
+  the same shared tokens. Semantic status colors and contextual surfaces remain intentional.
+- Existing grids, widths, control dimensions, navigation, draft/review guards,
+  authentication/identity handling and export contracts are preserved.
+- The six builds and focused unit tests passed. The browser records below cover
+  all six frontends in Chromium, Firefox and WebKit, including exact form roles,
+  colors, selection, keyboard account controls and enlarged text.
 
-- The older HTML adaptation text disagreed with later approved sidebar/account
-  rules. The versioned baseline now owns those rules; HTML is a generated companion.
-- Older ATO notes used a 208px sidebar and Roboto Mono. The later approved 256px
-  sidebar and shared Public Sans / platform monospace rules take precedence.
-- Older template icons, spacing and selected navigation colors were superseded
-  by the approved sidebar rules, not restored over the newer apps.
-- App-owned controls, login/account flows, identity fallbacks, layouts, features,
-  permissions, draft/review guards and exports retain their intended behavior.
+## Visual evidence
 
-See the [baseline reconciliation record](README.md#reconciliation-record--2026-10-23)
-and [preservation boundaries](README.md#preservation-boundaries-and-shared-palette).
+![New Hunt with Hunts selected](evidence/new-hunt.png)
+![ATO evidence form](evidence/ato-evidence.png)
+![Incident Response filters](evidence/incident-cases.png)
 
-## Evidence from the completed release
+See [the measured styles](evidence/computed-styles.json),
+[build results](evidence/form-build-results.json) and
+[browser results](evidence/form-browser-results.json).
+The log files in `evidence/form-check-*.log` and `evidence/form-build-*.log`
+record the executed checks. Earlier v1.4 logs are retained as historical evidence.
 
-- All six shared stylesheets were checked for parity with the contract.
-- All six frontend builds passed. Focused unit tests and **135 browser cases**
-  passed: 48 Hunt, 27 ATO and 60 across the four Incident Response variants.
-- Browser checks covered Chromium, Firefox and WebKit, including sidebar
-  geometry/text, navigation states, account interactions and workflow preservation.
-- The consistency checker rejected deliberate CSS divergence and a stale embedded
-  baseline. The generated template was also checked in all three browsers.
-- Runtime preservation checks confirmed that the v1.4 reconciliation changed no
-  application behavior or CSS declarations; the runtime-file change was the shared
-  stylesheet's version marker. Earlier approved UI alignment remained in place.
+## Scope and decisions
 
-The release merged to remote main in Hunt PR 74, ATO PR 28 and Incident Response
-PR 41. Exact release commits and original file hashes are in [manifest.json](manifest.json).
-The three temporary worktrees for that completed release were verified and removed.
+The prior comparison found mixed 12/13/14px form text. The baseline now assigns
+explicit roles instead of relying on the allowed size scale. This follows the
+Fluent 14px body scale while preserving compact enterprise controls; WCAG does
+not prescribe a minimum CSS pixel size. Text enlargement is checked separately.
 
-These were local build/unit/browser checks with synthetic API and identity
-fixtures, not a live cloud or Entra deployment qualification. GitHub-hosted CI
-could not start because of the account billing/spend limit; a green hosted-CI
-result is not claimed.
+The apps intentionally retain different workflows and content layouts: ATO's
+system/work/review groups, Hunt planning, and Incident Response conversation/case
+context. Code/identifier editors, native non-text controls, metadata, semantic
+warning/error/success headings and contextual surfaces retain documented exceptions.
 
-## This local installation
+Visual previews and browser tests use synthetic API/identity fixtures. They do
+not qualify live cloud/Entra deployments, execute investigations or approve SSPs.
+No production workflows, permissions, backend APIs or live records were changed.
 
-This change only installs the reference bundle and redirects personal skills and
-rules. It does not modify any app checkout or deploy/reconfigure a service.
-The Windows and WSL entrypoints open the same physical bundle. Core index links
-resolve locally, and the published source baseline is retained byte-for-byte.
-
-## Saved verification records
-
-- [Frontend command results](evidence/baseline-test-results.json)
-- [Release change scope](evidence/baseline-change-scope.json)
-- [Hunt browser checks](evidence/baseline-check-hunt.log)
-- [ATO browser checks](evidence/baseline-check-ato.log)
-- [Incident Response GovCloud checks](evidence/baseline-check-s3_notable_pipeline.log)
-- [Incident Response commercial checks](evidence/baseline-check-s3_notable_pipeline_commercial.log)
-- [Incident Response Azure checks](evidence/baseline-check-azure_notable_pipeline.log)
-- [Incident Response on-premises checks](evidence/baseline-check-llm_notable_analysis_onprem_systemd.log)
+Exact source commits and source/local checksums are in [manifest.json](manifest.json).

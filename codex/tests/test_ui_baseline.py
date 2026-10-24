@@ -62,7 +62,7 @@ class BaselineTests(unittest.TestCase):
         sync.install(self.source, self.destination)
         manifest = json.loads((self.destination / "manifest.json").read_text())
         readme = self.destination / "README.md"
-        readme.write_text(readme.read_text().replace('Version: **1.4.0**', 'Version: **99.0.0**'))
+        readme.write_text(readme.read_text().replace(f"Version: **{manifest['version']}**", 'Version: **99.0.0**'))
         manifest['version'] = '99.0.0'
         for item in manifest['files']:
             if item['path'] == 'README.md':
