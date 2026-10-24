@@ -1,31 +1,25 @@
-# Suite UI verification — v1.9.0
+# Suite UI verification — v1.10.0
 
-## Scope
+## Fixed and verified
 
-ATO and the four Incident Response frontends implement desktop zoom reflow,
-live conversation feedback, and required-field semantics. Threat Hunt receives
-the synchronized shared CSS/documentation, with no new reflow opt-in or runtime
-behavior. Its native-zoom/conversation gaps remain outside this authorized scope.
+- ATO's three-action unsaved-draft footer wraps within the existing fine-pointer
+  desktop reflow scope. All actions are visible; cancellation preserves the draft.
+- All four IR capacity popups remain inside the desktop viewport and expose the
+  visible title as their accessible dialog name. Their non-modal handlers remain.
+- 264 synthetic browser workflow cases pass across Chromium, Firefox and WebKit.
+  They cover navigation/drafts, duplicate submissions, delayed responses, retries,
+  capability guards, evidence preservation and keyboard/feedback states.
+- Five committed native Chromium regressions pass, plus 90 native Firefox/WebKit
+  samples across 1280/1440/1920 desktop widths at 100/200/400% zoom. Root font stays
+  16px. Focused component tests, builds and applicable TypeScript checks pass.
+- Shared CSS, release documents, visual companion and rule entrypoints agree on
+  baseline 1.10.0. The existing Playwright skill guide documents the workflow.
 
-## Verified outcomes
+[Execution record](evidence/workflow-gaps-verification.json).
 
-- Ordinary desktop typography, colors, sidebar geometry, account behavior and
-  workflow regressions retain the previous baseline.
-- Native Chromium page zoom at 100%, 200% and 400% preserves reachable main
-  content and focused controls; this uses the browser zoom factor with unchanged
-  root font in desktop windows, not mobile or device-scale emulation.
-- IR chat waiting status is outside the busy transcript; failures are alerts.
-- Both assistants announce a newly completed reply once, without focus transfer
-  or token-by-token announcements. Initial/restored history does not announce.
-- ATO System Name exposes required state and associated submit instructions;
-  existing creation and permission guards remain authoritative.
+These are controlled frontend tests, not live backend/SSO qualification or complete
+accessibility certification. Narrator/screen-reader speech and mobile work were
+excluded. WebKit is the Linux test engine, not macOS Safari. Threat Hunt received
+documentation and inactive shared CSS roles; its runtime was not retested here.
 
-See [build and focused unit results](evidence/desktop-a11y-build-results.json),
-[native zoom and announcement regressions](evidence/desktop-a11y-native-results.json),
-and [the existing multi-engine regression results](evidence/desktop-a11y-browser-results.json).
-The tests use synthetic API/identity records; no live cloud or identity operation
-is qualified. Actual Narrator/NVDA/JAWS speech and native Firefox/WebKit zoom are
-unverified. Accessibility-tree and keyboard results do not imply a complete WCAG
-conformance audit. No mobile tests or layout changes were performed.
-
-[Previous v1.8 verification](evidence/verification-v1.8.0.md) remains historical.
+[Previous baseline verification](evidence/verification-v1.9.0.md) remains historical.

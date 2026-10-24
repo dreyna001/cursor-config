@@ -48,3 +48,9 @@ separately from root-font resizing, preserve the requested desktop/mobile scope,
 and test waiting/error/completion announcements, required states and guarded flows.
 Distinguish accessibility-tree evidence from actual screen-reader speech; record
 excluded apps and unavailable checks rather than claiming whole-suite coverage.
+
+For UI changes, follow the central baseline's **Workflow and popup regression coverage**.
+Verify every dialog's accessible name, all constrained desktop confirmation actions,
+popup viewport fit, and relevant delayed/failed-request, retry, duplicate-submit and
+unsaved-navigation paths. Preserve each app's guards and desktop/mobile scope;
+record actual browser/role/state evidence and synthetic-versus-live test boundaries.

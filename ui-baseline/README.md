@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-> **Permanent local edition · v1.9.0 · 2026-10-24**
+> **Permanent local edition · v1.10.0 · 2026-10-24**
 >
 > Start here on Windows: `C:\Users\Daniel.Reyna\.agents\ui-baseline\README.md`.
 > WSL opens the same files through `/home/dreyna/.agents/ui-baseline/README.md`.
@@ -17,7 +17,7 @@
 > newer approved release, compare its changes before refreshing this folder; never
 > downgrade newer login, account, sidebar, typography, color, layout or workflow work.
 
-Version: **1.9.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.10.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -33,6 +33,7 @@ source of shared rules.
   without importing prototype behavior or replacing an established stack.
 - [Interaction and accessibility](#interaction-and-accessibility): keyboard,
   dialogs, feedback states, control contrast and scrolling checks.
+- [Workflow and popup regression coverage](#workflow-and-popup-regression-coverage): failure paths, dialog names and constrained desktop actions.
 - [Desktop zoom and conversational feedback](#desktop-zoom-and-conversational-feedback): native zoom, reflow, reply announcements and required states.
 - [Motion and reduced motion](#motion-and-reduced-motion): timings, feedback roles, popup scope and validation.
 - [Navigation](#navigation), [sidebar states](#sidebar-navigation-states),
@@ -340,6 +341,48 @@ References: [WAI modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/
 [status messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html),
 [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html),
 and [bypass blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html).
+
+## Workflow and popup regression coverage
+
+UI parity includes usable workflows and failure recovery, not only matching styles.
+For changed surfaces, record the app, role, route, state, browser and real-versus-
+synthetic API boundary. Reuse existing Playwright fixtures and local browser caches.
+
+- Every `dialog` and `alertdialog`, including non-modal information popups, has
+  a programmatic name connected to its visible title (prefer `aria-labelledby`).
+  Verify the computed accessible name in a browser. Keep non-modal popups non-modal;
+  do not add a focus trap or change their existing dismissal behavior.
+- At 100%, 200% and 400% native desktop zoom from 1280, 1440 and 1920px windows,
+  open affected popups both before and after zooming. Check every confirmation
+  action, including three-action unsaved-draft footers. All focused actions and
+  ordinary popup text must fit horizontally. Allow the action row to wrap only
+  within the existing fine-pointer desktop reflow scope; never shrink its text.
+- Constrain an affected popup's width and horizontal position to the viewport
+  while preserving its anchor, vertical placement, scrolling, open/close handlers,
+  focus policy and ordinary desktop appearance. Respect the existing desktop-only
+  reflow media query; this does not authorize mobile layout work.
+- Exercise relevant user journeys with controlled delayed/failed requests,
+  repeated submission, retries, out-of-order replies, navigation during pending
+  requests and unsaved edits. Assert preserved input, selection, source content,
+  request counts and intended guards. Do not treat an unavailable capability as
+  a bug when the app intentionally disables it.
+- Keep test locators aligned with the current user-facing wording. Fix stale
+  selectors in the test; never revert approved UI copy to make a test pass.
+- A green style check, synthetic workflow suite or accessibility tree is not
+  proof of live backend persistence, authorization, real identity, spoken screen-
+  reader feedback or full product coverage. Record excluded/unavailable checks.
+
+Regression entrypoints: ATO and each IR frontend's
+`e2e/desktop-accessibility.spec.ts` cover the affected three-action dialog or
+capacity popup at native Chromium zoom. IR's `ContextUsageIndicator.test.tsx`
+checks its accessible name, and `e2e/queue-evidence-recovery.spec.ts` uses current
+evidence wording. Recheck native Firefox/WebKit zoom and the affected interactions
+when those engines are available; do not substitute root-font resizing.
+
+Release 1.10 scope: the ATO unsaved-draft footer and the four IR capacity popups.
+Threat Hunt receives the synchronized baseline/rules and inactive shared CSS roles;
+its runtime and workflows are outside this fix. Existing app exceptions, newer
+styles and mobile behavior remain authoritative.
 
 ## Desktop zoom and conversational feedback
 

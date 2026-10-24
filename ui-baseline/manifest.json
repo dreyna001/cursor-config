@@ -1,18 +1,18 @@
 {
-  "version": "1.9.0",
+  "version": "1.10.0",
   "prepared": "2026-10-24",
   "source_commits": {
-    "ai-enabled-threathunting": "0d39ff55abb7d95dfca2fc869b5168d4b1b2735d",
-    "ai-enabled-ato": "e249662468764ee0e48113578c0740f94cb6bcaf",
-    "llm_notable_analysis": "ab65c0847655831c57b347d63a1df84a3b30d03a"
+    "ai-enabled-threathunting": "b8a7421ff385bb1396c5f7980d674411e09cf743",
+    "ai-enabled-ato": "a104d8e3f49bffce0e93f907487c222f546356af",
+    "llm_notable_analysis": "7d70f0f0c94a5021e206e147112309be440ace79"
   },
   "files": [
     {
       "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "a8afa0d9850b816cd85c113ba80ef7db363621252b520df60d8ce2b55694cec6",
-      "local_sha256": "a8afa0d9850b816cd85c113ba80ef7db363621252b520df60d8ce2b55694cec6"
+      "source_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5",
+      "local_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5"
     },
     {
       "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
@@ -46,36 +46,36 @@
       "path": "references/ai-enabled-threathunting/AGENTS.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "AGENTS.md",
-      "source_sha256": "15f8d37ec0872c49c078c292e5033ec6faedf01d88b34f8a50dae5fea977b5a5",
-      "local_sha256": "15f8d37ec0872c49c078c292e5033ec6faedf01d88b34f8a50dae5fea977b5a5"
+      "source_sha256": "363c388644c10fb7d478f6faece35ebfc7643b1ecb924f1d3a1dd3a392bffc4a",
+      "local_sha256": "363c388644c10fb7d478f6faece35ebfc7643b1ecb924f1d3a1dd3a392bffc4a"
     },
     {
       "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
       "repository": "ai-enabled-threathunting",
       "source_path": "frontend/src/suite-workspace.css",
-      "source_sha256": "3237d4cb097c03de1724819e9df29640b70117de70640fd3355488673bddfad3",
-      "local_sha256": "3237d4cb097c03de1724819e9df29640b70117de70640fd3355488673bddfad3"
+      "source_sha256": "da4d2f654032a97582259063375d1af253383c3069a0a4a176c0e3b6f9ce57db",
+      "local_sha256": "da4d2f654032a97582259063375d1af253383c3069a0a4a176c0e3b6f9ce57db"
     },
     {
       "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
       "repository": "ai-enabled-threathunting",
       "source_path": "scripts/check_suite_ui.py",
-      "source_sha256": "5615f8bf8285b870051b8f6929421962e8dcd5fe68bbbd6613a2ad57cee9be75",
-      "local_sha256": "5615f8bf8285b870051b8f6929421962e8dcd5fe68bbbd6613a2ad57cee9be75"
+      "source_sha256": "f11c242259f8d0a242fd2e9560b67e3fa255f2a6c9271e92472ed2e115367da9",
+      "local_sha256": "f11c242259f8d0a242fd2e9560b67e3fa255f2a6c9271e92472ed2e115367da9"
     },
     {
       "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
       "repository": "ai-enabled-threathunting",
       "source_path": "design-previews/20261018/unified/visual-reference.html",
-      "source_sha256": "732c95c7925eef67eceb1b076f3f77f9130883739297f5a4eead552f17b697ea",
-      "local_sha256": "732c95c7925eef67eceb1b076f3f77f9130883739297f5a4eead552f17b697ea"
+      "source_sha256": "3874bd80dc4113f403184e5280524f2c1aeb95cb2b07962adbd7236768871390",
+      "local_sha256": "3874bd80dc4113f403184e5280524f2c1aeb95cb2b07962adbd7236768871390"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
       "repository": "ai-enabled-ato",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "a8afa0d9850b816cd85c113ba80ef7db363621252b520df60d8ce2b55694cec6",
-      "local_sha256": "a8afa0d9850b816cd85c113ba80ef7db363621252b520df60d8ce2b55694cec6"
+      "source_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5",
+      "local_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
@@ -95,15 +95,15 @@
       "path": "references/ai-enabled-ato/AGENTS.md",
       "repository": "ai-enabled-ato",
       "source_path": "AGENTS.md",
-      "source_sha256": "efb1823bb64195520f5c08bec673e8b30a2161192d313eb7adfb5aa79fa57ed4",
-      "local_sha256": "efb1823bb64195520f5c08bec673e8b30a2161192d313eb7adfb5aa79fa57ed4"
+      "source_sha256": "0887c8552134782f771c42eeac16eab26e2bb4650cd4a12b468c810c65a9e180",
+      "local_sha256": "0887c8552134782f771c42eeac16eab26e2bb4650cd4a12b468c810c65a9e180"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
       "repository": "llm_notable_analysis",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "a8afa0d9850b816cd85c113ba80ef7db363621252b520df60d8ce2b55694cec6",
-      "local_sha256": "a8afa0d9850b816cd85c113ba80ef7db363621252b520df60d8ce2b55694cec6"
+      "source_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5",
+      "local_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
@@ -116,22 +116,22 @@
       "path": "references/llm_notable_analysis/AGENTS.md",
       "repository": "llm_notable_analysis",
       "source_path": "AGENTS.md",
-      "source_sha256": "a10ce1c7a85d1f9654a3777e1f691c98725d480e85bf17fb18e95af7bc4f1f19",
-      "local_sha256": "a10ce1c7a85d1f9654a3777e1f691c98725d480e85bf17fb18e95af7bc4f1f19"
+      "source_sha256": "adaf35bf501575ed9852126dd56e80e3f97517724736f5165266a67cad82f7d5",
+      "local_sha256": "adaf35bf501575ed9852126dd56e80e3f97517724736f5165266a67cad82f7d5"
     },
     {
       "path": "README.md",
-      "local_sha256": "ed906f68b818aee82eded7f454589f867bcd0a3f6be97bb6bd8a445279c6fddb",
+      "local_sha256": "6cbf548712abc5374fd88eac48a4972b7dbe32e22c1e301b2bd2e8b333239e54",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "91543ca8d02454d42d1014bbae1dd09e1139c641075b5d67d40fed02dbce110c",
+      "local_sha256": "e1a2d413a3733e05a4ba32663f077838520525165e076adebddcbb180ce25da2",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "a1f3a588a718e6a45a95408034855bbcdc5cf19031fb1ef2c54dca1c05720005",
+      "local_sha256": "2680185c92119fe9d13b731335228850424f20c30367d1677dfeb08329bead1c",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -569,6 +569,14 @@
     {
       "path": "evidence/verification-v1.8.0.md",
       "local_sha256": "80f68389cc7eeb8d5f9b0415a30867a9cf6877a19ad2fab468f76aafd22c0b45"
+    },
+    {
+      "path": "evidence/verification-v1.9.0.md",
+      "local_sha256": "2c7dbfa38308b68f35c3677a901ae298fd620286a7c39bb906650ef43eb41b34"
+    },
+    {
+      "path": "evidence/workflow-gaps-verification.json",
+      "local_sha256": "411d6bfb1738c05fac708021bfe1681f74cc36bd55e78ffbcf46bfcc243fd75c"
     }
   ]
 }

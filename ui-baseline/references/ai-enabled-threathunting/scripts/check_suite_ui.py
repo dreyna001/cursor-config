@@ -40,6 +40,11 @@ def read_release(root: Path) -> tuple[str, str, str]:
             raise ValueError(f"{root}: missing desktop-only reflow contract: {required}")
     if "## Desktop zoom and conversational feedback" not in doc:
         raise ValueError(f"{root}: missing native zoom and announcement contract")
+    for required in (".workspace-dialog-actions", ".workspace-popup-viewport"):
+        if required not in css[0]:
+            raise ValueError(f"{root}: missing constrained desktop popup/action role: {required}")
+    if "## Workflow and popup regression coverage" not in doc:
+        raise ValueError(f"{root}: missing workflow and popup regression coverage")
     instructions = root.joinpath("AGENTS.md").read_text(encoding="utf-8")
     if "docs/suite-ui-standard.md" not in instructions or "authoritative" not in instructions:
         raise ValueError(f"{root}: AGENTS.md does not route to the central baseline")
