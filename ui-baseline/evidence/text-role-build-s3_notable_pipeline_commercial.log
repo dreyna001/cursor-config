@@ -1,0 +1,173 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-k1XHoepT.css                    65.27 kB │ gzip:  12.29 kB
+dist/assets/chevron-down-CZdZXS40.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/input-5Hes7OAk.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-CbH5fZZO.js                      0.89 kB │ gzip:   0.44 kB
+dist/assets/CaseArchiveNoticeBanner-BSC9YqGg.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-DECRL0Tu.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-DYRVcHMO.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-Ko2T6XZR.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-CIr4ZKuA.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-BhKO13O8.js                  62.80 kB │ gzip:  19.89 kB
+dist/assets/CasesPage-DOP81RTS.js                 82.86 kB │ gzip:  28.50 kB
+dist/assets/MarkdownMessage-BmEX9B1h.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-BiC3oV-X.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-HaCGrm0Q.js                    435.79 kB │ gzip: 134.16 kB
+✓ built in 5.75s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/auth/PortalAuth.test.tsx src/auth/productionAccountBoundary.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/text-role-parity-incident/s3_notable_pipeline_commercial/frontend/analyst-portal[39m
+
+ [32m✓[39m src/auth/productionAccountBoundary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 279[2mms[22m[39m
+ [32m✓[39m src/auth/PortalAuth.test.tsx [2m([22m[2m7 tests[22m[2m)[22m[33m 349[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m11 passed[39m[22m[90m (11)[39m
+[2m   Start at [22m 21:35:37
+[2m   Duration [22m 2.16s[2m (transform 584ms, setup 318ms, import 1.15s, tests 629ms, environment 1.84s)[22m
+
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-Bb-Z2Jon.css                    65.47 kB │ gzip:  12.31 kB
+dist/assets/chevron-down-kvfND269.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/input-DxJ116bx.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-dTTxelfN.js                      0.89 kB │ gzip:   0.44 kB
+dist/assets/CaseArchiveNoticeBanner-CsdSm2-c.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-C9YjTyox.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-lPCNPvAc.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-DXdloONx.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-DzIZhGgK.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-CLtsoYER.js                  62.80 kB │ gzip:  19.89 kB
+dist/assets/CasesPage-DvFyjYNa.js                 82.86 kB │ gzip:  28.50 kB
+dist/assets/MarkdownMessage-D7qZtzN8.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-BywJ1wvm.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-Bf6GwjRT.js                    435.79 kB │ gzip: 134.15 kB
+✓ built in 5.41s
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-qEqusINU.css                    77.87 kB │ gzip:  13.87 kB
+dist/assets/chevron-down-T3T3YiL4.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/input-DaFsV-EK.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-DRK-djLV.js                      0.89 kB │ gzip:   0.43 kB
+dist/assets/CaseArchiveNoticeBanner-CUJ7eMx6.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-vrDTXtQ_.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-KUqgeNI0.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-rNu5O1Dr.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-CiP-RFQp.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-CjGxxdGd.js                  62.80 kB │ gzip:  19.89 kB
+dist/assets/CasesPage-pqOaRLYb.js                 82.86 kB │ gzip:  28.50 kB
+dist/assets/MarkdownMessage-C477MxNh.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-CCHEnH0c.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-VM0if1s0.js                    435.79 kB │ gzip: 134.15 kB
+✓ built in 8.48s
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-Bdmx6iXw.css                    77.86 kB │ gzip:  13.87 kB
+dist/assets/chevron-down-CMu6fpJp.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/input-DpAuJjTR.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-B_lFUARz.js                      0.89 kB │ gzip:   0.43 kB
+dist/assets/CaseArchiveNoticeBanner-nXVdADJ8.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-BNextMQS.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-mqixMh_6.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-v8a2tB5C.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-DQGcsqLI.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-Dyq2mI9x.js                  62.80 kB │ gzip:  19.88 kB
+dist/assets/CasesPage-BZInMcZN.js                 82.86 kB │ gzip:  28.50 kB
+dist/assets/MarkdownMessage-vVCAbgr1.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-evdcacXl.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-BvnJ-nNQ.js                    435.79 kB │ gzip: 134.16 kB
+✓ built in 6.00s
+
+Final build after preserving semantic label colors:
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-T0gsHwUA.css                    77.96 kB │ gzip:  13.88 kB
+dist/assets/chevron-down-C5d6QZFp.js               0.30 kB │ gzip:   0.24 kB
+dist/assets/input-BjmKntak.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-DvzWDstf.js                      0.89 kB │ gzip:   0.43 kB
+dist/assets/CaseArchiveNoticeBanner-94zPAX4b.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-DWrT2cCW.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-Cw5tbG07.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-B7OpzE0C.js         13.39 kB │ gzip:   4.34 kB
+dist/assets/CaseDetailPage-D88gea-f.js            54.84 kB │ gzip:  16.74 kB
+dist/assets/HomePage-H_zxIJEw.js                  62.80 kB │ gzip:  19.89 kB
+dist/assets/CasesPage-Csmul3iJ.js                 82.86 kB │ gzip:  28.50 kB
+dist/assets/MarkdownMessage-_ZOC520h.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-CC1k6kvr.js                    284.32 kB │ gzip:  72.60 kB
+dist/assets/index-CJzvckl-.js                    435.79 kB │ gzip: 134.15 kB
+✓ built in 6.03s

@@ -1,18 +1,18 @@
 {
-  "version": "1.5.0",
+  "version": "1.6.0",
   "prepared": "2026-10-23",
   "source_commits": {
-    "ai-enabled-threathunting": "c8a8a9a336bf64a779f666008d545e7f8a48f0cf",
-    "ai-enabled-ato": "77b6c13d2cd4180d27c0f0b9796f47bc9354a6ae",
-    "llm_notable_analysis": "6646b5e8d88b820ccf763d8544cf37d4dd32397b"
+    "ai-enabled-threathunting": "c1d8e8f0cc086c6d2214eeb8e71207094291bd54",
+    "ai-enabled-ato": "39a313ac89f9beeab5fe5fe736819cafc586becb",
+    "llm_notable_analysis": "77a1ba7010c0a95d8b9af218fb2d3d54f93e1b5e"
   },
   "files": [
     {
       "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "f276a7d1ad6bb7a09d40583d07825a00babb6a1fe4d94cb367f72336481b853a",
-      "local_sha256": "f276a7d1ad6bb7a09d40583d07825a00babb6a1fe4d94cb367f72336481b853a"
+      "source_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e",
+      "local_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e"
     },
     {
       "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
@@ -53,8 +53,8 @@
       "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
       "repository": "ai-enabled-threathunting",
       "source_path": "frontend/src/suite-workspace.css",
-      "source_sha256": "d3c0340f47c9c6e3a7cdad46b0becc8a30fc1803dd322cd68366184d23384576",
-      "local_sha256": "d3c0340f47c9c6e3a7cdad46b0becc8a30fc1803dd322cd68366184d23384576"
+      "source_sha256": "751d59f74674c1fb224701eedcd7b937ff7033b215d60dbc82fd3711580267f7",
+      "local_sha256": "751d59f74674c1fb224701eedcd7b937ff7033b215d60dbc82fd3711580267f7"
     },
     {
       "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
@@ -67,15 +67,15 @@
       "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
       "repository": "ai-enabled-threathunting",
       "source_path": "design-previews/20261018/unified/visual-reference.html",
-      "source_sha256": "e89828d60a8bc147a90e1272617f1cf56dcd9738e2772a13aa3a0ff403bf4b51",
-      "local_sha256": "e89828d60a8bc147a90e1272617f1cf56dcd9738e2772a13aa3a0ff403bf4b51"
+      "source_sha256": "9c25cfdf728dfc0dfb23c62fe755d6c57f41348516ead30c5a7976803b965942",
+      "local_sha256": "9c25cfdf728dfc0dfb23c62fe755d6c57f41348516ead30c5a7976803b965942"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
       "repository": "ai-enabled-ato",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "f276a7d1ad6bb7a09d40583d07825a00babb6a1fe4d94cb367f72336481b853a",
-      "local_sha256": "f276a7d1ad6bb7a09d40583d07825a00babb6a1fe4d94cb367f72336481b853a"
+      "source_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e",
+      "local_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
@@ -102,8 +102,8 @@
       "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
       "repository": "llm_notable_analysis",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "f276a7d1ad6bb7a09d40583d07825a00babb6a1fe4d94cb367f72336481b853a",
-      "local_sha256": "f276a7d1ad6bb7a09d40583d07825a00babb6a1fe4d94cb367f72336481b853a"
+      "source_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e",
+      "local_sha256": "1c8fd8edf11cd5def5c14dc211fb72aba62a661de1aca15310c4221aebe8861e"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
@@ -121,17 +121,17 @@
     },
     {
       "path": "README.md",
-      "local_sha256": "2ff799a082e0d63e9d15adbb356adde5b371e3b0d3533a4e1b352a1ecb6a9181",
+      "local_sha256": "6053fc5367724d93f41c9d93d3292e8a3ff8ae4f8eef762984648869f6de572a",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "73aa00e7057f88041a2cc7375454d41adf59e03efe6a05cff44dead1a5a97b96",
+      "local_sha256": "fd10d0471e8e518fe70705a0b5989065e951dcd7b1b12ee41eb67123592780d8",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "fd14ce7abf102ffd2e92b7fbf5660ec976a2450b2c36b57ca15e96b6517f8829",
+      "local_sha256": "3f93fdd09efbd89fdfdcf9792790a4326eb34086604e9ae4a1618f2a23b573dc",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -172,7 +172,7 @@
     },
     {
       "path": "evidence/computed-styles.json",
-      "local_sha256": "baf98408d7a366a417653c5ddac6ea5933195a76ddd8f8c5281c1009655c4783"
+      "local_sha256": "ef58ba7d30325874de364971e6be09f5bb2042a994282b23f6e3d431890ca295"
     },
     {
       "path": "evidence/form-browser-results.json",
@@ -232,11 +232,75 @@
     },
     {
       "path": "evidence/incident-cases.png",
-      "local_sha256": "f5688ed787e7dcc5c79b3e7ecd1fd0ba1345c2d290a969d288e3793d4b6598f2"
+      "local_sha256": "1ed01841fd7641748b1c24f643acd1880f45e868b603768bccedcd4331d95437"
     },
     {
       "path": "evidence/new-hunt.png",
       "local_sha256": "70259cc2edc4990de01f75268c03581d4e54b5bb85a38bf99cd892484ff4fae8"
+    },
+    {
+      "path": "evidence/ato-controls.png",
+      "local_sha256": "7836dcbe371b9150e740299bace8f1e26ebfc252d7e7be43d54a746d599d9a7b"
+    },
+    {
+      "path": "evidence/hunt-new.png",
+      "local_sha256": "193bca7ac70fef47e614c93b66538e11dba7bedb4ebee14217315bc8e4921b76"
+    },
+    {
+      "path": "evidence/text-role-browser-results.json",
+      "local_sha256": "293200edd5da2ab95ea8fc11284be044a4c920ddf65573e6ca65f2bc4504009b"
+    },
+    {
+      "path": "evidence/text-role-build-ato.log",
+      "local_sha256": "84fb9a1521ab902f1526c38cf5c0bda24ba4acce921420f5e397356749ba953c"
+    },
+    {
+      "path": "evidence/text-role-build-azure_notable_pipeline.log",
+      "local_sha256": "c47f11df33533ed08271456ac0293d69faa2dc01c049af7940c8c1a9d4be63f3"
+    },
+    {
+      "path": "evidence/text-role-build-hunt.log",
+      "local_sha256": "88a0f2b77041f2a505b2cbad74c0fb8366813cc1f906b30eee503d1888d88366"
+    },
+    {
+      "path": "evidence/text-role-build-llm_notable_analysis_onprem_systemd.log",
+      "local_sha256": "f24f4efd02c27a97c1bdceef26e7026ae00bf81636f64b2adc86653f754f99f0"
+    },
+    {
+      "path": "evidence/text-role-build-results.json",
+      "local_sha256": "293200edd5da2ab95ea8fc11284be044a4c920ddf65573e6ca65f2bc4504009b"
+    },
+    {
+      "path": "evidence/text-role-build-s3_notable_pipeline.log",
+      "local_sha256": "25e092331e61027408f467d14077d0cee32029e1389250d66329a03193033764"
+    },
+    {
+      "path": "evidence/text-role-build-s3_notable_pipeline_commercial.log",
+      "local_sha256": "821b768f46ae4c8426656546b1c3142145e4552f7d20795e04de878256d50c38"
+    },
+    {
+      "path": "evidence/text-role-check-ato.log",
+      "local_sha256": "71d201cf6bb01bf0de6b461a66f22f2516502025fbda040322cc35f0d2b7ba78"
+    },
+    {
+      "path": "evidence/text-role-check-azure_notable_pipeline.log",
+      "local_sha256": "513e7136c81f505dc8cd2dedde604dfe21c4755026ed52b2d385aaeece944bad"
+    },
+    {
+      "path": "evidence/text-role-check-hunt.log",
+      "local_sha256": "ff580710c90da4d9843b80ee0df9ba403bb0232db9a090f4caa54d38e81dafd1"
+    },
+    {
+      "path": "evidence/text-role-check-llm_notable_analysis_onprem_systemd.log",
+      "local_sha256": "8b6bc8471efe3bd8b3b88382cae56756abcc6eed388bcad19e1181e3d32bfa1b"
+    },
+    {
+      "path": "evidence/text-role-check-s3_notable_pipeline.log",
+      "local_sha256": "29320f9e4b2447f44b38431ae4412a8f1359ce78f7e6834e41c4cdff12f24480"
+    },
+    {
+      "path": "evidence/text-role-check-s3_notable_pipeline_commercial.log",
+      "local_sha256": "1002a23eb6ee02c65bf52b7a1377489a21425deb693411b2bf243a12397086f4"
     }
   ]
 }

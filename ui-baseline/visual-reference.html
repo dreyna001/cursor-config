@@ -195,7 +195,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 
 .deployment-settings>section:last-of-type{margin-bottom:0}.deployment-technical{border-top:0}
 .icon svg{display:block;width:100%;height:100%}.scope-data dt{color:#748ba8}.scope-data dd{margin:0}.topbar .btn .icon{color:#8cbcff}
-/* Suite Workspace UI v1.5.0. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.6.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 
 
@@ -212,6 +212,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
   --workspace-color-primary: #1f6feb;
   --workspace-color-on-primary: #ffffff;
   --workspace-color-link: #8cbcff;
+  --workspace-color-placeholder: var(--workspace-color-muted);
+  --workspace-color-label: var(--workspace-color-text);
+  --workspace-font-weight-field: 400;
+  --workspace-font-weight-label: 500;
   --workspace-font-field: var(--workspace-font-size-14);
   --workspace-font-label: var(--workspace-font-size-13);
   --workspace-font-action: var(--workspace-font-size-12);
@@ -394,12 +398,26 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
   ):not(.vs-code, .font-mono, [data-workspace-text-role="code"]) {
     /* Explicit role overrides old local text-xs/text-sm utilities consistently. */
     font-size: var(--workspace-font-field) !important;
+    font-weight: var(--workspace-font-weight-field) !important;
   }
   .workspace-typography :is(input, select, [role="combobox"]):not([type="checkbox"], [type="radio"], [type="range"], [type="file"], [type="hidden"], [type="color"], [type="button"], [type="submit"], [type="reset"], .vs-code, .font-mono, [data-workspace-text-role="code"]) {
     line-height: 1.25rem;
   }
   .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"]) {
     font-size: var(--workspace-font-label) !important;
+  }
+  .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"], [data-workspace-text-role="action"]) {
+    font-weight: var(--workspace-font-weight-label) !important;
+  }
+  .workspace-typography :is(label, .workspace-form-label):not([data-workspace-text-role="metadata"], [data-workspace-text-role="action"], [data-workspace-tone], .text-warning, .text-destructive, .text-success) {
+    color: var(--workspace-color-label) !important;
+  }
+  .workspace-typography :is(input, textarea)::placeholder {
+    color: var(--workspace-color-placeholder) !important;
+    opacity: 1 !important;
+  }
+  .workspace-typography :is([role="combobox"][data-placeholder], .workspace-placeholder) {
+    color: var(--workspace-color-placeholder) !important;
   }
   .workspace-typography :is(h1,h2,h3,h4,h5,h6,.workspace-page-title,.workspace-section-title,.workspace-toolbar-title):not(.folio-overline,.text-muted-foreground,.text-warning,.text-destructive,.text-success,[data-workspace-tone]) {
     color: var(--workspace-color-heading);
@@ -421,10 +439,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .vr-main .vr-eyebrow-sample{font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
 @media print{.vr-sidebar,.vr-main .vr-action-row,.vr-topbar{display:none}.shell{display:block}.vr-main{padding:20px;max-width:none}.vr-swatch,.vr-sample{break-inside:avoid}.vr-main{color:#222}.vr-main h1,.vr-main h2,.vr-main h3,.vr-main p,.vr-main td{color:#222}.vr-main pre{max-height:none}}
 
-.shell{grid-template-columns:var(--workspace-sidebar-width) minmax(0,1fr)}.vr-sidebar{padding-block:0}.vr-sidebar .sidebar-bottom{padding-block:16px}</style><meta name="suite-ui-baseline" content="1.5.0" data-authority="README.md" /></head><body class="workspace-typography">
+.shell{grid-template-columns:var(--workspace-sidebar-width) minmax(0,1fr)}.vr-sidebar{padding-block:0}.vr-sidebar .sidebar-bottom{padding-block:16px}</style><meta name="suite-ui-baseline" content="1.6.0" data-authority="README.md" /></head><body class="workspace-typography">
 <a class="skip" href="#main-content">Skip to reference</a><div class="shell"><aside class="sidebar vr-sidebar workspace-sidebar"><a class="brand workspace-brand" href="#overview"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"/></svg></span>Visual kit</a><nav aria-label="Reference sections"><a class="workspace-nav-item nav-item" href="#overview">Overview</a><a class="workspace-nav-item nav-item" href="#stack">Libraries and assets</a><a class="workspace-nav-item nav-item" href="#palette">Colors</a><a class="workspace-nav-item nav-item" href="#geometry">Typography and spacing</a><a class="workspace-nav-item nav-item" href="#components">Components</a><a class="workspace-nav-item nav-item" href="#behavior">UX rules</a><a class="workspace-nav-item nav-item" href="#handoff">Copy and export</a></nav><div class="sidebar-bottom"><span class="vr-meta">Source: approved HTML mockup<br>18 October 2026 · desktop</span></div></aside>
 <main class="app-main"><header class="topbar vr-topbar"><span class="breadcrumb">HTML mockup / Visual reference</span><span class="prototype-badge">Self-contained · no external runtime</span></header><div class="content vr-main" id="main-content" tabindex="-1">
-<section id="overview"><div class="page-head"><div><div class="eyebrow">Reusable visual template</div><h1>HTML mockup design system</h1></div></div><p class="vr-intro">Generated visual companion to <a href="README.md">Suite UI Standard 1.5.0</a>. Read the <a href="references/ai-enabled-threathunting/docs/enterprise-ui-visual-standard.md">adaptation guide</a> for how to apply it. The versioned standard owns the rules; newer approved app behavior and layouts are preserved. Embedded examples and historical CSS are illustrative; the current shared screen contract is applied last.</p><div class="vr-action-row"><button class="btn primary" data-copy="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"/></svg></span>Copy complete CSS</button><button class="btn" data-download="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,112v96a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V112A16,16,0,0,1,56,96H80a8,8,0,0,1,0,16H56v96H200V112H176a8,8,0,0,1,0-16h24A16,16,0,0,1,216,112ZM93.66,69.66,120,43.31V136a8,8,0,0,0,16,0V43.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,69.66Z"/></svg></span>Download CSS</button><button class="btn" data-copy="brief">Copy agent brief</button></div><p class="vr-meta">Export includes the complete screen and print rules plus embedded Public Sans font faces. Reference-document layout styles are kept separate.</p><p class="vr-meta">Preferred source inspector: <strong>B</strong> (compact fields and Open source). Origin: threat-hunting unified mockup, with ATO comparisons. Adapt the visual language to each application’s required functionality.</p></section>
+<section id="overview"><div class="page-head"><div><div class="eyebrow">Reusable visual template</div><h1>HTML mockup design system</h1></div></div><p class="vr-intro">Generated visual companion to <a href="README.md">Suite UI Standard 1.6.0</a>. Read the <a href="references/ai-enabled-threathunting/docs/enterprise-ui-visual-standard.md">adaptation guide</a> for how to apply it. The versioned standard owns the rules; newer approved app behavior and layouts are preserved. Embedded examples and historical CSS are illustrative; the current shared screen contract is applied last.</p><div class="vr-action-row"><button class="btn primary" data-copy="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"/></svg></span>Copy complete CSS</button><button class="btn" data-download="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,112v96a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V112A16,16,0,0,1,56,96H80a8,8,0,0,1,0,16H56v96H200V112H176a8,8,0,0,1,0-16h24A16,16,0,0,1,216,112ZM93.66,69.66,120,43.31V136a8,8,0,0,0,16,0V43.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,69.66Z"/></svg></span>Download CSS</button><button class="btn" data-copy="brief">Copy agent brief</button></div><p class="vr-meta">Export includes the complete screen and print rules plus embedded Public Sans font faces. Reference-document layout styles are kept separate.</p><p class="vr-meta">Preferred source inspector: <strong>B</strong> (compact fields and Open source). Origin: threat-hunting unified mockup, with ATO comparisons. Adapt the visual language to each application’s required functionality.</p></section>
 <section id="stack"><div class="vr-section-head"><h2>01 · Libraries and assets</h2><p>This is the HTML mockup’s actual visual stack. Reproduce these choices; this guide does not select a replacement application stack.</p></div><div class="table-wrap"><table class="table vr-library-table"><thead><tr><th>Layer</th><th>Exact reference choice</th><th>Porting rule</th></tr></thead><tbody>
 <tr><td>Layout and styling</td><td>Plain HTML + custom CSS Grid/Flexbox, CSS variables and media queries.</td><td>Load font faces → base styles.css → palette.css → final overrides, in that order.</td></tr>
 <tr><td>Interface font</td><td>Public Sans, Latin WOFF2; bundled weights 400, 500, 600, 700; font-display: swap.</td><td>Self-host or use the embedded font faces. Preserve the included SIL Open Font License.</td></tr>
@@ -442,7 +460,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 <details class="simple-details"><summary>Component classes and purpose <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><div class="table-wrap"><table class="table"><thead><tr><th>Component</th><th>Classes</th><th>Behavior to retain</th></tr></thead><tbody><tr><td>Shell</td><td><code>.shell · .sidebar · .app-main · .topbar · .content</code></td><td>One global rail, compact identity/header and one primary content region.</td></tr><tr><td>Navigation</td><td><code>.nav-item · .tabbar · .active</code></td><td>Selected destination uses a blue-tinted fill or underline plus aria-current.</td></tr><tr><td>Actions</td><td><code>.btn · .primary · .ghost · .danger · .icon-only</code></td><td>One prominent decision; quieter contextual actions. Label icon-only controls.</td></tr><tr><td>Inputs</td><td><code>.form-field · .form-label · .input · .form-error</code></td><td>Visible labels, contained errors, explicit saved/unsaved state.</td></tr><tr><td>Tables</td><td><code>.table-wrap · .table · .title · .subtitle</code></td><td>Compact rows and thin separators; contain wide-column scrolling.</td></tr><tr><td>Status</td><td><code>.status · .green · .amber · .red · .blue</code></td><td>A short plain-language state. Color never carries meaning alone.</td></tr><tr><td>Disclosure</td><td><code>.simple-details + native details/summary</code></td><td>Chevron, readable summary, full content preserved; collapse technical detail initially.</td></tr><tr><td>Dialog / drawer</td><td><code>dialog · .drawer · .dialog-head · .dialog-body · .dialog-foot</code></td><td>Native showModal()/close(), named dialog, Escape and focus return.</td></tr><tr><td>Saved records</td><td><code>.record-viewport · .saved-event · .record-detail · .saved-results-table</code></td><td>Bounded results, inline expansion, sticky columns/header where defined; full original values accessible.</td></tr><tr><td>References</td><td><code>.ref · .references · .raw-box · .record-fields</code></td><td>Small citation buttons open exact retained detail, not a vague navigation jump.</td></tr><tr><td>Reports</td><td><code>.report-layout · .report-section · .report-question-table · .paper</code></td><td>Dark browser reading; full static light print content. Full saved answers remain accessible.</td></tr></tbody></table></div></details><div class="vr-sample"><h3>Shared account presentation</h3><p class="hint">Static example only; the app supplies the real identity and sign-out behavior.</p><div class="workspace-account"><div class="workspace-account-trigger" role="img" aria-label="Sample account: Alex Morgan"><span class="workspace-account-avatar" aria-hidden="true">AM</span><span class="workspace-account-label"><span class="workspace-account-name">Alex Morgan</span><span class="workspace-account-caption">Account</span></span><span class="workspace-account-chevron" aria-hidden="true">⌃</span></div></div></div></section>
 <section id="behavior"><div class="vr-section-head"><h2>05 · UX rules to carry over</h2><p>Reuse the organization and interaction principles; adapt the workflow to the new product.</p></div><p><strong>Strong visual preference, applied with judgment.</strong> Keep specialized document viewers, editors, comparisons, pickers, bulk actions and upload workflows when the application needs them. B does not prohibit an embedded document view where simultaneous review is necessary.</p><details class="simple-details"><summary>Authoritative baseline · embedded release copy <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><pre class="vr-brief"># Suite Workspace UI Standard
 
-Version: **1.5.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.6.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -618,7 +636,15 @@ it is not a runtime dependency of any app.
 
 - Textual input values, native/custom select values, placeholders and ordinary
   textarea content use **14px** (`--workspace-font-field`). Form labels use
-  **13px** (`--workspace-font-label`). The same role gets the same size in each app.
+  **13px** (`--workspace-font-label`), weight **500**, color **#BBC6D3**. Entered
+  values use weight **400**. Equivalent text roles share family, size, weight and
+  color across apps; different wording is appropriate when the domain task differs.
+- Placeholder and input-hint text use **#8B949E** at opacity **1** through
+  `--workspace-color-placeholder`, including custom combobox placeholders. Do not
+  rely on browser defaults or app-local gray values. Disabled controls retain
+  their existing component-level dimming; placeholder glyph opacity does not
+  override a disabled control’s opacity. The standard dark field
+  surfaces provide at least 4.5:1 text contrast; verify the computed colors.
 - Compact action text retains **12px** (`--workspace-font-action`) to preserve
   the existing button widths and density. Sidebar navigation/account roles remain
   separately specified. Do not force table-cell links or metadata to form sizes.
@@ -630,6 +656,10 @@ it is not a runtime dependency of any app.
   native geometry. Code/identifier editors marked `.vs-code`, `.font-mono` or
   `data-workspace-text-role=&quot;code&quot;` keep their explicit code typography. Metadata
   labels may use `data-workspace-text-role=&quot;metadata&quot;` when that is their real role.
+  A label acting as an upload/action control uses `data-workspace-text-role=&quot;action&quot;`
+  and retains its action styling. Do not use either marker to bypass ordinary
+  field-label parity. Helper descriptions remain muted and semantic status text
+  retains its meaning; they are different roles, not alternate field-label styles.
 - Common page/raised surfaces, body/heading/muted text, borders, primary actions
   and links use `--workspace-color-*` from the shared stylesheet. Ordinary titles
   use the heading color. Explicit muted/overline and semantic warning/error/success
@@ -800,6 +830,14 @@ roles explicit, keeps the current layout and action density, and selects the
 existing Hunts destination during creation. The already-matching page, surface,
 heading and text palette now references the same shared tokens. Existing app
 workflows, contextual surfaces, statuses, account and login behavior are preserved.
+
+## Shared text-role alignment — 2026-10-23
+
+Version 1.6 removes browser-default placeholder gray and aligns ordinary label
+color/weight across the six independent frontends. It preserves text content,
+control geometry, app workflows, identity handling and contextual status colors.
+The ATO creation-page title noted in the follow-up audit is a separate unresolved
+page-title mapping issue; this release does not silently redefine that role.
 </pre></details><ul><li><strong>One navigation hierarchy:</strong> global rail → selected work item → contextual tabs. Avoid duplicate overview panels or repeated item titles.</li><li><strong>Decision first:</strong> current state, concise assessment, scope and next action. Use compact question/result tables for repeated information.</li><li><strong>Optional detail:</strong> chevron disclosures for policy, IDs and diagnostics. Keep blockers and required decisions visible.</li><li><strong>Complete source access:</strong> bounded record pages, scrollable wide tables, lazy heavy detail, exact reference targets and explicit full exports.</li><li><strong>Honest states:</strong> text plus color; distinguish partial, missing, failed and not yet checked. A configured policy is not proof of measured success.</li><li><strong>Edits and safety:</strong> one canonical editor, visible dirty/saved/error state, reachable save bar, explicit irreversible confirmation and stale-version handling.</li><li><strong>Scrolling:</strong> preserve the app’s existing scroll regions. Large record views may use a bounded region; mockup records use max-height: min(42rem, 65dvh).</li><li><strong>Desktop verification:</strong> 1280, 1440 and 1920px; verify long text, keyboard focus, disclosures/dialogs, empty/error states and reduced motion. The reference is desktop-only.</li><li><strong>Reports:</strong> dark browser reading; intentional white print output with full answers and chronology, stable reference numbers and saved-content parity.</li></ul></section>
 <section id="handoff"><div class="vr-section-head"><h2>06 · Copy and hand off</h2><p>Download the exact CSS, copy the shell scaffold and give the next agent the brief. Domain-specific selectors can be kept only where useful.</p></div><p>The theme uses global element selectors. Scope or reconcile them with the destination app before importing; preserve the cascade and component states. This file combines historical example CSS/assets with the current <code>frontend/src/suite-workspace.css</code> applied last. The linked standard owns shared rules; page dimensions shown below remain examples.</p><div class="vr-action-row"><button class="btn primary" data-copy="theme">Copy complete CSS</button><button class="btn" data-download="theme">Download CSS</button><button class="btn" data-download="icons">Download icon assets</button><button class="btn" data-download="licenses">Download licenses</button><button class="btn" data-copy="shell">Copy shell HTML</button><button class="btn" data-copy="brief">Copy agent brief</button></div><details class="simple-details" id="css-disclosure"><summary>Complete theme CSS · loaded only when opened <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><pre id="css-source"></pre></details><details class="simple-details"><summary>Starter shell HTML <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><pre id="shell-source">&lt;div class=&quot;shell&quot;&gt;
   &lt;aside class=&quot;sidebar&quot;&gt;

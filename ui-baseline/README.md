@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-> **Permanent local edition · v1.5.0 · 2026-10-23**
+> **Permanent local edition · v1.6.0 · 2026-10-23**
 >
 > Start here on Windows: `C:\Users\Daniel.Reyna\.agents\ui-baseline\README.md`.
 > WSL opens the same files through `/home/dreyna/.agents/ui-baseline/README.md`.
@@ -17,7 +17,7 @@
 > newer approved release, compare its changes before refreshing this folder; never
 > downgrade newer login, account, sidebar, typography, color, layout or workflow work.
 
-Version: **1.5.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.6.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -194,7 +194,15 @@ it is not a runtime dependency of any app.
 
 - Textual input values, native/custom select values, placeholders and ordinary
   textarea content use **14px** (`--workspace-font-field`). Form labels use
-  **13px** (`--workspace-font-label`). The same role gets the same size in each app.
+  **13px** (`--workspace-font-label`), weight **500**, color **#BBC6D3**. Entered
+  values use weight **400**. Equivalent text roles share family, size, weight and
+  color across apps; different wording is appropriate when the domain task differs.
+- Placeholder and input-hint text use **#8B949E** at opacity **1** through
+  `--workspace-color-placeholder`, including custom combobox placeholders. Do not
+  rely on browser defaults or app-local gray values. Disabled controls retain
+  their existing component-level dimming; placeholder glyph opacity does not
+  override a disabled control’s opacity. The standard dark field
+  surfaces provide at least 4.5:1 text contrast; verify the computed colors.
 - Compact action text retains **12px** (`--workspace-font-action`) to preserve
   the existing button widths and density. Sidebar navigation/account roles remain
   separately specified. Do not force table-cell links or metadata to form sizes.
@@ -206,6 +214,10 @@ it is not a runtime dependency of any app.
   native geometry. Code/identifier editors marked `.vs-code`, `.font-mono` or
   `data-workspace-text-role="code"` keep their explicit code typography. Metadata
   labels may use `data-workspace-text-role="metadata"` when that is their real role.
+  A label acting as an upload/action control uses `data-workspace-text-role="action"`
+  and retains its action styling. Do not use either marker to bypass ordinary
+  field-label parity. Helper descriptions remain muted and semantic status text
+  retains its meaning; they are different roles, not alternate field-label styles.
 - Common page/raised surfaces, body/heading/muted text, borders, primary actions
   and links use `--workspace-color-*` from the shared stylesheet. Ordinary titles
   use the heading color. Explicit muted/overline and semantic warning/error/success
@@ -376,3 +388,11 @@ roles explicit, keeps the current layout and action density, and selects the
 existing Hunts destination during creation. The already-matching page, surface,
 heading and text palette now references the same shared tokens. Existing app
 workflows, contextual surfaces, statuses, account and login behavior are preserved.
+
+## Shared text-role alignment — 2026-10-23
+
+Version 1.6 removes browser-default placeholder gray and aligns ordinary label
+color/weight across the six independent frontends. It preserves text content,
+control geometry, app workflows, identity handling and contextual status colors.
+The ATO creation-page title noted in the follow-up audit is a separate unresolved
+page-title mapping issue; this release does not silently redefine that role.
