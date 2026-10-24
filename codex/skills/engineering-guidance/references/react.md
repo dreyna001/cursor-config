@@ -30,3 +30,10 @@ loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
 content in the affected apps. Preserve app-specific guards and layouts. Record
 actual browser/route/state evidence and any unverified areas; source parity alone
 is not interaction or accessibility sign-off.
+
+For desktop zoom and assistant-feedback work, follow the central baseline's
+**Desktop zoom and conversational feedback** section. Verify actual browser zoom
+separately from root-font resizing, preserve the requested desktop/mobile scope,
+and test waiting/error/completion announcements, required states and guarded flows.
+Distinguish accessibility-tree evidence from actual screen-reader speech; record
+excluded apps and unavailable checks rather than claiming whole-suite coverage.

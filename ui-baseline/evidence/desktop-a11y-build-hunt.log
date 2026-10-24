@@ -1,0 +1,57 @@
+
+> threat-hunting-frontend@0.1.0 build
+> tsc -b && vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 1744 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                               0.60 kB │ gzip:   0.37 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2   14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2   14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2   14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2   14.66 kB
+dist/assets/index-BwxSXISA.css              201.49 kB │ gzip:  30.77 kB
+dist/assets/index-BKTuOT4F.js               582.99 kB │ gzip: 164.34 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 3.34s
+
+> threat-hunting-frontend@0.1.0 test:unit
+> vitest run
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv5.0.1 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/suite-desktop-a11y-hunt/frontend[39m
+
+ [32m✓[39m src/reportTitle.test.ts [2m([22m[2m8 tests[22m[2m)[22m[32m 8[2mms[22m[39m
+ [32m✓[39m src/planScope.test.ts [2m([22m[2m7 tests[22m[2m)[22m[32m 11[2mms[22m[39m
+ [32m✓[39m src/api/hunts.test.ts [2m([22m[2m18 tests[22m[2m)[22m[32m 74[2mms[22m[39m
+ [32m✓[39m src/HuntWorkflowProgress.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 12[2mms[22m[39m
+ [32m✓[39m src/ActionDiagnostics.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 16[2mms[22m[39m
+ [32m✓[39m src/answerRequirementCoverage.test.ts [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/ScanSummary.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[32m 35[2mms[22m[39m
+ [32m✓[39m src/api/runtimeSettings.test.ts [2m([22m[2m2 tests[22m[2m)[22m[32m 7[2mms[22m[39m
+ [32m✓[39m src/ProcessComparison.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 84[2mms[22m[39m
+ [32m✓[39m src/ResultBrowser.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 22[2mms[22m[39m
+ [32m✓[39m src/WorkspaceConfiguration.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 28[2mms[22m[39m
+ [32m✓[39m src/EvidenceInspector.test.tsx [2m([22m[2m19 tests[22m[2m)[22m[32m 106[2mms[22m[39m
+ [32m✓[39m src/FindingsDesk.test.tsx [2m([22m[2m17 tests[22m[2m)[22m[32m 70[2mms[22m[39m
+ [32m✓[39m src/ReportEditor.test.tsx [2m([22m[2m5 tests[22m[2m)[22m[32m 19[2mms[22m[39m
+ [32m✓[39m src/HuntPlanReview.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[32m 89[2mms[22m[39m
+ [32m✓[39m src/NewHuntForm.test.tsx [2m([22m[2m2 tests[22m[2m)[22m[32m 6[2mms[22m[39m
+ [32m✓[39m src/PlanningFailureNotice.test.tsx [2m([22m[2m3 tests[22m[2m)[22m[32m 10[2mms[22m[39m
+ [32m✓[39m src/ReportOverview.test.tsx [2m([22m[2m37 tests[22m[2m)[22m[32m 258[2mms[22m[39m
+ [32m✓[39m src/ThreatHuntApp.test.tsx [2m([22m[2m29 tests[22m[2m)[22m[32m 121[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m19 passed[39m[22m[90m (19)[39m
+[2m      Tests [22m [1m[32m187 passed[39m[22m[90m (187)[39m
+[2m   Start at [22m 02:23:34
+[2m   Duration [22m 1.88s[2m (transform 65%, import 28%, tests 6%, worker 1%)[22m
+
+[2m  Transform [22m [33mtransforming modules took 10.55s[39m[2m · 65% of tracked time, re-done on every run[22m
+[2m            [22m [2mpersist transforms across runs with [22m[33mfsModuleCache: true[39m
+[2m            [22m [2mlearn more: https://vitest.dev/guide/improving-performance#caching-between-reruns[22m

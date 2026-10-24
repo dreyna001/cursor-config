@@ -1,0 +1,47 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.69 kB │ gzip:   0.38 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-DtvYPmVo.css                    82.36 kB │ gzip:  14.69 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-DujPbhB-.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-DyxCDfgh.js                      0.93 kB │ gzip:   0.45 kB
+dist/assets/CaseArchiveNoticeBanner-DGWRuBZK.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-DvlQi3og.js            3.05 kB │ gzip:   1.13 kB
+dist/assets/EmptyState-CeZ1m4QZ.js                 4.22 kB │ gzip:   1.33 kB
+dist/assets/ClosedTicketsPage-Cs_K-AvF.js         12.02 kB │ gzip:   3.95 kB
+dist/assets/CasesPage-DLP88QBJ.js                 14.15 kB │ gzip:   4.79 kB
+dist/assets/CaseDetailPage-CUqN-afc.js            47.25 kB │ gzip:  13.93 kB
+dist/assets/HomePage-9ky8QXlR.js                  60.05 kB │ gzip:  19.21 kB
+dist/assets/ui-vendor-BehYNCCw.js                136.28 kB │ gzip:  44.14 kB
+dist/assets/markdown-vendor-BjnHQkUg.js          162.18 kB │ gzip:  49.33 kB
+dist/assets/auth-vendor-BwepJRxc.js              246.50 kB │ gzip:  62.32 kB
+dist/assets/index-BAznOfrN.js                    386.86 kB │ gzip: 119.00 kB
+✓ built in 5.46s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/components/ChatPanel.test.tsx src/components/HomeChatWorkspace.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/suite-desktop-a11y-incident/s3_notable_pipeline/frontend/analyst-portal[39m
+
+ [32m✓[39m src/components/ChatPanel.test.tsx [2m([22m[2m14 tests[22m[2m)[22m[33m 950[2mms[22m[39m
+     [33m[2m✓[22m[39m clears stale server session ids and retries as a new session [33m 357[2mms[22m[39m
+ [32m✓[39m src/components/HomeChatWorkspace.test.tsx [2m([22m[2m13 tests[22m[2m)[22m[33m 1487[2mms[22m[39m
+     [33m[2m✓[22m[39m keeps a blank draft out of history until a non-empty question is sent [33m 446[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m27 passed[39m[22m[90m (27)[39m
+[2m   Start at [22m 02:23:28
+[2m   Duration [22m 3.55s[2m (transform 900ms, setup 284ms, import 1.57s, tests 2.44s, environment 1.71s)[22m

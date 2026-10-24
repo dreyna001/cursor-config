@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-Version: **1.8.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.9.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -16,6 +16,7 @@ source of shared rules.
   without importing prototype behavior or replacing an established stack.
 - [Interaction and accessibility](#interaction-and-accessibility): keyboard,
   dialogs, feedback states, control contrast and scrolling checks.
+- [Desktop zoom and conversational feedback](#desktop-zoom-and-conversational-feedback): native zoom, reflow, reply announcements and required states.
 - [Motion and reduced motion](#motion-and-reduced-motion): timings, feedback roles, popup scope and validation.
 - [Navigation](#navigation), [sidebar states](#sidebar-navigation-states),
   [typography](#typography), [account presentation](#shared-sidebar-account-and-text-roles)
@@ -111,7 +112,7 @@ terminology and domain distinctions; wording skills support that contract.
 
 ## Navigation
 
-- Expanded primary sidebar: **256px / 16rem**, including padding and border.
+- Expanded primary sidebar in ordinary desktop views: **256px / 16rem**, including padding and border. The desktop zoom exception below takes precedence when that width would obstruct reflow.
 - Horizontal sidebar padding: **16px / 1rem per side**. Row padding is separate.
 - Use `--workspace-sidebar-width` and `--workspace-sidebar-padding-inline` in
   `src/suite-workspace.css`; keep the sidebar from shrinking and the main region
@@ -322,6 +323,62 @@ References: [WAI modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/
 [non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html),
 and [bypass blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html).
 
+## Desktop zoom and conversational feedback
+
+Version 1.9 makes these existing interaction outcomes testable beyond root-font
+resizing. Preserve the normal desktop composition, typography, colors, routing,
+drafts, permissions, request timing and cancellation behavior.
+
+- Test **actual full-page browser zoom at 100%, 200% and 400%**, starting from
+  desktop windows of 1280, 1440 and 1920px. Verify the browser's zoom factor and
+  layout viewport, keep the root font unchanged, and identify the tested engine.
+  Pinch magnification, device scale emulation and changing the root font are not
+  substitutes. A 320 CSS-pixel layout reached by zooming a desktop window is a
+  desktop reflow check, not authorization to test or redesign mobile interfaces.
+- In the opt-in `.workspace-desktop-reflow` shell, a fine-pointer, hover-capable
+  desktop with an effective viewport at most 48rem reflows the sidebar before
+  full-width content. Do not gate reflow on device pixel ratio: page zoom can
+  change the layout viewport without a matching resolution change. This is the accessible alternative
+  to pinning 256px of navigation beside a narrow workspace. Keep all navigation and
+  account actions available, preserve Skip to workspace, and allow vertical page
+  scrolling. Retain local horizontal scrolling for genuine tables/code/documents;
+  ordinary headings, controls and prose must not require sideways page scrolling.
+  These rules do not alter coarse-pointer/touch/mobile presentation.
+- Verify focused controls remain fully reachable after scrolling at zoom, including
+  filters, required fields, submit actions, assistant composers and modal buttons.
+  Preserve modal focus/guard behavior and existing app-specific pane semantics.
+- Keep chat waiting status outside its busy transcript and announce failures as
+  actionable alerts. Time counters and typing dots must not repeat announcements
+  on every tick. Preserve visible feedback and cancellation/request behavior.
+- After a **newly completed** assistant response, announce **“Assistant response
+  ready.”** once without moving focus or reading a long answer automatically.
+  Do not announce initial/restored history, pagination, refreshes, failed/cancelled
+  requests or responses belonging to a previous workspace. This is an equivalent
+  feedback role across independently implemented assistants, not shared runtime code.
+- Expose truly required fields through native `required` or appropriate ARIA, with
+  associated instructions when an unavailable submit action needs explanation.
+  Keep existing validators and submit guards authoritative; labels alone do not
+  communicate a field's required state to assistive technology.
+- Record native zoom/reflow, accessibility-tree semantics, keyboard behavior and
+  actual assistive-technology speech separately. A passing DOM/AX assertion is not
+  a claim that Narrator, NVDA or JAWS speech was tested. Report unavailable engines
+  or speech capture honestly. No GitHub Actions or additional runtime dependency
+  is required by this validation contract.
+
+Run each in-scope frontend's `e2e/desktop-accessibility.spec.ts` in its existing
+Playwright harness using Chromium and a headed desktop session (`xvfb-run` is
+suitable for Linux). Reuse the installed browser; `SUITE_UI_CHROMIUM_EXECUTABLE_PATH`
+can select an existing compatible binary. The harness creates only an isolated,
+temporary browser profile and extension for native zoom. Keep the usual multi-engine
+interaction suite as a separate check; explicitly skipped native zoom is unverified.
+
+Release scope: ATO and all four Incident Response frontends implement these fixes.
+Threat Hunt receives the synchronized standard and stylesheet only; its runtime
+was explicitly excluded from this remediation. The reflow selector is opt-in and
+does not change Threat Hunt. Its native-zoom and conversational-feedback alignment
+is unverified for this release and must not be described as complete suite coverage.
+Existing shared typography, palette, account, sidebar and motion rules remain intact.
+
 ## Scope and maintenance
 
 The versioned `src/suite-workspace.css` is identical across all six frontend
@@ -503,3 +560,10 @@ neutral field-boundary contrast, missing IR bypass links and ATO standalone
 page-state title mappings. Version 1.8 corrects those six gaps and adds the
 interaction/accessibility check contract above. Existing layouts, authentication,
 workflow guards, decorative palette and motion standards remain in place.
+
+## Desktop accessibility correction — v1.9.0
+
+The desktop-only follow-up reproduced obstructed 400% reflow, IR chat waiting/error
+announcement gaps, missing reply-completion cues and ATO required-field semantics.
+This release corrects them in the five in-scope frontends and makes their validation
+explicit. Normal desktop layouts and all workflow/domain guards are preserved.
