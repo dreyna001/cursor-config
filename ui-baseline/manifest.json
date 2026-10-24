@@ -121,7 +121,7 @@
     },
     {
       "path": "README.md",
-      "local_sha256": "fbf99885a43803cd6eed74aa05ae33fd6cd13239eee5488f3c348cfa82827793",
+      "local_sha256": "b4030fbc2ef2dd630f9c217e14ffa3f1800e75e12160b74aff6bda6ccac1c889",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -581,6 +581,10 @@
     {
       "path": "evidence/verification-v1.10.0.md",
       "local_sha256": "65a6ba7089dfbac2f402649083eb56c8c318f6ba6bd1c7bb698d3ed4b8ce92c9"
+    },
+    {
+      "path": "pattern-catalog.md",
+      "local_sha256": "e53d1f6a6d9f73292379ad1eeca5ea127349dcb88e24ddc4cd27f65b052a4296"
     }
   ]
 }
