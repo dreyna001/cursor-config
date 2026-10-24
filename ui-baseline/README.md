@@ -31,6 +31,8 @@ source of shared rules.
   each app's intended behavior, layouts, features and newer approved work.
 - [Visual adaptation](#visual-adaptation): how to use the common design language
   without importing prototype behavior or replacing an established stack.
+- [Optional UI pattern catalog](pattern-catalog.md): selectable interaction
+  approaches with provenance and verification limits.
 - [Interaction and accessibility](#interaction-and-accessibility): keyboard,
   dialogs, feedback states, control contrast and scrolling checks.
 - [Workflow and popup regression coverage](#workflow-and-popup-regression-coverage): failure paths, dialog names and constrained desktop actions.
@@ -128,6 +130,12 @@ precise citations, paging, approval boundaries and genuine loading/error states.
 Never invent scores, health checks, identities or service capabilities to match
 the sample. The [suite vocabulary](references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md) owns
 terminology and domain distinctions; wording skills support that contract.
+
+For optional interaction approaches gathered from approved previews and suite
+apps, consult the [UI pattern catalog](pattern-catalog.md). Entries are examples
+to select and adapt, not additional shared rules or default layouts. Verify the
+current destination app, user intent, accessibility behavior and export contract
+before reuse.
 
 ## Navigation
 
