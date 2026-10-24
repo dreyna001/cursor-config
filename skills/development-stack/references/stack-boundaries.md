@@ -16,7 +16,7 @@ These are preferred technologies when their capability is required, not dependen
 - **PostgreSQL / SQLAlchemy / Alembic / psycopg:** durable relational state for portal/worker apps.
 - **pgvector + PostgreSQL FTS:** hybrid semantic retrieval when PostgreSQL is an appropriate system of record; self-managed on-prem or provider-managed in cloud.
 - **React / Vite / TypeScript / Tailwind / Radix:** web UI when required.
-- **Federal SOC Dark theme:** default cybersecurity portal visual language when theming is open.
+- **Shared UI baseline:** start at the permanent local UI/UX baseline; approved shared changes must synchronize its versioned bundle, installed copy and all three apps. Older theme notes cannot override newer approved UI.
 - **pytest / Pydantic Evals:** deterministic tests vs probabilistic LLM evaluation.
 - **Per-format doc intake:** default bounded extraction; not every app needs file intake.
 - **jsonschema:** external JSON or schema validation only.

@@ -1,0 +1,170 @@
+{
+  "version": "1.4.0",
+  "prepared": "2026-10-23",
+  "source_commits": {
+    "ai-enabled-threathunting": "7697a36749c71a6c842de4b5b949998380a08887",
+    "ai-enabled-ato": "100f32bcef498a73534bd353581294e503877f6e",
+    "llm_notable_analysis": "cc15580cfe3ae8f4c012af8342e5b6c81ac3edba"
+  },
+  "files": [
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-ui-standard.md",
+      "source_sha256": "fdbfd42868adb871b3a2f4fd0fc78e2d0bd4997d1cadf09c01f9ae759451bda9",
+      "local_sha256": "fdbfd42868adb871b3a2f4fd0fc78e2d0bd4997d1cadf09c01f9ae759451bda9"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-vocabulary-and-object-model.md",
+      "source_sha256": "698f482dba4fbcf0f02891b6bf41c70d1fa55fd8d7f1cda1938982d00761e75e",
+      "local_sha256": "698f482dba4fbcf0f02891b6bf41c70d1fa55fd8d7f1cda1938982d00761e75e"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-terminology-audit.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-terminology-audit.md",
+      "source_sha256": "65363f120567ec07a7d6f7d60399da0b1545f5f9964f62a6bf5d7a1666461763",
+      "local_sha256": "65363f120567ec07a7d6f7d60399da0b1545f5f9964f62a6bf5d7a1666461763"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/threat-hunt-reporting-guidance.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/threat-hunt-reporting-guidance.md",
+      "source_sha256": "69cfd5ec87be099ae0b1e3f073dc48e8e70636de5538838e20253bc05242a7ca",
+      "local_sha256": "69cfd5ec87be099ae0b1e3f073dc48e8e70636de5538838e20253bc05242a7ca"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/enterprise-ui-visual-standard.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/enterprise-ui-visual-standard.md",
+      "source_sha256": "95bd4b5d18863c64b4cbfbd94c4f4a165f5096ab5df20d9dbf1cece3e6715198",
+      "local_sha256": "66f5bee7c27a01be371af038e45ab033a9a12e1bc07bd8377b404b82ce98612b"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/AGENTS.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "AGENTS.md",
+      "source_sha256": "8687cb81850003f6e7ac8f134cf3d72cd855adb0c0695bff28d26617ea6caaba",
+      "local_sha256": "ee3ad05c410a23122172bad8dbbcec4fdd8c3163364e721bbb06dcadfcaef961"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/suite-workspace.css",
+      "source_sha256": "be8e48a3df5e3edaac3e956e5e250826ca421e503d24c93a451f3e978574ba7d",
+      "local_sha256": "be8e48a3df5e3edaac3e956e5e250826ca421e503d24c93a451f3e978574ba7d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "scripts/check_suite_ui.py",
+      "source_sha256": "cb26182ca4853fdefb7dc9caba4667079861566b1cc083dc8582f36b24a9bb6d",
+      "local_sha256": "cb26182ca4853fdefb7dc9caba4667079861566b1cc083dc8582f36b24a9bb6d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "design-previews/20261018/unified/visual-reference.html",
+      "source_sha256": "1ee13353a2a42b5169f5c26bca4b6251b66135304d10e80659f59dd6f575d92f",
+      "local_sha256": "1ee13353a2a42b5169f5c26bca4b6251b66135304d10e80659f59dd6f575d92f"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-ui-standard.md",
+      "source_sha256": "fdbfd42868adb871b3a2f4fd0fc78e2d0bd4997d1cadf09c01f9ae759451bda9",
+      "local_sha256": "fdbfd42868adb871b3a2f4fd0fc78e2d0bd4997d1cadf09c01f9ae759451bda9"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-terminology-audit.md",
+      "source_sha256": "101c11803d4516558ece88d07f615ac7c3f627fff133e8dee41e9c479106b57e",
+      "local_sha256": "101c11803d4516558ece88d07f615ac7c3f627fff133e8dee41e9c479106b57e"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/PORTAL_THEME.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/PORTAL_THEME.md",
+      "source_sha256": "0b34b8600889ed0c614a224bb6a3a64603b5c9549c404057635119b2524e67bb",
+      "local_sha256": "5d8b8aaea5f8bf878ac95568824621e84474e3a96ba69ac4a8aeff4e74461732"
+    },
+    {
+      "path": "references/ai-enabled-ato/AGENTS.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "AGENTS.md",
+      "source_sha256": "7baa3748824b3f266d403288559ca1cb29aaa906753c15ecd69849f63dc157dc",
+      "local_sha256": "80e422595c87939d7a2214ffdf111c521c9753b6739a10465b8b15eba85824fb"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-ui-standard.md",
+      "source_sha256": "fdbfd42868adb871b3a2f4fd0fc78e2d0bd4997d1cadf09c01f9ae759451bda9",
+      "local_sha256": "fdbfd42868adb871b3a2f4fd0fc78e2d0bd4997d1cadf09c01f9ae759451bda9"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-terminology-audit.md",
+      "source_sha256": "bbc6cced28bdb5abce55e6a32a10d5188f22ea4e9a46eb7f3d82bd96d78cd255",
+      "local_sha256": "bbc6cced28bdb5abce55e6a32a10d5188f22ea4e9a46eb7f3d82bd96d78cd255"
+    },
+    {
+      "path": "references/llm_notable_analysis/AGENTS.md",
+      "repository": "llm_notable_analysis",
+      "source_path": "AGENTS.md",
+      "source_sha256": "4fc1a0c479f32c688c333463db3ef8ac6bf10f560bee0e59c6e49f53c2062efb",
+      "local_sha256": "ce40aad1038f19149e45642dac01bae3ffd094fc92683be4584573234ec04032"
+    },
+    {
+      "path": "README.md",
+      "local_sha256": "f3f0b6717a301f622ecb1420f7c5faf5aaa7fd73d52a48e791fa345d9d1349b0",
+      "note": "Local navigation edition or verification record; does not replace published source."
+    },
+    {
+      "path": "visual-reference.html",
+      "local_sha256": "060c32c2d20c7f71f720cc8853dfc39a706264564fff0e425077c763cae613a3",
+      "note": "Local navigation edition or verification record; does not replace published source."
+    },
+    {
+      "path": "verification.md",
+      "local_sha256": "0c7a30da6fb4142cea6f4ef508b88e9d1c40d5e77e61b034c4072f87c131ff3f",
+      "note": "Local navigation edition or verification record; does not replace published source."
+    },
+    {
+      "path": "evidence/baseline-change-scope.json",
+      "local_sha256": "d5ec966f20e6839e1f0bf94bd8620258f215dafdae4a23a78707e8373847ce3e"
+    },
+    {
+      "path": "evidence/baseline-check-ato.log",
+      "local_sha256": "bdcbb28cc94aa7233ba95357cc79243298055045ad2043067054335f3dc5c3a3"
+    },
+    {
+      "path": "evidence/baseline-check-azure_notable_pipeline.log",
+      "local_sha256": "8829b5896d8b98f97a81732774b5c713bfc3a3a2499e5964bbf4361da84de2d8"
+    },
+    {
+      "path": "evidence/baseline-check-hunt.log",
+      "local_sha256": "7437fcb248b5ce97538e3fe24810bb5533a37c7800f3e98a3575a4817ca8913b"
+    },
+    {
+      "path": "evidence/baseline-check-llm_notable_analysis_onprem_systemd.log",
+      "local_sha256": "d47f15f478724602f99ae8653fe16301b08889c44c09f2d3c7254450ddc66243"
+    },
+    {
+      "path": "evidence/baseline-check-s3_notable_pipeline.log",
+      "local_sha256": "47432f3299ca999dd10328d5bd668d55c5808cbc81a1333a152680d9b632b8b1"
+    },
+    {
+      "path": "evidence/baseline-check-s3_notable_pipeline_commercial.log",
+      "local_sha256": "69a9b701bba531cbd4dd8f732f23c46ed89cbb84711e26af2662790268bb094c"
+    },
+    {
+      "path": "evidence/baseline-test-results.json",
+      "local_sha256": "293200edd5da2ab95ea8fc11284be044a4c920ddf65573e6ca65f2bc4504009b"
+    }
+  ]
+}

@@ -7,7 +7,7 @@
     "skills": "$HOME/.agents/skills"
   },
   "schema_version": 1,
-  "skill_count": 57,
+  "skill_count": 58,
   "skills": [
     "agentic-security-workflows",
     "ai-use-case-delivery-framework",
@@ -31,6 +31,7 @@
     "implement-python-feature",
     "incremental-implementation",
     "integration-scope-planning",
+    "investigation-desk-ui",
     "langgraph-engineering",
     "llm-evidence-regression",
     "llm-step-design",

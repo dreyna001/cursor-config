@@ -1,0 +1,40 @@
+{
+  "hunt": {
+    "base": "bdf6acde6bc91689a36eca455ec0a9d58c594d4c",
+    "files": [
+      "AGENTS.md",
+      "design-previews/20261018/unified/build-visual-reference.py",
+      "design-previews/20261018/unified/visual-reference.html",
+      "docs/enterprise-ui-skill-20261016.md",
+      "docs/enterprise-ui-visual-standard.md",
+      "docs/suite-ui-standard.md",
+      "docs/unified-threat-hunting-ui-spec.md",
+      "frontend/src/suite-workspace.css",
+      "scripts/check_suite_ui.py"
+    ]
+  },
+  "ato": {
+    "base": "7c816fe329eb99612080cb7cbdc32a40ad080f6c",
+    "files": [
+      "AGENTS.md",
+      "docs/PORTAL_THEME.md",
+      "docs/SSP_UI_CONVERSION_PLAN.md",
+      "docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html",
+      "docs/suite-ui-standard.md",
+      "portal/src/suite-workspace.css",
+      "scripts/check_suite_ui.py"
+    ]
+  },
+  "incident": {
+    "base": "21b5b5ad45cfcafff1bb9312b6efcaf93f94d687",
+    "files": [
+      "AGENTS.md",
+      "azure_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+      "docs/suite-ui-standard.md",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/suite-workspace.css",
+      "s3_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/src/suite-workspace.css",
+      "scripts/check_suite_ui.py"
+    ]
+  }
+}

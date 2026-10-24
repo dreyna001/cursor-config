@@ -1,0 +1,66 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2368 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.53 kB │ gzip:   0.33 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-CBusHgiy.css                    74.34 kB │ gzip:  13.28 kB
+dist/assets/chevron-down-Cuz3vVhK.js               0.30 kB │ gzip:   0.25 kB
+dist/assets/rotate-cw-CVsS4VaL.js                  0.37 kB │ gzip:   0.29 kB
+dist/assets/input-FnyePsXJ.js                      0.57 kB │ gzip:   0.37 kB
+dist/assets/badge-i8k0XMy9.js                      0.89 kB │ gzip:   0.44 kB
+dist/assets/CaseArchiveNoticeBanner-DJDw4Esa.js    1.23 kB │ gzip:   0.52 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/EmptyState-DOUUJLcZ.js                 4.09 kB │ gzip:   1.25 kB
+dist/assets/sourceCompleteness-Dhy2XKWy.js         7.49 kB │ gzip:   2.71 kB
+dist/assets/ClosedTicketsPage-DWtrE651.js         13.11 kB │ gzip:   4.28 kB
+dist/assets/CaseDetailPage-CPM9fJ1O.js            54.66 kB │ gzip:  16.69 kB
+dist/assets/HomePage-VVluySlX.js                  59.27 kB │ gzip:  19.03 kB
+dist/assets/CasesPage-zKVwFRwG.js                 83.38 kB │ gzip:  28.63 kB
+dist/assets/MarkdownMessage-DWD3hzYD.js          165.06 kB │ gzip:  50.24 kB
+dist/assets/index-Mvsl6cgu.js                    343.08 kB │ gzip:  84.76 kB
+dist/assets/index-DmZb7hRF.js                    436.24 kB │ gzip: 134.24 kB
+✓ built in 6.32s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/auth/PortalAuth.test.tsx src/auth/productionAccountBoundary.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/ui-baseline-20261023-incident/azure_notable_pipeline/frontend/analyst-portal[39m
+
+ [32m✓[39m src/auth/productionAccountBoundary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 283[2mms[22m[39m
+ [32m✓[39m src/auth/PortalAuth.test.tsx [2m([22m[2m8 tests[22m[2m)[22m[33m 488[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m12 passed[39m[22m[90m (12)[39m
+[2m   Start at [22m 20:21:31
+[2m   Duration [22m 3.94s[2m (transform 702ms, setup 579ms, import 1.68s, tests 771ms, environment 4.26s)[22m
+
+
+Running 15 tests using 1 worker
+
+  ✓   1 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (5.9s)
+  ✓   2 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (5.6s)
+  ✓   3 [chromium] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (4.7s)
+  ✓   4 [chromium] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (2.8s)
+  ✓   5 [chromium] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (2.9s)
+  ✓   6 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (8.6s)
+  ✓   7 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (6.9s)
+  ✓   8 [firefox] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (5.9s)
+  ✓   9 [firefox] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (3.6s)
+  ✓  10 [firefox] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (3.7s)
+  ✓  11 [webkit] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1280px (5.8s)
+  ✓  12 [webkit] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1440px (6.9s)
+  ✓  13 [webkit] › e2e/suite-ui.spec.ts:37:3 › applies suite sidebar and typography at 1920px (6.4s)
+  ✓  14 [webkit] › e2e/suite-ui.spec.ts:47:1 › retains accessible suite navigation with enlarged text (4.4s)
+  ✓  15 [webkit] › e2e/suite-ui.spec.ts:55:1 › uses the same sidebar and title roles in the assistant workspace (3.8s)
+
+  15 passed (1.5m)

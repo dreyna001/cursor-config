@@ -1,0 +1,6 @@
+interface:
+  display_name: "Enterprise Workspace UI"
+  short_description: "Adapt the unified visual template on request."
+  default_prompt: "Use $investigation-desk-ui to adapt the unified visual reference and preferred source-inspector B to this application with judgment, preserving its required workflows, evidence and established stack."
+policy:
+  allow_implicit_invocation: false
