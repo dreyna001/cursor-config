@@ -1,0 +1,19 @@
+[
+  {
+    "check": "production build",
+    "exit_code": 0
+  },
+  {
+    "check": "component tests (3)",
+    "exit_code": 0
+  },
+  {
+    "check": "browser tests (29)",
+    "exit_code": 0
+  },
+  {
+    "check": "end-to-end TypeScript",
+    "exit_code": 2,
+    "preexisting": "e2e/suite-ui.ts:69 is unchanged from remote main; SVGElement/HTMLElement mismatch"
+  }
+]

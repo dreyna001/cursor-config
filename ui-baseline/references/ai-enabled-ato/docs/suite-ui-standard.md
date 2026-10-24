@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-Version: **1.6.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.6.1** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -150,6 +150,8 @@ terminology and domain distinctions; wording skills support that contract.
   Use the matching `--workspace-font-size-*` rem token. Avoid one-off sizes,
   fractional rem approximations, and a smaller font to force a label to fit.
 - Page title / h1: **28px**, weight 600, line-height 1.3.
+  ATO’s Create System Workspace title uses this page-title role, even though
+  its form is inside a card. Ordinary card and section titles remain 18px.
 - Section / h2 and card titles: **18px**, weight 600, line-height 1.5.
 - Subsection / h3: **16px**, weight 600, line-height 1.5.
 - Group / h4–h5: **14px**, weight 600. h6: **13px**.
@@ -378,3 +380,9 @@ color/weight across the six independent frontends. It preserves text content,
 control geometry, app workflows, identity handling and contextual status colors.
 The ATO creation-page title noted in the follow-up audit is a separate unresolved
 page-title mapping issue; this release does not silently redefine that role.
+
+## Patch correction — v1.6.1
+
+ATO’s creation page now uses its existing 28px page-title role instead of the
+18px card-title role. This corrects the mapping only; no shared color, font,
+spacing, layout, form behavior or other app presentation is changed.

@@ -1,6 +1,31 @@
-# Three-app UI alignment verification — v1.6.0
+# Three-app UI alignment verification — v1.6.1
 
-## Result
+## ATO creation-title correction — v1.6.1
+
+The creation-page primary title now uses the existing 28px/600 page-title role
+and heading color #E6EDF3. It remains a level-one heading; ordinary card/section
+titles remain 18px. The only application change is that title and its unused
+component import. Shared CSS changes only its version comment.
+
+The new assertion first reproduced the old 18px result, then passed after the fix.
+Fresh local checks passed: ATO production build, 3 focused component tests
+and 29 browser tests. Chromium, Firefox and WebKit each verified
+the creation title at 1280/1440/1920px and 100%/200% text size with no horizontal
+overflow. Existing create-button validation and profile/error/retry checks passed.
+The separate end-to-end TypeScript check still reports the pre-existing
+SVGElement/HTMLElement mismatch in unchanged e2e/suite-ui.ts:69; this patch
+does not broaden into repairing that helper. The production TypeScript build passes.
+No live cloud/Entra or real persistence validation is claimed. The v1.6.0 suite
+evidence below remains historical; the unchanged apps were source-checked for
+this patch, not requalified with a new full browser run.
+
+![Corrected ATO creation title](evidence/ato-creation-title.png)
+
+See [fresh validation results](evidence/ato-title-validation.json),
+[build/type/component checks](evidence/ato-title-build.log) and
+[browser checks](evidence/ato-title-browser.log).
+
+## Prior v1.6.0 verification
 
 The approved placeholder-color and ordinary-label role changes are implemented
 across Threat Hunting, ATO and all four Incident Response frontend variants.
@@ -47,6 +72,6 @@ Visual previews and browser tests use synthetic API/identity fixtures. They do
 not qualify live cloud/Entra deployments, execute investigations or approve SSPs.
 No production workflows, permissions, backend APIs or live records were changed.
 
-The ATO creation-page title remains a separate known mapping issue from the follow-up audit; this release does not change that page layout.
+The ATO creation-page title mismatch identified in the v1.6.0 audit is resolved by v1.6.1 as described above.
 
 Exact source commits and source/local checksums are in [manifest.json](manifest.json).

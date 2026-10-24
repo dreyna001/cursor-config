@@ -1,0 +1,36 @@
+[
+  {
+    "repo": "hunt",
+    "changed_files": [
+      "design-previews/20261018/unified/visual-reference.html",
+      "docs/suite-ui-standard.md",
+      "frontend/src/suite-workspace.css"
+    ],
+    "runtime_change": "version comment only",
+    "styles_unchanged_except_version": true
+  },
+  {
+    "repo": "ato",
+    "changed_files": [
+      "docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html",
+      "docs/suite-ui-standard.md",
+      "portal/e2e/security/ssp-workspace-ui.spec.ts",
+      "portal/src/pages/SspWorkspaceRoute.tsx",
+      "portal/src/suite-workspace.css"
+    ],
+    "runtime_change": "creation heading and unused import only",
+    "styles_unchanged_except_version": true
+  },
+  {
+    "repo": "incident",
+    "changed_files": [
+      "azure_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+      "docs/suite-ui-standard.md",
+      "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/suite-workspace.css",
+      "s3_notable_pipeline/frontend/analyst-portal/src/suite-workspace.css",
+      "s3_notable_pipeline_commercial/frontend/analyst-portal/src/suite-workspace.css"
+    ],
+    "runtime_change": "version comment only",
+    "styles_unchanged_except_version": true
+  }
+]
