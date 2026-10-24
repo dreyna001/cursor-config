@@ -1,0 +1,45 @@
+
+> analyst-portal-ui@0.1.0 build
+> vite build
+
+vite v6.4.3 building for production...
+transforming...
+✓ 2370 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/index.html                                    0.69 kB │ gzip:   0.38 kB
+dist/assets/public-sans-600-Fru-LXNs.woff2        14.59 kB
+dist/assets/public-sans-700-BqJmxWdE.woff2        14.60 kB
+dist/assets/public-sans-400-8Rpg0ruU.woff2        14.63 kB
+dist/assets/public-sans-500-NlrCPXnF.woff2        14.66 kB
+dist/assets/index-CyOntVgC.css                    81.11 kB │ gzip:  14.43 kB
+dist/assets/sourceCompleteness-BefEL_RY.js         0.41 kB │ gzip:   0.25 kB
+dist/assets/input-DpGBQeR0.js                      0.61 kB │ gzip:   0.39 kB
+dist/assets/badge-D3WEq4bx.js                      0.93 kB │ gzip:   0.46 kB
+dist/assets/CaseArchiveNoticeBanner-CuVvvWv8.js    1.27 kB │ gzip:   0.54 kB
+dist/assets/caseSummary-DMlI9bea.js                1.56 kB │ gzip:   0.66 kB
+dist/assets/MarkdownMessage-CGLtUEni.js            3.05 kB │ gzip:   1.13 kB
+dist/assets/EmptyState-BRPbnHrM.js                 4.22 kB │ gzip:   1.33 kB
+dist/assets/ClosedTicketsPage-CXhzfttI.js         12.02 kB │ gzip:   3.96 kB
+dist/assets/CasesPage-D-9LMI_e.js                 14.15 kB │ gzip:   4.80 kB
+dist/assets/CaseDetailPage-CH0wB_yZ.js            47.25 kB │ gzip:  13.93 kB
+dist/assets/HomePage-CC3Qdblt.js                  59.78 kB │ gzip:  19.12 kB
+dist/assets/ui-vendor-BehYNCCw.js                136.28 kB │ gzip:  44.14 kB
+dist/assets/markdown-vendor-BjnHQkUg.js          162.18 kB │ gzip:  49.33 kB
+dist/assets/auth-vendor-BwepJRxc.js              246.50 kB │ gzip:  62.32 kB
+dist/assets/index-DdQPITwa.js                    386.84 kB │ gzip: 118.99 kB
+✓ built in 6.66s
+
+> analyst-portal-ui@0.1.0 test
+> vitest run src/auth/PortalAuth.test.tsx src/auth/productionAccountBoundary.test.tsx
+
+
+[1m[30m[46m RUN [49m[39m[22m [36mv4.1.11 [39m[90m/home/dreyna/ai-coe-projects/.worktrees/suite-accessibility-incident/s3_notable_pipeline/frontend/analyst-portal[39m
+
+ [32m✓[39m src/auth/productionAccountBoundary.test.tsx [2m([22m[2m4 tests[22m[2m)[22m[32m 299[2mms[22m[39m
+ [32m✓[39m src/auth/PortalAuth.test.tsx [2m([22m[2m6 tests[22m[2m)[22m[33m 370[2mms[22m[39m
+
+[2m Test Files [22m [1m[32m2 passed[39m[22m[90m (2)[39m
+[2m      Tests [22m [1m[32m10 passed[39m[22m[90m (10)[39m
+[2m   Start at [22m 00:36:41
+[2m   Duration [22m 2.23s[2m (transform 618ms, setup 282ms, import 1.22s, tests 670ms, environment 1.85s)[22m

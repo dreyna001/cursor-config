@@ -1,48 +1,45 @@
-# Suite UI verification — v1.7.0
+# Suite UI verification — v1.8.0
 
-## Motion alignment
+## Six audited gaps resolved
 
-All three applications, including all four Incident Response variants, now use
-the shared motion contract: 150ms interaction/disclosure/popup transitions,
-immediate keyboard focus, 1s linear spinners, 2s loading pulses, and the existing
-1.2s staggered IR typing feedback. Reduced motion disables decorative CSS
-animation and transitions across the app, including portals and pseudo-elements.
-Status content, final open/selected states, request timing and layout are preserved.
+- All four Incident Response confirmation dialogs contain keyboard focus, expose
+  modal semantics, preserve pending-delete guards and restore the opener.
+- ATO workspace and IR skeleton waiting states have a live status outside the
+  busy region. ATO workspace errors and IR confirmation failures announce errors.
+- IR loading-table labels/order match the loaded table.
+- All six frontends use the accessible neutral field-boundary token; decorative
+  dividers, semantic states, disabled styling, geometry and other colors remain.
+- All four IR shells offer Skip to workspace for their existing main regions.
+- ATO standalone error/empty states use the current page-title role. The normal
+  creation route and card/dialog title hierarchy remain unchanged.
 
-The earlier checks established colors and states but missed motion parity. The
-baseline now requires a coverage record across typography, palette, spacing,
-hover/selection, focus, disabled/loading states, overlays and motion. Matching
-source hashes or still screenshots alone cannot establish complete UI parity.
+## Validation and limits
 
-## Fresh verification
+The six production builds and relevant unit checks passed. Browser results below
+cover Chromium, Firefox and WebKit, including the added modal, busy-state,
+loading, error, bypass and contrast cases. Existing navigation/account, typography,
+motion/reduced-motion, enlarged-text, scrolling and guarded workflow checks remain.
+ATO's empty component branch is verified separately at component level because
+the ordinary empty-inventory route intentionally opens the creation form.
 
-- Six production builds and 233 focused/unit tests passed locally.
-- 140 browser tests passed across Chromium, Firefox and WebKit. The existing
-  shared UI checks now verify normal/reduced preference modes, runtime preference
-  changes, actual navigation/disclosure timing, immediate focus, portal-scope
-  CSS probes, spinner/pulse/typing roles, stopped animations and stable geometry.
-- Existing navigation, account, form, creation and workflow checks still pass.
-- ATO E2E TypeScript checking passes; its prior HTML/SVG helper error is fixed.
-- Source scope checks preserve existing non-motion CSS, layout, API/identity
-  handling, component behavior, dependencies and previous test assertions.
-- Shared documents, stylesheets, font assets and the generated companion are
-  synchronized. Each application keeps its own independent local implementation.
+See [build results](evidence/accessibility-build-results.json),
+[browser results](evidence/accessibility-browser-results.json), and
+[scope record](evidence/accessibility-scope.json). Logs and supplemental checks
+are in the evidence folder. [The previous motion release](evidence/verification-v1.7.0.md)
+remains historical evidence. Current rules, sources and generated HTML agree.
 
-See [build results](evidence/motion-build-results.json),
-[browser results](evidence/motion-browser-results.json), and
-[scope checks](evidence/motion-scope.json). Detailed build/browser logs are in
-the evidence folder. [Earlier v1.6.1 verification](evidence/verification-v1.6.1.md)
-is historical evidence, not a claim that every current screen was requalified.
+The earlier audit's synthetic-history fixture initially disabled conversation
+history, and its empty-state fixture entered the creation route. These fixtures
+were corrected without changing application routing. The account Tab regression
+now compares with the browser's measured native sequence, which can include
+scrollable regions. Only the final corrected runs count as qualification.
 
-## Boundaries and intentional differences
+All apps keep independent runtime sources and builds. Existing app layouts,
+control sizes, authentication, account behavior, workflow guards, request timing,
+print/export and domain status meanings remain app-owned.
 
-Hunt's native disclosure, ATO's profile/provider disclosure and IR's expandable
-history keep their existing controls and final states. The IR typing indicator
-is an intentional task-specific feedback role. Existing popups retain their
-current shape/entry effect; native dialogs do not gain new effects. No workflow
-timer, auto-scroll measurement callback, backend operation or live record changed.
-
-Browser checks use synthetic API/identity fixtures. They do not qualify live
-cloud/Entra deployments, every customer theme, every possible route/state, all
-assistive technology, or full WCAG conformance. Remaining coverage must be
-reported explicitly rather than being treated as automatic parity.
+This is bounded local validation with synthetic APIs/identity. It does not qualify
+live cloud/Entra, all possible routes/states, all screen readers, customer themes,
+or full WCAG conformance. Root-font enlargement is not proof of browser zoom or
+complete reflow qualification. These remain explicit additional checks when
+affected by future work; source hashes are never a complete accessibility pass.

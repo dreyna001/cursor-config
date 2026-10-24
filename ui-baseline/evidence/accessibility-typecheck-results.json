@@ -1,0 +1,18 @@
+[
+  {
+    "name": "s3_notable_pipeline",
+    "exit_code": 0
+  },
+  {
+    "name": "s3_notable_pipeline_commercial",
+    "exit_code": 0
+  },
+  {
+    "name": "azure_notable_pipeline",
+    "exit_code": 0
+  },
+  {
+    "name": "llm_notable_analysis_onprem_systemd",
+    "exit_code": 0
+  }
+]

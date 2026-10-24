@@ -80,3 +80,11 @@ and source-linked conclusions. Preserve execution and evidence boundaries.
 Do not copy domain terminology, sample data, unsupported risk/compliance scores or
 fake service behavior merely because the visual example contains it. Use the
 [handoff prompt](references/handoff.md) when delegating to another agent.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.

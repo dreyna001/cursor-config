@@ -47,3 +47,11 @@ it for the first time.
 Inspect the rendered view and relevant states when available. Check
 whether users can tell what they are seeing, who produced it, what
 they should do, and what happens next. Report any inspection limits.
+
+For shared UI work, complete the central baseline's **Interaction and accessibility**
+checks and its role/state coverage record. Exercise keyboard focus and bypass,
+modal/popup semantics, disabled/readonly/validation, loading/error announcements,
+loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
+content in the affected apps. Preserve app-specific guards and layouts. Record
+actual browser/route/state evidence and any unverified areas; source parity alone
+is not interaction or accessibility sign-off.

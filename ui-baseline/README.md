@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-> **Permanent local edition · v1.7.0 · 2026-10-23**
+> **Permanent local edition · v1.8.0 · 2026-10-24**
 >
 > Start here on Windows: `C:\Users\Daniel.Reyna\.agents\ui-baseline\README.md`.
 > WSL opens the same files through `/home/dreyna/.agents/ui-baseline/README.md`.
@@ -17,7 +17,7 @@
 > newer approved release, compare its changes before refreshing this folder; never
 > downgrade newer login, account, sidebar, typography, color, layout or workflow work.
 
-Version: **1.7.0** (2026-10-23). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.8.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -31,6 +31,8 @@ source of shared rules.
   each app's intended behavior, layouts, features and newer approved work.
 - [Visual adaptation](#visual-adaptation): how to use the common design language
   without importing prototype behavior or replacing an established stack.
+- [Interaction and accessibility](#interaction-and-accessibility): keyboard,
+  dialogs, feedback states, control contrast and scrolling checks.
 - [Motion and reduced motion](#motion-and-reduced-motion): timings, feedback roles, popup scope and validation.
 - [Navigation](#navigation), [sidebar states](#sidebar-navigation-states),
   [typography](#typography), [account presentation](#shared-sidebar-account-and-text-roles)
@@ -278,6 +280,66 @@ motion and reduced motion. Record each as verified, an intentional exception,
 or unverified. Do not turn a source-hash match or a static screenshot check into
 a claim that every interaction and motion state was exercised.
 
+## Interaction and accessibility
+
+These are shared outcomes for equivalent roles, not a requirement to use one
+component library or change app layouts. Preserve native controls, authentication,
+domain-specific permissions and busy/draft/review guards. The six gaps reproduced
+in the October 24 audit are regression cases for this contract.
+
+- **Keyboard focus and bypass:** every action must be keyboard reachable, with
+  visible immediate focus and a logical order. Keep focus visible when containers
+  scroll. Provide a keyboard-visible **Skip to workspace** link before repeated
+  navigation, targeting the active main region with programmatic focus support.
+- **Modal dialogs:** give the dialog a name and an appropriate description; move
+  focus inside, contain Tab/Shift+Tab, make background content inert, and restore
+  focus to the connected opener on close. Preserve existing Escape/outside-click
+  and pending-operation guards. Native `showModal()` is suitable where already
+  compatible with the app; Radix dialogs remain suitable. Account panels and
+  non-modal help popups keep their separate existing behavior, never a modal trap.
+- **Loading and error feedback:** expose a concise live status for waiting states
+  and `aria-busy` on the affected region. Keep the status outside a busy subtree
+  so busy suppression cannot swallow it. Announce actionable errors without
+  forcing focus unless the flow needs it. Preserve retries, timers, data and
+  existing request guards; do not announce every token or polling refresh.
+- **Loading-to-content consistency:** skeletons must use the current loaded view's
+  column order and exact labels for equivalent meanings. Preserve geometry and
+  status meaning; avoid exposing placeholder rows as real data to assistive tech.
+- **Disabled, readonly and validation:** use accurate native/ARIA state, keep
+  duplicate-action protection and approval guards, and make reasons for unavailable
+  actions discoverable. Keep associated labels/help/errors and existing native
+  validation; verify invalid-field focus and error recovery. Component-specific
+  dimming, sizes and readonly behavior remain app-owned.
+- **Essential control boundaries:** use `--workspace-color-control-border`
+  (**#6E7B8D**) for enabled neutral textual fields, selects and marked composite
+  field boundaries. Verify at least **3:1** against adjacent surfaces where the
+  boundary identifies the control. Keep decorative dividers at #30363D. Preserve
+  semantic invalid/warning states, which require their own contrast check, and
+  disabled component dimming. Native controls keep their geometry. Forced-color
+  modes use system colors rather than suppressing the user's contrast settings.
+- **Page-state headings:** a standalone loading/error/empty screen must retain
+  its correct page hierarchy. Error/empty titles use the existing 28px page-title
+  role, including semantic h2 via `workspace-page-title`; card/dialog titles stay
+  at their existing section role.
+- **Scrolling and enlarged content:** check desktop widths **1280, 1440 and
+  1920px**, enlarged text to **200%**, short desktop heights, and the affected
+  panes/popups. Verify keyboard access, visible focus, reachable footer/actions,
+  contained intended table/editor overflow, and no accidental page clipping.
+  Record full zoom/reflow and assistive-technology qualification separately when
+  not exercised; a root-font test does not prove browser zoom or screen-reader use.
+
+For every affected app/frontend, record the route and actual state checked,
+browser/viewport, expected outcome and result for the above roles, plus motion,
+color and typography. Run focused regressions in Chromium, Firefox and WebKit
+when available. Distinguish **verified**, **intentional exception** and
+**unverified**; do not claim complete WCAG 2.2 AA conformance from this finite suite.
+Customer requirements and app-specific exceptions remain explicit.
+
+References: [WAI modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/dialog-modal/),
+[status messages](https://www.w3.org/WAI/WCAG22/Understanding/status-messages.html),
+[non-text contrast](https://www.w3.org/WAI/WCAG22/Understanding/non-text-contrast.html),
+and [bypass blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html).
+
 ## Scope and maintenance
 
 The versioned `src/suite-workspace.css` is identical across all six frontend
@@ -450,3 +512,12 @@ page-title mapping issue; this release does not silently redefine that role.
 ATO’s creation page now uses its existing 28px page-title role instead of the
 18px card-title role. This corrects the mapping only; no shared color, font,
 spacing, layout, form behavior or other app presentation is changed.
+
+## Interaction parity correction — v1.8.0
+
+The October 24 broader audit reproduced IR dialog focus escape, incomplete
+loading/error announcements, stale IR skeleton column labels/order, insufficient
+neutral field-boundary contrast, missing IR bypass links and ATO standalone
+page-state title mappings. Version 1.8 corrects those six gaps and adds the
+interaction/accessibility check contract above. Existing layouts, authentication,
+workflow guards, decorative palette and motion standards remain in place.
