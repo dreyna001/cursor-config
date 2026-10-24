@@ -1,0 +1,12 @@
+{
+  "version": "1.14.0",
+  "shared": "docs/suite-foundation-contract.json",
+  "preserved": [
+    "Route allowlist, event-driven navigation and citation history state around shared BrowserRouter",
+    "HttpOnly cookies, CSRF discovery/rotation and background-request idle-session marker",
+    "Reads use a 30-second total deadline; mutations allow 220 seconds, downloads 120 seconds; no automatic retry of accepted mutations",
+    "Hunt intake rules, schema validation, explicit approval and conflict/reconciliation handling",
+    "Per-user tab draft persistence and cleanup; no cross-user global cache"
+  ],
+  "deadlinePolicy": "30 seconds by default including body; explicit 220-second chat/long mutation and 120-second transfer budgets; only ATO generation stream owns its idle deadline."
+}

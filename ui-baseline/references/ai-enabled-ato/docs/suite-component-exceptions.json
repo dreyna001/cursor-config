@@ -1,0 +1,202 @@
+{
+  "version": "1.12.0",
+  "policy": "Reviewed existing specialized controls only. New generic actions/fields must use shared primitives. Inventory changes require review, reason and browser evidence; never silently rebaseline.",
+  "nativeControls": [
+    {
+      "path": "portal/src/components/ssp-workspace/AgencyTemplatePanel.tsx",
+      "tag": "input",
+      "sha256": "82621715caca7c57fc81d9b7f66638c2f92f17801306fb15c154c4887265a70b",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/CommonProvidersEditor.tsx",
+      "tag": "button",
+      "sha256": "111c0b412792db78dc4b5168626e426122b5edec31083f90a5e57c21b4379a7f",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/CommonProvidersEditor.tsx",
+      "tag": "input",
+      "sha256": "08f10860e10eb25623e600d4b12e1706923d491e0d9f1d2d26c2fae6ac81dc6c",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/CommonProvidersEditor.tsx",
+      "tag": "input",
+      "sha256": "c5a8c273fa005b4e9bc8e919f81efcb9a1eb8d12c9a3c90fc615aa1266b8374e",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/ControlWorkbench.tsx",
+      "tag": "button",
+      "sha256": "0289ad363ddd23cdb99a0b6920ca5f78d1c55fc01ea98f441e441cbb77fc75ba",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/ControlWorkbench.tsx",
+      "tag": "button",
+      "sha256": "296bdd390eb58ede765c4ae3086b431a0116d0dd3e8856d3ab29338ff9450fc8",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/ControlWorkbench.tsx",
+      "tag": "button",
+      "sha256": "8b7a73c09a0ff4ad535dac1ef4eea79da694c8030458975fb1ddda72d1a922e0",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/ControlWorkbench.tsx",
+      "tag": "input",
+      "sha256": "07dd46fd4d6144fb63ed4c2c46c92a593fb3a7b563e0dec0bcae71af04a3e844",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/ControlWorkbench.tsx",
+      "tag": "input",
+      "sha256": "90b97cdc81516fb8a1796fe5a2993c4c74115e2e5b738613f0ba4f30be2bd4cc",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/ControlWorkbench.tsx",
+      "tag": "input",
+      "sha256": "ccfa13d8f7a0384f432d9c30cf99c46e02f80805f41b2490351765abfab8def6",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/EvidencePanel.tsx",
+      "tag": "input",
+      "sha256": "7ccd067691ed80a99fe5e41a60e2b1cec487caf9a60e25350f5d65385eff25d2",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/EvidencePanel.tsx",
+      "tag": "input",
+      "sha256": "e6162ff92e2ee5b8372b0cfa00b1362af347afe639db4132b0b5f39558cc8e08",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/EvidenceUpdateWorkflow.tsx",
+      "tag": "button",
+      "sha256": "0cbe2606ef328f37b194c552f71cd8bce0f29fcb86f2e49870e6de047797df93",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/EvidenceUpdateWorkflow.tsx",
+      "tag": "input",
+      "sha256": "08bc981779e1939a3868e084dc04ca759b991ec9c5f44973dc9e117f17ad5825",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/EvidenceUpdateWorkflow.tsx",
+      "tag": "input",
+      "sha256": "79faa74166baeabfe369fe2b8158f0357ddc3c90b2487309e26ff1ffd4b5485e",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/EvidenceUpdateWorkflow.tsx",
+      "tag": "input",
+      "sha256": "dcdcfe2a48a39d067e3f113583d8e45944491c167ad656cfedfa0b9423415944",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/OrganizationDefinedParametersEditor.tsx",
+      "tag": "input",
+      "sha256": "daeaa385e1d31c75fe9e6105139331288b72f7ce4a6998fec4aa6c04b37b2a0c",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/SourceContextInspector.tsx",
+      "tag": "button",
+      "sha256": "0d96573f8d967fb79d6d5da19148d413d628cf5321146e7f2553abb1547a5f9f",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/SspAssistantEditFlow.tsx",
+      "tag": "input",
+      "sha256": "1092122224c042176a5ae032b5b2b11cfb2baf131cc5dde302a30b26bbb72995",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/SspDocumentPanel.tsx",
+      "tag": "button",
+      "sha256": "2b0e8114966d63b09e78b2012198aa045729322f3ff7f75ff665d7efba31600d",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/components/ssp-workspace/WorkspacePresentation.tsx",
+      "tag": "button",
+      "sha256": "f8e573945f4ae6516c2b5d5401871196b2ffdd6bf62826f4038f9d22edc1a6c5",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/pages/AgencyDocumentSettingsPage.tsx",
+      "tag": "button",
+      "sha256": "9b8cdbe8d06f6769cfd59fd6b8f876825f8c72fa849a30f98ca4a3881be4ff1d",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/pages/AgencyDocumentSettingsPage.tsx",
+      "tag": "button",
+      "sha256": "bc30102584c995b3ad5b8e9baf8497e322d2c287d298bc2756824f583348b7b9",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/pages/AgencyDocumentSettingsPage.tsx",
+      "tag": "input",
+      "sha256": "b2d455f62753ca6ebbbab0de461822488a6d070050eb964250cf9f4905138e19",
+      "count": 1,
+      "reason": "Native checkbox/radio/file interaction; not an ordinary text-field primitive."
+    },
+    {
+      "path": "portal/src/pages/SspWorkspacePage.tsx",
+      "tag": "button",
+      "sha256": "1db280f08a05cc1bdb441689d02a4e3a44b4541ea759f2db8c69c20d129a459f",
+      "count": 2,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/pages/SspWorkspacePage.tsx",
+      "tag": "button",
+      "sha256": "c9e1c1f91791a2d0398e9c879ef64ec07fd06a0d9f269f8daf467bad28e86293",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/pages/SspWorkspacePage.tsx",
+      "tag": "button",
+      "sha256": "db2a9d27c1a77f18a20a1269c9b44828c3f0acf343b12fcc71a520f951150796",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    },
+    {
+      "path": "portal/src/pages/SspWorkspacePage.tsx",
+      "tag": "button",
+      "sha256": "e4cc0c0cef05572905cd47ecf3879f31847512949732b75e1c9d4307af298761",
+      "count": 1,
+      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+    }
+  ]
+}

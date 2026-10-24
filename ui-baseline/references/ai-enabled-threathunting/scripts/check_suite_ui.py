@@ -2,6 +2,10 @@
 from __future__ import annotations
 
 import argparse
+import json
+from check_frontend_stack import check_root
+from check_suite_components import check_root as check_components
+from check_suite_foundation import check_root as check_foundation
 import hashlib
 import html
 from pathlib import Path
@@ -21,6 +25,9 @@ def read_release(root: Path) -> tuple[str, str, str]:
     version = re.search(r"Version: \*\*(\d+\.\d+\.\d+)\*\*", doc)
     if not version or AUTHORITY not in doc or "## Start here: the UI/UX index" not in doc:
         raise ValueError(f"{root}: missing central authority/index/version")
+    check_root(root)
+    check_components(root)
+    check_foundation(root)
     paths = frontends(root)
     if not paths:
         raise ValueError(f"{root}: no suite frontends found")
@@ -88,6 +95,12 @@ def main() -> int:
     args = parser.parse_args()
     try:
         releases = [read_release(root) for root in [args.root, *args.peer]]
+        if len({(root / "docs/suite-frontend-stack.json").read_text() for root in [args.root, *args.peer]}) != 1:
+            raise ValueError("Suite frontend stack contracts differ across repositories")
+        if len({(root / "docs/suite-component-contract.json").read_bytes() for root in [args.root, *args.peer]}) != 1:
+            raise ValueError("Suite shared component manifests differ across repositories")
+        if len({(root / "docs/suite-foundation-contract.json").read_bytes() for root in [args.root, *args.peer]}) != 1:
+            raise ValueError("Suite shared foundation manifests differ across repositories")
         if len({release[:2] for release in releases}) != 1:
             raise ValueError("Suite release documents/stylesheets differ across repositories")
         if args.preserve_ref:

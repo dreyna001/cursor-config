@@ -73,3 +73,10 @@ Verify every dialog's accessible name, all constrained desktop confirmation acti
 popup viewport fit, and relevant delayed/failed-request, retry, duplicate-submit and
 unsaved-navigation paths. Preserve each app's guards and desktop/mobile scope;
 record actual browser/role/state evidence and synthetic-versus-live test boundaries.
+
+For shared frontend architecture changes, follow the baseline's **Shared frontend
+foundations and independent deployment** and **Foundation decision review**.
+Run `scripts/check_suite_foundation.py` as well as the UI/workflow checks.
+Treat the current implementation as a reviewed default, not proof of optimality;
+record evidence, alternatives and intentional domain adapters. Each app must
+remain buildable and deployable without another application's checkout.

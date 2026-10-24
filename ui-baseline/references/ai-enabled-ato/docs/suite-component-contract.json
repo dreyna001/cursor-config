@@ -1,0 +1,30 @@
+{
+  "version": "1.14.0",
+  "canonicalRepository": "ai-enabled-threathunting",
+  "canonicalFrontend": "frontend",
+  "scope": "Shared primitives and their default visual/interaction contract. Product routes, auth, requests, drafts, domain layouts and specialized native controls retain app behavior.",
+  "files": {
+    "e2e/fixtures/suite-component-styles.json": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+    "e2e/fixtures/suite-components.html": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+    "e2e/fixtures/suite-components.tsx": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+    "e2e/suite-components.spec.ts": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+    "playwright.components.config.ts": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+    "src/components/ui/badge.tsx": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+    "src/components/ui/button.tsx": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+    "src/components/ui/card.tsx": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+    "src/components/ui/confirm-dialog.tsx": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+    "src/components/ui/dialog.tsx": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+    "src/components/ui/input.tsx": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+    "src/components/ui/label.tsx": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+    "src/components/ui/native-select.tsx": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+    "src/components/ui/select.tsx": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+    "src/components/ui/separator.tsx": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+    "src/components/ui/skeleton.tsx": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+    "src/components/ui/suite-components.css": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+    "src/components/ui/tabs.tsx": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+    "src/components/ui/textarea.tsx": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+    "src/components/ui/workspace-account.tsx": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+    "src/lib/utils.ts": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+  },
+  "verification": "Run scripts/check_suite_components.py with both --peer roots, then e2e/suite-components.spec.ts in all six app CSS contexts and existing app workflow suites. Never update hashes to bless one-app drift."
+}

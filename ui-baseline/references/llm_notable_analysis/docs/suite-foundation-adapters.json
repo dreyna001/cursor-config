@@ -1,0 +1,12 @@
+{
+  "version": "1.14.0",
+  "shared": "docs/suite-foundation-contract.json",
+  "preserved": [
+    "Four independently built deployment variants; no cross-variant runtime imports",
+    "Azure/AWS MSAL providers and on-prem session authentication stay distinct",
+    "Signed blob/S3 transfers have no portal auth headers; Azure retains native upload progress transport",
+    "Existing 220-second chat deadline, polling visibility/cancellation and response schemas",
+    "Case queues use shared memory-only state scope reset on auth-provider unmount; app-specific attachment states remain"
+  ],
+  "deadlinePolicy": "30 seconds by default including body; explicit 220-second chat/long mutation and 120-second transfer budgets; only ATO generation stream owns its idle deadline."
+}

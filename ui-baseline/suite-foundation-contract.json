@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "version": "1.14.0",
+  "canonical": "ai-enabled-threathunting/frontend",
+  "deployment": "Each frontend contains its own source copies; no cross-repository build or runtime imports.",
+  "dependencies": {
+    "react": "19.3.1",
+    "react-router": "8.5.0",
+    "zod": "3.25.76"
+  },
+  "files": {
+    "src/lib/suite/http.ts": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+    "src/lib/suite/validation.ts": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+    "src/lib/suite/state.tsx": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+    "src/lib/suite/forms.tsx": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+    "src/lib/suite/routing.tsx": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+    "src/lib/suite/foundation.test.ts": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+    "e2e/fixtures/suite-foundation.html": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+    "e2e/fixtures/suite-foundation.tsx": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+    "e2e/suite-foundation.spec.ts": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+    "playwright.foundation.config.ts": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+    "src/lib/suite/query.ts": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+    "src/lib/suite/hardening.test.ts": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+    "src/lib/suite/deferred-boundary.tsx": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+  },
+  "reviewedOptionalPackages": []
+}

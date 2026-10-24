@@ -1,18 +1,18 @@
 {
-  "version": "1.10.1",
+  "version": "1.14.0",
   "prepared": "2026-10-24",
   "source_commits": {
-    "ai-enabled-threathunting": "2fd0294f2cbae795b9f8473b0dca3207d7eefb8c",
-    "ai-enabled-ato": "dde0c082f67545bd111c25beff661a08c84a99f8",
-    "llm_notable_analysis": "47d430b23ad7e69b17a0fe9fb76b2098bef2609d"
+    "ai-enabled-threathunting": "e126ab8b4b9c0979b20ce1b658893468a198a889",
+    "ai-enabled-ato": "7533792bcd5afb1b012fe44a6fc64f7657492175",
+    "llm_notable_analysis": "162b7b0fcae0833bc87a78402e8b2ae41bd74d58"
   },
   "files": [
     {
       "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c",
-      "local_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c"
+      "source_sha256": "4958a8112770907d69e41203921979e85a19c6bad5ecc60576de278f9bff4299",
+      "local_sha256": "4958a8112770907d69e41203921979e85a19c6bad5ecc60576de278f9bff4299"
     },
     {
       "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
@@ -46,36 +46,36 @@
       "path": "references/ai-enabled-threathunting/AGENTS.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "AGENTS.md",
-      "source_sha256": "dc54ac9061b6ffae16e45d080b306ea90f59c22d45f4c1c702b0a96be5e1552a",
-      "local_sha256": "dc54ac9061b6ffae16e45d080b306ea90f59c22d45f4c1c702b0a96be5e1552a"
+      "source_sha256": "10755834a6b686dd2690e8c3d9b2a75ea80641de1bdbdfc5c269a0d08865f25b",
+      "local_sha256": "10755834a6b686dd2690e8c3d9b2a75ea80641de1bdbdfc5c269a0d08865f25b"
     },
     {
       "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
       "repository": "ai-enabled-threathunting",
       "source_path": "frontend/src/suite-workspace.css",
-      "source_sha256": "aac908d589f9c7377d3ef08f11ecb973a634173afda2a1dbb366f75752e4a8ba",
-      "local_sha256": "aac908d589f9c7377d3ef08f11ecb973a634173afda2a1dbb366f75752e4a8ba"
+      "source_sha256": "37107e599a8db2aea8787113086671089bad330e2a9f73e4254be03b35f1cc2e",
+      "local_sha256": "37107e599a8db2aea8787113086671089bad330e2a9f73e4254be03b35f1cc2e"
     },
     {
       "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
       "repository": "ai-enabled-threathunting",
       "source_path": "scripts/check_suite_ui.py",
-      "source_sha256": "f11c242259f8d0a242fd2e9560b67e3fa255f2a6c9271e92472ed2e115367da9",
-      "local_sha256": "f11c242259f8d0a242fd2e9560b67e3fa255f2a6c9271e92472ed2e115367da9"
+      "source_sha256": "d6e13791122fd8c28c96f62b1e23923a3e1fdc17a110469264a538205da84b70",
+      "local_sha256": "d6e13791122fd8c28c96f62b1e23923a3e1fdc17a110469264a538205da84b70"
     },
     {
       "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
       "repository": "ai-enabled-threathunting",
       "source_path": "design-previews/20261018/unified/visual-reference.html",
-      "source_sha256": "78bfa7dc8312ccf7585ce62a0e9b72c08031a09d2ab6f954c396db0ad85eb846",
-      "local_sha256": "78bfa7dc8312ccf7585ce62a0e9b72c08031a09d2ab6f954c396db0ad85eb846"
+      "source_sha256": "0bcfa80401534be8f06c4c42ac1416aba3e5ed58133edf6b8ccef9d882d709e8",
+      "local_sha256": "0bcfa80401534be8f06c4c42ac1416aba3e5ed58133edf6b8ccef9d882d709e8"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
       "repository": "ai-enabled-ato",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c",
-      "local_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c"
+      "source_sha256": "4958a8112770907d69e41203921979e85a19c6bad5ecc60576de278f9bff4299",
+      "local_sha256": "4958a8112770907d69e41203921979e85a19c6bad5ecc60576de278f9bff4299"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
@@ -95,15 +95,15 @@
       "path": "references/ai-enabled-ato/AGENTS.md",
       "repository": "ai-enabled-ato",
       "source_path": "AGENTS.md",
-      "source_sha256": "4528491c9b7eec54edc8af4d83c723ac44e02a46494f5526dcfe84c557f13890",
-      "local_sha256": "4528491c9b7eec54edc8af4d83c723ac44e02a46494f5526dcfe84c557f13890"
+      "source_sha256": "42a8c5532e31c4f323b84125f0b94a0b4c1949782c4fb7417a1a8297c5f84e92",
+      "local_sha256": "42a8c5532e31c4f323b84125f0b94a0b4c1949782c4fb7417a1a8297c5f84e92"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
       "repository": "llm_notable_analysis",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c",
-      "local_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c"
+      "source_sha256": "4958a8112770907d69e41203921979e85a19c6bad5ecc60576de278f9bff4299",
+      "local_sha256": "4958a8112770907d69e41203921979e85a19c6bad5ecc60576de278f9bff4299"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
@@ -116,22 +116,22 @@
       "path": "references/llm_notable_analysis/AGENTS.md",
       "repository": "llm_notable_analysis",
       "source_path": "AGENTS.md",
-      "source_sha256": "89efed9ea2ab249d57c5a9320b03ea5a2dc37c44d40fb81a2014ed23ba46df14",
-      "local_sha256": "89efed9ea2ab249d57c5a9320b03ea5a2dc37c44d40fb81a2014ed23ba46df14"
+      "source_sha256": "0c7a5f7a3f6db73b98a6af05c0d9fdfba228f40a7e5811d5e5145e152239f78d",
+      "local_sha256": "0c7a5f7a3f6db73b98a6af05c0d9fdfba228f40a7e5811d5e5145e152239f78d"
     },
     {
       "path": "README.md",
-      "local_sha256": "b4030fbc2ef2dd630f9c217e14ffa3f1800e75e12160b74aff6bda6ccac1c889",
+      "local_sha256": "0423f6a71f01f0d560357ef7fbcc6b1d219caa7f954dc642f8c20953baa62b6d",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "ea74a23dfe8b5864bb2b9e00ebfccb865c2f16ce61c72a895559a7f74734a4cb",
+      "local_sha256": "02394c783af8982b21dd4f16b19c08246992826de1ca201aab196f5761ae9d6c",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "7b1569a3d6ce3d7469779da329006a4ae89277a0ee1751e95deaec345a87defc",
+      "local_sha256": "dbea919f3aff4f7298221a506307ad361ad4f938d79aa3218d3943125c5c2d58",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -585,6 +585,2054 @@
     {
       "path": "pattern-catalog.md",
       "local_sha256": "e53d1f6a6d9f73292379ad1eeca5ea127349dcb88e24ddc4cd27f65b052a4296"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-frontend-stack.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-frontend-stack.json",
+      "source_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1",
+      "local_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/scripts/check_frontend_stack.py",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "scripts/check_frontend_stack.py",
+      "source_sha256": "056325300be5ce040553caa9272765233a19521cca6abe7e41c7c653536c80c6",
+      "local_sha256": "056325300be5ce040553caa9272765233a19521cca6abe7e41c7c653536c80c6"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/package.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/package.json",
+      "source_sha256": "b80fed96fa652fa11a380c5ec2bc4c46c4755e0e8548b352c2330017258ebc92",
+      "local_sha256": "b80fed96fa652fa11a380c5ec2bc4c46c4755e0e8548b352c2330017258ebc92"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/.nvmrc",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/.nvmrc",
+      "source_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "local_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-frontend-stack.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-frontend-stack.json",
+      "source_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1",
+      "local_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1"
+    },
+    {
+      "path": "references/ai-enabled-ato/scripts/check_suite_ui.py",
+      "repository": "ai-enabled-ato",
+      "source_path": "scripts/check_suite_ui.py",
+      "source_sha256": "d6e13791122fd8c28c96f62b1e23923a3e1fdc17a110469264a538205da84b70",
+      "local_sha256": "d6e13791122fd8c28c96f62b1e23923a3e1fdc17a110469264a538205da84b70"
+    },
+    {
+      "path": "references/ai-enabled-ato/scripts/check_frontend_stack.py",
+      "repository": "ai-enabled-ato",
+      "source_path": "scripts/check_frontend_stack.py",
+      "source_sha256": "056325300be5ce040553caa9272765233a19521cca6abe7e41c7c653536c80c6",
+      "local_sha256": "056325300be5ce040553caa9272765233a19521cca6abe7e41c7c653536c80c6"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/package.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/package.json",
+      "source_sha256": "4e87166c161678a657b60467add2bbd5f1936b4ac809ba022fa0f9499cbf9ff5",
+      "local_sha256": "4e87166c161678a657b60467add2bbd5f1936b4ac809ba022fa0f9499cbf9ff5"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/.nvmrc",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/.nvmrc",
+      "source_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "local_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/mockups/ssp-ui-explorations/10-unified-workspace-reference.html",
+      "source_sha256": "0bcfa80401534be8f06c4c42ac1416aba3e5ed58133edf6b8ccef9d882d709e8",
+      "local_sha256": "0bcfa80401534be8f06c4c42ac1416aba3e5ed58133edf6b8ccef9d882d709e8"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-frontend-stack.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-frontend-stack.json",
+      "source_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1",
+      "local_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1"
+    },
+    {
+      "path": "references/llm_notable_analysis/scripts/check_suite_ui.py",
+      "repository": "llm_notable_analysis",
+      "source_path": "scripts/check_suite_ui.py",
+      "source_sha256": "d6e13791122fd8c28c96f62b1e23923a3e1fdc17a110469264a538205da84b70",
+      "local_sha256": "d6e13791122fd8c28c96f62b1e23923a3e1fdc17a110469264a538205da84b70"
+    },
+    {
+      "path": "references/llm_notable_analysis/scripts/check_frontend_stack.py",
+      "repository": "llm_notable_analysis",
+      "source_path": "scripts/check_frontend_stack.py",
+      "source_sha256": "056325300be5ce040553caa9272765233a19521cca6abe7e41c7c653536c80c6",
+      "local_sha256": "056325300be5ce040553caa9272765233a19521cca6abe7e41c7c653536c80c6"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/package.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/package.json",
+      "source_sha256": "e339f742b8c0d6fabd3c5a9cc893b6f4337c4514e3e8278ce6f02b142cd69d9c",
+      "local_sha256": "e339f742b8c0d6fabd3c5a9cc893b6f4337c4514e3e8278ce6f02b142cd69d9c"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/.nvmrc",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/.nvmrc",
+      "source_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "local_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/package.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/package.json",
+      "source_sha256": "2b90a4eb454cc559c52438681da20df02bbba3d935263ac2f72da7bcae794845",
+      "local_sha256": "2b90a4eb454cc559c52438681da20df02bbba3d935263ac2f72da7bcae794845"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/.nvmrc",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/.nvmrc",
+      "source_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "local_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/package.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/package.json",
+      "source_sha256": "730ec7e04dccc0cbbc36acd854fb1b0320c7ab1e5acc38d2a08d8dd23f1e5198",
+      "local_sha256": "730ec7e04dccc0cbbc36acd854fb1b0320c7ab1e5acc38d2a08d8dd23f1e5198"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/.nvmrc",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/.nvmrc",
+      "source_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "local_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/package.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/package.json",
+      "source_sha256": "2f025022a9b2ab19477188661a8911d4283ada19d162bd748db648aa5f3cd6cc",
+      "local_sha256": "2f025022a9b2ab19477188661a8911d4283ada19d162bd748db648aa5f3cd6cc"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/.nvmrc",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/.nvmrc",
+      "source_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33",
+      "local_sha256": "d9f318747a126ce2247661af67852b185def7789492eabfad7bba322be087c33"
+    },
+    {
+      "path": "suite-frontend-stack.json",
+      "local_sha256": "87bce2e98165a97b0a5ddf041277389833880add6038e8da3b945baad710f2a1"
+    },
+    {
+      "path": "evidence/verification-v1.11.0.md",
+      "local_sha256": "9ab4c83011131bb881ec57aff917015d546ae7ae4a399299a19d75e9c4856113"
+    },
+    {
+      "path": "evidence/frontend-stack-1.11.0.json",
+      "local_sha256": "099b6e4e7647785d7ba03808a6bfa0115a36820e0d70ea2326379c06603c1b31"
+    },
+    {
+      "path": "evidence/frontend-publisher-metadata-20261024.json",
+      "local_sha256": "42045380f52a86b1a7c36588843fb9a8022fcb89c8f5762e7c6c4fee5db6964f"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-component-contract.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-component-contract.json",
+      "source_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25",
+      "local_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-component-exceptions.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-component-exceptions.json",
+      "source_sha256": "4fee38f8142a351ed901d475b0d221defa36408e41c3809e2dd73acb2a3ca59f",
+      "local_sha256": "4fee38f8142a351ed901d475b0d221defa36408e41c3809e2dd73acb2a3ca59f"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/scripts/check_suite_components.py",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "scripts/check_suite_components.py",
+      "source_sha256": "0e63f9ed288282c44227de7297b4eda7d093f13838e1f3eaee2e02cc00e86491",
+      "local_sha256": "0e63f9ed288282c44227de7297b4eda7d093f13838e1f3eaee2e02cc00e86491"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/fixtures/suite-components.html",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/fixtures/suite-components.html",
+      "source_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+      "local_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/fixtures/suite-components.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/fixtures/suite-components.tsx",
+      "source_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+      "local_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/suite-components.spec.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/suite-components.spec.ts",
+      "source_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+      "local_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/badge.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/badge.tsx",
+      "source_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+      "local_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/button.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/button.tsx",
+      "source_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+      "local_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/card.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/card.tsx",
+      "source_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+      "local_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/confirm-dialog.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/confirm-dialog.tsx",
+      "source_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+      "local_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/dialog.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/dialog.tsx",
+      "source_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+      "local_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/input.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/input.tsx",
+      "source_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+      "local_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/label.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/label.tsx",
+      "source_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+      "local_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/native-select.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/native-select.tsx",
+      "source_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+      "local_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/select.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/select.tsx",
+      "source_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+      "local_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/separator.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/separator.tsx",
+      "source_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+      "local_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/skeleton.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/skeleton.tsx",
+      "source_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+      "local_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/suite-components.css",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/suite-components.css",
+      "source_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+      "local_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/tabs.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/tabs.tsx",
+      "source_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+      "local_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/textarea.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/textarea.tsx",
+      "source_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+      "local_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/components/ui/workspace-account.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/components/ui/workspace-account.tsx",
+      "source_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+      "local_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/utils.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/utils.ts",
+      "source_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "local_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/build-visual-reference.py",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "design-previews/20261018/unified/build-visual-reference.py",
+      "source_sha256": "a2103e4a0a9be84f8d68df0ba7728e4d4c52e1d671df766bc96af51699ee21eb",
+      "local_sha256": "a2103e4a0a9be84f8d68df0ba7728e4d4c52e1d671df766bc96af51699ee21eb"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-component-contract.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-component-contract.json",
+      "source_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25",
+      "local_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-component-exceptions.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-component-exceptions.json",
+      "source_sha256": "ef632cf12a5abf2fae65eea1b65784122367c59a1ce08cec8ef7809752cc7d17",
+      "local_sha256": "ef632cf12a5abf2fae65eea1b65784122367c59a1ce08cec8ef7809752cc7d17"
+    },
+    {
+      "path": "references/ai-enabled-ato/scripts/check_suite_components.py",
+      "repository": "ai-enabled-ato",
+      "source_path": "scripts/check_suite_components.py",
+      "source_sha256": "0e63f9ed288282c44227de7297b4eda7d093f13838e1f3eaee2e02cc00e86491",
+      "local_sha256": "0e63f9ed288282c44227de7297b4eda7d093f13838e1f3eaee2e02cc00e86491"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-component-contract.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-component-contract.json",
+      "source_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25",
+      "local_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-component-exceptions.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-component-exceptions.json",
+      "source_sha256": "8adfb547833f7d8042ac33fb35bdd222efd41c976d20d1568d1683b2ecc69d77",
+      "local_sha256": "8adfb547833f7d8042ac33fb35bdd222efd41c976d20d1568d1683b2ecc69d77"
+    },
+    {
+      "path": "references/llm_notable_analysis/scripts/check_suite_components.py",
+      "repository": "llm_notable_analysis",
+      "source_path": "scripts/check_suite_components.py",
+      "source_sha256": "0e63f9ed288282c44227de7297b4eda7d093f13838e1f3eaee2e02cc00e86491",
+      "local_sha256": "0e63f9ed288282c44227de7297b4eda7d093f13838e1f3eaee2e02cc00e86491"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/fixtures/suite-components-context.css",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/fixtures/suite-components-context.css",
+      "source_sha256": "0a35595dcd583643bb9f2c328d2a1cc9cb068d492f38244cde1bf31541165c42",
+      "local_sha256": "0a35595dcd583643bb9f2c328d2a1cc9cb068d492f38244cde1bf31541165c42"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/suite-components.html",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/suite-components.html",
+      "source_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+      "local_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/suite-components.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/suite-components.tsx",
+      "source_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+      "local_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/suite-components.spec.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/suite-components.spec.ts",
+      "source_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+      "local_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/badge.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/badge.tsx",
+      "source_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+      "local_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/button.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/button.tsx",
+      "source_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+      "local_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/card.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/card.tsx",
+      "source_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+      "local_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/confirm-dialog.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/confirm-dialog.tsx",
+      "source_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+      "local_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/dialog.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/dialog.tsx",
+      "source_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+      "local_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/input.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/input.tsx",
+      "source_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+      "local_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/label.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/label.tsx",
+      "source_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+      "local_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/native-select.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/native-select.tsx",
+      "source_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+      "local_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/select.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/select.tsx",
+      "source_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+      "local_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/separator.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/separator.tsx",
+      "source_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+      "local_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/skeleton.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/skeleton.tsx",
+      "source_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+      "local_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/suite-components.css",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/suite-components.css",
+      "source_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+      "local_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/tabs.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/tabs.tsx",
+      "source_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+      "local_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/textarea.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/textarea.tsx",
+      "source_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+      "local_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/components/ui/workspace-account.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/components/ui/workspace-account.tsx",
+      "source_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+      "local_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/utils.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/utils.ts",
+      "source_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "local_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/suite-components-context.css",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/suite-components-context.css",
+      "source_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431",
+      "local_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "source_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+      "local_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "source_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+      "local_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "source_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+      "local_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "source_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+      "local_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/button.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/button.tsx",
+      "source_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+      "local_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/card.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/card.tsx",
+      "source_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+      "local_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "source_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+      "local_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "source_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+      "local_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/input.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/input.tsx",
+      "source_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+      "local_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/label.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/label.tsx",
+      "source_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+      "local_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "source_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+      "local_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/select.tsx",
+      "source_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+      "local_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "source_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+      "local_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "source_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+      "local_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "source_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+      "local_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "source_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+      "local_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "source_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+      "local_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "source_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+      "local_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/utils.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/utils.ts",
+      "source_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "local_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "source_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431",
+      "local_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "source_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+      "local_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "source_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+      "local_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "source_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+      "local_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "source_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+      "local_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/button.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/button.tsx",
+      "source_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+      "local_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/card.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/card.tsx",
+      "source_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+      "local_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "source_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+      "local_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "source_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+      "local_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/input.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/input.tsx",
+      "source_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+      "local_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/label.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/label.tsx",
+      "source_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+      "local_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "source_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+      "local_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/select.tsx",
+      "source_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+      "local_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "source_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+      "local_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "source_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+      "local_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "source_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+      "local_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "source_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+      "local_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "source_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+      "local_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "source_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+      "local_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/utils.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/utils.ts",
+      "source_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "local_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "source_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431",
+      "local_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "source_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+      "local_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "source_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+      "local_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "source_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+      "local_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "source_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+      "local_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/button.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/button.tsx",
+      "source_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+      "local_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/card.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/card.tsx",
+      "source_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+      "local_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "source_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+      "local_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "source_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+      "local_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/input.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/input.tsx",
+      "source_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+      "local_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/label.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/label.tsx",
+      "source_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+      "local_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "source_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+      "local_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/select.tsx",
+      "source_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+      "local_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "source_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+      "local_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "source_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+      "local_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "source_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+      "local_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "source_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+      "local_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "source_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+      "local_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "source_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+      "local_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/utils.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/utils.ts",
+      "source_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "local_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "source_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431",
+      "local_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-components.html",
+      "source_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2",
+      "local_sha256": "b4116751dd1d0402e2338893495d85279cc1c5fcad85627b4a14d8644ceac7f2"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-components.tsx",
+      "source_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac",
+      "local_sha256": "26d5891c44ca6b41b9586dd016b0c2f6538ed1101e4ce441c69ec7ecf654baac"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-components.spec.ts",
+      "source_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722",
+      "local_sha256": "b3bc11cc2f0203aab2292fad7b8207a2105e77970379e5ab57678edd504d8722"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/badge.tsx",
+      "source_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d",
+      "local_sha256": "cd3bdf249408739a08fd0d2f2f1acfbee8a03b0ddf0f682f0d47fcabb9f95e9d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/button.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/button.tsx",
+      "source_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0",
+      "local_sha256": "9f3e86be28db26266e175e50718d78d072a2c6f33d26d0574f9532b9175e9ee0"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/card.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/card.tsx",
+      "source_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4",
+      "local_sha256": "924814037369fb725d835eb77dd1d58c56d09c7dfb83d20b6b7e711ca151b8c4"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/confirm-dialog.tsx",
+      "source_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270",
+      "local_sha256": "dbc427994f708495268e3a707c186200c9b91956fc734fa898401713cf339270"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/dialog.tsx",
+      "source_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec",
+      "local_sha256": "98a6860ca09ebcb004bdc0629e55155d6ddd5b69e6d5236042f5b20288694eec"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/input.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/input.tsx",
+      "source_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023",
+      "local_sha256": "d3322a5d7d1127d778c9524c14eda5d970300d000867c23ed305bbee321dd023"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/label.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/label.tsx",
+      "source_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0",
+      "local_sha256": "a624eb24fe2a55bf03bdf1df5fe2b44172167250068fa7049c81b758a05003d0"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/native-select.tsx",
+      "source_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9",
+      "local_sha256": "5acf7da8ba897636d2678c5bf604740a8cbfbd17579c11e700dacd570d5878c9"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/select.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/select.tsx",
+      "source_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106",
+      "local_sha256": "a5f62e0c572103fee470d15fa91036f0a9cd11a327555ded80c06b5c23547106"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/separator.tsx",
+      "source_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d",
+      "local_sha256": "607acdf62f4471d14bf1cffdf6fd5b3b60780abb73bce5b36586afa348e5c62d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/skeleton.tsx",
+      "source_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61",
+      "local_sha256": "2cb98b0bde6400362dd283942072c0082eecdc86d49f273e79cc86699764bd61"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/suite-components.css",
+      "source_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39",
+      "local_sha256": "3aae8c03bfff3d1d5029d924f559578cd2725e5b129e4879979476354f15ab39"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/tabs.tsx",
+      "source_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd",
+      "local_sha256": "f7a6b1b89b73e43ec256278cbb33523fad0457d49e77f2be8607c97eb56d06cd"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/textarea.tsx",
+      "source_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2",
+      "local_sha256": "30fcc4d3be46231aa4c7a896dd13594d3a48372015beb4b368b9e13eff32daa2"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/components/ui/workspace-account.tsx",
+      "source_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689",
+      "local_sha256": "d4a362f263cc23b6c081c2641af6350483b6016befd55775e1396cbc96e67689"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/utils.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/utils.ts",
+      "source_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27",
+      "local_sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-components-context.css",
+      "source_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431",
+      "local_sha256": "48a5082a1557e1e7a7ff340462912c03d5e6265ab669eb413ab0ba716c779431"
+    },
+    {
+      "path": "suite-component-contract.json",
+      "local_sha256": "6d0f586a26204f95b627eb7d4f3252433def579dc3d031f734266d0884851b25"
+    },
+    {
+      "path": "suite-vocabulary-and-object-model.md",
+      "local_sha256": "698f482dba4fbcf0f02891b6bf41c70d1fa55fd8d7f1cda1938982d00761e75e"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/.gitattributes",
+      "repository": "ai-enabled-threathunting",
+      "source_path": ".gitattributes",
+      "source_sha256": "1b4e4bb4aff1f06639c4ea7afb253976a70fdbdf0ae4e6f73d59b18f08487bf9",
+      "local_sha256": "1b4e4bb4aff1f06639c4ea7afb253976a70fdbdf0ae4e6f73d59b18f08487bf9"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-component-verification.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-component-verification.md",
+      "source_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04",
+      "local_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-component-qualification.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-component-qualification.json",
+      "source_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc",
+      "local_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/fixtures/suite-component-styles.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/fixtures/suite-component-styles.json",
+      "source_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+      "local_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/playwright.components.config.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/playwright.components.config.ts",
+      "source_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+      "local_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072"
+    },
+    {
+      "path": "references/ai-enabled-ato/.gitattributes",
+      "repository": "ai-enabled-ato",
+      "source_path": ".gitattributes",
+      "source_sha256": "e3c39f950b3816ff959c72a8bcb0cbb7a246b6ee6349cc01c913c109269c4203",
+      "local_sha256": "e3c39f950b3816ff959c72a8bcb0cbb7a246b6ee6349cc01c913c109269c4203"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-component-verification.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-component-verification.md",
+      "source_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04",
+      "local_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-component-qualification.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-component-qualification.json",
+      "source_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc",
+      "local_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/auth.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/auth.ts",
+      "source_sha256": "82fe8535ff17b303f131c441f28391cb132e1ec8e7fe47e87359672e8e000531",
+      "local_sha256": "82fe8535ff17b303f131c441f28391cb132e1ec8e7fe47e87359672e8e000531"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/suite-component-styles.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/suite-component-styles.json",
+      "source_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+      "local_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/playwright.components.config.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/playwright.components.config.ts",
+      "source_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+      "local_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072"
+    },
+    {
+      "path": "references/llm_notable_analysis/.gitattributes",
+      "repository": "llm_notable_analysis",
+      "source_path": ".gitattributes",
+      "source_sha256": "3f1cc43a2176e66709e288ea7022082266136756eaa2ab09195e943f34744e55",
+      "local_sha256": "3f1cc43a2176e66709e288ea7022082266136756eaa2ab09195e943f34744e55"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-component-verification.md",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-component-verification.md",
+      "source_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04",
+      "local_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-component-qualification.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-component-qualification.json",
+      "source_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc",
+      "local_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "source_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+      "local_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/playwright.components.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/playwright.components.config.ts",
+      "source_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+      "local_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "source_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+      "local_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/playwright.components.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/playwright.components.config.ts",
+      "source_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+      "local_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "source_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+      "local_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/playwright.components.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/playwright.components.config.ts",
+      "source_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+      "local_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-component-styles.json",
+      "source_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1",
+      "local_sha256": "6d78b0dd9824f89693b831d56535d61f3392dad47899b26f252ff3a2c3e891d1"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/playwright.components.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/playwright.components.config.ts",
+      "source_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072",
+      "local_sha256": "4b98e8e92337c88b031fcc0fb42d00a39203130711997b0498b5c0cc49336072"
+    },
+    {
+      "path": "suite-component-verification.md",
+      "local_sha256": "b697919aad65e793172b26b233498ddc7effaff3a107b0b7f5fa8595b5596c04"
+    },
+    {
+      "path": "suite-component-qualification.json",
+      "local_sha256": "9b1c4650a055553d2fc1f33a043160b34ed74a1d5790cff36087b8e92a8061fc"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-foundation-contract.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-foundation-contract.json",
+      "source_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310",
+      "local_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-foundation-adapters.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-foundation-adapters.json",
+      "source_sha256": "712fd1d27fb49ee634683c9eee2c321d4866828925537b6ab96af9f885e6abe2",
+      "local_sha256": "712fd1d27fb49ee634683c9eee2c321d4866828925537b6ab96af9f885e6abe2"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-foundation-verification.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-foundation-verification.md",
+      "source_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866",
+      "local_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-foundation-qualification.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-foundation-qualification.json",
+      "source_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0",
+      "local_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-foundation-architecture-review.md",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-foundation-architecture-review.md",
+      "source_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89",
+      "local_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/scripts/check_suite_foundation.py",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "scripts/check_suite_foundation.py",
+      "source_sha256": "47098574be4d24c149db58ae499017641c560fadb5e7c41a33c1c57c0ff08a2d",
+      "local_sha256": "47098574be4d24c149db58ae499017641c560fadb5e7c41a33c1c57c0ff08a2d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/http.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/http.ts",
+      "source_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+      "local_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/validation.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/validation.ts",
+      "source_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+      "local_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/state.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/state.tsx",
+      "source_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+      "local_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/forms.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/forms.tsx",
+      "source_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+      "local_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/routing.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/routing.tsx",
+      "source_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+      "local_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/foundation.test.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/foundation.test.ts",
+      "source_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+      "local_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/fixtures/suite-foundation.html",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/fixtures/suite-foundation.html",
+      "source_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+      "local_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/fixtures/suite-foundation.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/fixtures/suite-foundation.tsx",
+      "source_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+      "local_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/e2e/suite-foundation.spec.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/e2e/suite-foundation.spec.ts",
+      "source_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+      "local_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/playwright.foundation.config.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/playwright.foundation.config.ts",
+      "source_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+      "local_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-foundation-contract.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-foundation-contract.json",
+      "source_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310",
+      "local_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-foundation-adapters.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-foundation-adapters.json",
+      "source_sha256": "f83c1e7ef01d710943c133fceeececd127fe554b6ade19936fd415227c997a83",
+      "local_sha256": "f83c1e7ef01d710943c133fceeececd127fe554b6ade19936fd415227c997a83"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-foundation-verification.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-foundation-verification.md",
+      "source_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866",
+      "local_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-foundation-qualification.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-foundation-qualification.json",
+      "source_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0",
+      "local_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-foundation-architecture-review.md",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-foundation-architecture-review.md",
+      "source_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89",
+      "local_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89"
+    },
+    {
+      "path": "references/ai-enabled-ato/scripts/check_suite_foundation.py",
+      "repository": "ai-enabled-ato",
+      "source_path": "scripts/check_suite_foundation.py",
+      "source_sha256": "47098574be4d24c149db58ae499017641c560fadb5e7c41a33c1c57c0ff08a2d",
+      "local_sha256": "47098574be4d24c149db58ae499017641c560fadb5e7c41a33c1c57c0ff08a2d"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/http.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/http.ts",
+      "source_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+      "local_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/validation.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/validation.ts",
+      "source_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+      "local_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/state.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/state.tsx",
+      "source_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+      "local_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/forms.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/forms.tsx",
+      "source_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+      "local_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/routing.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/routing.tsx",
+      "source_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+      "local_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/foundation.test.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/foundation.test.ts",
+      "source_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+      "local_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/suite-foundation.html",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/suite-foundation.html",
+      "source_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+      "local_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/fixtures/suite-foundation.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/fixtures/suite-foundation.tsx",
+      "source_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+      "local_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/e2e/suite-foundation.spec.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/e2e/suite-foundation.spec.ts",
+      "source_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+      "local_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/playwright.foundation.config.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/playwright.foundation.config.ts",
+      "source_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+      "local_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-foundation-contract.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-foundation-contract.json",
+      "source_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310",
+      "local_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-foundation-adapters.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-foundation-adapters.json",
+      "source_sha256": "51979afe4bbc1060421a4932af413dfbc77b4abc491926cbfba35e07dcc056c5",
+      "local_sha256": "51979afe4bbc1060421a4932af413dfbc77b4abc491926cbfba35e07dcc056c5"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-foundation-verification.md",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-foundation-verification.md",
+      "source_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866",
+      "local_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-foundation-qualification.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-foundation-qualification.json",
+      "source_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0",
+      "local_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-foundation-architecture-review.md",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-foundation-architecture-review.md",
+      "source_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89",
+      "local_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89"
+    },
+    {
+      "path": "references/llm_notable_analysis/scripts/check_suite_foundation.py",
+      "repository": "llm_notable_analysis",
+      "source_path": "scripts/check_suite_foundation.py",
+      "source_sha256": "47098574be4d24c149db58ae499017641c560fadb5e7c41a33c1c57c0ff08a2d",
+      "local_sha256": "47098574be4d24c149db58ae499017641c560fadb5e7c41a33c1c57c0ff08a2d"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/http.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/http.ts",
+      "source_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+      "local_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "source_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+      "local_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "source_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+      "local_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "source_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+      "local_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "source_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+      "local_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "source_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+      "local_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "source_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+      "local_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "source_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+      "local_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "source_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+      "local_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/playwright.foundation.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/playwright.foundation.config.ts",
+      "source_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+      "local_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/http.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/http.ts",
+      "source_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+      "local_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "source_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+      "local_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "source_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+      "local_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "source_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+      "local_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "source_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+      "local_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "source_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+      "local_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "source_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+      "local_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "source_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+      "local_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "source_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+      "local_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/playwright.foundation.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/playwright.foundation.config.ts",
+      "source_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+      "local_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/http.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/http.ts",
+      "source_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+      "local_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "source_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+      "local_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "source_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+      "local_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "source_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+      "local_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "source_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+      "local_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "source_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+      "local_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "source_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+      "local_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "source_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+      "local_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "source_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+      "local_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/playwright.foundation.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/playwright.foundation.config.ts",
+      "source_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+      "local_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/http.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/http.ts",
+      "source_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8",
+      "local_sha256": "4c9f4f449a3fc5da9712e67633e6663fa722489e1a9e50dc02b95b08a1ec17e8"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/validation.ts",
+      "source_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d",
+      "local_sha256": "e038529548294ad4c47e5e5d539e0f29ef71e4066d1de6c11109f728a9993d2d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/state.tsx",
+      "source_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5",
+      "local_sha256": "03e75885ec5074a73ef296abb9ce01a02f3f945df11fbac536442843274e8ff5"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/forms.tsx",
+      "source_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296",
+      "local_sha256": "502ff258cd25573825aa065a59c29a68ecd1bf2c422189281e5e42c45cf9c296"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/routing.tsx",
+      "source_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189",
+      "local_sha256": "c0aa078501181282e380ad3a333f81508d6049ee6c7d2d4755de2ad225e7f189"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/foundation.test.ts",
+      "source_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2",
+      "local_sha256": "e8efcaa2402c022b9188f4f1b86c5da6257b62873493706595139cd477b494c2"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-foundation.html",
+      "source_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b",
+      "local_sha256": "78d48beabd03239e9175342e8193f9b5a7eee0b9ddc1403c2bbb5b68c701042b"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/fixtures/suite-foundation.tsx",
+      "source_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334",
+      "local_sha256": "5e992b8924ba211d7bb4d350950eaa4e6b1cbd33b0474a8b705b3a72d41d7334"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/e2e/suite-foundation.spec.ts",
+      "source_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629",
+      "local_sha256": "5bbe37547d43ecca6cc89d5ec964e1a5778472be7ce39abc279898b5684bb629"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/playwright.foundation.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/playwright.foundation.config.ts",
+      "source_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77",
+      "local_sha256": "192d7f74fcf7c957d43681999e866abc43ca2a0ef0897d70d47fee44ed825d77"
+    },
+    {
+      "path": "suite-foundation-contract.json",
+      "local_sha256": "328ed43d8099eab7600bfd4dccda5b990294bfae745409d4867fae4b3c6e9310"
+    },
+    {
+      "path": "suite-foundation-verification.md",
+      "local_sha256": "c94b117c74cb80b757a8cb3c3646ad8a2dc36d08279a010f74921fc1db987866"
+    },
+    {
+      "path": "suite-foundation-qualification.json",
+      "local_sha256": "ca7a1bc729e3256f6c027b16f60619632bc956a6581e44d0665911f19eca41d0"
+    },
+    {
+      "path": "suite-foundation-architecture-review.md",
+      "local_sha256": "cfc583e5299fdf77fd0cc8d78c7ee98fe767c348e9455e9f9dd63f2705861b89"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/docs/suite-performance-contract.json",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "docs/suite-performance-contract.json",
+      "source_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2",
+      "local_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/scripts/check_suite_performance.py",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "scripts/check_suite_performance.py",
+      "source_sha256": "0ecf69edba7a2a3fe803b210de910af343755a2757d6686c2dff3b8e9cce18dc",
+      "local_sha256": "0ecf69edba7a2a3fe803b210de910af343755a2757d6686c2dff3b8e9cce18dc"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/vite.config.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/vite.config.ts",
+      "source_sha256": "f960f5705bbba8667840b588259fd6337fdf3ded56d3f920c0a085821a3cd0b5",
+      "local_sha256": "f960f5705bbba8667840b588259fd6337fdf3ded56d3f920c0a085821a3cd0b5"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/query.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/query.ts",
+      "source_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+      "local_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/hardening.test.ts",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/hardening.test.ts",
+      "source_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+      "local_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d"
+    },
+    {
+      "path": "references/ai-enabled-threathunting/frontend/src/lib/suite/deferred-boundary.tsx",
+      "repository": "ai-enabled-threathunting",
+      "source_path": "frontend/src/lib/suite/deferred-boundary.tsx",
+      "source_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c",
+      "local_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+    },
+    {
+      "path": "references/ai-enabled-ato/docs/suite-performance-contract.json",
+      "repository": "ai-enabled-ato",
+      "source_path": "docs/suite-performance-contract.json",
+      "source_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2",
+      "local_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2"
+    },
+    {
+      "path": "references/ai-enabled-ato/scripts/check_suite_performance.py",
+      "repository": "ai-enabled-ato",
+      "source_path": "scripts/check_suite_performance.py",
+      "source_sha256": "0ecf69edba7a2a3fe803b210de910af343755a2757d6686c2dff3b8e9cce18dc",
+      "local_sha256": "0ecf69edba7a2a3fe803b210de910af343755a2757d6686c2dff3b8e9cce18dc"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/vite.config.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/vite.config.ts",
+      "source_sha256": "833507332b2e815d99824945d56a8b2a77bd40fe98e5f0ce4f680e0f94a518b3",
+      "local_sha256": "833507332b2e815d99824945d56a8b2a77bd40fe98e5f0ce4f680e0f94a518b3"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/query.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/query.ts",
+      "source_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+      "local_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/hardening.test.ts",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/hardening.test.ts",
+      "source_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+      "local_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d"
+    },
+    {
+      "path": "references/ai-enabled-ato/portal/src/lib/suite/deferred-boundary.tsx",
+      "repository": "ai-enabled-ato",
+      "source_path": "portal/src/lib/suite/deferred-boundary.tsx",
+      "source_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c",
+      "local_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+    },
+    {
+      "path": "references/llm_notable_analysis/docs/suite-performance-contract.json",
+      "repository": "llm_notable_analysis",
+      "source_path": "docs/suite-performance-contract.json",
+      "source_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2",
+      "local_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2"
+    },
+    {
+      "path": "references/llm_notable_analysis/scripts/check_suite_performance.py",
+      "repository": "llm_notable_analysis",
+      "source_path": "scripts/check_suite_performance.py",
+      "source_sha256": "0ecf69edba7a2a3fe803b210de910af343755a2757d6686c2dff3b8e9cce18dc",
+      "local_sha256": "0ecf69edba7a2a3fe803b210de910af343755a2757d6686c2dff3b8e9cce18dc"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/vite.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/vite.config.ts",
+      "source_sha256": "ac12cb9f01a7bbb7487d750ca5d8a6393ac54e6313f75e300d1bffe530968b0b",
+      "local_sha256": "ac12cb9f01a7bbb7487d750ca5d8a6393ac54e6313f75e300d1bffe530968b0b"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "source_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d",
+      "local_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/query.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/query.ts",
+      "source_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+      "local_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "source_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+      "local_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d"
+    },
+    {
+      "path": "references/llm_notable_analysis/azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "azure_notable_pipeline/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "source_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c",
+      "local_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/vite.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/vite.config.ts",
+      "source_sha256": "fe8c1a668d58c1ab6ae971f83584f54989833a8ac367fe9d5864f0abc6da3051",
+      "local_sha256": "fe8c1a668d58c1ab6ae971f83584f54989833a8ac367fe9d5864f0abc6da3051"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "source_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d",
+      "local_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/query.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/query.ts",
+      "source_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+      "local_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "source_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+      "local_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d"
+    },
+    {
+      "path": "references/llm_notable_analysis/llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "llm_notable_analysis_onprem_systemd/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "source_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c",
+      "local_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/vite.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/vite.config.ts",
+      "source_sha256": "2bb7e37fb4f59b9419526889c01cf11e2e2611d84cfe55276a3998dbc1433c89",
+      "local_sha256": "2bb7e37fb4f59b9419526889c01cf11e2e2611d84cfe55276a3998dbc1433c89"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "source_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d",
+      "local_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/query.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/query.ts",
+      "source_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+      "local_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "source_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+      "local_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "source_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c",
+      "local_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/vite.config.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/vite.config.ts",
+      "source_sha256": "1f805eab067765a0204f8b6d63602df00cad985e2f35b0e3a3b0b45e0bfedb49",
+      "local_sha256": "1f805eab067765a0204f8b6d63602df00cad985e2f35b0e3a3b0b45e0bfedb49"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/openapi/schemas-only.hbs",
+      "source_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d",
+      "local_sha256": "693e5908e1ea62f62b3f2e3bd915d42befcda1695295e09040a5f385791b7c6d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/query.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/query.ts",
+      "source_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491",
+      "local_sha256": "860ee4856f3495921886c8c5a5c22743356d54b5ed853870221f6ee680a66491"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/hardening.test.ts",
+      "source_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d",
+      "local_sha256": "66b40e324095fd51485fda9b006fe6d738fed140b1c8cd3bae951c584fb8742d"
+    },
+    {
+      "path": "references/llm_notable_analysis/s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/frontend/analyst-portal/src/lib/suite/deferred-boundary.tsx",
+      "source_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c",
+      "local_sha256": "4f98ac15ae5c1a31f57ffc2130435363d4db7fd2187df75f6ba3c3ba0ca17e3c"
+    },
+    {
+      "path": "suite-performance-contract.json",
+      "local_sha256": "b0db7bbf0b3e8a1b61c60395e442b4ff14bcd786e3120b44f4fecc908f253af2"
     }
-  ]
+  ],
+  "source_state": "Local working-tree candidate; not merged or deployed"
 }

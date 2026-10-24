@@ -1,0 +1,31 @@
+*.sh text eol=lf
+data/qualification/**/*.json text eol=lf
+data/qualification/**/*.md text eol=lf
+data/qualification/**/*.csv text eol=lf
+data/qualification/**/*.txt text eol=lf
+data/qualification/**/*.xml text eol=lf
+docs/contracts/**/*.json text eol=lf
+reference/authorities/**/*.json text eol=lf
+
+# Shared suite component sources must retain byte-identical LF endings.
+portal/src/components/ui/* text eol=lf
+portal/src/lib/utils.ts text eol=lf
+portal/e2e/suite-components.spec.ts text eol=lf
+portal/e2e/fixtures/suite-component* text eol=lf
+portal/playwright.components.config.ts text eol=lf
+
+# Shared frontend foundation release (independent local copies).
+portal/src/lib/suite/http.ts text eol=lf
+portal/src/lib/suite/validation.ts text eol=lf
+portal/src/lib/suite/state.tsx text eol=lf
+portal/src/lib/suite/forms.tsx text eol=lf
+portal/src/lib/suite/routing.tsx text eol=lf
+portal/src/lib/suite/foundation.test.ts text eol=lf
+portal/e2e/fixtures/suite-foundation.html text eol=lf
+portal/e2e/fixtures/suite-foundation.tsx text eol=lf
+portal/e2e/suite-foundation.spec.ts text eol=lf
+portal/playwright.foundation.config.ts text eol=lf
+
+portal/src/lib/suite/query.ts text eol=lf
+portal/src/lib/suite/hardening.test.ts text eol=lf
+portal/src/lib/suite/deferred-boundary.tsx text eol=lf

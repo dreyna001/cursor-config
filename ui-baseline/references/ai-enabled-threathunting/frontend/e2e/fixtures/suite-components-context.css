@@ -1,0 +1,6 @@
+@import "../../src/tailwind.css";
+@import "../../src/threat-hunt.css";
+@import "../../src/guided-workspace.css";
+@import "../../src/investigation-desk.css";
+@import "../../src/unified-workspace.css";
+body { margin:0; } #root > main { min-height:100vh; }
