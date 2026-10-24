@@ -1,4 +1,8 @@
-# Suite UI verification — v1.10.0
+# Suite UI verification — v1.10.1
+
+Version 1.10.1 explicitly requires scoped Playwright verification for every UI/UX
+change. Runtime code is unchanged from the verified 1.10.0 fix, apart from the
+stylesheet version marker; source-preservation checks passed in all three apps.
 
 ## Fixed and verified
 
@@ -13,7 +17,7 @@
   samples across 1280/1440/1920 desktop widths at 100/200/400% zoom. Root font stays
   16px. Focused component tests, builds and applicable TypeScript checks pass.
 - Shared CSS, release documents, visual companion and rule entrypoints agree on
-  baseline 1.10.0. The existing Playwright skill guide documents the workflow.
+  baseline 1.10.1. The existing Playwright skill guide documents the workflow.
 
 [Execution record](evidence/workflow-gaps-verification.json).
 
@@ -22,4 +26,4 @@ accessibility certification. Narrator/screen-reader speech and mobile work were
 excluded. WebKit is the Linux test engine, not macOS Safari. Threat Hunt received
 documentation and inactive shared CSS roles; its runtime was not retested here.
 
-[Previous baseline verification](evidence/verification-v1.9.0.md) remains historical.
+[Previous baseline verification](evidence/verification-v1.10.0.md) remains historical.

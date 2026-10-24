@@ -68,7 +68,7 @@ and test waiting/error/completion announcements, required states and guarded flo
 Distinguish accessibility-tree evidence from actual screen-reader speech; record
 excluded apps and unavailable checks rather than claiming whole-suite coverage.
 
-For UI changes, follow the central baseline's **Workflow and popup regression coverage**.
+For every UI/UX change, use Playwright to verify the affected surface and follow the central baseline's **Workflow and popup regression coverage**.
 Verify every dialog's accessible name, all constrained desktop confirmation actions,
 popup viewport fit, and relevant delayed/failed-request, retry, duplicate-submit and
 unsaved-navigation paths. Preserve each app's guards and desktop/mobile scope;
