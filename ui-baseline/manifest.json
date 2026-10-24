@@ -1,18 +1,18 @@
 {
-  "version": "1.10.0",
+  "version": "1.10.1",
   "prepared": "2026-10-24",
   "source_commits": {
-    "ai-enabled-threathunting": "b8a7421ff385bb1396c5f7980d674411e09cf743",
-    "ai-enabled-ato": "a104d8e3f49bffce0e93f907487c222f546356af",
-    "llm_notable_analysis": "7d70f0f0c94a5021e206e147112309be440ace79"
+    "ai-enabled-threathunting": "2fd0294f2cbae795b9f8473b0dca3207d7eefb8c",
+    "ai-enabled-ato": "dde0c082f67545bd111c25beff661a08c84a99f8",
+    "llm_notable_analysis": "47d430b23ad7e69b17a0fe9fb76b2098bef2609d"
   },
   "files": [
     {
       "path": "references/ai-enabled-threathunting/docs/suite-ui-standard.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5",
-      "local_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5"
+      "source_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c",
+      "local_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c"
     },
     {
       "path": "references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md",
@@ -46,15 +46,15 @@
       "path": "references/ai-enabled-threathunting/AGENTS.md",
       "repository": "ai-enabled-threathunting",
       "source_path": "AGENTS.md",
-      "source_sha256": "363c388644c10fb7d478f6faece35ebfc7643b1ecb924f1d3a1dd3a392bffc4a",
-      "local_sha256": "363c388644c10fb7d478f6faece35ebfc7643b1ecb924f1d3a1dd3a392bffc4a"
+      "source_sha256": "dc54ac9061b6ffae16e45d080b306ea90f59c22d45f4c1c702b0a96be5e1552a",
+      "local_sha256": "dc54ac9061b6ffae16e45d080b306ea90f59c22d45f4c1c702b0a96be5e1552a"
     },
     {
       "path": "references/ai-enabled-threathunting/frontend/src/suite-workspace.css",
       "repository": "ai-enabled-threathunting",
       "source_path": "frontend/src/suite-workspace.css",
-      "source_sha256": "da4d2f654032a97582259063375d1af253383c3069a0a4a176c0e3b6f9ce57db",
-      "local_sha256": "da4d2f654032a97582259063375d1af253383c3069a0a4a176c0e3b6f9ce57db"
+      "source_sha256": "aac908d589f9c7377d3ef08f11ecb973a634173afda2a1dbb366f75752e4a8ba",
+      "local_sha256": "aac908d589f9c7377d3ef08f11ecb973a634173afda2a1dbb366f75752e4a8ba"
     },
     {
       "path": "references/ai-enabled-threathunting/scripts/check_suite_ui.py",
@@ -67,15 +67,15 @@
       "path": "references/ai-enabled-threathunting/design-previews/20261018/unified/visual-reference.html",
       "repository": "ai-enabled-threathunting",
       "source_path": "design-previews/20261018/unified/visual-reference.html",
-      "source_sha256": "3874bd80dc4113f403184e5280524f2c1aeb95cb2b07962adbd7236768871390",
-      "local_sha256": "3874bd80dc4113f403184e5280524f2c1aeb95cb2b07962adbd7236768871390"
+      "source_sha256": "78bfa7dc8312ccf7585ce62a0e9b72c08031a09d2ab6f954c396db0ad85eb846",
+      "local_sha256": "78bfa7dc8312ccf7585ce62a0e9b72c08031a09d2ab6f954c396db0ad85eb846"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-ui-standard.md",
       "repository": "ai-enabled-ato",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5",
-      "local_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5"
+      "source_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c",
+      "local_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c"
     },
     {
       "path": "references/ai-enabled-ato/docs/suite-terminology-audit.md",
@@ -95,15 +95,15 @@
       "path": "references/ai-enabled-ato/AGENTS.md",
       "repository": "ai-enabled-ato",
       "source_path": "AGENTS.md",
-      "source_sha256": "0887c8552134782f771c42eeac16eab26e2bb4650cd4a12b468c810c65a9e180",
-      "local_sha256": "0887c8552134782f771c42eeac16eab26e2bb4650cd4a12b468c810c65a9e180"
+      "source_sha256": "4528491c9b7eec54edc8af4d83c723ac44e02a46494f5526dcfe84c557f13890",
+      "local_sha256": "4528491c9b7eec54edc8af4d83c723ac44e02a46494f5526dcfe84c557f13890"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-ui-standard.md",
       "repository": "llm_notable_analysis",
       "source_path": "docs/suite-ui-standard.md",
-      "source_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5",
-      "local_sha256": "c23333fbe5777925f0b5599b2a6e84b3e27f829570352c309e998f2071c4c1c5"
+      "source_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c",
+      "local_sha256": "e83526e644aefd5975d3c55cf59cc42d9632aa08cfa2d82397f43ebf45aca77c"
     },
     {
       "path": "references/llm_notable_analysis/docs/suite-terminology-audit.md",
@@ -116,22 +116,22 @@
       "path": "references/llm_notable_analysis/AGENTS.md",
       "repository": "llm_notable_analysis",
       "source_path": "AGENTS.md",
-      "source_sha256": "adaf35bf501575ed9852126dd56e80e3f97517724736f5165266a67cad82f7d5",
-      "local_sha256": "adaf35bf501575ed9852126dd56e80e3f97517724736f5165266a67cad82f7d5"
+      "source_sha256": "89efed9ea2ab249d57c5a9320b03ea5a2dc37c44d40fb81a2014ed23ba46df14",
+      "local_sha256": "89efed9ea2ab249d57c5a9320b03ea5a2dc37c44d40fb81a2014ed23ba46df14"
     },
     {
       "path": "README.md",
-      "local_sha256": "6cbf548712abc5374fd88eac48a4972b7dbe32e22c1e301b2bd2e8b333239e54",
+      "local_sha256": "fbf99885a43803cd6eed74aa05ae33fd6cd13239eee5488f3c348cfa82827793",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "e1a2d413a3733e05a4ba32663f077838520525165e076adebddcbb180ce25da2",
+      "local_sha256": "ea74a23dfe8b5864bb2b9e00ebfccb865c2f16ce61c72a895559a7f74734a4cb",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "2680185c92119fe9d13b731335228850424f20c30367d1677dfeb08329bead1c",
+      "local_sha256": "7b1569a3d6ce3d7469779da329006a4ae89277a0ee1751e95deaec345a87defc",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -576,7 +576,11 @@
     },
     {
       "path": "evidence/workflow-gaps-verification.json",
-      "local_sha256": "411d6bfb1738c05fac708021bfe1681f74cc36bd55e78ffbcf46bfcc243fd75c"
+      "local_sha256": "4c15bf4898c918cc0fcbc6e4f8afa70a0f5c8bdf8142f9860d301b758915767b"
+    },
+    {
+      "path": "evidence/verification-v1.10.0.md",
+      "local_sha256": "65a6ba7089dfbac2f402649083eb56c8c318f6ba6bd1c7bb698d3ed4b8ce92c9"
     }
   ]
 }

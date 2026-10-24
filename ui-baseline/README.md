@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-> **Permanent local edition · v1.10.0 · 2026-10-24**
+> **Permanent local edition · v1.10.1 · 2026-10-24**
 >
 > Start here on Windows: `C:\Users\Daniel.Reyna\.agents\ui-baseline\README.md`.
 > WSL opens the same files through `/home/dreyna/.agents/ui-baseline/README.md`.
@@ -17,7 +17,7 @@
 > newer approved release, compare its changes before refreshing this folder; never
 > downgrade newer login, account, sidebar, typography, color, layout or workflow work.
 
-Version: **1.10.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.10.1** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -343,6 +343,14 @@ References: [WAI modal dialog pattern](https://www.w3.org/WAI/ARIA/apg/patterns/
 and [bypass blocks](https://www.w3.org/WAI/WCAG22/Understanding/bypass-blocks.html).
 
 ## Workflow and popup regression coverage
+
+Every UI/UX change must include Playwright verification of the affected surface.
+For a small visual or copy edit, a focused rendered-browser check is sufficient;
+for an interaction change, exercise the relevant workflow and failure paths.
+Use screenshots, computed styles/geometry, keyboard input and native desktop zoom
+as appropriate. Vitest, TypeScript and build checks supplement browser testing.
+Record unavailable engines or blocked checks explicitly; do not silently skip
+browser verification or claim source-only checks as UI sign-off.
 
 UI parity includes usable workflows and failure recovery, not only matching styles.
 For changed surfaces, record the app, role, route, state, browser and real-versus-

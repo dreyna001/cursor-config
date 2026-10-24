@@ -22,7 +22,9 @@ Read when a React project uses Playwright for browser-level user flows. Keep bro
 
 Start with the permanent local UI baseline's **Workflow and popup regression
 coverage** section (or the app's released baseline fallback). Use this procedure
-for material UI/UX changes; keep the matrix proportional to the affected surfaces.
+for every UI/UX change. A small visual/copy edit needs a focused rendered check;
+interaction changes need the relevant workflows and failure paths. Keep the
+matrix proportional to the affected surfaces; never silently omit browser verification.
 
 1. Map the changed route, user role, state and intended behavior to existing
    browser tests. Start the isolated local/test app with controlled records.
@@ -36,6 +38,12 @@ for material UI/UX changes; keep the matrix proportional to the affected surface
 5. Run relevant supported browser engines, save concise results and reproductions,
    and identify untested roles/states. API-mocked browser tests are UI integration
    evidence; reserve full-stack E2E claims for real isolated application boundaries.
+
+Use Playwright with Chromium, Firefox and WebKit for the relevant browser checks.
+Use screenshots and computed geometry/styles for visual assertions, keyboard
+input for focus/navigation, and headed native browser zoom for reflow. Vitest
+component tests and TypeScript/build checks supplement browser verification;
+they do not replace it. Record unavailable engines or blocked checks as unverified.
 
 The baseline owns shared acceptance rules. This guide owns how to execute them;
 do not create a second visual standard or claim complete coverage from one test.
