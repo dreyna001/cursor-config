@@ -5,6 +5,10 @@ guidance and current previews, routing, performance/testing standards, condition
 backup decisions, Linux-only contextual learning, and the optional Executive Navy
 + Orange presentation profile. It changes no application code or cloud settings.
 
+The required Codex target is **WSL/Linux**. Native Windows Codex installation is
+outside this release scope and is not an outstanding requirement. The user has
+explicitly **deferred FedRAMP control/compliance mapping** for this cleanup.
+
 ## Verification performed
 
 - `python3 -m unittest discover -s codex/tests`: 28 passed, including platform
@@ -24,7 +28,8 @@ backup decisions, Linux-only contextual learning, and the optional Executive Nav
   harness; both actual helpers refused execution before accessing lesson storage.
   A full isolated Windows Codex link installation was attempted and rolled back
   when the host refused symbolic-link creation (WinError 1314). Full Windows
-  Codex installation is therefore **unverified**, not a passing check. No security
+  Codex installation was not verified; it is **outside the required WSL scope**,
+  with no follow-up installation required. No security
   policy, privileges, live learning store or Windows user configuration changed.
 - Linux Codex `plan`, `sync --apply`, static verification and runtime discovery
   passed. Runtime discovery found all 58 managed skills with user scope and no
@@ -70,3 +75,10 @@ system applicability remain unverified. The guidance requires the governing
 released baseline, transition rules, approved implementation and control-owner
 mapping before asserting equivalence or compliance. It prescribes no universal
 daily export, vault, retention tier, extra region or restore frequency.
+
+## Deferred scope
+
+FedRAMP control-source reconciliation and compliance-equivalence mapping are
+deferred at the user's direction. They are not blockers for this configuration
+release. Revisit them only when that work is requested; retain the existing
+conditional guidance without asserting compliance or altering cloud protection.

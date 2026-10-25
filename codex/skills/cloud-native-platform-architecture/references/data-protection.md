@@ -343,3 +343,8 @@ The consolidated control-guidance page could not be fetched in this review; its
 exact current control wording and applicability remain unverified. Escalate that
 specific mapping to the control owner instead of declaring compliance or adding
 duplicate jobs.
+
+Release disposition: the user deferred FedRAMP control/compliance mapping for
+the 2026-10-24 configuration cleanup. It is not a blocker for that release;
+revisit the mapping when requested. This disposition makes no compliance claim
+and does not change any application's existing protection or control obligations.

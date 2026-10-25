@@ -139,3 +139,7 @@ it. Do not change security policy or privileges as part of configuration sync.
 
 See [configuration release verification](docs/configuration-release-2026-10-24.md)
 for executed checks, backup-source review and platform limitations.
+
+For this workstation, Codex runs in WSL/Linux. Native Windows Codex installation
+is outside the required scope. The user has deferred the configuration release's
+FedRAMP control/compliance mapping; it is not an outstanding release blocker.
