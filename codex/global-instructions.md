@@ -28,6 +28,12 @@ This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.c
 - For reproduced regressions in parsing, API error mapping, timeout/cancellation, or durable state, use `boundary-failure-regressions` to verify the actual trigger and adjacent supported behavior. If one regression also changes LLM evidence or output contracts, apply `llm-evidence-regression` to those aspects too. Routine features and documentation do not trigger the boundary skill.
 - Use the `langgraph-engineering` skill only when designing, implementing, migrating, or reviewing a LangGraph application.
 
+For backup/recovery decisions about persistent technologies actually used by a project, route through `engineering-guidance` to the shared `cloud-native-platform-architecture/references/data-protection.md` reference.
+
+## Presentation color profiles
+
+- When the user asks to reuse the AI-assisted triage executive slide colors, use the optional `Executive Navy + Orange` profile in `$HOME/.agents/skills/development-stack/references/executive-navy-orange.json`. Apply it to that deck or when requested, not to unrelated designs by default.
+
 ## Codex model and subagent routing
 
 - Use the user- or session-selected primary model and reasoning level. When no preference is set and model controls allow, prefer `gpt-6.1-sol` with `high` reasoning or `gpt-6-astra` with `high` reasoning. The primary may complete work directly, especially when the task is short or its steps depend on each other.
@@ -37,6 +43,8 @@ This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.c
 
 <!-- BEGIN contextual-learning managed section -->
 ## Contextual learning
+
+Apply this section in Linux/WSL sessions only. Native Windows and macOS learning are disabled.
 
 - After meaningful failures, failed approaches, or user corrections, use `contextual-learning` at `$HOME/.agents/skills/contextual-learning/SKILL.md`; it extends the existing error-recovery skills. Establish the failure and cause, make the smallest authorized repair, and verify the original problem with useful regression coverage.
 - Load only relevant lessons from `${CODEX_HOME:-$HOME/.codex}/learning/INDEX.json`; verify current architecture, environment, versions, conditions and exclusions before reuse. Similar symptoms are insufficient. Resolve conflicting guidance by narrowing, correcting or superseding it.
@@ -70,7 +78,7 @@ For UI/UX work, start at the permanent local baseline:
 `$HOME/.agents/ui-baseline/README.md` (Windows:
 `%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
 open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
-[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+`$HOME/.agents/ui-baseline/README.md` (WSL).
 If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
@@ -84,6 +92,7 @@ repository's reference bundle, and the permanent local baseline are synchronized
 Follow the baseline's “Keeping one baseline” procedure, record app-specific
 exceptions and validation, and preserve newer approved behavior and styling.
 If any part cannot be updated or verified, report the remaining drift explicitly.
+
 For shared UI work, complete the central baseline's **Interaction and accessibility**
 checks and its role/state coverage record. Exercise keyboard focus and bypass,
 modal/popup semantics, disabled/readonly/validation, loading/error announcements,

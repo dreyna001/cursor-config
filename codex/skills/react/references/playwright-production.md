@@ -7,7 +7,9 @@ Read when a React project uses Playwright for browser-level user flows. Keep bro
 - Make setup and cleanup retry-safe. Playwright may replace a worker after a failure and rerun a test; a retry must not inherit or collide with the failed attempt's data. Prefer unique identifiers and controlled fixtures to serial ordering.
 - Capture traces on retry or failure when useful for diagnosis, rather than recording every passing test by default. Traces, screenshots, videos, and reports can include page content, URLs, request data, and auth state: restrict their retention and access, and sanitize artifacts before sharing them outside the trusted team.
 - Prefer user-visible locators and retrying assertions. A passing browser test demonstrates the covered user path only; it does not establish API authorization, cloud identity, or service availability beyond what the test environment exercised.
+
 - For material desktop UI or browser-flow changes, run focused checks in Chromium, Firefox, and WebKit using the existing harness; report unavailable engines instead of treating one browser as complete coverage.
+- Label browser flows with mocked application APIs separately from real application-stack journeys. For important persistence/auth journeys, exercise the actual application boundary with isolated test data and verify the outcome through reload or a fresh request; keep upstream external side effects controlled and state the limits of any doubles. Follow the shared testing guidance for independent expectations, failure-detection controls, and execution evidence.
 
 ## Official references
 
@@ -17,6 +19,8 @@ Read when a React project uses Playwright for browser-level user flows. Keep bro
 - [Playwright local web server configuration](https://playwright.dev/docs/test-webserver)
 - [Playwright test retries](https://playwright.dev/docs/test-retries)
 - [Playwright trace configuration](https://playwright.dev/docs/api/class-testoptions#test-options-trace)
+
+Follow the [shared testing guidance](../../engineering-guidance/references/correctness-and-testing.md) for test-level selection, independent expected results, failure-detection controls, durable outcomes, and honest execution evidence.
 
 ## UI/UX change workflow
 

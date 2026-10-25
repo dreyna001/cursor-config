@@ -9,7 +9,7 @@ For UI/UX work, start at the permanent local baseline:
 `$HOME/.agents/ui-baseline/README.md` (Windows:
 `%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
 open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
-[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+`$HOME/.agents/ui-baseline/README.md` (WSL).
 If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
@@ -36,7 +36,13 @@ For cloud development, apply the [Terraform cloud deployment standard](../terraf
 
 Use this skill as a conditional router for the user's migrated engineering standards. Read only the reference files relevant to the requested change and the systems it touches. Do not turn the collection into a checklist for unrelated work. Follow the current global `AGENTS.md` for universal behavior and model routing.
 
+For backup/recovery design or review of technologies actually used by the project, read [conditional backup and recovery decisions](../cloud-native-platform-architecture/references/data-protection.md).
+
 ## Reference index
+
+For frontend routes, browser history, deep links, or frontend/backend URL
+boundaries, read [URL routing](references/url-routing.md). For compact portals
+with peer workspaces, also use the scoped [small portal routing](references/small-portal-routing.md).
 
 For general code changes, use the applicable parts of [core engineering](references/core-engineering.md), [correctness and testing](references/correctness-and-testing.md), [maintainability and architecture](references/maintainability-and-architecture.md), [reliability and performance](references/reliability-and-performance.md), and [requirements confidence](references/requirements-confidence.md). For interface layout, navigation, content hierarchy, or editing-state decisions across UI stacks, read [UI/UX organization](references/ui-ux-organization.md).
 
@@ -61,7 +67,7 @@ does not apply to unrelated LLM work or ordinary writing.
 
 For production tool integrations, load only the matching reference: [Splunk SDK/SPL](../cybersecurity-integration-adapters/references/splunk-production.md), [OpenSearch/FAISS](../development-stack/references/retrieval-search-production.md), [local embeddings](../development-stack/references/local-embeddings-production.md), [Azure Functions/Storage](../development-stack/references/azure-functions-storage-production.md), [Cosmos DB/Azure AI Search](../development-stack/references/azure-cosmos-search-production.md), [Authlib OIDC/JWT](../development-stack/references/authlib-oidc-production.md), or [MSAL/Entra](../development-stack/references/msal-entra-production.md). For Vite builds, Vitest tests, or Playwright browser flows, use the matching reference in the [React skill](../react/SKILL.md). These references qualify existing integrations; they do not require choosing a new stack.
 
-For product architecture or project structure, consult [capability profile architecture](references/capability-profile-architecture.md) and/or [project layout standards](references/project-layout-standards.md) when relevant. Use [technology selection](references/technology-selection.md) only for greenfield work or when the project has no established stack; preserve explicit user choices and existing project evidence.
+For product architecture or project structure, consult [capability profile architecture](references/capability-profile-architecture.md) and/or [project layout standards](references/project-layout-standards.md) when relevant. Use [technology selection](references/technology-selection.md) for greenfield choices or an explicitly requested stack review/standardization; preserve explicit user choices and existing project evidence.
 
 For documentation work, read [documentation layout and bootstrap](references/docs-layout-and-bootstrap.md) and [testing and documentation standards](references/testing-documentation-standards.md) when the changed contract or behavior calls for them.
 
@@ -70,6 +76,15 @@ For documentation work, read [documentation layout and bootstrap](references/doc
 - For LangGraph workflow engineering, use the separate `$langgraph-engineering` skill as the primary workflow guide; read this collection only for an additional, directly relevant standard.
 - The original `subagent-delegation.mdc` rule is intentionally superseded: Codex model and delegation routing belongs to the current global `AGENTS.md`.
 - Do not use Cursor-only actions or assume Cursor tools are available in Codex.
+
+## Shared UI change completion
+
+Approved shared UI changes are not complete until the versioned baseline,
+its visual companion, all three apps (six frontends), this configuration
+repository's reference bundle, and the permanent local baseline are synchronized.
+Follow the baseline's “Keeping one baseline” procedure, record app-specific
+exceptions and validation, and preserve newer approved behavior and styling.
+If any part cannot be updated or verified, report the remaining drift explicitly.
 
 For shared UI work, complete the central baseline's **Interaction and accessibility**
 checks and its role/state coverage record. Exercise keyboard focus and bypass,

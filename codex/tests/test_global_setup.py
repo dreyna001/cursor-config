@@ -159,5 +159,74 @@ class GlobalSetupTests(unittest.TestCase):
             global_setup.discover_skills(self.source)
 
 
+    def learning_fixture(self):
+        self.add_skill("contextual-learning", "Linux conditional learning")
+        instructions = "# Shared rules\n\n<!-- BEGIN contextual-learning managed section -->\nLinux learning activation\n<!-- END contextual-learning managed section -->\n\n# Other rules\n"
+        (self.source / "global-instructions.md").write_text(instructions)
+        global_setup.write_source_manifest(self.source, apply=True)
+
+    def test_linux_keeps_learning_and_original_harness(self):
+        self.learning_fixture()
+        with patch.object(global_setup.sys, "platform", "linux"):
+            result = global_setup.install(self.source, self.codex_home, self.agents_home, apply=True)
+            self.assertEqual(result["skill_count"], 3)
+            self.assertTrue((self.agents_home / "skills/contextual-learning").is_symlink())
+            self.assertIn("Linux learning activation", (self.codex_home / "AGENTS.md").read_text())
+            self.assertTrue(global_setup.verify_static(self.source, self.codex_home, self.agents_home)["valid"])
+
+    def test_nonlinux_excludes_learning_from_discovery_and_harness(self):
+        self.learning_fixture()
+        for platform in ("win32", "darwin"):
+            with self.subTest(platform=platform), patch.object(global_setup.sys, "platform", platform):
+                result = global_setup.install(self.source, self.codex_home, self.agents_home, apply=True)
+                self.assertEqual(result["skill_count"], 2)
+                self.assertFalse((self.agents_home / "skills/contextual-learning").exists())
+                text = (self.codex_home / "AGENTS.md").read_text()
+                self.assertNotIn("Linux learning activation", text)
+                self.assertIn("# Shared rules", text)
+                self.assertIn("# Other rules", text)
+                self.assertTrue(global_setup.verify_static(self.source, self.codex_home, self.agents_home)["valid"])
+
+    def test_nonlinux_existing_learning_is_preserved_and_blocks_install(self):
+        self.learning_fixture()
+        existing = self.agents_home / "skills/contextual-learning/personal.txt"
+        existing.parent.mkdir(parents=True)
+        existing.write_text("keep existing work")
+        with patch.object(global_setup.sys, "platform", "win32"):
+            with self.assertRaisesRegex(global_setup.SetupError, "Linux-only"):
+                global_setup.install(self.source, self.codex_home, self.agents_home, apply=True)
+        self.assertEqual(existing.read_text(), "keep existing work")
+        self.assertFalse((self.codex_home / "AGENTS.md").exists())
+
+    def test_stale_generated_nonlinux_harness_is_rejected(self):
+        self.learning_fixture()
+        (self.source / "global-instructions.nonlinux.md").write_text("incorrect learning activation")
+        with self.assertRaisesRegex(global_setup.SetupError, "Non-Linux instructions are stale"):
+            global_setup.install(self.source, self.codex_home, self.agents_home, apply=True)
+        self.assertFalse(self.codex_home.exists())
+
+    def test_malformed_managed_section_is_rejected(self):
+        with self.assertRaisesRegex(global_setup.SetupError, "Malformed"):
+            global_setup.without_linux_learning("keep\n<!-- BEGIN contextual-learning managed section -->\n")
+
+    def test_learning_helper_refuses_nonlinux_before_reading_store(self):
+        import subprocess
+        helper = Path(__file__).resolve().parents[1] / "skills/contextual-learning/scripts/lessons.py"
+        result = subprocess.run([sys.executable, "-c", "import sys,runpy; sys.platform='win32'; runpy.run_path(sys.argv[1],run_name='__main__')", str(helper)], capture_output=True, text=True)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn("Linux-only; no lesson files were read or written", result.stderr)
+        self.assertNotIn("ModuleNotFoundError", result.stderr)
+
+
+    def test_interpreter_caches_do_not_change_source_fingerprint(self):
+        before = global_setup.tree_digest(self.source, ["alpha", "beta"])
+        cache = self.source / "skills/alpha/__pycache__"
+        cache.mkdir()
+        (cache / "example.cpython-314.pyc").write_bytes(b"local bytecode")
+        self.assertEqual(before, global_setup.tree_digest(self.source, ["alpha", "beta"]))
+        (self.source / "skills/alpha/SKILL.md").write_text("real source change")
+        self.assertNotEqual(before, global_setup.tree_digest(self.source, ["alpha", "beta"]))
+
+
 if __name__ == "__main__":
     unittest.main()

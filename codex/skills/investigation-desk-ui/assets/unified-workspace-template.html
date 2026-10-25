@@ -195,7 +195,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 
 .deployment-settings>section:last-of-type{margin-bottom:0}.deployment-technical{border-top:0}
 .icon svg{display:block;width:100%;height:100%}.scope-data dt{color:#748ba8}.scope-data dd{margin:0}.topbar .btn .icon{color:#8cbcff}
-/* Suite Workspace UI v1.10.1. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.14.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 
 
@@ -539,6 +539,134 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
   .workspace-desktop-reflow button { max-width: 100%; white-space: normal; }
 }
 
+/* Suite components v1.12.0. Canonical release: identical in all six frontends.
+ * Explicit component classes keep the same rendering with Tailwind and legacy CSS.
+ * Geometry/color declarations are authoritative; layout widths and placement stay with callers.
+ */
+:root {
+  --suite-control-height: 2.3125rem;
+  --suite-field-height: 2.25rem;
+  --suite-control-radius: 6px;
+  --suite-dialog-radius: 8px;
+  --suite-dialog-width: 520px;
+}
+.suite-button {
+  display:inline-flex; align-items:center !important; justify-content:center !important; gap:8px !important;
+  box-sizing:border-box !important; min-height:var(--suite-control-height) !important; height:var(--suite-control-height) !important;
+  padding:8px 13px !important; border:1px solid transparent !important; border-radius:var(--suite-control-radius) !important;
+  font-family:var(--workspace-font-ui) !important; font-size:0.75rem !important; font-weight:500 !important; line-height:1rem !important;
+  text-decoration:none !important; white-space:nowrap; cursor:pointer; box-shadow:none !important;
+  background:var(--workspace-color-primary) !important; color:var(--workspace-color-on-primary) !important;
+  transition:color 150ms,background-color 150ms,border-color 150ms,opacity 150ms;
+}
+.suite-button--primary:hover { background:#1b61cf !important; }
+.suite-button--secondary,.suite-button--outline { background:#1c2129 !important; color:#bbc6d3 !important; border-color:#30363d !important; }
+.suite-button--secondary:hover,.suite-button--outline:hover { background:#23364f !important; color:#d0e1f7 !important; }
+.suite-button--ghost { background:transparent !important; color:#bbc6d3 !important; }
+.suite-button--ghost:hover { background:#23364f !important; color:#d0e1f7 !important; }
+.suite-button--destructive { background:#2d1c20 !important; color:#ff8b85 !important; border-color:rgba(255,139,133,.2) !important; }
+.suite-button--destructive:hover { background:#3d242a !important; border-color:rgba(255,139,133,.45) !important; }
+.suite-button--link { background:transparent !important; color:#8cbcff !important; height:auto !important; min-height:0 !important; padding:0 !important; }
+.suite-button--link:hover { text-decoration:underline !important; }
+.suite-button--sm { height:32px !important; min-height:32px !important; padding:4px 12px !important; }
+.suite-button--lg { height:40px !important; min-height:40px !important; padding:8px 24px !important; }
+.suite-button--icon { width:37px !important; min-width:37px !important; padding:8px !important; }
+.suite-button:disabled,.suite-button[aria-disabled="true"] { opacity:.5 !important; pointer-events:none; cursor:not-allowed; }
+.suite-button:focus-visible { outline:2px solid #8cbcff !important; outline-offset:2px !important; box-shadow:none !important; transition:none !important; }
+.suite-button > svg { flex-shrink:0; pointer-events:none; }
+.suite-input,.suite-textarea,.suite-native-select {
+  box-sizing:border-box !important; border:1px solid #6e7b8d !important; border-radius:6px !important;
+  background:#0d1117 !important; color:#bbc6d3 !important; font-family:var(--workspace-font-ui) !important;
+  font-size:0.875rem !important; font-weight:400 !important; line-height:1.25rem !important; padding:4px 12px !important;
+  width:100%; box-shadow:none !important;
+}
+.suite-input,.suite-native-select { min-height:2.25rem !important; height:2.25rem !important; }
+.suite-textarea { padding:8px 12px !important; resize:vertical; }
+.suite-input::placeholder,.suite-textarea::placeholder { color:#8b949e !important; opacity:1 !important; }
+.suite-input:focus-visible,.suite-textarea:focus-visible,.suite-native-select:focus-visible { outline:2px solid #8cbcff !important; outline-offset:2px !important; }
+.suite-input:disabled,.suite-textarea:disabled,.suite-native-select:disabled { opacity:.5 !important; cursor:not-allowed; }
+.suite-input[aria-invalid="true"],.suite-textarea[aria-invalid="true"],.suite-native-select[aria-invalid="true"] { border-color:#ff8b85 !important; }
+.suite-input[class*="border-destructive"],.suite-textarea[class*="border-destructive"],.suite-native-select[class*="border-destructive"] { border-color:#ff8b85 !important; }
+.suite-input[class*="border-warning"],.suite-textarea[class*="border-warning"],.suite-native-select[class*="border-warning"] { border-color:#e3b341 !important; }
+.suite-input[type="checkbox"],.suite-input[type="radio"] { width:16px !important; height:16px !important; min-height:16px !important; padding:0 !important; accent-color:#1f6feb; }
+.suite-input[type="file"],.suite-input[type="hidden"],.suite-input[type="range"],.suite-input[type="color"] { height:auto !important; min-height:0 !important; }
+.suite-badge {
+  display:inline-flex !important; align-items:center !important; gap:6px !important; box-sizing:border-box !important;
+  min-height:24px !important; padding:2px 8px !important; border:1px solid rgba(31,111,235,.3) !important;
+  border-radius:4px !important; font-family:var(--workspace-font-ui) !important; font-size:0.75rem !important;
+  font-weight:500 !important; line-height:1.03125rem !important; box-shadow:none !important; text-transform:none !important;
+  background:rgba(31,111,235,.1) !important; color:#8cbcff !important;
+}
+.suite-badge::before { content:none !important; }
+.suite-badge[data-dot="true"]::before { content:"" !important; width:5px; height:5px; border-radius:50%; background:currentColor; flex-shrink:0; }
+.suite-badge--secondary { background:#1c2129 !important; color:#bbc6d3 !important; border-color:transparent !important; }
+.suite-badge--muted { background:#1c2129 !important; color:#8b949e !important; border-color:transparent !important; }
+.suite-badge--outline { background:transparent !important; color:#bbc6d3 !important; border-color:#30363d !important; }
+.suite-badge--warning { background:#292317 !important; color:#e3b341 !important; border-color:rgba(227,179,65,.2) !important; }
+.suite-badge--success { background:#16271f !important; color:#85bd96 !important; border-color:rgba(133,189,150,.2) !important; }
+.suite-badge--destructive { background:#2d1c20 !important; color:#ff8b85 !important; border-color:rgba(255,139,133,.2) !important; }
+.suite-dialog-overlay { position:fixed; inset:0; z-index:1000; background:rgba(0,0,0,.6); }
+.suite-dialog { position:fixed; z-index:1001; top:50%; left:50%; transform:translate(-50%,-50%); box-sizing:border-box;
+  width:calc(100vw - 32px); max-width:520px; max-height:calc(100dvh - 32px); overflow:auto; margin:0; padding:0;
+  border:1px solid #30363d; border-radius:8px; background:#161b22; color:#bbc6d3; font-family:var(--workspace-font-ui); }
+.suite-dialog--wide { max-width:680px; }
+.suite-dialog { display:block !important; min-height:0 !important; padding:0 !important; border-radius:8px !important; background:#161b22 !important; }
+.suite-dialog-header { display:flex; align-items:flex-start; justify-content:space-between; gap:16px; padding:20px 20px 12px; }
+.suite-dialog-title { border-color:#30363d; margin:0; padding:0; font-size:1.125rem; font-weight:600; line-height:1.4; color:#e6edf3; }
+.suite-dialog-body { padding:0 20px 20px; min-width:0; }
+.suite-dialog-description { margin:0; font-size:0.875rem; line-height:1.55; color:#8b949e; }
+.suite-dialog-actions { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; border-top:1px solid #30363d; padding:16px 20px 20px; }
+.suite-dialog-actions > .suite-button { max-width:100%; white-space:normal; height:auto !important; }
+.suite-field-error { color:#ff8b85; font-size:0.875rem; line-height:1.5; margin-top:12px; white-space:pre-line; }
+.suite-sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
+.suite-card { border-color:#30363d; border-radius:8px; background:#161b22; color:#bbc6d3; }
+.suite-card-header { display:flex; flex-direction:column; padding:20px; gap:6px; }
+.suite-card-content { padding:0 20px 20px; }
+.suite-card-title { color:#e6edf3; font-size:1.125rem; font-weight:600; line-height:1.4; }
+.suite-card-description { color:#8b949e; font-size:0.875rem; }
+.suite-label { font:500 13px/1.5 var(--workspace-font-ui); color:#bbc6d3; }
+.suite-separator { flex-shrink:0; background:#30363d; }
+.suite-separator[data-orientation="horizontal"] { height:1px; width:100%; }
+.suite-separator[data-orientation="vertical"] { width:1px; height:100%; }
+.suite-skeleton { border-radius:6px; background:#1c2129; animation:workspace-pulse var(--workspace-motion-pulse-duration) cubic-bezier(.4,0,.6,1) infinite; }
+.suite-tab-content { margin-top:16px; }
+.suite-tabs-list { display:flex; align-items:center; gap:16px; border-bottom:1px solid #30363d; }
+.suite-tab { display:inline-flex; align-items:center; justify-content:center; border:0 !important; border-bottom:2px solid transparent !important; background:transparent !important; padding:12px 4px !important; color:#8b949e !important; font:500 0.8125rem/1.25rem var(--workspace-font-ui) !important; }
+.suite-tab:hover { color:#e6edf3 !important; }
+.suite-tab[data-state="active"],.suite-tab[aria-current="page"] { border-bottom-color:#8cbcff !important; color:#e6edf3 !important; }
+.suite-tab:focus-visible { outline:2px solid #8cbcff !important; outline-offset:2px; }
+.suite-tab:disabled { opacity:.5; }
+.suite-select-trigger { display:flex; justify-content:space-between; align-items:center; width:100%; height:2.25rem !important; min-height:2.25rem !important; border:1px solid #6e7b8d !important; border-radius:6px !important; padding:4px 12px !important; background:#0d1117 !important; color:#bbc6d3 !important; font:400 0.875rem/1.25rem var(--workspace-font-ui) !important; box-shadow:none !important; }
+.suite-select-trigger:focus-visible { outline:2px solid #8cbcff; outline-offset:2px; }
+.suite-select-content { z-index:1100; max-height:min(384px,calc(100dvh - 32px)); overflow:auto; border:1px solid #30363d; border-radius:6px; background:#161b22; color:#bbc6d3; font:400 0.875rem/1.25rem var(--workspace-font-ui); }
+.suite-select-item { position:relative; display:flex; align-items:center; min-height:32px; padding:6px 32px 6px 8px; border-radius:4px; outline:0; }
+.suite-select-item[data-highlighted] { background:#23364f; color:#e6edf3; }
+.suite-select-item[data-disabled] { opacity:.5; pointer-events:none; }
+.suite-select-trigger svg,.suite-select-content svg { width:16px; height:16px; flex-shrink:0; }
+.suite-select-content [data-radix-select-viewport] { padding:4px; }
+.suite-select-item > span:first-child { position:absolute; right:8px; display:flex; align-items:center; justify-content:center; width:14px; height:14px; }
+.suite-select-scroll { display:flex; align-items:center; justify-content:center; padding:4px; }
+.suite-select-label { padding:6px 8px; font-size:0.875rem; font-weight:600; }
+.suite-select-separator { margin:4px -4px; height:1px; background:#30363d; }
+.suite-dialog-body footer { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:8px; margin-top:20px; }
+@media (prefers-reduced-motion:reduce) { .suite-button { transition:none !important; } }
+@media (forced-colors:active) {
+  .suite-button,.suite-badge,.suite-input,.suite-textarea,.suite-native-select,.suite-dialog { border-color:CanvasText !important; }
+  .suite-button:focus-visible,.suite-input:focus-visible,.suite-textarea:focus-visible,.suite-native-select:focus-visible { outline-color:Highlight !important; }
+}
+
+/* Explicit dense/composer and wrapping layouts retain their caller-owned geometry. */
+.suite-button[class~="h-auto"] { height:auto !important; white-space:normal; }
+.suite-button[class~="justify-start"] { justify-content:flex-start !important; }
+.suite-button[class~="rounded-full"] { border-radius:9999px !important; }
+.suite-button[class~="size-8"] { width:2rem !important; min-width:2rem !important; height:2rem !important; min-height:2rem !important; padding:.25rem !important; }
+.suite-button[class~="font-mono"],.suite-button.vs-pc-citation { font-family:var(--workspace-font-mono) !important; }
+
+/* A navigation action keeps the existing shared sidebar role, not button density. */
+.suite-button.workspace-nav-item { min-height:var(--workspace-sidebar-nav-min-height) !important; height:auto !important; padding:var(--workspace-sidebar-nav-padding-block) var(--workspace-sidebar-nav-padding-inline) !important; gap:var(--workspace-sidebar-nav-gap) !important; justify-content:flex-start !important; border-radius:var(--workspace-nav-radius) !important; font-size:var(--workspace-font-control) !important; font-weight:400 !important; line-height:1.25rem !important; background:transparent !important; color:var(--workspace-color-muted) !important; border-color:transparent !important; }
+.suite-button.workspace-nav-item:hover { background:var(--workspace-nav-hover-background) !important; color:var(--workspace-nav-hover-foreground) !important; }
+.suite-button.workspace-nav-item[aria-current="page"] { background:var(--workspace-nav-selected-background) !important; color:var(--workspace-nav-selected-foreground) !important; font-weight:500 !important; }
+
 .workspace-typography .sidebar .workspace-nav-item{text-decoration:none}</style><style id="reference-layout">
 .vr-main{max-width:1500px}.vr-main section{scroll-margin-top:24px;margin-bottom:42px}.vr-intro{max-width:800px;margin:12px 0 20px}
 .vr-section-head{border-bottom:1px solid var(--line);padding-bottom:14px;margin-bottom:20px}.vr-section-head p{font-size:13px;color:var(--muted);margin-top:6px}
@@ -554,10 +682,10 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .vr-main .vr-eyebrow-sample{font-size:11px;letter-spacing:1.3px;text-transform:uppercase;color:var(--muted)}
 @media print{.vr-sidebar,.vr-main .vr-action-row,.vr-topbar{display:none}.shell{display:block}.vr-main{padding:20px;max-width:none}.vr-swatch,.vr-sample{break-inside:avoid}.vr-main{color:#222}.vr-main h1,.vr-main h2,.vr-main h3,.vr-main p,.vr-main td{color:#222}.vr-main pre{max-height:none}}
 
-.shell{grid-template-columns:var(--workspace-sidebar-width) minmax(0,1fr)}.vr-sidebar{padding-block:0}.vr-sidebar .sidebar-bottom{padding-block:16px}</style><meta name="suite-ui-baseline" content="1.10.1" data-authority="README.md" /></head><body class="workspace-typography">
+.shell{grid-template-columns:var(--workspace-sidebar-width) minmax(0,1fr)}.vr-sidebar{padding-block:0}.vr-sidebar .sidebar-bottom{padding-block:16px}</style><meta name="suite-ui-baseline" content="1.14.0" data-authority="https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/suite-ui-standard.md" /></head><body class="workspace-typography">
 <a class="skip" href="#main-content">Skip to reference</a><div class="shell"><aside class="sidebar vr-sidebar workspace-sidebar"><a class="brand workspace-brand" href="#overview"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M104,40H56A16,16,0,0,0,40,56v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,104,40Zm0,64H56V56h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V56A16,16,0,0,0,200,40Zm0,64H152V56h48v48Zm-96,32H56a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,104,136Zm0,64H56V152h48v48Zm96-64H152a16,16,0,0,0-16,16v48a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V152A16,16,0,0,0,200,136Zm0,64H152V152h48v48Z"/></svg></span>Visual kit</a><nav aria-label="Reference sections"><a class="workspace-nav-item nav-item" href="#overview">Overview</a><a class="workspace-nav-item nav-item" href="#stack">Libraries and assets</a><a class="workspace-nav-item nav-item" href="#palette">Colors</a><a class="workspace-nav-item nav-item" href="#geometry">Typography and spacing</a><a class="workspace-nav-item nav-item" href="#components">Components</a><a class="workspace-nav-item nav-item" href="#behavior">UX rules</a><a class="workspace-nav-item nav-item" href="#handoff">Copy and export</a></nav><div class="sidebar-bottom"><span class="vr-meta">Source: approved HTML mockup<br>18 October 2026 · desktop</span></div></aside>
 <main class="app-main"><header class="topbar vr-topbar"><span class="breadcrumb">HTML mockup / Visual reference</span><span class="prototype-badge">Self-contained · no external runtime</span></header><div class="content vr-main" id="main-content" tabindex="-1">
-<section id="overview"><div class="page-head"><div><div class="eyebrow">Reusable visual template</div><h1>HTML mockup design system</h1></div></div><p class="vr-intro">Generated visual companion to <a href="../../../ui-baseline/README.md">Suite UI Standard 1.10.1</a>. Read the <a href="../../../ui-baseline/references/ai-enabled-threathunting/docs/enterprise-ui-visual-standard.md">adaptation guide</a> for how to apply it. The versioned standard owns the rules; newer approved app behavior and layouts are preserved. Embedded examples and historical CSS are illustrative; the current shared screen contract is applied last.</p><div class="vr-action-row"><button class="btn primary" data-copy="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"/></svg></span>Copy complete CSS</button><button class="btn" data-download="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,112v96a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V112A16,16,0,0,1,56,96H80a8,8,0,0,1,0,16H56v96H200V112H176a8,8,0,0,1,0-16h24A16,16,0,0,1,216,112ZM93.66,69.66,120,43.31V136a8,8,0,0,0,16,0V43.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,69.66Z"/></svg></span>Download CSS</button><button class="btn" data-copy="brief">Copy agent brief</button></div><p class="vr-meta">Export includes the complete screen and print rules plus embedded Public Sans font faces. Reference-document layout styles are kept separate.</p><p class="vr-meta">Preferred source inspector: <strong>B</strong> (compact fields and Open source). Origin: threat-hunting unified mockup, with ATO comparisons. Adapt the visual language to each application’s required functionality.</p></section>
+<section id="overview"><div class="page-head"><div><div class="eyebrow">Reusable visual template</div><h1>HTML mockup design system</h1></div></div><p class="vr-intro">Generated visual companion to <a href="../../../../ui-baseline/README.md" data-suite-reference="README.md">Suite UI Standard 1.14.0</a>. Read the <a href="https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/enterprise-ui-visual-standard.md">adaptation guide</a> for how to apply it. The versioned standard owns the rules; newer approved app behavior and layouts are preserved. Embedded examples and historical CSS are illustrative; the current shared screen contract is applied last.</p><div class="vr-action-row"><button class="btn primary" data-copy="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M69.12,94.15,28.5,128l40.62,33.85a8,8,0,1,1-10.24,12.29l-48-40a8,8,0,0,1,0-12.29l48-40a8,8,0,0,1,10.24,12.3Zm176,27.7-48-40a8,8,0,1,0-10.24,12.3L227.5,128l-40.62,33.85a8,8,0,1,0,10.24,12.29l48-40a8,8,0,0,0,0-12.29ZM162.73,32.48a8,8,0,0,0-10.25,4.79l-64,176a8,8,0,0,0,4.79,10.26A8.14,8.14,0,0,0,96,224a8,8,0,0,0,7.52-5.27l64-176A8,8,0,0,0,162.73,32.48Z"/></svg></span>Copy complete CSS</button><button class="btn" data-download="theme"><span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M216,112v96a16,16,0,0,1-16,16H56a16,16,0,0,1-16-16V112A16,16,0,0,1,56,96H80a8,8,0,0,1,0,16H56v96H200V112H176a8,8,0,0,1,0-16h24A16,16,0,0,1,216,112ZM93.66,69.66,120,43.31V136a8,8,0,0,0,16,0V43.31l26.34,26.35a8,8,0,0,0,11.32-11.32l-40-40a8,8,0,0,0-11.32,0l-40,40A8,8,0,0,0,93.66,69.66Z"/></svg></span>Download CSS</button><button class="btn" data-copy="brief">Copy agent brief</button></div><p class="vr-meta">Export includes the complete screen and print rules plus embedded Public Sans font faces. Reference-document layout styles are kept separate.</p><p class="vr-meta">Preferred source inspector: <strong>B</strong> (compact fields and Open source). Origin: threat-hunting unified mockup, with ATO comparisons. Adapt the visual language to each application’s required functionality.</p></section>
 <section id="stack"><div class="vr-section-head"><h2>01 · Libraries and assets</h2><p>This is the HTML mockup’s actual visual stack. Reproduce these choices; this guide does not select a replacement application stack.</p></div><div class="table-wrap"><table class="table vr-library-table"><thead><tr><th>Layer</th><th>Exact reference choice</th><th>Porting rule</th></tr></thead><tbody>
 <tr><td>Layout and styling</td><td>Plain HTML + custom CSS Grid/Flexbox, CSS variables and media queries.</td><td>Load font faces → base styles.css → palette.css → final overrides, in that order.</td></tr>
 <tr><td>Interface font</td><td>Public Sans, Latin WOFF2; bundled weights 400, 500, 600, 700; font-display: swap.</td><td>Self-host or use the embedded font faces. Preserve the included SIL Open Font License.</td></tr>
@@ -575,7 +703,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 <details class="simple-details"><summary>Component classes and purpose <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><div class="table-wrap"><table class="table"><thead><tr><th>Component</th><th>Classes</th><th>Behavior to retain</th></tr></thead><tbody><tr><td>Shell</td><td><code>.shell · .sidebar · .app-main · .topbar · .content</code></td><td>One global rail, compact identity/header and one primary content region.</td></tr><tr><td>Navigation</td><td><code>.nav-item · .tabbar · .active</code></td><td>Selected destination uses a blue-tinted fill or underline plus aria-current.</td></tr><tr><td>Actions</td><td><code>.btn · .primary · .ghost · .danger · .icon-only</code></td><td>One prominent decision; quieter contextual actions. Label icon-only controls.</td></tr><tr><td>Inputs</td><td><code>.form-field · .form-label · .input · .form-error</code></td><td>Visible labels, contained errors, explicit saved/unsaved state.</td></tr><tr><td>Tables</td><td><code>.table-wrap · .table · .title · .subtitle</code></td><td>Compact rows and thin separators; contain wide-column scrolling.</td></tr><tr><td>Status</td><td><code>.status · .green · .amber · .red · .blue</code></td><td>A short plain-language state. Color never carries meaning alone.</td></tr><tr><td>Disclosure</td><td><code>.simple-details + native details/summary</code></td><td>Chevron, readable summary, full content preserved; collapse technical detail initially.</td></tr><tr><td>Dialog / drawer</td><td><code>dialog · .drawer · .dialog-head · .dialog-body · .dialog-foot</code></td><td>Native showModal()/close(), named dialog, Escape and focus return.</td></tr><tr><td>Saved records</td><td><code>.record-viewport · .saved-event · .record-detail · .saved-results-table</code></td><td>Bounded results, inline expansion, sticky columns/header where defined; full original values accessible.</td></tr><tr><td>References</td><td><code>.ref · .references · .raw-box · .record-fields</code></td><td>Small citation buttons open exact retained detail, not a vague navigation jump.</td></tr><tr><td>Reports</td><td><code>.report-layout · .report-section · .report-question-table · .paper</code></td><td>Dark browser reading; full static light print content. Full saved answers remain accessible.</td></tr></tbody></table></div></details><div class="vr-sample"><h3>Shared account presentation</h3><p class="hint">Static example only; the app supplies the real identity and sign-out behavior.</p><div class="workspace-account"><div class="workspace-account-trigger" role="img" aria-label="Sample account: Alex Morgan"><span class="workspace-account-avatar" aria-hidden="true">AM</span><span class="workspace-account-label"><span class="workspace-account-name">Alex Morgan</span><span class="workspace-account-caption">Account</span></span><span class="workspace-account-chevron" aria-hidden="true">⌃</span></div></div></div></section>
 <section id="behavior"><div class="vr-section-head"><h2>05 · UX rules to carry over</h2><p>Reuse the organization and interaction principles; adapt the workflow to the new product.</p></div><p><strong>Strong visual preference, applied with judgment.</strong> Keep specialized document viewers, editors, comparisons, pickers, bulk actions and upload workflows when the application needs them. B does not prohibit an embedded document view where simultaneous review is necessary.</p><details class="simple-details"><summary>Authoritative baseline · embedded release copy <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><pre class="vr-brief"># Suite Workspace UI Standard
 
-Version: **1.10.1** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.14.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -587,6 +715,9 @@ source of shared rules.
 
 - [Authority and scope](#authority-and-scope): precedence and preservation of
   each app&#x27;s intended behavior, layouts, features and newer approved work.
+- [Shared components and drift prevention](#shared-components-and-drift-prevention): canonical source, approved variants and automated parity gates.
+- [Shared frontend foundations](#shared-frontend-foundations-and-independent-deployment): routing, transport, state, forms, validation and standalone builds.
+- [Frontend stack and Python compatibility](#frontend-stack-and-python-compatibility): current pins, toolchain alignment and documented holds.
 - [Visual adaptation](#visual-adaptation): how to use the common design language
   without importing prototype behavior or replacing an established stack.
 - [Interaction and accessibility](#interaction-and-accessibility): keyboard,
@@ -599,20 +730,20 @@ source of shared rules.
   and [sidebar geometry](#shared-sidebar-geometry-and-interaction): normative shared rules.
 - [Preservation and palette](#preservation-boundaries-and-shared-palette): the
   current login, account, typography, color and component boundaries.
-- [Visual companion](visual-reference.html):
+- [Visual companion](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/design-previews/20261018/unified/visual-reference.html):
   generated HTML examples, embedded contract and exportable reference assets.
-- [Vocabulary and object model](../../../ui-baseline/references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md): shared
+- [Vocabulary and object model](suite-vocabulary-and-object-model.md): shared
   names and the distinctions between app-specific states and domain objects.
 - Local exceptions and terminology mappings:
-  [Hunt](../../../ui-baseline/references/ai-enabled-threathunting/docs/suite-terminology-audit.md),
-  [ATO](../../../ui-baseline/references/ai-enabled-ato/docs/suite-terminology-audit.md),
-  [Incident Response](../../../ui-baseline/references/llm_notable_analysis/docs/suite-terminology-audit.md).
-- [ATO theme mapping](../../../ui-baseline/references/ai-enabled-ato/docs/PORTAL_THEME.md):
+  [Hunt](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/suite-terminology-audit.md),
+  [ATO](https://github.com/dreyna001/ai-enabled-ato/blob/main/docs/suite-terminology-audit.md),
+  [Incident Response](https://github.com/dreyna001/llm_notable_analysis/blob/main/docs/suite-terminology-audit.md).
+- [ATO theme mapping](https://github.com/dreyna001/ai-enabled-ato/blob/main/docs/PORTAL_THEME.md):
   product-specific token meanings and preservation boundaries, not another palette specification.
-- [Hunt report guidance](../../../ui-baseline/references/ai-enabled-threathunting/docs/threat-hunt-reporting-guidance.md):
+- [Hunt report guidance](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/threat-hunt-reporting-guidance.md):
   report content and export-specific requirements; do not replace them with screen UI rules.
-- [Canonical screen stylesheet](../../../ui-baseline/references/ai-enabled-threathunting/frontend/src/suite-workspace.css)
-  and [source consistency check](../../../ui-baseline/references/ai-enabled-threathunting/scripts/check_suite_ui.py):
+- [Canonical screen stylesheet](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/frontend/src/suite-workspace.css)
+  and [source consistency check](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/scripts/check_suite_ui.py):
   implementation and release checks for this contract.
 - [Maintenance and verification](#keeping-one-baseline): release copies,
   generated templates, browser checks and local/CI qualification boundaries.
@@ -628,9 +759,9 @@ Installed skill entrypoints are `$HOME/.agents/skills/&lt;skill-name&gt;/SKILL.m
 Windows uses the corresponding `%USERPROFILE%/.agents/skills/` location.
 Global entrypoints are `$CODEX_HOME/AGENTS.md` and the installed Cursor
 `react` / `ui-ux-organization` rules. Product-specific entrypoints are
-[Hunt AGENTS.md](../../../ui-baseline/references/ai-enabled-threathunting/AGENTS.md),
-[ATO AGENTS.md](../../../ui-baseline/references/ai-enabled-ato/AGENTS.md), and
-[Incident Response AGENTS.md](../../../ui-baseline/references/llm_notable_analysis/AGENTS.md). Their implementation/testing advice remains applicable, but they do not
+[Hunt AGENTS.md](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/AGENTS.md),
+[ATO AGENTS.md](https://github.com/dreyna001/ai-enabled-ato/blob/main/AGENTS.md), and
+[Incident Response AGENTS.md](https://github.com/dreyna001/llm_notable_analysis/blob/main/AGENTS.md). Their implementation/testing advice remains applicable, but they do not
 carry a parallel palette, typography scale or sidebar specification. The old
 Enterprise Workspace adaptation document is a compatibility pointer here.
 Read linked product instructions for the current scope; no UI baseline authorizes
@@ -639,7 +770,7 @@ changing security, workflow, storage or deployment contracts.
 ## Authority and scope
 
 This is the **single authoritative UI/UX baseline** for the suite. Its canonical
-source is [this file in ai-enabled-threathunting](../../../ui-baseline/README.md).
+source is [this file in ai-enabled-threathunting](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/suite-ui-standard.md).
 The identical files in ATO and Incident Response are released mirrors, not
 independently maintained standards. Read the checked-out release for the app
 being changed; do not mix versions from another branch or a newer template.
@@ -649,7 +780,7 @@ Order of precedence:
 1. Explicit user/customer requirements and the destination app&#x27;s intended
    behavior, permissions, accessibility needs and domain meaning.
 2. This versioned baseline for shared appearance and approved shared UI roles.
-3. The [unified HTML visual companion](visual-reference.html)
+3. The [unified HTML visual companion](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/design-previews/20261018/unified/visual-reference.html)
    in the canonical repository, illustrating the same baseline. Its sample
    layout, synthetic content and prototype interactions are not product features.
 4. App theme notes, general skills and older previews. They must link here and
@@ -661,7 +792,8 @@ which links to this authority. The companion and its current distributed copies
 are generated artifacts. Preserve dated historical prototypes and release evidence.
 
 Shared appearance does not require identical pages, navigation structures,
-component libraries, control dimensions, table density, dialogs or workflow order.
+component compositions, table density, specialized inspectors or workflow order.
+Equivalent ordinary controls use the shared component contract below.
 Keep layouts, available features, event handlers, draft/review guards, identity,
 backend contracts and export content unchanged during a visual alignment.
 Document necessary exceptions alongside this contract; a visual mismatch alone
@@ -676,15 +808,337 @@ an Open source action. It is one reusable pattern, not a mandatory page layout.
 Retain document/PDF/image viewers, long editors, comparison desks, structured
 pickers, bulk actions and upload progress wherever the app needs them.
 
-Use the destination&#x27;s established React, Tailwind, Radix and icon primitives.
+Use the shared suite React/Radix component source and the destination&#x27;s established
+Tailwind and icon integration.
 Native HTML and Phosphor assets in the companion are examples, not replacement
 dependencies. Translate semantic roles: the companion&#x27;s accent token is a primary
 action, while an app&#x27;s accent token may be a hover fill. Scope screen CSS; do not
 paste prototype print rules over application exports. Keep full original evidence,
 precise citations, paging, approval boundaries and genuine loading/error states.
 Never invent scores, health checks, identities or service capabilities to match
-the sample. The [suite vocabulary](../../../ui-baseline/references/ai-enabled-threathunting/docs/suite-vocabulary-and-object-model.md) owns
+the sample. The [suite vocabulary](suite-vocabulary-and-object-model.md) owns
 terminology and domain distinctions; wording skills support that contract.
+
+## Shared components and drift prevention
+
+Version 1.12 adopts the approved component choices across **all six frontends**.
+The canonical source is Hunt&#x27;s `frontend/src/components/ui/`; the same files and
+`src/lib/utils.ts` are mirrored byte-for-byte into ATO and all four IR builds.
+The checked [component contract](suite-component-contract.json) records the file
+hashes. These files are one suite release, not six independently evolving forks.
+
+- **Buttons:** IR&#x27;s 37px default height and 6px radius, ATO&#x27;s blue-tinted secondary
+  hover, soft red destructive treatment, consistent visible keyboard focus.
+- **Fields:** ATO&#x27;s 36px default height, 6px radius, opaque page background and
+  common high-contrast border; ordinary values are 14px. Native-select and popup
+  select triggers use the same field geometry. Keep native input semantics.
+- **Badges:** ATO&#x27;s 12px tinted/bordered family with semantic status variants.
+  Hunt&#x27;s optional status dot carries the same meaning; never rely on color alone.
+- **Confirmation dialogs:** IR&#x27;s 520px maximum width and 8px radius, shared Radix
+  focus containment/restoration, accessible title/description, Cancel-first focus,
+  busy dismissal/duplicate-submit protection and inline actionable failures.
+  Existing larger inspectors keep their documented wide layout and callbacks.
+- These dimensions describe the default at a 16px root. Text and primary field/
+  button heights scale with enlarged text. Explicit compact/icon/composer and
+  wrapping layouts use the same shared implementation; they are not permission
+  to create an app-specific visual fork.
+
+The shared source set also includes the existing card, label, separator,
+skeleton, tabs, select and account primitives. Product layouts may supply width,
+placement and wrapping. Normal component appearance belongs to the shared CSS.
+`suite-components.css` makes equivalent controls render consistently under the
+ordinary Tailwind setup and Hunt&#x27;s prefixed Tailwind/legacy CSS context.
+
+Use the shared primitives for new ordinary controls. The reviewed native-control
+inventory in each app&#x27;s `suite-component-exceptions.json` preserves specialized
+navigation/record selectors, anchored non-modal context popups, native file and
+checkbox inputs, code editors, single-border assistant composers and app-specific login presentation. These are
+explicit scope exceptions, not six alternative implementations of generic fields.
+Do not mass-convert specialized controls or change their guards to satisfy a hash.
+
+**Required edit procedure:** change the canonical component, copy the exact bytes
+to all six builds, update the versioned contract and affected exception records,
+then run `scripts/check_suite_components.py` with both peer repositories.
+`scripts/check_suite_ui.py` includes that gate. New or changed native controls
+and app-local `.suite-button`/field/badge/dialog overrides fail the gate.
+Do not update expected hashes merely to accept a divergent app implementation.
+The shared-file Git attributes enforce LF line endings on Windows and Linux, so
+checkout conversion cannot silently create different source bytes.
+
+Run `npm run test:components` in each frontend. The identical
+`playwright.components.config.ts` starts a dedicated Vite fixture server to load
+`/e2e/fixtures/suite-components.html` in its actual CSS context. The component
+tests are explicitly enabled by this configuration and stay skipped in ordinary
+product journeys, whose server may serve only compiled assets. Compare
+the computed-style attachments within each browser engine across all six builds.
+The approved per-engine computed styles are also checked inside every frontend&#x27;s
+component test, so an app-local generic CSS rule cannot quietly change a control
+while its shared source still matches. Update these expectations only after an
+approved visual change is verified across the suite.
+The fixture verifies hover/focus, disabled/readonly/invalid/required fields,
+dialog naming/focus/restoration, delayed failure/retry, duplicate submissions,
+constrained desktop fit, popup keyboard behavior, tabs and reduced motion.
+It uses simulated requests; also run the actual app workflow/role coverage below.
+Fixtures are test assets, not product routes or a production component explorer.
+The current [verification record](suite-foundation-verification.md) identifies
+actual browser/role/state coverage and the synthetic versus live boundaries.
+
+Shared component source parity does **not** prove every product screen looks or behaves identically. The shared foundation contract below now owns routing, transport, state, form and validation parity, with domain-specific adapters preserving each product&#x27;s semantics.
+
+## Shared frontend foundations and independent deployment
+
+Version 1.14 hardens the standardized routing, HTTP transport, state conventions, forms and
+validation across all six frontends. The canonical source is Hunt&#x27;s
+`frontend/src/lib/suite/`; each other frontend contains the **same source bytes**
+inside its own repository. The [foundation contract](suite-foundation-contract.json)
+records their hashes and the shared verification assets.
+
+**Each app builds and deploys independently.** There are no cross-repository
+imports, linked packages, shared runtime servers, or sibling-checkout build
+requirements. ATO needs only the ATO repository; Hunt needs only Hunt; each IR
+variant remains a standalone build within the IR repository. Peer checkouts are
+optional inputs to development-time drift checks, never application dependencies.
+
+- **Routing:** React Router 8.5.0 through the shared `routing.tsx` entrypoint and
+  BrowserRouter in all six apps. Route tables, allowlists, authentication redirects,
+  draft/review permission decisions and recovery destinations remain app-owned.
+  Hunt&#x27;s event-driven navigation adapter now feeds this same browser engine and
+  preserves citation history state. Its pre-router Back/Forward guard restores
+  rejected history before a dirty editor can unmount. ATO&#x27;s earlier capture guard
+  and save/continue logic remain intact. Back, Forward, deep links and rejected
+  navigation require real-browser tests; matching route source alone is inadequate.
+- **HTTP:** native Fetch through shared `fetchResponse`, `requestScope`, `ApiError`
+  and `readJson`. One cancellation/error model, deadline cleanup, validated JSON
+  decoding and **no automatic mutation retry**. App adapters supply endpoints,
+  identity headers, CSRF, error-body interpretation and domain response parsers.
+  The default deadline is 30 seconds across preparation, headers and response body.
+  IR chat and long mutations explicitly allow 220 seconds; signed uploads and
+  downloads allow 120 seconds. Hunt reads now use 30 seconds and mutations use
+  220 seconds. ATO SSP non-streaming reads use 30 seconds and mutations 220 seconds.
+  Only ATO generation streaming opts out, retaining its explicit heartbeat/idle
+  timeout and caller cancellation. No nested default may shorten an override.
+  Abort cancels browser transport/body reads; it does not prove server work stopped.
+  Preserve uncertain-write reconciliation and never automatically replay a mutation. Signed object
+  storage requests must never receive portal bearer tokens or CSRF headers.
+- **State:** React local state for component/route ownership and React Context for
+  state shared by descendants. Shared `createStateScope` provides memory-only
+  provider state with reactive subscriptions and an explicit restoration-only
+  snapshot accessor. IR queue draft persistence uses the snapshot accessor so
+  typing does not broadcast updates through the authenticated tree.
+  `useFormState` is the controlled
+  draft-state entrypoint. Derived values remain derived. Server data stays owned by
+  its existing request/polling controller; there is no suite-wide persisted server
+  cache. No Redux, Zustand, or query-cache package is required. Do not move private
+  case data into global storage. Existing authenticated lifetimes, polling,
+  cancellation, stale-response checks and Hunt&#x27;s explicitly scoped tab drafts stay
+  app-owned. The shared latest-read controller cancels superseded ATO session
+  reads and Hunt queue reads; stale responses cannot overwrite newer state.
+  IR filter changes reset pagination before requesting data, so an old cursor
+  cannot trigger a redundant request. Contexts representing workflow callbacks are domain adapters, not
+  alternative global-state frameworks.
+- **Forms:** all native form surfaces render the same `SuiteForm`, retaining their
+  exact DOM, classes, labels, focus order and browser validation. It suppresses
+  duplicate pending async submissions and respects `aria-busy`. Existing handlers
+  still own field values, save/reconcile behavior, busy/error announcements and
+  reset decisions. Return async work to the form and handle failures visibly; a
+  timeout must not discard the draft or automatically repeat an accepted write.
+- **Validation:** Zod 3.25.76 in every frontend through the shared validation
+  entrypoint, with `parseWithSchema` and `validateFields`. Native required/type/
+  length constraints remain. Domain schemas and generated API contracts differ
+  because the products have different data; retain their meanings, refinements,
+  evidence preservation and rejection paths. Backend validation remains
+  authoritative. Generated browser modules contain schemas only, excluding unused Zodios/Axios
+  clients. Keep the checked-in schemas-only template in `generate:api`.
+  Zod stays on 3 while the installed generator requires it; Python 3.12 versus 3.14 does not create this hold.
+
+`suite-foundation-adapters.json` in each repository records the intentional product
+boundaries. Equivalent generic mechanisms must not fork. Change the canonical
+source, copy it to all six frontends, update the shared contract and run
+`scripts/check_suite_foundation.py` locally, optionally with both `--peer` paths.
+`check_suite_ui.py` includes this gate. It rejects changed shared bytes, direct
+Fetch/form/router/validation bypasses and file-linked deployment dependencies.
+Adding a state, form, query or HTTP framework requires a recorded decision and
+an update to the reviewed-package contract; it is not a silent app-local choice.
+Run `npm run test:foundation` in each frontend for its own standalone fixture;
+then run the product workflow and component checks. Record actual browser, role,
+route and state coverage in [the foundation verification record](suite-foundation-verification.md).
+
+
+### Fast feedback and release qualification
+
+During implementation, run the local source gate and focused unit/browser tests
+for the changed boundary. Use the installed Node/browser caches and the dedicated
+`test:foundation` / `test:components` commands; freeze application files during a
+browser qualification run so hot reload does not contaminate the result. Run the
+complete affected six-frontend matrix once the shared candidate is stable, and
+repeat affected checks only after a relevant change or unresolved failure. Do
+not shorten the final release matrix by hiding failures or dropping required
+roles/states.
+
+Responsiveness comparisons require the same compiled production serving mode,
+browser/viewport, data, workload and stated cold/warm cache conditions. A Vite
+source fixture is appropriate for component behavior; its startup or test runtime
+is not a production responsiveness benchmark. Report build time, harness time,
+network/server latency and interaction/render latency separately. The current qualification reports anonymous cold-start JavaScript payloads
+separately from behavior, request counts and render counts. It does not equate
+smaller assets with lower end-to-end workflow latency.
+
+### Production bundle budgets
+
+Run `npm run build` then `npm run check:performance` in each frontend. The local
+checker reads Vite&#x27;s production manifest, counts each eager JavaScript asset once
+(including preloaded dependencies), excludes truly dynamic imports from that
+eager count, and separately bounds total JavaScript across all routes. Limits in
+`suite-performance-contract.json` use the measured 1.14 candidate with explicit
+headroom; they are payload limits, not latency guarantees. Update limits only
+with reviewed before/after network and bundle evidence, never merely to silence
+a failure. Also inspect actual browser requests: authentication or initial route
+logic can load dynamic chunks before the first usable screen.
+
+ATO page splitting must retain the eagerly registered agency-settings history
+guard. Hunt lazy renderer boundaries must leave the shell, drafts and workflow
+guards mounted. Delay a hidden panel until its first use, then retain it when
+visited so drafts survive. Keep shared data helpers separate from renderer
+modules so a static helper import cannot defeat the intended code split. New asynchronous screens need accessible loading and recoverable
+errors. Keep per-app identity, permissions, revisions and deploy independence.
+
+## Foundation decision review
+
+See the [current decision review and follow-up limits](suite-foundation-architecture-review.md) for the 1.14 candidate.
+
+An aligned implementation is a reviewed default, not proof of optimality. When
+asked to standardize, review or materially replace a foundation, compare the
+current implementations with a credible alternative before selecting a winner.
+Routine fixes do not reopen the whole stack.
+
+Record the requirement, concrete failure or cost, considered alternatives,
+security/workflow constraints, migration cost, measured evidence and reversal
+condition. Name evidence that is missing. Prefer a narrow experiment when the
+choice depends on performance or operator behavior. Do not assume the newest
+package, smallest dependency count, most popular library, or one app&#x27;s existing
+implementation is inherently better.
+
+For these frontends, use the following questions:
+
+- Would React Router data APIs remove duplicated loading/navigation machinery,
+  and can they preserve every dirty-draft and authentication transition? Keep
+  the current declarative engine until those benefits justify a tested migration.
+- Does a query library reduce duplicated server-state lifecycle code enough to
+  justify explicit authenticated cache keys, logout invalidation, refresh policy,
+  cancellation and mutation-reconciliation rules? Never introduce a global cache
+  merely to make all apps list the same dependency.
+- Do complex forms need field arrays, granular subscriptions or extensive shared
+  validation that a form library demonstrably simplifies? Compare equivalent
+  typing/rendering and error/focus behavior before replacing working native forms.
+- Does the HTTP layer bound the actual operation being discussed: connection,
+  headers, body, stream idle time or server-side work? Cancelling a browser request
+  does not establish that a mutation was cancelled. Preserve uncertain-write
+  reconciliation and signed-upload credential boundaries.
+- Does a wrapper own useful common behavior or a stable boundary? Avoid adding
+  aliases, settings or indirection solely to make different business flows look
+  identical in source. Product schemas, permissions and workflows are allowed to
+  differ; equivalent generic behavior needs parity tests.
+
+Use the existing React, Development Stack, Source-Driven Development,
+Maintainability/Architecture, Reliability/Performance and Correctness/Testing
+guidance together. These cover the work; a new suite-specific skill for each
+library would duplicate policy. Keep selections and exact versions here, method
+guidance in the existing skills, and mechanical enforcement in executable gates.
+If a future repeated workflow is genuinely missing, add a focused skill only for
+that gap and link it from this entry point.
+
+
+## Frontend stack and Python compatibility
+
+Version 1.11 standardizes the implementation toolchain across ATO, Threat Hunt,
+and all four Incident Response frontends. The exact, offline-checkable pins are
+in [the frontend stack contract](suite-frontend-stack.json). The contract and
+the package manifests/lockfiles are released together. A newest-version lookup
+does not by itself qualify a release; upgrades must pass the checks below.
+
+The stable target verified against publisher metadata on **2026-10-24** is:
+
+- Node.js **24.22.1 LTS**, npm **11.19.1**; Node 26 is Current, not the selected LTS.
+- React and React DOM **19.3.1**, with matching React 19 type packages.
+- TypeScript **7.0.2**, Vite **8.3.5**, React Vite plugin **6.1.2**.
+- Tailwind CSS and its Vite plugin **4.3.3**; Radix primitives at the exact
+  component-specific versions in the contract; Lucide React **1.61.0**.
+- React Router **8.5.0**, imported from `react-router` (or `react-router/dom`
+  for DOM-specific APIs). The old `react-router-dom` compatibility package is
+  not the current major and must not be used as the latest-version indicator.
+- Vitest **5.0.5** and Playwright Test **1.64.1**. Where used, jsdom is **30.1.3**,
+  Testing Library React **16.3.3**, and jest-dom **7.0.1**.
+
+Use exact direct dependency pins, committed npm lockfiles, the same Node major,
+and the existing independently deployable builds. Do not create cross-repository
+runtime imports or install product-specific libraries where they have no use.
+All common packages that are present must match the contract. Run
+`python3 scripts/check_frontend_stack.py --installed` in each repository;
+`check_suite_ui.py` also checks declared and locked versions.
+
+Stack alignment preserves product behavior, security and layout. Tailwind may
+coexist with the approved custom CSS; Hunt excludes Tailwind Preflight and prefixes
+its utility layer to prevent new global resets. All six frontends mount the same React Router browser engine through the shared foundation entrypoint. Hunt retains its event-driven navigation adapter, route allowlist and workflow callbacks around that engine.
+Use Radix primitives for equivalent interactions while keeping the documented
+native dialogs, layout density, exports and customer identity providers intact.
+
+### Python is a separate compatibility axis
+
+The suite&#x27;s intended backend direction is **Python 3.14**. A backend may remain
+on its declared, verified Python 3.12 runtime while its frontend is upgraded.
+Browser libraries execute in JavaScript, and Vite/TypeScript execute under Node;
+Python 3.12 alone is not a reason to lower React, Router, Tailwind or Vite versions.
+Node build stages and Python service stages remain separate. Do not change a
+backend runtime or cloud deployment merely to satisfy a frontend version target.
+
+A real coupling can exist in API/schema generation, Python browser-test bindings,
+offline installers, build scripts, native wheels, or hosting packages. Record the
+exact package, affected app/variant, tested version, concrete failing boundary,
+temporary pin, and removal condition. If Python 3.14 resolves that boundary,
+make the frontend recheck a named acceptance item of that app&#x27;s Python migration.
+Recheck required SDKs, schema/client generation, browser tests and packaged static
+assets when either runtime changes. Use the target runtime&#x27;s actual dependency
+declarations and qualification evidence rather than inferring status from a label.
+
+### Current compatibility hold
+
+**Zod 3.25.76** is retained in ATO and the Incident Response clients using
+`openapi-zod-client` / `@zodios/core`. The latest Zod is **4.6.7**, but the installed
+Zodios client declares `zod: ^3.x` and the generated schemas use that contract.
+This hold is independent of Python. Remove it when the client generation/runtime
+chain supports Zod 4 and schema, authorization/error, and generated-client tests
+pass. Do not use forced or legacy peer-dependency resolution to hide the mismatch.
+MSAL is product-specific; its selected common version is **5.26.0** wherever used.
+
+### Upgrade and evaluation acceptance
+
+- Verify stable publisher releases and their Node/browser/peer requirements;
+  inspect installed packages and caches before downloading. Do not select canary,
+  beta, RC or experimental APIs simply to obtain a larger version number.
+- Update manifests, locks, Node selectors, build images, generated clients where
+  applicable, the contract, release mirrors, companion and permanent baseline.
+  Record exceptions with an objective exit condition; do not silently fork pins.
+- Require type checks, production builds and relevant unit tests for all six
+  frontends. Browser checks must include the central interaction/accessibility,
+  popup/workflow, desktop zoom and reduced-motion requirements. Keep tests that
+  detect real regressions; update only stale API usage, ambiguous locators and
+  invalid timing assumptions. Preserve assertions of actual user outcomes.
+- Compare frontend performance using equivalent production builds, data volumes,
+  browser engines, viewport and cache policy. Record visible-content and paint
+  timing separately from automation dispatch/waiting and backend/model latency.
+- Isolated synthetic browser tests may use two workers after state independence
+  is verified. Keep real shared-state/provider workflows serialized until isolated.
+  Run a focused feedback lane and a broader release lane; never drop required
+  browser, zoom or guarded-flow coverage to make the result faster.
+- Record actual engine versions, routes, roles, states, skips and unavailable
+  checks. Native browser zoom is not font resizing; accessibility-tree assertions
+  are not screen-reader speech. Source/lock parity is not runtime qualification.
+
+Publisher references: [Node releases](https://nodejs.org/en/about/previous-releases),
+[React versions](https://react.dev/versions), [Vite releases](https://vite.dev/releases),
+[Router v8 migration](https://reactrouter.com/upgrading/v7),
+[npm registry package metadata](https://registry.npmjs.org/).
+
 
 ## Navigation
 
@@ -998,9 +1452,9 @@ can select an existing compatible binary. The harness creates only an isolated,
 temporary browser profile and extension for native zoom. Keep the usual multi-engine
 interaction suite as a separate check; explicitly skipped native zoom is unverified.
 
-Release scope: ATO and all four Incident Response frontends implement these fixes.
-Threat Hunt receives the synchronized standard and stylesheet only; its runtime
-was explicitly excluded from this remediation. The reflow selector is opt-in and
+Version 1.9 remediation scope: ATO and all four Incident Response frontends implemented these fixes.
+Threat Hunt received the synchronized standard and stylesheet only in version 1.9; its runtime
+was explicitly excluded from that remediation. The reflow selector is opt-in and
 does not change Threat Hunt. Its native-zoom and conversational-feedback alignment
 is unverified for this release and must not be described as complete suite coverage.
 Existing shared typography, palette, account, sidebar and motion rules remain intact.
@@ -1077,17 +1531,15 @@ selection while retaining those implementations and their layout/behavior contra
   use their dedicated values above; do not replace them with old theme values.
 - Map semantic roles, not raw variable names: `accent` can mean primary action
   in the HTML and hover fill in an app. Status colors retain domain meanings.
-- Existing button/input dimensions, corner radii, contextual fills and focus
-  primitives remain app-owned where a newer shared rule has not been approved.
-  For example, ATO&#x27;s secondary hover and Incident Response&#x27;s contextual input
-  surfaces must not be replaced just to reproduce an earlier template.
+- Version 1.12 supersedes prior app-owned ordinary button/input/badge/dialog
+  decoration with the approved shared component contract. Specialized layouts
+  and the explicitly recorded native controls retain their documented scope.
 - Login pages, editors, tables, dialogs, inspectors and reports retain their
   established layouts and interactions. App/document-specific typography and
   print/PDF rules remain explicit exceptions to ordinary screen text roles.
 
-Further control-level alignment requires evidence from the current rendered
-apps and an intentional update to this contract. A difference by itself is not
-proof of a bug or permission to copy an older declaration.
+Further alignment outside the version 1.12 component scope requires rendered
+evidence and an intentional contract update. Preserve specialized product roles.
 
 ## Keeping one baseline
 
@@ -1124,7 +1576,7 @@ blocked, report precisely what remains out of sync. App-only behavior changes do
 not require forcing unrelated parity; record an exception when they affect a
 shared rule. These instructions do not grant new deployment or merge permission.
 
-Edit this canonical document and canonical `frontend/src/suite-workspace.css`
+Edit this canonical document, the shared component source/manifest and canonical `frontend/src/suite-workspace.css`
 together when a shared rule changes. Bump both versions, publish identical
 released copies to the other five frontends and two repositories, and regenerate
 the visual companion with `python3 design-previews/20261018/unified/build-visual-reference.py`.
@@ -1136,8 +1588,8 @@ and link here rather than repeating the palette, font scale or sidebar geometry.
 Run `python3 scripts/check_suite_ui.py` in each repo. Add `--peer &lt;repo-root&gt;`
 for the other two repos to verify released document/CSS/reference parity. This
 check proves source consistency, not usability: also run the existing rendered
-suite checks and app workflow regressions described above. Preserve the root
-text-size behavior and existing control bounding boxes when aligning decoration.
+suite checks and app workflow regressions described above. Preserve root text-size behavior and specialized layout constraints. Default
+component geometry follows the approved shared component contract.
 
 ## Reconciliation record — 2026-10-23
 
@@ -1213,7 +1665,7 @@ explicit. Normal desktop layouts and all workflow/domain guards are preserved.
     &lt;/div&gt;
   &lt;/main&gt;
 &lt;/div&gt;</pre></details><details class="simple-details"><summary>Agent handoff brief <span class="icon" aria-hidden="true"><svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" fill="currentColor"><path d="M213.66,101.66l-80,80a8,8,0,0,1-11.32,0l-80-80A8,8,0,0,1,53.66,90.34L128,164.69l74.34-74.35a8,8,0,0,1,11.32,11.32Z"/></svg></span></summary><pre class="vr-brief" id="brief-source">Read the versioned Suite Workspace UI Standard first:
-README.md
+https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/suite-ui-standard.md
 This HTML is its generated visual companion, not an independent source of rules.
 Use the app&#x27;s checked-out standard and preserve newer approved login, sidebar,
 typography, color, accessibility and workflow implementations. Older prototypes
@@ -1352,4 +1804,19 @@ document.addEventListener('click',async event=>{
 });
 document.querySelector('#css-disclosure').addEventListener('toggle',event=>{if(event.target.open&&!document.querySelector('#css-source').textContent)document.querySelector('#css-source').textContent=theme();});
 document.querySelector('#example-search').addEventListener('input',event=>{let count=0;for(const row of document.querySelectorAll('#example-rows tr')){row.hidden=!row.dataset.search.includes(event.target.value.toLowerCase());if(!row.hidden)count++;}document.querySelector('#example-empty').hidden=count>0;});
-</script></body></html>
+</script><script>
+// Installed packages resolve the same companion through their user-profile root.
+(() => {
+  const path = location.pathname.replace(/\\/g, '/');
+  const root = path.includes('/.cursor/skills/')
+    ? '../../../../.agents/ui-baseline/'
+    : path.includes('/.agents/skills/') ? '../../../ui-baseline/' : null;
+  if (root) {
+    const base = new URL(root, location.href);
+    document.querySelectorAll('[data-suite-reference]').forEach(link => {
+      link.href = new URL(link.dataset.suiteReference, base).href;
+    });
+  }
+})();
+</script>
+</body></html>

@@ -1,0 +1,17 @@
+{
+  "name": "Executive Navy + Orange",
+  "description": "Preferred color profile for the AI-assisted triage executive slides.",
+  "usage": "Use when asked to match this deck or reuse this palette. It is an optional style profile, not a default for every design.",
+  "colors": {
+    "primary_navy": "#172447",
+    "accent_orange": "#F4A340",
+    "dark_text": "#263448",
+    "muted_text": "#53647B",
+    "pale_blue": "#EAF1FA",
+    "border": "#D5DEEA",
+    "cream_highlight": "#FFF6EA",
+    "dark_orange": "#A6530A",
+    "subtitle_on_navy": "#DCE6F2",
+    "white": "#FFFFFF"
+  }
+}

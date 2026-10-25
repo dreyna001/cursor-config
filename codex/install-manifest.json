@@ -1,5 +1,9 @@
 {
   "global_instructions": "global-instructions.md",
+  "global_instructions_nonlinux": "global-instructions.nonlinux.md",
+  "linux_only_skills": [
+    "contextual-learning"
+  ],
   "owner": "dreyna001/cursor-config",
   "runtime_entrypoints": {
     "instructions": "$CODEX_HOME/AGENTS.md (default ~/.codex/AGENTS.md)",

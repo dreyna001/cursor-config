@@ -4,7 +4,7 @@ For UI/UX work, start at the permanent local baseline:
 `$HOME/.agents/ui-baseline/README.md` (Windows:
 `%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
 open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
-[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+`$HOME/.agents/ui-baseline/README.md` (WSL).
 If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
@@ -57,6 +57,16 @@ remembered-destination decisions.
 - When many cards or sections stack vertically, bound the growing list region only when it would push closely related work out of reach; use a compact list cap and leave the rest of the page scrollable.
 - For a selection pane that stacks with related work, use the compact card-list cap as a starting point. When it sits side-by-side and the wider layout benefits from showing more choices, it can grow up to the full document or section-browser cap.
 - Choose scroll caps by context rather than applying one height everywhere. Use these as starting points, then adjust for content density, viewport height, and the nearby actions that need to stay visible: compact card lists around `min(24rem, 45dvh)`; large work panes around `min(38rem, 65dvh)`; full document or section browsers up to `min(48rem, 70dvh)`; menus and autocomplete results around `min(20rem, 50dvh)`; dialogs within `calc(100dvh - 2rem)`. Avoid fixed `vh` caps that can consume most of a short viewport.
+
+## Shared UI change completion
+
+Approved shared UI changes are not complete until the versioned baseline,
+its visual companion, all three apps (six frontends), this configuration
+repository's reference bundle, and the permanent local baseline are synchronized.
+Follow the baseline's “Keeping one baseline” procedure, record app-specific
+exceptions and validation, and preserve newer approved behavior and styling.
+If any part cannot be updated or verified, report the remaining drift explicitly.
+
 
 For shared visual changes, verify computed form roles, semantic colors, keyboard
 selection and control geometry against the central baseline. A passing size-scale

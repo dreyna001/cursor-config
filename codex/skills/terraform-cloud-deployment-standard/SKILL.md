@@ -10,6 +10,10 @@ Before creating or changing an AWS GovCloud instance, ask whether the FedRAMP au
 
 For production HTTP ingress design, changes, or review, read [authorization-ready applications](../engineering-guidance/references/authorization-ready-apps.md) and [API abuse and exposure](../engineering-guidance/references/api-abuse-and-exposure.md). Verify per-client/per-route quotas at the edge and application; a shared stage throttle is not equivalent. Preserve local developer/test configurations and existing customer-owned resources; the checklist does not authorize deployment or infrastructure migration.
 
+## Conditional data protection
+
+When the project uses persistent data, apply [conditional backup and recovery decisions](../cloud-native-platform-architecture/references/data-protection.md) through its existing deployment roots. This reference governs native coverage, justified additions and evidence; it does not authorize deployment or retention changes.
+
 ## Required design
 
 When production ingress serves browser content or authenticated data, also apply [application security](../engineering-guidance/references/security.md) for response-header, cache, and file-serving policies at the owning edge. Treat missing live configuration as unknown; do not infer a deployed vulnerability from an absent template.

@@ -13,3 +13,5 @@ Read when a React project uses Vitest for unit or component tests. Keep tests de
 - [Vitest mocking](https://vitest.dev/guide/mocking)
 - [Vitest global stubs and cleanup](https://vitest.dev/config/unstubglobals)
 - [Vitest isolation](https://vitest.dev/config/isolate)
+
+Follow the [shared testing guidance](../../engineering-guidance/references/correctness-and-testing.md) for test-level selection, independent expected results, failure-detection controls, durable outcomes, and honest execution evidence.

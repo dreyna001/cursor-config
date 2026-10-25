@@ -3,6 +3,8 @@ name: contextual-learning
 description: Recover from meaningful failures, failed approaches, or user corrections and retain verified lessons with explicit applicability conditions across projects.
 ---
 
+Linux/WSL only. Do not activate or invoke this skill on native Windows or macOS.
+
 # Contextual Learning
 
 Use after a meaningful failure, a disproven approach, or a user correction; also use when a prior lesson may affect a current diagnosis. Skip trivial typos and ordinary successful tasks. This skill extends [debugging-and-error-recovery](../debugging-and-error-recovery/SKILL.md); load that skill for technical diagnosis and repair, without duplicating its core loop. Retention is separate from repairing the current task.
