@@ -6,3 +6,5 @@ alwaysApply: false
 # API, Data, And Distributed Systems
 
 Read and apply [api-data-and-distributed](../skills/cursor-rules/references/api-data-and-distributed.md). Keep this rule as the activation stub; do not copy the reference body here.
+
+For frontend route and backend API boundaries, read [frontend and backend URL routing](../skills/cursor-rules/references/url-routing.md).

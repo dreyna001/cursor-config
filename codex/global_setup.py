@@ -105,6 +105,21 @@ def discover_skills(source_root: Path) -> dict[str, dict[str, str]]:
     return skills
 
 
+def without_linux_learning(content: str) -> str:
+    start = "<!-- BEGIN contextual-learning managed section -->"
+    end = "<!-- END contextual-learning managed section -->"
+    if start not in content and end not in content:
+        return content
+    if content.count(start) != 1 or content.count(end) != 1 or content.index(end) < content.index(start):
+        raise SetupError("Malformed contextual-learning managed section")
+    return content[:content.index(start)].rstrip() + "\n\n" + content[content.index(end) + len(end):].lstrip()
+
+
+def platform_skills(metadata: dict[str, Any]) -> dict[str, Any]:
+    return {name: value for name, value in metadata.items()
+            if name != "contextual-learning" or sys.platform.startswith("linux")}
+
+
 def source_manifest_path(source_root: Path) -> Path:
     return source_root / SOURCE_MANIFEST
 
@@ -114,6 +129,8 @@ def make_source_manifest(source_root: Path, skills: dict[str, dict[str, str]]) -
         "schema_version": 1,
         "owner": OWNER,
         "global_instructions": "global-instructions.md",
+        "global_instructions_nonlinux": "global-instructions.nonlinux.md",
+        "linux_only_skills": sorted(set(skills) & {"contextual-learning"}),
         "skills_root": "skills",
         "skill_count": len(skills),
         "skills": sorted(skills),
@@ -139,6 +156,10 @@ def load_source_manifest(source_root: Path, *, require_current: bool = True) -> 
     instructions = source_root / "global-instructions.md"
     if not instructions.is_file() or instructions.is_symlink():
         raise SetupError(f"Missing regular canonical global instruction file: {instructions}")
+    generated = source_root / "global-instructions.nonlinux.md"
+    expected_instructions = without_linux_learning(instructions.read_text(encoding="utf-8"))
+    if not generated.is_file() or generated.is_symlink() or generated.read_text(encoding="utf-8") != expected_instructions:
+        raise SetupError("Non-Linux instructions are stale; run refresh-manifest --apply")
     skills = discover_skills(source_root)
     expected = make_source_manifest(source_root, skills)
     path = source_manifest_path(source_root)
@@ -162,10 +183,13 @@ def atomic_write_json(path: Path, data: dict[str, Any]) -> None:
 
 def tree_digest(source_root: Path, skill_names: list[str]) -> str:
     digest = hashlib.sha256()
-    paths = [source_root / "global-instructions.md"]
+    paths = [source_root / "global-instructions.md", source_root / "global-instructions.nonlinux.md"]
     for name in skill_names:
         paths.extend(sorted((source_root / "skills" / name).rglob("*"), key=lambda item: item.relative_to(source_root).as_posix()))
     for path in sorted(paths, key=lambda item: item.relative_to(source_root).as_posix()):
+        # Interpreter caches are local execution products, not canonical source.
+        if "__pycache__" in path.relative_to(source_root).parts or path.suffix in {".pyc", ".pyo"}:
+            continue
         relative = path.relative_to(source_root).as_posix()
         digest.update(relative.encode("utf-8", errors="surrogateescape") + b"\0")
         if path.is_symlink():
@@ -239,7 +263,8 @@ def plan_install(source_root: Path, codex_home: Path, agents_home: Path) -> dict
     source_root = source_root.resolve()
     codex_home = codex_home.resolve()
     agents_home = agents_home.resolve()
-    source_manifest, skill_metadata = load_source_manifest(source_root)
+    source_manifest, all_metadata = load_source_manifest(source_root)
+    skill_metadata = platform_skills(all_metadata)
     if (codex_home / "AGENTS.override.md").exists():
         raise SetupError(
             f"{codex_home / 'AGENTS.override.md'} overrides global instructions; resolve it before installing"
@@ -260,7 +285,12 @@ def plan_install(source_root: Path, codex_home: Path, agents_home: Path) -> dict
     if path_exists(installed_manifest_path):
         prior_manifest = read_json(installed_manifest_path)
 
-    source_instructions = source_root / str(source_manifest["global_instructions"])
+    if not sys.platform.startswith("linux"):
+        for active_root in (official_root, codex_skills):
+            if path_exists(active_root / "contextual-learning"):
+                raise SetupError("Contextual learning is Linux-only; preserve the existing non-Linux package outside active skill roots before installing")
+    instruction_key = "global_instructions" if sys.platform.startswith("linux") else "global_instructions_nonlinux"
+    source_instructions = source_root / str(source_manifest[instruction_key])
     instruction_target = codex_home / "AGENTS.md"
     skill_targets = {
         name: (official_root / name, source_root / str(source_manifest["skills_root"]) / name)
@@ -541,6 +571,7 @@ def verify_runtime(source_root: Path, codex_home: Path, agents_home: Path, cwd_l
     if not static["valid"]:
         raise SetupError("Static installation verification failed: " + "; ".join(static["errors"]))
     _, metadata = load_source_manifest(source_root.resolve())
+    metadata = platform_skills(metadata)
     managed_names = set(metadata)
     chosen_cwds = list(cwd_list)
     if not chosen_cwds:
@@ -617,6 +648,12 @@ def write_source_manifest(source_root: Path, *, apply: bool) -> dict[str, Any]:
     path = source_manifest_path(source_root)
     if not apply:
         return {"applied": False, "path": str(path), "skill_count": len(skills), "skill_names": sorted(skills)}
+    generated = source_root / "global-instructions.nonlinux.md"
+    rendered = without_linux_learning((source_root / "global-instructions.md").read_text(encoding="utf-8"))
+    if generated.is_symlink():
+        raise SetupError("Refusing a symlink for generated non-Linux instructions")
+    if not generated.is_file() or generated.read_text(encoding="utf-8") != rendered:
+        generated.write_text(rendered, encoding="utf-8")
     atomic_write_json(path, data)
     return {"applied": True, "path": str(path), "skill_count": len(skills), "skill_names": sorted(skills)}
 

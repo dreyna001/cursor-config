@@ -24,6 +24,8 @@ Use these prompts for AWS and AWS GovCloud architecture. They are not a fixed re
 - For small knowledge corpora, compare managed search, application-managed retrieval, and simpler indexed storage before accepting OpenSearch operational cost.
 - If semantic retrieval is required, verify embedding-model and vector-search availability in the target partition and region.
 
+For data stores actually used by this project, read [conditional backup and recovery decisions](data-protection.md); protection choices follow documented recovery requirements and verified existing coverage.
+
 ## Reliability And Operations
 
 - Define retry ownership across SDK, Lambda, queue, event source, workflow, and application layers.

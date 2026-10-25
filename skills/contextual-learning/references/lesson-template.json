@@ -1,0 +1,48 @@
+{
+  "id": "replace-with-specific-slug",
+  "title": "Specific problem in an observed configuration",
+  "status": "candidate",
+  "failure_kind": "application-bug",
+  "keywords": ["subsystem", "architecture", "environment", "version"],
+  "problem": "Expected behavior, actual behavior, and established trigger.",
+  "causal_principle": "General mechanism, separately from local commands. Unverified explanations stay candidates.",
+  "origin": {"task": "Sanitized task label", "project": "Sanitized project label"},
+  "context": {
+    "architecture": "Relevant components, boundaries, and state model",
+    "environment": "OS, deployment type, tool/runtime assumptions",
+    "versions": {"relevant-component": "Exact observed version"}
+  },
+  "applicability": {
+    "required_facts": {
+      "project": "Sanitized project label",
+      "architecture": "Specific measured architecture",
+      "environment": "Specific observed environment",
+      "version.relevant-component": "Exact observed version"
+    },
+    "rationale": "Why these conditions matter; one incident remains scoped to its observed project/configuration."
+  },
+  "exclusions": {
+    "any_of": [{"deployment": "production"}],
+    "counterexamples": ["An architecture or version where the same symptom has a different cause."]
+  },
+  "diagnostic_checks": ["Independent checks distinguishing this cause from similar symptoms."],
+  "correction": {
+    "principle": "Smallest authorized change to the demonstrated cause",
+    "project_specific": ["Optional sanitized example commands/paths; examples only, recheck before adaptation."]
+  },
+  "invariants": ["Supported behavior, safety checks, state and permission boundaries to preserve."],
+  "verification": {
+    "failure_evidence": ["Sanitized reproduction or existing evidence reference"],
+    "cause_evidence": ["Observed causal evidence, not just temporal correlation"],
+    "repair_evidence": ["Original reproduction passes with correction"],
+    "regression_check": "Check and outcome, or why unnecessary/unavailable",
+    "limits": ["What has not been demonstrated"],
+    "additional_evidence": [],
+    "attribution": "User/task attribution if feedback; otherwise not applicable"
+  },
+  "source": {"revision": "Originating source revision or explicit unavailable reason", "date": "YYYY-MM-DD"},
+  "conflicts_with": [],
+  "supersedes": [],
+  "superseded_by": [],
+  "status_reason": "Why this status is justified within its recorded scope"
+}

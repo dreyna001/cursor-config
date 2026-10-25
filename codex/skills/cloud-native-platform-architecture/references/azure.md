@@ -23,6 +23,8 @@ Use these prompts for Azure and Azure Government architecture. They are not a fi
 - For small knowledge corpora, compare Azure AI Search with simpler application-managed or database retrieval before accepting additional service cost.
 - If semantic retrieval is required, verify embedding-model and vector or hybrid search availability in the target cloud and region.
 
+For data stores actually used by this project, read [conditional backup and recovery decisions](data-protection.md); protection choices follow documented recovery requirements and verified existing coverage.
+
 ## Reliability And Operations
 
 - Define retry ownership across SDK, Functions triggers, queues, workflows, and application code.

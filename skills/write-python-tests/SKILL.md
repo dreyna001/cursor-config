@@ -40,3 +40,5 @@ Return:
 - behaviors covered
 - important untested areas
 - how to run tests
+
+Follow the [shared testing guidance](../cursor-rules/references/correctness-and-testing.md) for test-level selection, independent expected results, failure-detection controls, durable outcomes, and honest execution evidence.

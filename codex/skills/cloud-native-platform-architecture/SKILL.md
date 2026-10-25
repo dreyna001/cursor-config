@@ -15,6 +15,10 @@ Preserve product behavior and control outcomes across platforms while allowing e
 
 Treat provider references as decision prompts, not prescribed service mappings. Verify current service, region, partition, identity, networking, and feature availability from authoritative sources before making deployment decisions.
 
+## Conditional data protection
+
+When the project uses persistent data, read [conditional backup and recovery decisions](references/data-protection.md) for only the technologies in use. Reuse verified native coverage before proposing additions.
+
 ## Architecture Workflow
 
 1. Identify the application, users, workload shape, data sensitivity, deployment boundary, and operational owner.

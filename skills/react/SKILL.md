@@ -8,7 +8,7 @@ For UI/UX work, start at the permanent local baseline:
 `$HOME/.agents/ui-baseline/README.md` (Windows:
 `%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
 open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
-[WSL](/home/dreyna/.agents/ui-baseline/README.md).
+`$HOME/.agents/ui-baseline/README.md` (WSL).
 If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
@@ -54,7 +54,7 @@ Follow these rules:
 * Preserve an application's established icon library. For apps already using Lucide, including the ATO portal, use `lucide-react` consistently; do not add a second icon library or replace it during unrelated UI work. Other existing icon systems do not need migration.
 * Import named icons directly, for example `import { FileText, Sparkles } from "lucide-react"`. Keep icons bundled with the application; do not introduce an icon CDN, remote kit, icon font, or a dynamic whole-catalog lookup for a known icon.
 * Preserve Lucide's outline style and default stroke width unless an existing local pattern calls for a change. Let icons inherit `currentColor`; use the application's semantic color utilities for intentional status/accent colors.
-* Follow shared component sizing. The ATO portal's Button primitive sizes descendant SVGs to `size-4` (16 px), prevents shrinking, and supplies the icon/text gap; standalone help icons also use `size-4`, while compact navigation/status icons use `size-3` (12 px). Inspect the shared primitive before overriding those styles.
+* Follow shared component sizing. The ATO portal's Button primitive sizes descendant SVGs to `size-4` (16 px), prevents shrinking, and supplies the icon/text gap; standalone help icons also use `size-4`, while primary navigation follows the central sidebar contract and domain-specific status icons retain their existing sizes. Inspect the shared primitive before overriding those styles.
 * Hide decorative icons from assistive technology with `aria-hidden="true"`; let visible text name the action. Give icon-only buttons an accessible action name on the button, and preserve keyboard focus and tooltips where useful. Never communicate an essential state through the icon alone.
 * Choose icons for the actual action and reuse the same meaning consistently. The ATO portal's document-generation and SSP Assistant actions reuse the shared `ssp-workspace/AiDocumentIcon.tsx`: `FileText` with a small `Sparkles` overlay, indicating AI document work. Its wrapper is `h-4 w-5`, with a `size-2.5!` overlay to override Button's descendant sizing. Generation progress uses `LoaderCircle` with `animate-spin`, and Stop uses `Square`; do not replace these during an unrelated change.
 * Keep icon combinations local until actual reuse warrants sharing. Check the rendered composition at its real button size, including clipping, spacing, inherited color, and loading/disabled states; do not add a general icon framework for one combination.
@@ -70,12 +70,13 @@ Follow these rules:
 * Explain values concretely: say what the value represents and, when useful, what changes it. Avoid repeating the label or using vague copy such as “more information.”
 * Before finishing a UI change, inspect the rendered layout at the relevant screen size and verify that labels, help, status, and actions remain associated and readable.
 
-### Resizable sidebars
+### Navigation rails and adjustable panes
 
-* When a sidebar takes space from the main workspace, provide a visible resize handle and a practical minimum width so users can reclaim content space without making navigation unusable.
-* Keep navigation labels and utility actions anchored to stable padding during resizing. Size compact controls to their contents when stretching or centering them would cause unnecessary movement. Keep the navigation start stable when a header wraps; if truncation is appropriate, preserve the full accessible label.
+* Distinguish fixed navigation from adjustable work panes. A compact, fixed navigation rail does not need a resize handle; keep it fixed when that best protects the main workspace from losing width. Do not make navigation resizable by default.
+* When users can resize a pane that takes space from the main work area, provide a visible handle and practical minimum and maximum widths so users can reclaim content space without losing access to the pane's purpose.
+* For adjustable panes, keep labels and utility actions anchored to stable padding during resizing. Size compact controls to their contents when stretching or centering them would cause unnecessary movement. Keep navigation starts stable when headers wrap; if truncation is appropriate, preserve the full accessible label.
 * Support pointer dragging and keyboard resizing with an accessible separator, announced current/minimum/maximum widths, and enforced bounds. Preserve the main content's ability to shrink or scroll without overlap.
-* Persist a user's width when that matches the application's navigation behavior. Match the product's existing visual system; examples may guide spacing and interaction without becoming styling references.
+* Persist a user's width only when the pane is intentionally adjustable and persistence matches the application's behavior. Match the product's existing visual system; examples may guide spacing and interaction without becoming styling references.
 
 ## Security boundaries
 
@@ -86,6 +87,20 @@ When touching authentication, API credentials, browser persistence, uploads/prev
 - When building or deploying a Vite app, read [Vite production practices](references/vite-production.md).
 - When adding or maintaining Vitest unit/component tests, read [Vitest practices](references/vitest-production.md).
 - When adding or maintaining Playwright browser tests, read [Playwright practices](references/playwright-production.md).
+
+## Performance guidance
+
+For frontend performance changes, read [frontend performance](../cursor-rules/references/reliability-and-performance.md#frontend-performance), including third-party loading, bundle size, and skeleton states.
+
+## Shared UI change completion
+
+Approved shared UI changes are not complete until the versioned baseline,
+its visual companion, all three apps (six frontends), this configuration
+repository's reference bundle, and the permanent local baseline are synchronized.
+Follow the baseline's “Keeping one baseline” procedure, record app-specific
+exceptions and validation, and preserve newer approved behavior and styling.
+If any part cannot be updated or verified, report the remaining drift explicitly.
+
 
 For shared visual changes, verify computed form roles, semantic colors, keyboard
 selection and control geometry against the central baseline. A passing size-scale

@@ -2,13 +2,17 @@
 """Local conditional lesson store: immutable revisions and an atomic compact index."""
 import argparse
 import datetime as dt
-import fcntl
 import hashlib
 import json
 import os
 from pathlib import Path
 import re
 import sys
+
+if not sys.platform.startswith('linux'):
+    raise SystemExit('Contextual learning is Linux-only; no lesson files were read or written.')
+
+import fcntl
 import tempfile
 
 ROOT = Path(os.environ.get('CODEX_HOME') or Path.home() / '.codex').expanduser() / 'learning'
