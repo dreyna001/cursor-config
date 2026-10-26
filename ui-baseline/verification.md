@@ -1,5 +1,46 @@
 # Flat workspace surfaces — 1.15.0
 
+## Published sources and fresh release gate — 2026-10-25
+
+The application release is merged: [Hunt #90](https://github.com/dreyna001/ai-enabled-threathunting/pull/90),
+[ATO #40](https://github.com/dreyna001/ai-enabled-ato/pull/40), and
+[Incident Response #53](https://github.com/dreyna001/llm_notable_analysis/pull/53).
+ATO's runtime adoption was already included in its preceding `c020a51` main
+commit; #40 closes its publication notes. The manifest now pins actual merged
+release source commits rather than the older pre-v1.15 candidate HEADs. Every
+repository-backed snapshot hash was checked against its pinned Git object.
+
+Fresh validation across all six frontends passed **1,707 unit tests**, all
+typechecks/production builds, installed pins and JavaScript budgets. Shared
+component fixtures passed **90 browser cases**: five cases in each of Chromium,
+Firefox and WebKit for each frontend. This covers computed roles and contrast,
+keyboard focus, disabled/readonly/required states, named dialogs with focus
+containment/restoration, duplicate submission, failure/retry, popup/tabs,
+constrained desktop/enlarged content and reduced motion. ATO's two adopting
+System Setup/document-settings cases passed in all three engines (**six further
+cases**) with synthetic API fixtures. The test window included concurrent
+documentation-only closeout commits; the application sources under test were
+unchanged. These fresh 96 executions are separate from the earlier closeout
+record below and must not be added to it as unique coverage.
+
+The six existing Cursor UI routing/template profile copies were refreshed with
+backups of their prior contents. Codex global plan/sync/verify passed with no
+pending skill-source changes. Learning/security rules were not changed. The
+permanent offline baseline is installed through the guarded baseline installer
+and checked against this versioned bundle. No live model, identity, customer
+service or production deployment was involved. Native browser zoom and actual
+screen-reader speech remain outside this flat-surface qualification; 200% root
+text is recorded separately.
+
+The [machine-readable record](evidence/v115-release-20261025/qualification.json)
+contains per-frontend counts, budgets, source commits and scope. Representative
+browser captures show [ATO System Setup](evidence/v115-release-20261025/ato-system-setup-chromium.png),
+[ATO document settings](evidence/v115-release-20261025/ato-document-settings-chromium.png),
+[Hunt controls](evidence/v115-release-20261025/hunt-components-chromium.png), and
+[IR controls](evidence/v115-release-20261025/ir-azure-components-chromium.png).
+
+## Original flat-surface qualification
+
 Qualified locally on 2026-10-24. This is local verification, not a production deployment.
 
 The approved surface update keeps the existing palette and canvas colors. Ordinary

@@ -2,9 +2,9 @@
   "version": "1.15.0",
   "prepared": "2026-10-24",
   "source_commits": {
-    "ai-enabled-threathunting": "e126ab8b4b9c0979b20ce1b658893468a198a889",
-    "ai-enabled-ato": "7533792bcd5afb1b012fe44a6fc64f7657492175",
-    "llm_notable_analysis": "162b7b0fcae0833bc87a78402e8b2ae41bd74d58"
+    "ai-enabled-threathunting": "d3d9db73bf7007003ce712c1d41bf6ea6549ba66",
+    "ai-enabled-ato": "a60097e42e92b9b995c68e1de63f220fa56158df",
+    "llm_notable_analysis": "bd8691574fe9f9bed4960bdfe3373766eb14bdbd"
   },
   "files": [
     {
@@ -131,7 +131,7 @@
     },
     {
       "path": "verification.md",
-      "local_sha256": "3753ef5b0e1581dad9952bcef3d9a3d4c1ccf242782de9f1d7dcd8df0fa04e88",
+      "local_sha256": "d1e1ba09e65fea97fb8688c9a402c4681595189bd6d5b33e46734197eff5ed93",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -2667,7 +2667,28 @@
       "source_path": "portal/src/suite-workspace.css",
       "source_sha256": "c24da216d204593afa643ac3d04a0ba2434970bccfce90611d91677bf31c18e4",
       "local_sha256": "c24da216d204593afa643ac3d04a0ba2434970bccfce90611d91677bf31c18e4"
+    },
+    {
+      "path": "evidence/v115-release-20261025/hunt-components-chromium.png",
+      "local_sha256": "b498fff3e82bf6fd6568821fd60ed37fbb1d44a37722a7dc171784afcee7263a"
+    },
+    {
+      "path": "evidence/v115-release-20261025/ato-system-setup-chromium.png",
+      "local_sha256": "e4103f79ec74967c3770c69a6358cd1f7f5159227af45b77d2fdbecf3a8a7d64"
+    },
+    {
+      "path": "evidence/v115-release-20261025/qualification.json",
+      "local_sha256": "1354a337377673bcaf87684e7e3252ee202e8a28bec5f6c6ef618347d25d64d6"
+    },
+    {
+      "path": "evidence/v115-release-20261025/ato-document-settings-chromium.png",
+      "local_sha256": "2b5db4c07d7d4ef26bbdacd2b6f1562f77bcb8bad17787e119d4306dc36f4262"
+    },
+    {
+      "path": "evidence/v115-release-20261025/ir-azure-components-chromium.png",
+      "local_sha256": "6547ee7716f4d3b0a9d5fa1cb55abe3b8b60a0e658ff27b872927af3627f4c11"
     }
   ],
-  "source_state": "Release content verified locally; repository publication tracked separately; not deployed"
+  "source_state": "Application snapshots pinned to merged v1.15 release commits; versioned bundle publication follows Git history; not deployed",
+  "published": "2026-10-25"
 }
