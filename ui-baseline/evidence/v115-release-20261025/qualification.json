@@ -1,0 +1,130 @@
+{
+  "release": "1.15.0",
+  "date": "2026-10-25",
+  "source_commits": {
+    "ai-enabled-threathunting": "d3d9db73bf7007003ce712c1d41bf6ea6549ba66",
+    "ai-enabled-ato": "a60097e42e92b9b995c68e1de63f220fa56158df",
+    "llm_notable_analysis": "bd8691574fe9f9bed4960bdfe3373766eb14bdbd"
+  },
+  "application_pull_requests": {
+    "ai-enabled-threathunting": 90,
+    "ai-enabled-ato": 40,
+    "llm_notable_analysis": 53
+  },
+  "shared_css_sha256": "c24da216d204593afa643ac3d04a0ba2434970bccfce90611d91677bf31c18e4",
+  "frontends": [
+    {
+      "frontend": "hunt",
+      "unit_tests_passed": 251,
+      "typecheck_passed": true,
+      "production_build_passed": true,
+      "performance_budget_passed": true,
+      "eager_js_bytes": 633164,
+      "total_js_bytes": 850974,
+      "component_cases": {
+        "chromium": 5,
+        "firefox": 5,
+        "webkit": 5
+      }
+    },
+    {
+      "frontend": "ato",
+      "unit_tests_passed": 447,
+      "typecheck_passed": true,
+      "production_build_passed": true,
+      "performance_budget_passed": true,
+      "eager_js_bytes": 481008,
+      "total_js_bytes": 916018,
+      "component_cases": {
+        "chromium": 5,
+        "firefox": 5,
+        "webkit": 5
+      }
+    },
+    {
+      "frontend": "azure_notable_pipeline",
+      "unit_tests_passed": 249,
+      "typecheck_passed": true,
+      "production_build_passed": true,
+      "performance_budget_passed": true,
+      "eager_js_bytes": 399618,
+      "total_js_bytes": 1096952,
+      "component_cases": {
+        "chromium": 5,
+        "firefox": 5,
+        "webkit": 5
+      }
+    },
+    {
+      "frontend": "llm_notable_analysis_onprem_systemd",
+      "unit_tests_passed": 246,
+      "typecheck_passed": true,
+      "production_build_passed": true,
+      "performance_budget_passed": true,
+      "eager_js_bytes": 390678,
+      "total_js_bytes": 799996,
+      "component_cases": {
+        "chromium": 5,
+        "firefox": 5,
+        "webkit": 5
+      }
+    },
+    {
+      "frontend": "s3_notable_pipeline",
+      "unit_tests_passed": 239,
+      "typecheck_passed": true,
+      "production_build_passed": true,
+      "performance_budget_passed": true,
+      "eager_js_bytes": 655506,
+      "total_js_bytes": 1061103,
+      "component_cases": {
+        "chromium": 5,
+        "firefox": 5,
+        "webkit": 5
+      }
+    },
+    {
+      "frontend": "s3_notable_pipeline_commercial",
+      "unit_tests_passed": 275,
+      "typecheck_passed": true,
+      "production_build_passed": true,
+      "performance_budget_passed": true,
+      "eager_js_bytes": 400984,
+      "total_js_bytes": 1102235,
+      "component_cases": {
+        "chromium": 5,
+        "firefox": 5,
+        "webkit": 5
+      }
+    }
+  ],
+  "unit_tests_total": 1707,
+  "shared_component_browser_cases": 90,
+  "ato_flat_surface_browser_cases": {
+    "chromium": 2,
+    "firefox": 2,
+    "webkit": 2
+  },
+  "browser_api_boundary": "synthetic component-local state and ATO intercepted API fixtures",
+  "role_coverage": [
+    "button hover/focus",
+    "disabled/readonly/required fields",
+    "field contrast",
+    "dialog accessible name and focus containment/restoration",
+    "duplicate-submit prevention and failed-action retry",
+    "keyboard popups/tabs",
+    "constrained desktop dialog and 200% root text",
+    "reduced motion",
+    "ATO System Setup and document-settings flat surfaces"
+  ],
+  "limits": [
+    "No production deployment or live service/identity/model calls",
+    "Native browser zoom and screen-reader speech were not evaluated for this flat-surface release",
+    "Existing app layouts and specialized panels remain intentional exceptions"
+  ],
+  "profile_sync": {
+    "codex_global_plan_sync_verify": "passed; no pending source changes",
+    "cursor_ui_routing_and_template_copies": 6,
+    "prior_copies_backed_up": true
+  }
+}
