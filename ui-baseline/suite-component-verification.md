@@ -1,6 +1,8 @@
 # Shared component verification — v1.12.0
 
-Verified on 2026-10-24 as a local working-tree candidate. No commit, merge or deployment is implied.
+Verified on 2026-10-24 as a local working-tree candidate; the implementation
+was subsequently committed and merged into the application repositories. The
+recorded tests do not establish a production deployment.
 All six frontends carry the same 21 component/utility/fixture/configuration files from the canonical Hunt release. Source hashes, recorded native-control exceptions, app-local override checks and peer comparisons passed.
 
 ## Verification results

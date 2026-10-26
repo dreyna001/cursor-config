@@ -47,6 +47,7 @@ Follow these rules:
 * Prefer existing primitives and semantic theme tokens/utilities for colors, surfaces, borders, spacing, typography, and focus states. Avoid hard-coded colors, one-off CSS, or duplicate buttons, badges, cards, and help controls when the shared component can express the need.
 * Keep hover, focus, active, disabled, loading, success, and error states consistent with the shared component patterns. Preserve readable contrast, visible focus, and responsive behavior.
 * Make local presentation changes locally. Change shared primitives or theme tokens only when the intended effect is shared across the app.
+* For shared suite workspace surfaces, follow **Workspace section surfaces** in `~/.agents/ui-baseline/README.md`. Preserve the established palette, use the page canvas for nested ordinary sections and workspace tabs, and retain semantic notice and independent control surfaces.
 * Keep expandable cards visually continuous: the trigger, single section title, status, and expanded content share one card outline. Avoid a separate bordered trigger followed by a second card that repeats the same title. When correcting one expandable section, check its sibling sections for the same pattern.
 
 ## Icons: Lucide React

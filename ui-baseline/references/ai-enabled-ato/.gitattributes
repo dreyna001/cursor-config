@@ -7,6 +7,13 @@ data/qualification/**/*.xml text eol=lf
 docs/contracts/**/*.json text eol=lf
 reference/authorities/**/*.json text eol=lf
 
+# Publisher captures and frozen evaluation inputs are hash-pinned byte records.
+# Preserve CRLF and intentional Markdown hard breaks; their hashes validate them.
+reference/assessment_research/** -text whitespace=-blank-at-eol,-blank-at-eof,-space-before-tab
+tests/evals/fixtures/** -text whitespace=-blank-at-eol
+reference/assessment_research/**/*.pdf binary
+tests/evals/fixtures/**/*.pdf binary
+
 # Shared suite component sources must retain byte-identical LF endings.
 portal/src/components/ui/* text eol=lf
 portal/src/lib/utils.ts text eol=lf
