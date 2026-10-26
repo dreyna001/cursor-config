@@ -7,6 +7,11 @@ This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.c
 
 - For required deployable cloud prerequisites, provide explicit Terraform create-or-reference-existing choices through the documented deployment configuration; allow disabled only for optional capabilities. Apply `terraform-cloud-deployment-standard` for ownership, input validation, bootstrap ordering, and supported-platform exceptions. Preserve the established stack; this rule does not authorize adding unrelated services, taking over existing resources, or deploying changes.
 
+## Local verification and GitHub Actions
+
+- Use local tests, lint, type checks, builds and other appropriate local verification for Codex work. Do not create, extend, dispatch, rerun, poll or troubleshoot GitHub Actions, or ask the user to diagnose them, unless the user explicitly requests GitHub Actions work. Do not make Actions results a Codex verification or merge-readiness gate.
+- Continue authorized Git operations, pull requests and merges. Existing workflows may trigger automatically on a push or merge; this does not authorize changing workflows or branch policies. Respect actual remote access and merge constraints, and report genuine blockers without fabricating successful checks or bypassing protections.
+
 ## Local tool and Terraform provider caches
 
 - Before downloading or installing a tool or provider, inspect locally installed versions and caches for a package matching the required version and platform.
