@@ -2,7 +2,7 @@
 
 ## Single authority
 
-Read the [Suite Workspace UI Standard](../../../README.md) for the
+Read the [Suite Workspace UI Standard](https://github.com/dreyna001/ai-enabled-threathunting/blob/main/docs/suite-ui-standard.md) for the
 authoritative rules, current version, adaptation boundaries and reconciliation
 record. In an existing suite checkout, use `docs/suite-ui-standard.md` from that
 release. ATO and Incident Response carry identical released mirrors.

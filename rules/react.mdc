@@ -27,6 +27,8 @@ If any part cannot be updated or verified, report the remaining drift explicitly
 
 Read and apply [react](../skills/cursor-rules/references/react.md). Keep this rule as the activation stub; do not copy the reference body here.
 
+For shared suite workspace section surfaces, follow the central baseline's **Workspace section surfaces** guidance and preserve the existing palette.
+
 For shared visual changes, verify computed form roles, semantic colors, keyboard
 selection and control geometry against the central baseline. A passing size-scale
 check alone does not establish role parity. Preserve the recorded app exceptions.

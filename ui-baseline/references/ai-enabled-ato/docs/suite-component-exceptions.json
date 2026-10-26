@@ -89,9 +89,9 @@
     {
       "path": "portal/src/components/ssp-workspace/EvidenceUpdateWorkflow.tsx",
       "tag": "button",
-      "sha256": "0cbe2606ef328f37b194c552f71cd8bce0f29fcb86f2e49870e6de047797df93",
+      "sha256": "073958ae921d66f23da6e156dfa1dca93e97e7bafed7c884ca4cb7d9a20f8c80",
       "count": 1,
-      "reason": "Specialized navigation, record/disclosure selection or contextual icon; preserve existing layout and domain callbacks."
+      "reason": "Existing fact-list record selector; selection now clears the review-next notice and focuses the chosen fact. Layout and native selection semantics are preserved. Chromium, Firefox and WebKit workflow evidence: docs/ui-workflow-shortcuts-verification-20261024.md."
     },
     {
       "path": "portal/src/components/ssp-workspace/EvidenceUpdateWorkflow.tsx",

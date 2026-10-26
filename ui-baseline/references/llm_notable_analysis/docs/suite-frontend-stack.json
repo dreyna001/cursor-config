@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "baselineVersion": "1.14.0",
+  "baselineVersion": "1.15.0",
   "verifiedOn": "2026-10-24",
   "node": "24.22.1",
   "packageManager": "npm@11.19.1",

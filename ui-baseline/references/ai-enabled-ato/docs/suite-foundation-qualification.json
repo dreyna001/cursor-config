@@ -1,6 +1,6 @@
 {
   "version": "1.14.0",
-  "sourceState": "Local working-tree candidate; not committed, merged or deployed",
+  "sourceState": "Qualified as a local working-tree candidate on 2026-10-24; implementation subsequently committed and merged; not deployed",
   "counts": {
     "unit": 1639,
     "sharedBrowser": 162,

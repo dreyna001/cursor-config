@@ -22,3 +22,10 @@ imitate a sample. Status color never establishes approval or authorization.
 The [conversion plan](SSP_UI_CONVERSION_PLAN.md#unified-template-adaptation--october-19)
 records historical source/installed acceptance. Source and mocked browser checks
 do not substitute for deployed-stack or customer qualification.
+
+System Setup opts its nested section and resolution notices into the baseline's
+flat workspace surface roles (`.workspace-flat-section` and
+`.workspace-flat-notice`). They inherit the existing page canvas; notices retain
+their semantic status color as a left rule. The sticky section tabs retain their
+behavior and use the same canvas behind transparent tab states. Existing palette,
+spacing, content gutters, dividers, and field fills remain unchanged.

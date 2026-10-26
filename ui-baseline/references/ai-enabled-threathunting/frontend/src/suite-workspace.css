@@ -1,4 +1,4 @@
-/* Suite Workspace UI v1.14.0. Keep this file identical across suite frontends.
+/* Suite Workspace UI v1.15.0. Keep this file identical across suite frontends.
    Role mappings and permitted exceptions: docs/suite-ui-standard.md. */
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 400; font-display: swap; src: url("./assets/fonts/public-sans-400.woff2") format("woff2"); }
 @font-face { font-family: "Public Sans"; font-style: normal; font-weight: 500; font-display: swap; src: url("./assets/fonts/public-sans-500.woff2") format("woff2"); }
@@ -313,6 +313,23 @@
   .workspace-typography :is(input, select, textarea, [role="combobox"], .workspace-field-boundary):not(:disabled, [aria-disabled="true"]) {
     border-color: CanvasText !important;
   }
+}
+
+/* Opt-in flat workspace sections preserve their content and semantic colors. */
+.workspace-flat-section,
+.suite-card.workspace-flat-section {
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+.workspace-flat-notice {
+  background-color: transparent;
+  border-width: 0;
+  border-style: solid;
+  border-left-width: 2px;
+  border-radius: 0;
+  box-shadow: none;
 }
 
 /* Desktop zoom reflow is opt-in; touch/mobile and ordinary desktop stay unchanged. */

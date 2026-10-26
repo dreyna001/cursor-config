@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "version": "1.14.0",
+  "version": "1.15.0",
   "canonical": "ai-enabled-threathunting/frontend",
   "deployment": "Each frontend contains its own source copies; no cross-repository build or runtime imports.",
   "dependencies": {

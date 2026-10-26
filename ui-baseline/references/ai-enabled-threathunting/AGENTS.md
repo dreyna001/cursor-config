@@ -34,6 +34,11 @@ Follow the user/session-selected model and reasoning settings and the central Co
 - Use the `threat-hunt-reporting` skill when installed. Keep factual assessments,
   approved scope, evidence provenance and event timelines distinct from model
   confidence, investigation operations and presentation conventions.
+- For changes to either the browser Report or PDF export, apply the
+  [paired browser/PDF review gate](docs/threat-hunt-reporting-guidance.md#paired-browserpdf-review-gate).
+  Explicitly assess the other surface in the PR, update it when needed, and
+  verify generated PDFs before merging export changes. Record justified
+  medium-specific differences and any deferred parity work in the project queue.
 
 ## UI verification
 

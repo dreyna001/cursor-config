@@ -101,6 +101,41 @@ Treat saved report data as canonical. Keep every supported answer, finding, obse
 
 Presentation changes must preserve the existing schema, validation, draft-edit surface, save behavior, finalization gate, and immutable finalized artifacts. Apply a new PDF layout to a newly finalized report according to the application’s existing lifecycle; do not silently rewrite previously finalized files.
 
+## Paired browser/PDF review gate
+
+Treat the browser Report and exportable PDF as two presentations of the same
+saved report. At planning and PR review, any change to report content, headings,
+ordering, labels, coverage, citations, supporting detail, shared projections or
+export rendering must prompt an explicit assessment of the other surface.
+The repository PR template carries this reminder; `AGENTS.md` routes report
+work here. This is a review requirement, not an automated parity guarantee.
+
+- State **Browser impact** and **PDF impact** in the PR: changed, unchanged with
+  a reason, or deferred with a linked item in `docs/remaining-work.md`. An
+  unverified or deferred surface is not complete parity.
+- Update both surfaces when the same saved meaning or approved design applies.
+  Record intentional medium differences: browser tabs/panels become static print
+  sections, while typography and pagination follow the PDF contract. Preserve
+  existing omission decisions; presentation parity does not require copying
+  interactive controls or restoring omitted appendices.
+- Check the same representative saved-report fixtures in both views for answers,
+  analyst edits, distinct limits, scope, event times, coverage labels and exact
+  source identities. Preserve complete canonical data, snapshot/current provenance,
+  unavailable states and immutable finalized artifacts. Add focused regression
+  coverage for changed behavior; retain the existing parity/presentation checks.
+- Before merging PDF changes, use the `pdf` skill to generate and render actual
+  PDFs and visually inspect every page. Check heading/content separation, readable
+  text, long values, table continuations, citations/links and page-edge clipping.
+  Text extraction and passing tests alone do not establish visual correctness.
+  Verify the affected download/finalization journey with isolated local data;
+  use Playwright for affected browser behavior per the desktop baseline.
+- Record fixture/source versions, test commands/results and rendered PDF evidence
+  in the implementation handoff. State synthetic-versus-live boundaries and
+  unavailable checks explicitly. Resolve required checks before merge.
+
+This gate is app-specific and does not change the shared suite baseline, report
+schema, model prompts, approval rules or historical finalized files.
+
 ## Basis and local conventions
 
 The following sources inform the evidence and hunt-analysis principles. The visual hierarchy, exact report ordering, title-suffix display rule, numbered-link presentation, and browser/PDF appendix behavior above are **local presentation conventions**, not requirements imposed by these sources.
@@ -178,3 +213,40 @@ Coverage and limits disclosure while keeping question-specific uncertainty and
 partial or blocked states visible. Preserve every distinct note and source
 binding. Total data scanned and completed-search counts remain visible in the
 Search summary heading. The PDF retains its static print layout.
+
+### Report section tabs and source review (October 24)
+
+The approved Report design uses eight peer sections: Assessment, Questions &
+conclusions, Coverage & limits, Approved scope, Search summary, Timeline,
+Observations, and Source values. A tab selects one section directly; it does not
+require expanding that same section again. Preserve complete saved content,
+question-specific limits and meaningful empty/unavailable states. Supporting
+record fields may remain in the existing advanced/saved-data views.
+
+The approved document hierarchy uses 18px section/source-panel titles and 16px
+question titles, while retaining semantic h3/h4 nesting below Hunt report. This
+Report-only typography adaptation uses `vs-report-section-title` and
+`vs-report-question-title`; it does not redefine global heading sizes. Use the
+baseline's stacked layout for constrained desktop zoom while Report is visible.
+
+A normal report citation opens a non-modal source panel inside Report. The panel
+belongs to its originating section and closes on section or workspace exit;
+returning does not reopen it. Show available record fields in one flat detail
+view, with natural scrolling for long content, explicit snapshot/current-source
+identity, and a separate Open in Evidence action. Missing saved snapshots must
+not silently acquire current values. Keep bounded retrieval, revision checks,
+errors/retry and complete exports. Preserve canonical citation IDs and all
+report edits when navigating. Modified-link/open-in-new-tab behavior retains the
+existing canonical source destination.
+
+The Evidence workspace can display saved evidence snapshots. Its query and
+finding views display current retained records, so their report-panel action is
+explicitly labeled **Open current record in Evidence** and carries current-source
+provenance. Opening a current record inside the report panel also preserves that
+choice when moving to Evidence. Keep the saved report version and return path
+attached to either navigation mode.
+
+This is an app-specific reading/navigation decision, not a new default for other
+suite apps. Browser section navigation does not change the saved report schema,
+model output contract or immutable PDF lifecycle. Static exports continue to
+include the complete saved report, independent of the currently selected tab.

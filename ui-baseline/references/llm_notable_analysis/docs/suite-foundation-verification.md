@@ -1,6 +1,8 @@
 # Frontend hardening qualification — 1.14.0
 
-Local candidate, 2026-10-24. Not committed, merged or deployed.
+Qualified locally on 2026-10-24; the v1.14 implementation was subsequently
+committed and merged into the application repositories. These results describe
+the tested local candidate and do not establish a production deployment.
 
 All six frontends passed typecheck, production build and 1639 unit checks.
 162 shared browser cases, 341 product cases,

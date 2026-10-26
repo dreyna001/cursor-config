@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-Version: **1.14.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
+Version: **1.15.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
 and Incident Response Workspace, including its four deployment variants.
 
 ## Start here: the UI/UX index
@@ -17,6 +17,8 @@ source of shared rules.
 - [Frontend stack and Python compatibility](#frontend-stack-and-python-compatibility): current pins, toolchain alignment and documented holds.
 - [Visual adaptation](#visual-adaptation): how to use the common design language
   without importing prototype behavior or replacing an established stack.
+- [Workspace section surfaces](#workspace-section-surfaces): flat nested sections,
+  notices and tabs while preserving the shared palette.
 - [Interaction and accessibility](#interaction-and-accessibility): keyboard,
   dialogs, feedback states, control contrast and scrolling checks.
 - [Workflow and popup regression coverage](#workflow-and-popup-regression-coverage): failure paths, dialog names and constrained desktop actions.
@@ -115,6 +117,31 @@ precise citations, paging, approval boundaries and genuine loading/error states.
 Never invent scores, health checks, identities or service capabilities to match
 the sample. The [suite vocabulary](suite-vocabulary-and-object-model.md) owns
 terminology and domain distinctions; wording skills support that contract.
+
+## Workspace section surfaces
+
+Use the page canvas as the default background for sections inside a workspace.
+Build hierarchy with spacing, alignment, headings and dividers before adding a
+surface fill or outline. Do not put an ordinary section inside a second filled
+card when its parent already establishes the workspace context. In ATO, opt into
+this treatment with `.workspace-flat-section`; keep its content, padding, grid,
+section spacing and existing dividers intact while removing only the section's
+raised fill, enclosing border and rounded card outline.
+
+Keep notices on the same canvas unless their meaning calls for a semantic
+treatment. A flat resolution notice may use `.workspace-flat-notice` to remove
+its enclosing fill and outline while retaining its existing semantic text color
+and left status rule. This role does not alter warning or success meaning.
+
+Workspace tabs sit directly on the surrounding canvas. Use a transparent tab
+strip and transparent selected and hover backgrounds; show selection with the
+existing underline and text treatment. Sticky tabs remain sticky, using the page
+canvas surface so content does not show through them. Preserve visible keyboard
+focus. These rules apply to workspace section navigation; they do not restyle
+dialogs, popovers, menus, form controls, status badges, or genuinely independent
+cards. Existing page, raised, control, border, text and semantic status colors
+stay unchanged. A surface fill must cover its intended container evenly; never
+let a section or tab fill stop partway across its container.
 
 ## Shared components and drift prevention
 
@@ -942,3 +969,13 @@ The desktop-only follow-up reproduced obstructed 400% reflow, IR chat waiting/er
 announcement gaps, missing reply-completion cues and ATO required-field semantics.
 This release corrects them in the five in-scope frontends and makes their validation
 explicit. Normal desktop layouts and all workflow/domain guards are preserved.
+
+## Flat workspace sections — v1.15.0
+
+ATO System Setup uses the existing page canvas for its nested section and section
+tabs. The change removes only decorative section and tab fills and the section's
+enclosing card outline. It preserves the palette, content gutters, spacing,
+dividers, sticky tabs, controls, status colors and focus treatment. Flat notices
+retain their semantic text and left status rule without an enclosing box. Other
+suite surfaces remain unchanged unless they adopt this role for the same purpose;
+independent panels, controls, dialogs and popups keep their established treatment.

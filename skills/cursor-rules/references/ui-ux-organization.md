@@ -25,6 +25,11 @@ For compact portals with multiple peer workspaces and no distinct home page, use
 [small portal routing](small-portal-routing.md) for route, sign-in, and
 remembered-destination decisions.
 
+For suite workspace surfaces, follow **Workspace section surfaces** in
+`~/.agents/ui-baseline/README.md`. Preserve the established palette; use the
+page canvas for nested ordinary sections and workspace tabs, and retain semantic
+notice treatment and independent control or panel surfaces.
+
 ## Organize around the user's task
 
 - Give the primary task a clear place and hierarchy. Keep closely related context, content, status, and actions together, and avoid repeating the same identity or instruction across neighboring regions.
