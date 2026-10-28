@@ -90,7 +90,7 @@ Do not recommend a kitchen-sink architecture. Add a component only when a curren
 
 ## Customer Configuration Boundary
 
-For Terraform deployment design, apply the [Terraform cloud deployment standard](../terraform-cloud-deployment-standard/SKILL.md). Make create-or-reference-existing choices explicit for required deployable cloud prerequisites, while preserving the established stack, ownership, and documented government-cloud exceptions.
+For Terraform deployment design, apply the [Terraform cloud deployment standard](../terraform-cloud-deployment-standard/SKILL.md). Make create-or-reference-existing choices explicit independently per required deployable dependency, support mixed existing/new infrastructure, and preserve the established stack, ownership, and documented government-cloud exceptions.
 
 Make customer-specific values explicit and documented when they legitimately vary, including retention, resource names, regions, tenant identifiers, endpoints, model deployments, capacity, integration destinations, data mappings, approval policy, and feature enablement.
 
