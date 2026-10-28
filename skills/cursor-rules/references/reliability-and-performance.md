@@ -29,3 +29,7 @@ Apply when implementing or reviewing relevant frontend paths. Preserve project s
 - Auto-follow chat or transcript updates only while the reader is near the end or explicitly requests the latest content. Preserve their visual anchor and scroll position while they read older content, including when history is prepended; unrelated updates must not force them to the bottom.
 - Use existing skeleton components for perceptible initial loading of structured content. Reserve layout space, provide accessible loading status, and respect reduced motion. Preserve usable content during refresh when appropriate, and distinguish loading from empty and error states.
 - Use representative builds and interactions to verify the change. Report relevant before/after measurements and checks proportionate to the change. Distinguish expected improvements from measured results; if measurement cannot run, state what remains unverified.
+
+## Model and embedding efficiency
+
+For model-call and embedding/indexing paths, apply [LLM efficiency with preserved analysis](llm-efficiency.md). Inspect redundant provider work, reuse only compatible results, and measure retained behavior with token/call savings.

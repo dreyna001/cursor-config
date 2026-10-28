@@ -31,6 +31,8 @@ For corrections to evidence, schema or grounding behavior, use
 [llm-evidence-regression](../llm-evidence-regression/SKILL.md) to pair unsupported
 controls with supported findings and decisions that must survive.
 
+For model-call or output-contract changes, apply [LLM efficiency with preserved analysis](../cursor-rules/references/llm-efficiency.md): inspect the assembled workflow for redundant work, preserve analytical responsibilities, and qualify savings with retained behavior.
+
 ## Core Principles
 
 - Keep `direct evidence`, `advisory context`, and `inference` separate.
