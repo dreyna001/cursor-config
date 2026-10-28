@@ -40,6 +40,9 @@ For backup/recovery design or review of technologies actually used by the projec
 
 ## Reference index
 
+For model-call, prompt/output-contract or embedding/indexing changes, apply [LLM efficiency with preserved analysis](references/llm-efficiency.md) alongside the relevant engineering references.
+
+
 For frontend routes, browser history, deep links, or frontend/backend URL
 boundaries, read [URL routing](references/url-routing.md). For compact portals
 with peer workspaces, also use the scoped [small portal routing](references/small-portal-routing.md).

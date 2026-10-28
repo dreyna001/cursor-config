@@ -13,6 +13,8 @@ Use this skill when:
 
 Design an LLM step that adds value without taking ownership of deterministic decisions.
 
+For model-call or output-contract changes, apply [LLM efficiency with preserved analysis](../engineering-guidance/references/llm-efficiency.md): inspect the assembled workflow for redundant work, preserve analytical responsibilities, and qualify savings with retained behavior.
+
 ## Process
 
 1. State why an LLM is needed.
