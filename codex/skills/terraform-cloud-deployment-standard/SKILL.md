@@ -41,6 +41,13 @@ databases, model services/deployments, search services/indexes, and source stora
 Allow `disabled` only for optional capabilities. Do not add services or change
 the established application/authentication stack merely to implement this rule.
 
+- Make ownership independently configurable for dependencies with separate
+  lifecycles; support customers who already have only part of the required
+  infrastructure. An existing model account can host a newly created model
+  deployment, and an existing inference endpoint can use newly created private
+  connectivity, or vice versa. Do not force an all-create/all-reference bundle.
+  Document each choice, its required inputs and any genuinely dependent choices;
+  preserve shared compatible resources instead of requiring duplicates.
 - Keep the project's canonical flags/schema when they already express these
   choices. One documented customer configuration must identify ownership and
   supply either creation settings or existing identifiers, without requiring
@@ -76,7 +83,8 @@ the established application/authentication stack merely to implement this rule.
   preserve the established protected secret and state handling.
 - Verify create mode's intended resources and wiring, existing mode's compatible
   references and preserved ownership, invalid/missing/conflicting inputs, optional
-  disabled mode, and the staged bootstrap path. Use meaningful Terraform contract
+  disabled mode, mixed existing/new dependencies, and the staged bootstrap path.
+  Use meaningful Terraform contract
   or plan checks; local validation alone does not establish live acceptance.
 
 ## Required verification

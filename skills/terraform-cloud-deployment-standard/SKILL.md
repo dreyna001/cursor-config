@@ -31,6 +31,62 @@ When production ingress serves browser content or authenticated data, also apply
 11. Validate customer inputs before planning and expose useful non-secret outputs needed for operation and troubleshooting.
 12. Keep code, examples, deployment instructions, rollback steps, and tests synchronized.
 
+## Create-or-reference deployment contract
+
+For every required, deployable cloud prerequisite, provide an explicit choice to
+create a product-owned resource or reference a compatible existing resource.
+Apply this to the dependencies actually needed by the selected application and
+capabilities: for example networking, state storage, registries, encryption keys,
+databases, model services/deployments, search services/indexes, and source storage.
+Allow `disabled` only for optional capabilities. Do not add services or change
+the established application/authentication stack merely to implement this rule.
+
+- Make ownership independently configurable for dependencies with separate
+  lifecycles; support customers who already have only part of the required
+  infrastructure. An existing model account can host a newly created model
+  deployment, and an existing inference endpoint can use newly created private
+  connectivity, or vice versa. Do not force an all-create/all-reference bundle.
+  Document each choice, its required inputs and any genuinely dependent choices;
+  preserve shared compatible resources instead of requiring duplicates.
+- Keep the project's canonical flags/schema when they already express these
+  choices. One documented customer configuration must identify ownership and
+  supply either creation settings or existing identifiers, without requiring
+  operators to edit module source. Reject conflicting create/existing inputs,
+  missing required values, incompatible references, and disabled required
+  dependencies. Do not guess ownership from a resource's presence or name.
+- In existing mode, reference and validate the resource; do not replace it,
+  transfer ownership, rewrite shared policies, or mutate its network/schema
+  implicitly. Any permission wiring or mutation must be explicitly scoped.
+  Existing application resources can be adopted only through a reviewed import
+  or migration, with one owner per resource. This contract does not require a
+  reuse flag for every internal resource Terraform already owns.
+- Compose the choices through the documented application root and established
+  bootstrap/data-plane roots. Order foundation, private connectivity/DNS, state,
+  registries, application deployment, and schema configuration so initial setup
+  has no circular prerequisite. Feed nonsecret outputs into later stages instead
+  of repeatedly asking for IDs of resources just created. Keep state keys/owners
+  separate, planning the default, and applies tied to reviewed saved plans.
+- Qualify control-plane and data-plane support for the pinned provider, target
+  cloud/partition/region, endpoint, identity audience, permissions, and API
+  version. A management-plane resource does not prove index/schema support.
+  Introduce an additional Terraform provider only for a required unsupported API,
+  explain the need, and verify compatibility; preserve established version pins
+  unless a scoped change is necessary. If creation is unavailable or ownership
+  is externally governed, document that exception and its existing-resource
+  contract rather than claiming complete create support or bypassing Terraform.
+- Separate Terraform provisioning from release builds, artifact publication,
+  corpus loading, external credential issuance, provider approvals/quotas, and
+  customer-side network/identity changes. Document remaining prerequisites and
+  automate permitted delivery steps with existing tools; wrappers must not
+  provision infrastructure outside Terraform or embed provisioning in
+  `local-exec`/`remote-exec`. Keep secret bytes out of committed inputs/outputs;
+  preserve the established protected secret and state handling.
+- Verify create mode's intended resources and wiring, existing mode's compatible
+  references and preserved ownership, invalid/missing/conflicting inputs, optional
+  disabled mode, mixed existing/new dependencies, and the staged bootstrap path.
+  Use meaningful Terraform contract
+  or plan checks; local validation alone does not establish live acceptance.
+
 ## Required verification
 
 For every changed Terraform root:
