@@ -14,6 +14,15 @@ For production HTTP ingress design, changes, or review, read [authorization-read
 
 When the project uses persistent data, apply [conditional backup and recovery decisions](../cloud-native-platform-architecture/references/data-protection.md) through its existing deployment roots. This reference governs native coverage, justified additions and evidence; it does not authorize deployment or retention changes.
 
+## Secrets and guided setup
+
+For infrastructure secret/key handling or a guided customer setup, read
+[secret-safe provisioning and recovery](references/secret-safe-provisioning.md).
+It covers ephemeral/write-only versus ordinary sensitive state, readback/export
+leaks, independent ownership, one-time input collection, exact saved-plan review,
+partial recovery and actual-provider canary qualification. Preserve existing
+customer resources; this requirement does not authorize migration or deployment.
+
 ## Required design
 
 When production ingress serves browser content or authenticated data, also apply [application security](../cursor-rules/references/security.md) for response-header, cache, and file-serving policies at the owning edge. Treat missing live configuration as unknown; do not infer a deployed vulnerability from an absent template.
@@ -100,9 +109,18 @@ For every changed Terraform root:
 7. Verify the documented plan and saved-plan apply commands match the implementation.
 8. Treat live cloud deployment as a separate acceptance step when credentials or customer infrastructure are required; report when it was not run.
 
-## CI contract
+For a user-requested audit in another project, the
+[reusable project prompt](references/project-audit-prompt.md) supplies the same
+contract with an explicit local-only scope. Adapt the project path and the user's
+actual authorization; copying the prompt does not authorize unrelated migrations.
 
-Require pull-request CI for formatting, initialization without the backend, validation, tests, and security scanning. Pin tool versions or use repository lock files. Grant the workflow read-only permissions unless a tested step requires more.
+## Verification contract
+
+Use the user-authorized local checks or existing delivery mechanism for formatting,
+backend-disabled initialization, validation, tests and security scanning. Pin tools
+and retain lockfiles. Do not create, invoke or require GitHub Actions when the user
+or standing policy excludes it. Respect actual repository merge protections;
+passing local checks does not authorize bypassing them or deploying resources.
 
 ## Handoff
 
