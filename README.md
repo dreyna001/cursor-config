@@ -94,6 +94,16 @@ Project-specific rules stay in each repo's `.cursor/` folder. This repo is for g
 
 `skills/cloud-native-platform-architecture/references/data-protection.md` is the Cursor authoring source for conditional backup decisions. Its byte-identical Codex distribution is `codex/skills/cloud-native-platform-architecture/references/data-protection.md`. Edit the shared reference and mirror it; architecture/Terraform skills, engineering routers and existing rules link to it instead of copying provider policy. Both installers include the reference as part of the existing skill package; no new skill or manifest entry is needed. This documentation update does not install, publish or deploy anything.
 
+## Shared Terraform setup contract
+
+The existing Terraform skill now owns
+[secret-safe provisioning and guided recovery](skills/terraform-cloud-deployment-standard/references/secret-safe-provisioning.md),
+with the same reference packaged for Codex. Its
+[reusable project audit prompt](skills/terraform-cloud-deployment-standard/references/project-audit-prompt.md)
+applies that contract to another authorized project. The standing Codex/Cursor
+rules route cloud work to it; provider-specific behavior still needs pinned-source
+and local lifecycle qualification. Installation does not deploy cloud resources.
+
 ## Install global Codex configuration
 
 The Codex source collection contains 58 custom skills; Linux installs all 58 and non-Linux installs exclude contextual learning (57). Overlapping planning, debugging, cybersecurity, and review workflows share retained entry points; tool-specific production guidance lives in ten conditional references, with official vendor sources, rather than additional skills. The engineering router links directly to those references for existing integrations; stack-selection defaults are not prerequisites for routine implementation. The focused `llm-evidence-regression` workflow pairs unsupported rejection with supported evidence/decision retention, while keeping captured recovery separate from live model quality. The `boundary-failure-regressions` skill checks reproduced parser, API, timeout/cancellation, and persistence failures while protecting adjacent supported behavior.
