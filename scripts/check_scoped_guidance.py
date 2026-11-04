@@ -25,8 +25,19 @@ def check() -> dict:
         for link in re.findall(r"\]\(([^)\s]+)\)", content):
             if any(name in link for name in ("api-project-checkpoints.md", "ato-runtime-deployment-contract.md")):
                 raise AssertionError(f"Global route retains removed app-only contract: {path}: {link}")
-    refs = Path("references/shared-frontend-foundations.md")
-    assert (ROOT / "global/codex/skills/engineering-guidance" / refs).read_bytes() == (ROOT / "global/skills/cursor-rules" / refs).read_bytes()
+    shared_refs = ("shared-frontend-foundations.md", "safe-reuse-and-preparation.md",
+                   "llm-efficiency.md", "reliability-and-performance.md",
+                   "api-data-and-distributed.md")
+    for name in shared_refs:
+        refs = Path("references") / name
+        canonical = ROOT / "global/codex/skills/engineering-guidance" / refs
+        mirror = ROOT / "global/skills/cursor-rules" / refs
+        assert canonical.read_bytes() == mirror.read_bytes(), f"Shared reference drift: {name}"
+        for path in (canonical, mirror):
+            for link in re.findall(r"\]\(([^)\s]+)\)", path.read_text()):
+                if link.startswith(("#", "http:", "https:", "mailto:", "C:")):
+                    continue
+                assert (path.parent / link.split("#")[0]).exists(), f"Broken shared reference: {path}: {link}"
     for app in APPS:
         package = ROOT / app
         manifest = json.loads((package / "source-manifest.json").read_text())

@@ -23,6 +23,8 @@ Do not substitute deterministic copying for model reasoning or semantic review.
 
 ## Reuse only demonstrably compatible results
 
+For cache lifecycle, access/freshness validation, extraction compatibility and shared parsing, read [safe reuse and preparation](safe-reuse-and-preparation.md).
+
 Prefer bounded request-scoped reuse when identical transformations repeat. Use
 persistent reuse only when its measured benefit justifies lifecycle complexity
 and compatible storage already exists or new infrastructure is separately scoped.
@@ -61,3 +63,27 @@ requests and deterministic controls; use bounded live comparisons when authorize
 and relevant, with synthetic evidence and explicit coverage limits. Do not impose
 paid runs on every routine change or infer permission for deployments or recurring
 model calls. Retain failed attempts and investigate regressions before promotion.
+
+## Order checks and batch within the same bounds
+
+Run deterministic blocking checks for authorization, scope, required inputs,
+format and resource limits before paid/model work when their result can establish
+a blocker. Valid inputs still receive every required semantic review; schema or
+citation validity does not prove analytical correctness.
+
+Batch only compatible items within memory, byte/token, time, concurrency and
+cancellation bounds. Keep per-item identity, ordering, errors, evidence bindings
+and completed-work accounting. Use per-item fallback only for an identified
+batch-specific limit with a bounded remaining budget; do not replay successful
+items or fan out after authentication, policy or general provider failures.
+
+## Compare the whole outcome
+
+Follow [benchmark qualification](../../benchmark-qualification/SKILL.md) for
+fixed cases/settings, answer isolation and complete attempt records.
+Compare final answer quality, supported-evidence retention, uncertainty and required
+review with total workflow cost and end-to-end latency, including preparation,
+retrieval/reranking, repair/review, cache overhead and failed attempts. Ranking
+scores, shorter prompts and fewer calls alone do not establish improvement.
+Use the existing benchmark and evidence-regression workflows; label estimates,
+captured replays, mocked dependencies and live measurements separately.

@@ -61,6 +61,10 @@ Do not use for ordinary chat, unrelated security review, or authority decisions.
 - Make intake short, show a readable scope/change preview, and provide one clear
   next action. Use ordinary controls for ordinary edits; JSON and engine metadata
   belong in advanced inspection. Keep consequential coverage gaps visible.
+- In an existing chat-led workflow, keep the authorized conversation central and
+  let it open supporting evidence/document views with the same object/version.
+  Keep consequential approvals explicit and server-enforced; opening a view or
+  chatting is not approval. Preserve direct navigation and app-specific gates.
 - Continue conversations with the same authorized object and source versions.
   Scope expansion, changed evidence, or stale proposals require the existing
   refresh/review boundary; prior assistant assertions never become evidence.

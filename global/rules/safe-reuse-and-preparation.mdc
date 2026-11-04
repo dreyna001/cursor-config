@@ -1,0 +1,10 @@
+---
+description: Bounded caches, authorized fresh reads, shared parsing and compatible extraction reuse
+alwaysApply: false
+---
+
+# Safe Reuse and Preparation
+
+For cache, refresh, extraction or repeated preparation changes, read
+[the shared contract](../skills/cursor-rules/references/safe-reuse-and-preparation.md).
+Keep model efficiency, upload safety and project-specific safeguards in scope.

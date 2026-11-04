@@ -56,3 +56,9 @@ Check that CI actually runs the applicable locked frontend/build-tool and backen
 - Dependency audits, secret checks, infrastructure scans, digest-pinned images, and scanner triage stay in Qualification.
 
 Sources: [Nginx header inheritance](https://nginx.org/en/docs/http/ngx_http_headers_module.html#add_header), [OWASP response headers](https://cheatsheetseries.owasp.org/cheatsheets/HTTP_Headers_Cheat_Sheet.html), [OWASP authorization](https://cheatsheetseries.owasp.org/cheatsheets/Authorization_Cheat_Sheet.html), [OWASP SSRF prevention](https://cheatsheetseries.owasp.org/cheatsheets/Server_Side_Request_Forgery_Prevention_Cheat_Sheet.html), [MSAL browser caching](https://learn.microsoft.com/en-us/entra/msal/javascript/browser/caching).
+
+For cache or extraction reuse, apply
+[safe reuse and preparation](safe-reuse-and-preparation.md): current authorization
+and freshness checks, per-upload admission scanning/validation, and preservation
+of original integrity still apply to every reused result. Use the established
+security policy and scanning boundary; this adds no external scanning service.

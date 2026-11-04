@@ -29,3 +29,20 @@ Apply when implementing or reviewing relevant database or list paths. Preserve p
 - Preserve the serializer-specific encoding, Unicode/escaping behavior, separators, key conversion and ordering, nested/custom-value handling, and object framing. Count encoded bytes rather than characters. Retain the existing byte limit, field selection/order, and truncation behavior; do not weaken limits or security controls to gain speed.
 - Verify output equivalence and byte boundaries below, at, and above the limit, including empty input, non-ASCII and escaped content, nested values, and an oversized entry. Measure representative field counts and value sizes; report a synthetic CPU benchmark as local evidence rather than a production request speedup.
 - Distinguish response pagination/projection from backend read bounds: a small returned page can still fetch and parse a complete archive object. Trace and measure storage requests, bytes read, parsing, and projection CPU separately. If full-object reads remain, record that remaining cost and any unmeasured deployed latency; consider a storage-layout change only when requirements, measurements, cost, and migration impact justify it.
+
+## Retry and save identity
+
+Reuse the same logical-operation/idempotency key for retries of the same logical
+operation, binding it to the authorized scope and payload. Keep per-attempt
+request/trace IDs linked to that operation so retry diagnostics remain distinct. A changed operation requires a
+new identity; reject conflicting reuse. Prevent duplicate side effects with the
+existing atomic claim/deduplication boundary and retain recoverable job status.
+Resolve an unknown outcome by reading that status, not by silently starting over.
+
+After a material saved change, reload through a fresh authorized read and confirm
+stored records and associated files match the intended revision/content, including
+required integrity and provenance. A success notification is not persistence proof.
+Use [the existing boundary testing guidance](correctness-and-testing.md#test-selection-and-trustworthy-evidence)
+for browser/API/authentication/storage journeys and explicit real-versus-mocked
+dependencies. For shared parsing or byte accounting, also read
+[safe preparation](safe-reuse-and-preparation.md).

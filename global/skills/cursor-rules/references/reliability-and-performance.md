@@ -33,3 +33,18 @@ Apply when implementing or reviewing relevant frontend paths. Preserve project s
 ## Model and embedding efficiency
 
 For model-call and embedding/indexing paths, apply [LLM efficiency with preserved analysis](llm-efficiency.md). Inspect redundant provider work, reuse only compatible results, and measure retained behavior with token/call savings.
+
+## Reuse and completion
+
+For caches, overlapping refreshes and repeated preparation, use
+[safe reuse and preparation](safe-reuse-and-preparation.md).
+On cancellation or conversation/account/object changes, bind replies to the
+originating request, scope and generation. A late reply must not update the
+active conversation or new object. Reconcile unknown external completion
+through its durable status rather than replaying work.
+
+Clean up abandoned staged uploads using the existing bounded, retry-safe cleanup
+path only after verifying exact ownership and that the object is uncommitted and
+unreferenced. Preserve attachments already saved, shared or claimed by another
+operation. Surface failed cleanup and retain recoverable status; cancellation
+does not authorize broad deletion.

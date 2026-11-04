@@ -40,6 +40,8 @@ For backup/recovery design or review of technologies actually used by the projec
 
 ## Reference index
 
+For cache, overlapping refresh, extraction reuse or repeated parsing/byte preparation changes, read [safe reuse and preparation](references/safe-reuse-and-preparation.md). Use the reliability reference for late cancellation/cleanup and the API reference for retry/save identity.
+
 For model-call, prompt/output-contract or embedding/indexing changes, apply [LLM efficiency with preserved analysis](references/llm-efficiency.md) alongside the relevant engineering references.
 
 
