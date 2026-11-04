@@ -1,5 +1,5 @@
 {
-  "version": "1.15.0",
+  "version": "1.15.1",
   "prepared": "2026-10-24",
   "source_commits": {
     "ai-enabled-threathunting": "d3d9db73bf7007003ce712c1d41bf6ea6549ba66",
@@ -121,17 +121,17 @@
     },
     {
       "path": "README.md",
-      "local_sha256": "97cd25e140454c6c2189727c38e3762a23423179d597e548baf8e7ea3d4b44ba",
+      "local_sha256": "11383f118690e884fd97196e0d35ec21123aa12995c8bdf890d3297d9aad91cf",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "visual-reference.html",
-      "local_sha256": "8dfd9c10a614a22fa9b0a9fb32829efc5d8cccc1f73088c6efe5ae25a5f5e325",
+      "local_sha256": "077bc8a2577e7203be8baa99dc12c2b640c3fcfcab057fefbe526a39faf49bbb",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
       "path": "verification.md",
-      "local_sha256": "d1e1ba09e65fea97fb8688c9a402c4681595189bd6d5b33e46734197eff5ed93",
+      "local_sha256": "68bd2037c3b56973c5bbda65cb2367e0a4b8090c15997fc5bb2689438388d894",
       "note": "Local navigation edition or verification record; does not replace published source."
     },
     {
@@ -2690,5 +2690,7 @@
     }
   ],
   "source_state": "Application snapshots pinned to merged v1.15 release commits; versioned bundle publication follows Git history; not deployed",
-  "published": "2026-10-25"
+  "published": "2026-10-25",
+  "guidance_amended": "2026-10-29",
+  "production_visual_version": "1.15.0"
 }

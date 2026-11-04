@@ -13,15 +13,17 @@ If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
 point for shared rules, adaptation, visual examples, exceptions and validation.
-Preserve newer approved login/account, sidebar, typography, colors, layouts,
-features and intended behavior; older HTML or guidance cannot override them.
+For maintenance, preserve the current approved appearance. For an explicitly
+requested redesign or selected visual reference, follow that reference for the
+authorized visual scope; existing styles and older examples must not override it.
+Preserve functionality, accessibility, permissions and workflow guards separately.
+The baseline's **Design authority and redesign scope** section defines this distinction.
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
+For a shared production rollout, follow the baseline's **Keeping one baseline**
+procedure across the versioned standard, companion, all three apps (six frontends),
+reference bundle and permanent local baseline. Report unverified scope or drift.
+A scoped mockup or guidance-only change does not authorize a production rollout;
+label its scope and retain the production baseline until that rollout is requested.
 
 Use when creating, editing, or reviewing React frontend code.
 
@@ -43,12 +45,12 @@ Follow these rules:
 
 ## Component styling and visual systems
 
-* Before styling a component, inspect the app's theme, shared UI primitives, design tokens, and nearby screens. Follow the established system instead of introducing a competing look.
-* Prefer existing primitives and semantic theme tokens/utilities for colors, surfaces, borders, spacing, typography, and focus states. Avoid hard-coded colors, one-off CSS, or duplicate buttons, badges, cards, and help controls when the shared component can express the need.
-* Keep hover, focus, active, disabled, loading, success, and error states consistent with the shared component patterns. Preserve readable contrast, visible focus, and responsive behavior.
+* Inspect the selected visual authority and current component behavior before styling. During maintenance, follow the existing design. During an authorized redesign, let the selected reference own colors, spacing, typography, layout and interaction states; remove conflicting legacy visual rules instead of layering them back in.
+* Reuse accessible component behavior and the existing styling toolchain where they fit. Tokens and primitive skins may change for a redesign; a component library is not a requirement to preserve its default look. Map reference values into a coherent source of truth and avoid duplicate competing skins.
+* Verify default, hover, focus, active/selected, text-selection, disabled, loading, success and error states against the chosen design. Inspect computed styles and CSS import order, not only screenshots at rest. Preserve readable contrast, visible focus and responsive behavior.
 * Make local presentation changes locally. Change shared primitives or theme tokens only when the intended effect is shared across the app.
-* For shared suite workspace surfaces, follow **Workspace section surfaces** in `~/.agents/ui-baseline/README.md`. Preserve the established palette, use the page canvas for nested ordinary sections and workspace tabs, and retain semantic notice and independent control surfaces.
-* Keep expandable cards visually continuous: the trigger, single section title, status, and expanded content share one card outline. Avoid a separate bordered trigger followed by a second card that repeats the same title. When correcting one expandable section, check its sibling sections for the same pattern.
+* For shared suite maintenance, follow **Workspace section surfaces** in `~/.agents/ui-baseline/README.md`. These are existing-design defaults, not limits on an authorized redesign.
+* When the selected design uses expandable cards, keep them visually continuous: the trigger, single section title, status, and expanded content share one card outline. Avoid a separate bordered trigger followed by a second card that repeats the same title. When correcting one expandable section, check its sibling sections for the same pattern.
 
 ## Icons: Lucide React
 
@@ -95,19 +97,12 @@ For frontend performance changes, read [frontend performance](../cursor-rules/re
 
 ## Shared UI change completion
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
-
 
 For shared visual changes, verify computed form roles, semantic colors, keyboard
-selection and control geometry against the central baseline. A passing size-scale
+selection and control geometry against the applicable visual authority, including an explicitly selected redesign reference. A passing size-scale
 check alone does not establish role parity. Preserve the recorded app exceptions.
 
-Equivalent text roles must share the baseline styling across independent apps.
+Equivalent text roles must share the applicable design styling across independent apps.
 Check placeholder color/opacity and ordinary label emphasis explicitly; browser
 defaults are not a design token. Keep helper, status, metadata and action roles distinct.
 
@@ -115,7 +110,7 @@ For shared UI work, complete the central baseline's **Interaction and accessibil
 checks and its role/state coverage record. Exercise keyboard focus and bypass,
 modal/popup semantics, disabled/readonly/validation, loading/error announcements,
 loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
-content in the affected apps. Preserve app-specific guards and layouts. Record
+content in the affected apps. Preserve app-specific guards. Preserve layouts outside the authorized redesign scope. Record
 actual browser/route/state evidence and any unverified areas; source parity alone
 is not interaction or accessibility sign-off.
 

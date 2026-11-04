@@ -1,6 +1,6 @@
 # Global Codex instructions
 
-This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.codex/AGENTS.md`). Do not load every skill. Use `engineering-guidance` as the router and read only the references that apply. Skills install from `global/codex/skills/` into `~/.agents/skills/` through `python3 codex/global_setup.py sync --apply`. Cursor `.mdc` files in `rules/` are not auto-loaded here; standing policies that apply in both harnesses are listed in this file. After changing this file or `global/codex/skills/`, run `python3 codex/global_setup.py plan`, then `sync --apply` and `verify`.
+This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.codex/AGENTS.md`). Do not load every skill. Use `engineering-guidance` as the router and read only the references that apply. Skills install from `global/codex/skills/` into `~/.agents/skills/` through `python3 codex/global_setup.py sync --apply`. Cursor `.mdc` files in `global/rules/` are not auto-loaded here; standing policies that apply in both harnesses are listed in this file. After changing this file or `global/codex/skills/`, run `python3 codex/global_setup.py plan`, then `sync --apply` and `verify`.
 
 - Before creating or changing an AWS GovCloud instance, ask whether the FedRAMP authorization is Low, Moderate, or High when that level is not already stated. Do not choose a level. Apply the authorization-ready rule for the stated level.
 - Use Terraform exclusively for all new or changed cloud infrastructure across projects and clouds. Do not create or extend SAM, CloudFormation, Bicep, ARM, Pulumi, CDK, console provisioning, or infrastructure-creating scripts. Use the project's documented Terraform root; existing alternate IaC is legacy and is not authority to add another path. Application builds, artifact publication, and read-only verification may use their established tools. Existing resources require an explicitly scoped migration rather than implicit replacement.
@@ -68,6 +68,16 @@ For backup/recovery decisions about persistent technologies actually used by a p
 - For an ordinary Git worktree, remove it from a retained checkout using `git worktree remove <verified-absolute-path>` without `--force`, only after every check passes. Verify the registered path and repository boundary first; never delete the directory manually. Branch deletion requires separate authorization.
 - Preserve shared tool/provider caches outside worktrees and never follow provider symlinks to delete their targets. Report worktrees removed/archived, verification results, and worktrees retained with reasons.
 
+## Informational hints
+
+Informational field help, tooltips and info-icon hints must open on pointer hover
+and keyboard focus without requiring a click. Keep the hint open while the pointer
+is over its trigger or content. Support Escape dismissal, accessible tooltip
+semantics and a described-by connection to the trigger; keep enlarged content
+readable and inside the viewport. Verify pointer, keyboard and dismissal behavior
+in the browser. Menus, action buttons and expandable guidance keep their existing
+interactions; this rule applies to informational hints.
+
 ## UI/UX baseline
 
 For UI/UX work, start at the permanent local baseline:
@@ -79,21 +89,23 @@ If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
 point for shared rules, adaptation, visual examples, exceptions and validation.
-Preserve newer approved login/account, sidebar, typography, colors, layouts,
-features and intended behavior; older HTML or guidance cannot override them.
+For maintenance, preserve the current approved appearance. For an explicitly
+requested redesign or selected visual reference, follow that reference for the
+authorized visual scope; existing styles and older examples must not override it.
+Preserve functionality, accessibility, permissions and workflow guards separately.
+The baseline's **Design authority and redesign scope** section defines this distinction.
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
+For a shared production rollout, follow the baseline's **Keeping one baseline**
+procedure across the versioned standard, companion, all three apps (six frontends),
+reference bundle and permanent local baseline. Report unverified scope or drift.
+A scoped mockup or guidance-only change does not authorize a production rollout;
+label its scope and retain the production baseline until that rollout is requested.
 
 For shared UI work, complete the central baseline's **Interaction and accessibility**
 checks and its role/state coverage record. Exercise keyboard focus and bypass,
 modal/popup semantics, disabled/readonly/validation, loading/error announcements,
 loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
-content in the affected apps. Preserve app-specific guards and layouts. Record
+content in the affected apps. Preserve app-specific guards. Preserve layouts outside the authorized redesign scope. Record
 actual browser/route/state evidence and any unverified areas; source parity alone
 is not interaction or accessibility sign-off.
 

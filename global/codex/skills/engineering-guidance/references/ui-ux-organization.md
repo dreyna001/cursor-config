@@ -9,15 +9,17 @@ If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
 point for shared rules, adaptation, visual examples, exceptions and validation.
-Preserve newer approved login/account, sidebar, typography, colors, layouts,
-features and intended behavior; older HTML or guidance cannot override them.
+For maintenance, preserve the current approved appearance. For an explicitly
+requested redesign or selected visual reference, follow that reference for the
+authorized visual scope; existing styles and older examples must not override it.
+Preserve functionality, accessibility, permissions and workflow guards separately.
+The baseline's **Design authority and redesign scope** section defines this distinction.
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
+For a shared production rollout, follow the baseline's **Keeping one baseline**
+procedure across the versioned standard, companion, all three apps (six frontends),
+reference bundle and permanent local baseline. Report unverified scope or drift.
+A scoped mockup or guidance-only change does not authorize a production rollout;
+label its scope and retain the production baseline until that rollout is requested.
 
 Use this reference for interface layout, navigation, content hierarchy, and editing-state decisions across UI stacks. Adapt it to the user's task, the product's established patterns, and the available screen space; it guides decisions without prescribing an app-specific flow or feature set.
 
@@ -26,7 +28,7 @@ For compact portals with multiple peer workspaces and no distinct home page, use
 remembered-destination decisions.
 
 For suite workspace surfaces, follow **Workspace section surfaces** in
-`~/.agents/ui-baseline/README.md`. Preserve the established palette; use the
+`~/.agents/ui-baseline/README.md`. For maintenance, preserve the established palette; use the
 page canvas for nested ordinary sections and workspace tabs, and retain semantic
 notice treatment and independent control or panel surfaces.
 
@@ -65,19 +67,12 @@ notice treatment and independent control or panel surfaces.
 
 ## Shared UI change completion
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
-
 
 For shared visual changes, verify computed form roles, semantic colors, keyboard
-selection and control geometry against the central baseline. A passing size-scale
+selection and control geometry against the applicable visual authority, including an explicitly selected redesign reference. A passing size-scale
 check alone does not establish role parity. Preserve the recorded app exceptions.
 
-Equivalent text roles must share the baseline styling across independent apps.
+Equivalent text roles must share the applicable design styling across independent apps.
 Check placeholder color/opacity and ordinary label emphasis explicitly; browser
 defaults are not a design token. Keep helper, status, metadata and action roles distinct.
 
@@ -85,7 +80,7 @@ For shared UI work, complete the central baseline's **Interaction and accessibil
 checks and its role/state coverage record. Exercise keyboard focus and bypass,
 modal/popup semantics, disabled/readonly/validation, loading/error announcements,
 loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
-content in the affected apps. Preserve app-specific guards and layouts. Record
+content in the affected apps. Preserve app-specific guards. Preserve layouts outside the authorized redesign scope. Record
 actual browser/route/state evidence and any unverified areas; source parity alone
 is not interaction or accessibility sign-off.
 
