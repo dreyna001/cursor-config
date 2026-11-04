@@ -8,8 +8,11 @@ description: "Adapt the Enterprise Workspace visual template to an application's
 For UI/UX work, start at the `$HOME/.agents/ui-baseline/README.md` (permanent local UI/UX baseline)
 (if unavailable, use the app's `docs/suite-ui-standard.md` release copy; no GitHub sign-in is required). It is the single
 entry point for shared rules, visual examples, product exceptions and verification.
-Preserve newer approved login/account, sidebar, typography, colors, layouts and
-behavior; older HTML and guidance cannot override the baseline.
+For maintenance, preserve the current approved appearance. For an explicitly
+requested redesign or selected visual reference, follow that reference for the
+authorized visual scope; existing styles and older examples must not override it.
+Preserve functionality, accessibility, permissions and workflow guards separately.
+The baseline's **Design authority and redesign scope** section defines this distinction.
 
 This opt-in skill applies the user's preferred visual reference with application-
 specific judgment. Read the [visual adaptation contract](references/visual-adaptation.md)
@@ -19,7 +22,8 @@ without implicitly invoking this workflow.
 
 ## Source of truth
 
-The current reference comes from the October 18, 2026 unified HTML mockup in
+Use the visual reference explicitly selected for the task. When none is selected,
+the production default comes from the October 18, 2026 unified HTML mockup in
 `ai-enabled-threathunting`, with cross-application comparisons against ATO.
 The user selected source-inspector **B**: compact fields/context and an explicit
 Open source action. B is a preferred component pattern, not the name of an entire
@@ -70,18 +74,17 @@ fake service behavior merely because the visual example contains it. Use the
 
 ## Shared UI change completion
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
+For a shared production rollout, follow the baseline's **Keeping one baseline**
+procedure across the versioned standard, companion, all three apps (six frontends),
+reference bundle and permanent local baseline. Report unverified scope or drift.
+A scoped mockup or guidance-only change does not authorize a production rollout;
+label its scope and retain the production baseline until that rollout is requested.
 
 For shared UI work, complete the central baseline's **Interaction and accessibility**
 checks and its role/state coverage record. Exercise keyboard focus and bypass,
 modal/popup semantics, disabled/readonly/validation, loading/error announcements,
 loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
-content in the affected apps. Preserve app-specific guards and layouts. Record
+content in the affected apps. Preserve app-specific guards. Preserve layouts outside the authorized redesign scope. Record
 actual browser/route/state evidence and any unverified areas; source parity alone
 is not interaction or accessibility sign-off.
 

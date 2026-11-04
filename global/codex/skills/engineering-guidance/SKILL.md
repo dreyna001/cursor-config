@@ -14,15 +14,17 @@ If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
 the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
 sign-in is required to read the installed reference. This is the single entry
 point for shared rules, adaptation, visual examples, exceptions and validation.
-Preserve newer approved login/account, sidebar, typography, colors, layouts,
-features and intended behavior; older HTML or guidance cannot override them.
+For maintenance, preserve the current approved appearance. For an explicitly
+requested redesign or selected visual reference, follow that reference for the
+authorized visual scope; existing styles and older examples must not override it.
+Preserve functionality, accessibility, permissions and workflow guards separately.
+The baseline's **Design authority and redesign scope** section defines this distinction.
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
+For a shared production rollout, follow the baseline's **Keeping one baseline**
+procedure across the versioned standard, companion, all three apps (six frontends),
+reference bundle and permanent local baseline. Report unverified scope or drift.
+A scoped mockup or guidance-only change does not authorize a production rollout;
+label its scope and retain the production baseline until that rollout is requested.
 
 ## Cloud IaC policy
 
@@ -84,18 +86,12 @@ For documentation work, read [documentation layout and bootstrap](references/doc
 
 ## Shared UI change completion
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
 
 For shared UI work, complete the central baseline's **Interaction and accessibility**
 checks and its role/state coverage record. Exercise keyboard focus and bypass,
 modal/popup semantics, disabled/readonly/validation, loading/error announcements,
 loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
-content in the affected apps. Preserve app-specific guards and layouts. Record
+content in the affected apps. Preserve app-specific guards. Preserve layouts outside the authorized redesign scope. Record
 actual browser/route/state evidence and any unverified areas; source parity alone
 is not interaction or accessibility sign-off.
 

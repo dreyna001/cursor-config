@@ -8,20 +8,22 @@ alwaysApply: false
 For UI/UX work, start at the `$HOME/.agents/ui-baseline/README.md` (permanent local UI/UX baseline)
 (if unavailable, use the app's `docs/suite-ui-standard.md` release copy; no GitHub sign-in is required). It is the single
 entry point for shared rules, visual examples, product exceptions and verification.
-Preserve newer approved login/account, sidebar, typography, colors, layouts and
-behavior; older HTML and guidance cannot override the baseline.
+For maintenance, preserve the current approved appearance. For an explicitly
+requested redesign or selected visual reference, follow that reference for the
+authorized visual scope; existing styles and older examples must not override it.
+Preserve functionality, accessibility, permissions and workflow guards separately.
+The baseline's **Design authority and redesign scope** section defines this distinction.
 
 Read and apply [self-explanatory-ui](../skills/self-explanatory-ui/SKILL.md)
 when creating or reviewing user-facing labels, instructions, states, and actions.
 
 ## Shared UI change completion
 
-Approved shared UI changes are not complete until the versioned baseline,
-its visual companion, all three apps (six frontends), this configuration
-repository's reference bundle, and the permanent local baseline are synchronized.
-Follow the baseline's “Keeping one baseline” procedure, record app-specific
-exceptions and validation, and preserve newer approved behavior and styling.
-If any part cannot be updated or verified, report the remaining drift explicitly.
+For a shared production rollout, follow the baseline's **Keeping one baseline**
+procedure across the versioned standard, companion, all three apps (six frontends),
+reference bundle and permanent local baseline. Report unverified scope or drift.
+A scoped mockup or guidance-only change does not authorize a production rollout;
+label its scope and retain the production baseline until that rollout is requested.
 
 
 On native Windows, resolve `$HOME/.agents/ui-baseline/` as `%USERPROFILE%\.agents\ui-baseline\`.

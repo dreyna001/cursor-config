@@ -151,3 +151,35 @@ excluded. WebKit is the Linux test engine, not macOS Safari. Threat Hunt receive
 documentation and inactive shared CSS roles; its runtime was not retested here.
 
 [Previous baseline verification](evidence/verification-v1.10.0.md) remains historical.
+
+## Guidance amendment — 2026-10-29
+
+Local guidance edition 1.15.1 clarifies maintenance versus an authorized redesign,
+visual-state verification and mockup-versus-production scope. Production reference
+files and their 1.15.0 source checksums remain unchanged. No production UI rollout
+is claimed. The local companion labels the amendment and the historical visual
+release separately.
+
+
+## Publication review — 2026-11-04
+
+Reviewed and published the previously local 1.15.1 guidance and its five Codex
+skill routes with the corresponding Cursor distribution. Maintenance preserves
+the approved appearance; an explicitly selected redesign owns only its authorized
+visual scope. Permissions, evidence, approval/review, accessibility and workflow
+guards remain unchanged. The embedded production visual release remains 1.15.0;
+no six-frontend application rollout or production qualification is claimed.
+
+Review corrected the released-default attribution in the Investigation Desk
+handoff, kept the skip link first, and placed the guidance notice outside the
+fixed sidebar. The source companion and all three generated copies passed 12
+focused desktop checks: Chromium, Firefox and WebKit at 1440x1000, first-Tab skip
+focus, Enter bypass to main content, current-guidance link resolution, notice
+geometry and no JavaScript errors. Source-companion screenshots were inspected.
+These are static-reference browser checks through a local HTTP server; they do
+not exercise application APIs, authentication, storage or screen-reader speech.
+
+All 28 configuration/installer preservation tests and nine affected skill
+entrypoint validations passed, along with source hashes, package/link/mirror and
+generated-companion checks. Installed native Windows configuration and the
+shared permanent Windows baseline were left unchanged.

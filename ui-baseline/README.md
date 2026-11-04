@@ -1,6 +1,6 @@
 # Suite Workspace UI Standard
 
-> **Permanent local edition · v1.15.0 · 2026-10-24**
+> **Permanent local guidance edition · v1.15.1 · 2026-10-29**
 >
 > Start here on Windows: `C:\Users\Daniel.Reyna\.agents\ui-baseline\README.md`.
 > WSL opens the same files through `/home/dreyna/.agents/ui-baseline/README.md`.
@@ -17,8 +17,10 @@
 > newer approved release, compare its changes before refreshing this folder; never
 > downgrade newer login, account, sidebar, typography, color, layout or workflow work.
 
-Version: **1.15.0** (2026-10-24). Shared by ATO Workspace, Threat Hunt Workspace,
-and Incident Response Workspace, including its four deployment variants.
+Version: **1.15.1** (2026-10-29), guidance-only clarification. The embedded
+production visual release remains **1.15.0**, shared by ATO Workspace, Threat Hunt
+Workspace and Incident Response Workspace, including its four deployment variants.
+This amendment does not publish a new production theme or claim an app rollout.
 
 ## Start here: the UI/UX index
 
@@ -27,6 +29,7 @@ rules, templates and repository instructions must send readers here first.
 The linked supporting material keeps its narrower purpose; it is not a second
 source of shared rules.
 
+- [Design authority and redesign scope](#design-authority-and-redesign-scope): maintenance defaults, selected references and rollout boundaries.
 - [Authority and scope](#authority-and-scope): precedence and preservation of
   each app's intended behavior, layouts, features and newer approved work.
 - [Shared components and drift prevention](#shared-components-and-drift-prevention): canonical source, approved variants and automated parity gates.
@@ -83,6 +86,37 @@ Enterprise Workspace adaptation document is a compatibility pointer here.
 Read linked product instructions for the current scope; no UI baseline authorizes
 changing security, workflow, storage or deployment contracts.
 
+## Design authority and redesign scope
+
+Explicit user direction controls the authorized visual scope. These rules guide
+design work; they do not freeze an existing appearance or require a particular
+layout, palette, component skin or historical template.
+
+- **Maintenance:** preserve the current approved appearance and use the released
+  baseline as the default when no redesign is requested.
+- **Authorized redesign:** the user's selected reference owns typography, colors,
+  spacing, density, borders, geometry, layout and interaction states within scope.
+  Its age or origin does not disqualify it when the user explicitly selects it.
+  Existing theme rules, component defaults and older guidance must not override it.
+  Reuse accessible component behavior and installed styling libraries where they
+  fit; replace conflicting skins and audit the final CSS cascade.
+- **Behavior:** preserve real features, evidence, permissions, security, draft and
+  navigation guards, validation and accessibility requirements unless a behavior
+  change is separately authorized. Layout and styling are not workflow guards.
+  Raise a concrete conflict with an accessibility requirement and make the
+  smallest documented adaptation; do not use it to retain unrelated old styling.
+- **Verification:** compare equivalent routes, data, states and viewports,
+  including hover, keyboard focus, active/selected, native text selection,
+  disabled, loading, validation and error states. Record rendered evidence and
+  source/import checks. A static screenshot or source parity alone is insufficient.
+- **Scope:** a mockup or guidance amendment does not authorize production edits
+  across six frontends. Label the selected reference and unimplemented scope.
+  Complete an approved shared production rollout using **Keeping one baseline**.
+
+This section qualifies all preservation, palette, layout and template defaults
+below and in the archived production references. It does not change backend
+contracts or remove interaction, accessibility or release-verification checks.
+
 ## Authority and scope
 
 This is the **single authoritative UI/UX baseline** for the suite. Its canonical
@@ -93,7 +127,8 @@ being changed; do not mix versions from another branch or a newer template.
 
 Order of precedence:
 
-1. Explicit user/customer requirements and the destination app's intended
+1. Explicit user/customer requirements, including the selected visual reference
+   for an authorized redesign, and the destination app's intended
    behavior, permissions, accessibility needs and domain meaning.
 2. This versioned baseline for shared appearance and approved shared UI roles.
 3. The [unified HTML visual companion](visual-reference.html)
@@ -110,8 +145,9 @@ are generated artifacts. Preserve dated historical prototypes and release eviden
 Shared appearance does not require identical pages, navigation structures,
 component compositions, table density, specialized inspectors or workflow order.
 Equivalent ordinary controls use the shared component contract below.
-Keep layouts, available features, event handlers, draft/review guards, identity,
-backend contracts and export content unchanged during a visual alignment.
+Keep layouts outside the authorized redesign scope unchanged. Preserve available
+features, event handlers, draft/review guards, identity, backend contracts and
+export content during visual work.
 Document necessary exceptions alongside this contract; a visual mismatch alone
 does not authorize a functional change or a deployment.
 
