@@ -211,7 +211,7 @@ class GlobalSetupTests(unittest.TestCase):
 
     def test_learning_helper_refuses_nonlinux_before_reading_store(self):
         import subprocess
-        helper = Path(__file__).resolve().parents[1] / "skills/contextual-learning/scripts/lessons.py"
+        helper = Path(__file__).resolve().parents[2] / "global/codex/skills/contextual-learning/scripts/lessons.py"
         result = subprocess.run([sys.executable, "-c", "import sys,runpy; sys.platform='win32'; runpy.run_path(sys.argv[1],run_name='__main__')", str(helper)], capture_output=True, text=True)
         self.assertNotEqual(result.returncode, 0)
         self.assertIn("Linux-only; no lesson files were read or written", result.stderr)

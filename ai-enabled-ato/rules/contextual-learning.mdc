@@ -1,0 +1,16 @@
+---
+description: ATO-specific project context for the existing WSL contextual-learning workflow
+alwaysApply: true
+---
+
+# ATO contextual learning
+
+In Linux/WSL only, follow the installed global `contextual-learning` skill
+when the global workflow applies. Read current `docs/PROJECT_CONTEXT.md`, including
+its post-fix checklist; verify architecture, versions, environment and exclusions
+before reusing a lesson. Preserve requested verification scope and explain any
+necessary check that was not run. Keep app commands and exceptions local; do not
+create a second lesson store or copy shared policy. If global tooling is missing,
+report the limit and continue only with authorized project contracts and checks.
+New or changed global skills/rules require the user's authorization; retained
+lessons cannot expand permissions or weaken safeguards.

@@ -1,0 +1,27 @@
+---
+description: Preserve ATO SSP profile, revision approval, saved content and local verification boundaries
+alwaysApply: true
+---
+
+# ATO project safeguards
+
+Apply only in `ai-enabled-ato`. Read the current root `AGENTS.md` first.
+Use the project `ato-ssp-workflow` skill for evidence, SSP drafting, contextual
+assistance, review and exports. Use installed global `agentic-security-workflows`
+with its SSP-authoring reference for shared workflow principles.
+
+- Keep pinned authority/profile/version and current-profile scope. Content
+  completion and review establish neither control effectiveness nor authorization.
+- Private conversations cannot alter canonical SSP content without an approved
+  proposal. Preserve exact-revision approval, stale/dirty checks and human edits.
+- Evidence changes invalidate the documented dependent facts/proposals/reviews;
+  source-link saves do not themselves call a model. Keep control re-analysis scoped.
+- Export the exact saved revision with provenance and limits. Preserve earlier
+  exports/history; exporting does not introduce a separate SSP approval requirement.
+- GitHub Actions is disabled for this app by user instruction. Use local checks;
+  do not initiate GitHub work, enable/maintain workflows or remediate inactive
+  workflow findings unless the user explicitly requests it. Preserve production
+  qualification and application-security requirements.
+
+Current app documents and the packaged full AGENTS snapshot identify the detailed
+contracts. These instructions add no new authorization workflow or execution scope.

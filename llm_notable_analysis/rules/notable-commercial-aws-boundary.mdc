@@ -1,0 +1,18 @@
+---
+description: Commercial-only AWS and GovCloud no-touch boundary under s3_notable_pipeline_commercial
+alwaysApply: false
+---
+
+# Notable commercial AWS boundary
+
+Only for work under `s3_notable_pipeline_commercial/` in
+`llm_notable_analysis`, read that directory's current `AGENTS.md` and the
+[full boundary snapshot](../skills/notable-incident-workflow/references/commercial-aws-boundary.md).
+Commercial scope is partition `aws`, region `us-east-1`; fail closed outside it.
+The sibling `s3_notable_pipeline/` is out-of-scope production GovCloud: no edits,
+imports, symlinks, deployments, migrations, deletions, cleanup or copied runtime
+data/secrets/identifiers/endpoints. No destructive AWS deletion commands.
+Before a live mutation, verify account, partition, region, role/profile, stack
+and intended resources, and obtain explicit deployment approval. Use the existing
+Terraform customer-default root; preserve the internal Python package identity
+and copied contracts unless explicitly scoped otherwise.

@@ -1,0 +1,12 @@
+---
+description: ATO-only runtime configuration and deployment contract
+alwaysApply: true
+---
+
+# ATO runtime and deployment contract
+
+Apply only in `ai-enabled-ato`. Read the project's `ATO_TECHNICAL_SPEC.md`
+Section 31 and `docs/requirements/{traceability,hard-stops}.yaml`, then the
+[app runtime contract](../skills/ato-ssp-workflow/references/runtime-deployment-contract.md).
+Resolve paths from the app repository root. Current normative app documents win
+over this packaged snapshot. Keep ATO runtime constraints out of global guidance.

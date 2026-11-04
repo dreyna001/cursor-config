@@ -1,0 +1,98 @@
+{
+  "schema_version": 1,
+  "scope": "project_only",
+  "project": "ai-enabled-threathunting",
+  "packaged_date": "2026-11-04",
+  "source_revision": "a533ced5be75cf6558837f714b95e35907b9f348",
+  "source_precedence": "Current app AGENTS and normative source documents precede packaged snapshots; dated checkpoints require revalidation.",
+  "installation": "Manual reviewed copy of rules/ and complete skills/ into only the matching app .cursor/ directory; never global installation.",
+  "excluded": [
+    "credentials",
+    "runtime state",
+    "customer data",
+    "private lessons",
+    "future-work/review backlogs",
+    "generic global skill copies"
+  ],
+  "sources": [
+    {
+      "source_repository": "ai-enabled-threathunting",
+      "source_path": "AGENTS.md",
+      "source_revision": "a533ced5be75cf6558837f714b95e35907b9f348",
+      "source_file_sha256": "9ce12c5fdb8058555caf560eaaaf40e333666265799d071dfacae85b94467d28",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": false,
+      "destination": "skills/threat-hunt-reporting/references/repository-agents.md",
+      "destination_sha256": "9ce12c5fdb8058555caf560eaaaf40e333666265799d071dfacae85b94467d28"
+    },
+    {
+      "source_repository": "cursor-config",
+      "source_path": "skills/cursor-rules/references/api-project-checkpoints.md",
+      "source_revision": "087ebd566d7b3f64a585450a215ac606d6cd9c83",
+      "source_file_sha256": "52d4c17bd8d47ac355d054808dad57fc9df9859df1b055b047563bd10dd16a07",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": true,
+      "destination": "skills/threat-hunt-reporting/references/production-http-checkpoint.md",
+      "destination_sha256": "0cc8ae2ac189896fccfc3e9a846013e40769d2de0a130fbf39cde03af259cd99"
+    },
+    {
+      "source_repository": "ai-enabled-threathunting",
+      "source_path": "docs/threat-hunt-reporting-guidance.md",
+      "source_revision": "a533ced5be75cf6558837f714b95e35907b9f348",
+      "source_file_sha256": "3741b9f23586e65646176a1f693a491f92d6b2e5460c9f29ddb6489a8d98497a",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": false,
+      "destination": "skills/threat-hunt-reporting/references/threat-hunt-reporting-guidance.md",
+      "destination_sha256": "3741b9f23586e65646176a1f693a491f92d6b2e5460c9f29ddb6489a8d98497a"
+    },
+    {
+      "source_repository": "ai-enabled-threathunting",
+      "source_path": "docs/operator-runbook.md",
+      "source_revision": "a533ced5be75cf6558837f714b95e35907b9f348",
+      "source_file_sha256": "c400adb8f9c79d2d443393d25a108b1995a728287490cf4411296e3b06149aa5",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": true,
+      "destination": "skills/threat-hunt-reporting/references/operator-runbook.md",
+      "destination_sha256": "9f6ebfb92de8a8a21085889e1eeaf57e188840c669c8c69a6e3d5747c3a1c241",
+      "adaptation": "Original app-relative document links expressed as explicit current project-root paths for portable installation."
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "0a07d640f8427afed5f140915b09baa195d0e469727353aa449e67f936d865cf"
+    },
+    {
+      "path": "rules/production-http-checkpoints.mdc",
+      "sha256": "8c13ae93211f24505f0fc3cb61a9cf90b59b6b0ad2b3843b737707770af27af2"
+    },
+    {
+      "path": "rules/threat-hunting-project-safeguards.mdc",
+      "sha256": "7b212eb2333188dd11ed49705258e7fa9a505accd767537b584aedd77458dfdc"
+    },
+    {
+      "path": "skills/threat-hunt-reporting/SKILL.md",
+      "sha256": "d556e9eb604f29e37b845f96ce37912a55a3e4355257c059c8f6a1f0c07991b9"
+    },
+    {
+      "path": "skills/threat-hunt-reporting/references/operator-runbook.md",
+      "sha256": "9f6ebfb92de8a8a21085889e1eeaf57e188840c669c8c69a6e3d5747c3a1c241"
+    },
+    {
+      "path": "skills/threat-hunt-reporting/references/production-http-checkpoint.md",
+      "sha256": "0cc8ae2ac189896fccfc3e9a846013e40769d2de0a130fbf39cde03af259cd99"
+    },
+    {
+      "path": "skills/threat-hunt-reporting/references/repository-agents.md",
+      "sha256": "9ce12c5fdb8058555caf560eaaaf40e333666265799d071dfacae85b94467d28"
+    },
+    {
+      "path": "skills/threat-hunt-reporting/references/threat-hunt-reporting-guidance.md",
+      "sha256": "3741b9f23586e65646176a1f693a491f92d6b2e5460c9f29ddb6489a8d98497a"
+    }
+  ]
+}

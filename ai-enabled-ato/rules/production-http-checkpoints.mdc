@@ -1,0 +1,8 @@
+---
+description: Historical production HTTP security checkpoints for ai-enabled-ato; reverify current source and deployment
+alwaysApply: false
+---
+
+# Production HTTP security checkpoints
+
+Apply only in `ai-enabled-ato` when production HTTP/API, edge, login, health or upload exposure is in scope. Read [the dated app checkpoint](../skills/ato-ssp-workflow/references/production-http-checkpoint.md). Use the installed global engineering router for generic API controls. The dated observations require current-source verification; preserve existing protections. Do not retrofit developer/test instances or expand verification without the requested scope.

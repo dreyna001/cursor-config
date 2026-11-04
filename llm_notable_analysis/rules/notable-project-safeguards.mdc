@@ -1,0 +1,23 @@
+---
+description: Preserve notable-analysis four-product evidence, read-only chat, action and native deployment boundaries
+alwaysApply: true
+---
+
+# Notable incident-analysis project safeguards
+
+Apply only in `llm_notable_analysis`. Read current root `AGENTS.md` and use
+the local `notable-incident-workflow` skill. Current `docs/case-analysis-contract.md`
+and `docs/incident-response-ui-parity.md` define behavior across the four native
+products. Preserve retrieval-bound read-only chat, retired automatic-query
+boundaries and existing action gates. Documentation and local verification do
+not authorize response execution or deployment.
+
+Keep future-work/review backlogs local and untracked. Shared reasoning fixes use
+the global `llm-evidence-regression` principle across affected native products;
+preserve local contracts and intentional product differences. Follow current
+global Terraform policy for new/changed cloud infrastructure, not legacy alternate
+templates. Existing resources require an explicitly scoped migration.
+
+Preserve the on-prem-only presentation pilot and its exact reviewed source/hash
+exceptions; it does not authorize cloud rollout. Never import a sibling checkout
+at build or runtime to manufacture parity.

@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "scope": "project_only",
+  "project": "ai-enabled-ato",
+  "packaged_date": "2026-11-04",
+  "source_revision": "a3c178941ffd9d37de4a1b74f1be966a38df74e8",
+  "source_precedence": "Current app AGENTS and normative source documents precede packaged snapshots; dated checkpoints require revalidation.",
+  "installation": "Manual reviewed copy of rules/ and complete skills/ into only the matching app .cursor/ directory; never global installation.",
+  "excluded": [
+    "credentials",
+    "runtime state",
+    "customer data",
+    "private lessons",
+    "future-work/review backlogs",
+    "generic global skill copies"
+  ],
+  "sources": [
+    {
+      "source_repository": "ai-enabled-ato",
+      "source_path": "AGENTS.md",
+      "source_revision": "a3c178941ffd9d37de4a1b74f1be966a38df74e8",
+      "source_file_sha256": "099a8ebd226d0e397027a758389c77acb7dadb7df904a96e9eeff1d390fff5ef",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": false,
+      "destination": "skills/ato-ssp-workflow/references/repository-agents.md",
+      "destination_sha256": "099a8ebd226d0e397027a758389c77acb7dadb7df904a96e9eeff1d390fff5ef"
+    },
+    {
+      "source_repository": "cursor-config",
+      "source_path": "skills/cursor-rules/references/api-project-checkpoints.md",
+      "source_revision": "087ebd566d7b3f64a585450a215ac606d6cd9c83",
+      "source_file_sha256": "52d4c17bd8d47ac355d054808dad57fc9df9859df1b055b047563bd10dd16a07",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": true,
+      "destination": "skills/ato-ssp-workflow/references/production-http-checkpoint.md",
+      "destination_sha256": "77e2c3c9517df9465b4ca409a4bf34fcf74747f06e11271563c31adaca1377a8"
+    },
+    {
+      "source_repository": "cursor-config",
+      "source_path": "codex/skills/engineering-guidance/references/ato-runtime-deployment-contract.md",
+      "source_revision": "087ebd566d7b3f64a585450a215ac606d6cd9c83",
+      "source_file_sha256": "bfefd6a619e9ec3f742f32c1a786d7d8028f89ef987c6318e9a7fd2753019cd2",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": true,
+      "destination": "skills/ato-ssp-workflow/references/runtime-deployment-contract.md",
+      "destination_sha256": "62e2c9ab6b23ea1a418ffe4257d0b56f2f690326214f5e8473ef03334edd035c"
+    },
+    {
+      "source_repository": "ai-enabled-ato",
+      "source_path": "docs/SSP_ROADMAP_AND_BACKLOG.md",
+      "source_revision": "a3c178941ffd9d37de4a1b74f1be966a38df74e8",
+      "source_file_sha256": "48007ca6d64e6c5d89c2fb740aa1a4da2df352ea9e66cbe92be448b146de106b",
+      "source_worktree_modified": true,
+      "selection": {
+        "start": "## Regression obligations",
+        "end_exclusive": "## Retrieval qualification"
+      },
+      "adapted": true,
+      "destination": "skills/ato-ssp-workflow/references/ssp-regression-obligations.md",
+      "destination_sha256": "c972bceda3919ab250876cc0e349f6a3bfb0d13fb61968d3f096afa5316efc96",
+      "adaptation": "Original app-relative document links expressed as explicit current project-root paths for portable installation."
+    },
+    {
+      "source_repository": "ai-enabled-ato",
+      "source_path": "docs/PROJECT_CONTEXT.md",
+      "source_revision": "a3c178941ffd9d37de4a1b74f1be966a38df74e8",
+      "source_file_sha256": "ffd67dfefcdd51f1bf0c09374e93388581b8c2710a3ad845bd7ab4e4dbefda2b",
+      "source_worktree_modified": false,
+      "selection": {
+        "start": "## SSP field mapping",
+        "end_exclusive": "## Learning and diagnosis"
+      },
+      "adapted": false,
+      "destination": "skills/ato-ssp-workflow/references/ssp-field-mapping.md",
+      "destination_sha256": "9bbb9b254d515de0c926e6a4bf7bfd949e6e9572d7d6865899e50fdfe0811ae0"
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "891b7c5ea3d666fc88a970618d13d6f1446427d040ddb0366ba59b33669a69cf"
+    },
+    {
+      "path": "rules/contextual-learning.mdc",
+      "sha256": "d68cd98a2fbcd52abfb0c47e49c0624d17ecef17f72a7057c387d8b3ed69c27c"
+    },
+    {
+      "path": "rules/ato-project-safeguards.mdc",
+      "sha256": "737be9bed8453463247dad04931526e86dcf2f91d92148c1027fc48225f2ec51"
+    },
+    {
+      "path": "rules/ato-runtime-deployment-contract.mdc",
+      "sha256": "a40e9bb2cb972ff23617c7aa6a630b938fff7e61a3b3aac6310fe217b3533370"
+    },
+    {
+      "path": "rules/production-http-checkpoints.mdc",
+      "sha256": "4d9ac9b6d7a66c1b567e816cd2aeb633db717ddef7812a921e6493da35f879fd"
+    },
+    {
+      "path": "skills/ato-ssp-workflow/SKILL.md",
+      "sha256": "b3ee87e5cbbbfa91ed4a24092ef3983a0951d9d78b5114f52439485120537dfa"
+    },
+    {
+      "path": "skills/ato-ssp-workflow/references/production-http-checkpoint.md",
+      "sha256": "77e2c3c9517df9465b4ca409a4bf34fcf74747f06e11271563c31adaca1377a8"
+    },
+    {
+      "path": "skills/ato-ssp-workflow/references/repository-agents.md",
+      "sha256": "099a8ebd226d0e397027a758389c77acb7dadb7df904a96e9eeff1d390fff5ef"
+    },
+    {
+      "path": "skills/ato-ssp-workflow/references/runtime-deployment-contract.md",
+      "sha256": "62e2c9ab6b23ea1a418ffe4257d0b56f2f690326214f5e8473ef03334edd035c"
+    },
+    {
+      "path": "skills/ato-ssp-workflow/references/ssp-field-mapping.md",
+      "sha256": "9bbb9b254d515de0c926e6a4bf7bfd949e6e9572d7d6865899e50fdfe0811ae0"
+    },
+    {
+      "path": "skills/ato-ssp-workflow/references/ssp-regression-obligations.md",
+      "sha256": "c972bceda3919ab250876cc0e349f6a3bfb0d13fb61968d3f096afa5316efc96"
+    }
+  ]
+}

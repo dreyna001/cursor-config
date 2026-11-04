@@ -7,9 +7,9 @@ import re
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGETS = (
-    'skills/development-stack/references/unified-workspace-template.html',
-    'codex/skills/development-stack/references/unified-workspace-template.html',
-    'codex/skills/investigation-desk-ui/assets/unified-workspace-template.html',
+    'global/skills/development-stack/references/unified-workspace-template.html',
+    'global/codex/skills/development-stack/references/unified-workspace-template.html',
+    'global/codex/skills/investigation-desk-ui/assets/unified-workspace-template.html',
 )
 PROFILE_LINKS = '''<script>
 // Installed packages resolve the same companion through their user-profile root.

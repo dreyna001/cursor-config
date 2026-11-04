@@ -1,0 +1,19 @@
+---
+description: Preserve threat-hunting engine, execution scope, data and approval/reporting gates
+alwaysApply: true
+---
+
+# Threat-hunting project safeguards
+
+Apply only in `ai-enabled-threathunting`. Read current root `AGENTS.md`,
+`README.md#current-status` and `docs/operator-runbook.md`. Use installed global
+`agentic-security-workflows` with its threat-hunting reference for shared principles.
+Documentation does not change the active engine, execution scope, limits or
+approval requirements and does not authorize deployment, access or external action.
+
+For report/browser/export changes, use the local `threat-hunt-reporting` skill and
+current `docs/threat-hunt-reporting-guidance.md`. Preserve saved content, analyst
+edits, evidence identity, finalization guards and immutable historical PDFs.
+Test at desktop viewport sizes only unless the user explicitly requests mobile
+work. Preserve historical mobile evidence without rerunning it. Use current
+runbook/context for local operations; no second global learning store.
