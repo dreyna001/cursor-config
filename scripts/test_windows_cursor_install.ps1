@@ -8,12 +8,12 @@ $destination = Join-Path $fixture "destination"
 New-Item -ItemType Directory -Force -Path $source | Out-Null
 Copy-Item -LiteralPath (Join-Path $repoRoot "install-to-user-cursor.ps1") -Destination (Join-Path $source "install.ps1")
 foreach ($relative in @("rules", "skills\regular", "skills\contextual-learning", "skills-cursor\contextual-learning")) {
-    New-Item -ItemType Directory -Force -Path (Join-Path $source $relative) | Out-Null
+    New-Item -ItemType Directory -Force -Path (Join-Path $source ("global\" + $relative)) | Out-Null
 }
 $content = "before`n<!-- BEGIN contextual-learning managed section -->`nlearning activation`n<!-- END contextual-learning managed section -->`nafter`n"
-[System.IO.File]::WriteAllText((Join-Path $source "rules\global.mdc"), $content)
+[System.IO.File]::WriteAllText((Join-Path $source "global\rules\global.mdc"), $content)
 foreach ($relative in @("skills\regular\SKILL.md", "skills\contextual-learning\SKILL.md", "skills-cursor\contextual-learning\SKILL.md")) {
-    [System.IO.File]::WriteAllText((Join-Path $source $relative), "fixture skill")
+    [System.IO.File]::WriteAllText((Join-Path $source ("global\" + $relative)), "fixture skill")
 }
 & (Join-Path $source "install.ps1") -DestinationRoot $destination
 $installed = [System.IO.File]::ReadAllText((Join-Path $destination "rules\global.mdc"))
@@ -29,7 +29,7 @@ $refused = $false
 try { & (Join-Path $source "install.ps1") -DestinationRoot $existing } catch { $refused = $_.Exception.Message -like "*Linux-only*" }
 if (-not $refused -or (Test-Path -LiteralPath (Join-Path $existing "rules"))) { throw "Existing Windows learning did not block installation before writes" }
 if ([System.IO.File]::ReadAllText((Join-Path $existing "skills\contextual-learning\keep.txt")) -ne "personal work") { throw "Existing work was altered" }
-[System.IO.File]::WriteAllText((Join-Path $source "rules\global.mdc"), "<!-- BEGIN contextual-learning managed section -->`ninvalid")
+[System.IO.File]::WriteAllText((Join-Path $source "global\rules\global.mdc"), "<!-- BEGIN contextual-learning managed section -->`ninvalid")
 $refused = $false
 try { & (Join-Path $source "install.ps1") -DestinationRoot (Join-Path $fixture "malformed") } catch { $refused = $_.Exception.Message -like "*Malformed*" }
 if (-not $refused) { throw "Malformed activation section was accepted" }

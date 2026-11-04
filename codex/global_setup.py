@@ -659,9 +659,9 @@ def write_source_manifest(source_root: Path, *, apply: bool) -> dict[str, Any]:
 
 
 def parser() -> argparse.ArgumentParser:
-    default_source = Path(__file__).resolve().parent
+    default_source = Path(__file__).resolve().parents[1] / "global" / "codex"
     root = argparse.ArgumentParser(description="Install and verify the canonical global Codex instructions and skills.")
-    root.add_argument("--source", type=Path, default=default_source, help="Canonical codex/ source directory (default: this script's directory).")
+    root.add_argument("--source", type=Path, default=default_source, help="Canonical global/codex/ source directory (default: this script's directory).")
     root.add_argument("--codex-home", type=Path, default=default_codex_home(), help="Codex home (default: CODEX_HOME or ~/.codex).")
     root.add_argument("--agents-home", type=Path, default=default_agents_home(), help="Global skills home (default: ~/.agents).")
     commands = root.add_subparsers(dest="command", required=True)

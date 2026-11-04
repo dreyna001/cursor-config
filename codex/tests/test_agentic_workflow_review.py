@@ -7,7 +7,7 @@ import tempfile
 import unittest
 
 
-SCRIPT = Path(__file__).resolve().parents[1] / "skills/agentic-security-workflows/scripts/validate_review.py"
+SCRIPT = Path(__file__).resolve().parents[2] / "global/codex/skills/agentic-security-workflows/scripts/validate_review.py"
 spec = importlib.util.spec_from_file_location("validate_review", SCRIPT)
 validator = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(validator)

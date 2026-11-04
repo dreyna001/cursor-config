@@ -9,9 +9,9 @@ $repoRoot = Split-Path -Parent $MyInvocation.MyCommand.Path
 $cursorHome = Join-Path $env:USERPROFILE ".cursor"
 $codexSkills = Join-Path $env:USERPROFILE ".codex\skills"
 
-$destRules = Join-Path $repoRoot "rules"
-$destSkills = Join-Path $repoRoot "skills"
-$destSkillsCursor = Join-Path $repoRoot "skills-cursor"
+$destRules = Join-Path $repoRoot "global\rules"
+$destSkills = Join-Path $repoRoot "global\skills"
+$destSkillsCursor = Join-Path $repoRoot "global\skills-cursor"
 
 function Reset-Dir([string]$Path) {
     if (Test-Path $Path) {

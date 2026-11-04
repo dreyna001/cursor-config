@@ -1,0 +1,9 @@
+---
+description: Shared frontend foundations with independent app builds, deployment and local domain safeguards
+alwaysApply: false
+---
+
+# Shared Frontend Foundations
+
+Read [the shared foundation contract](../skills/cursor-rules/references/shared-frontend-foundations.md)
+when changing foundations shared by multiple applications. Preserve each app's local safeguards.

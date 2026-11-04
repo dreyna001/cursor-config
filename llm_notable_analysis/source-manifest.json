@@ -1,0 +1,117 @@
+{
+  "schema_version": 1,
+  "scope": "project_only",
+  "project": "llm_notable_analysis",
+  "packaged_date": "2026-11-04",
+  "source_revision": "a1f6cadf4821407740f9de4436814f8c2f8ace5e",
+  "source_precedence": "Current app AGENTS and normative source documents precede packaged snapshots; dated checkpoints require revalidation.",
+  "installation": "Manual reviewed copy of rules/ and complete skills/ into only the matching app .cursor/ directory; never global installation.",
+  "excluded": [
+    "credentials",
+    "runtime state",
+    "customer data",
+    "private lessons",
+    "future-work/review backlogs",
+    "generic global skill copies"
+  ],
+  "sources": [
+    {
+      "source_repository": "llm_notable_analysis",
+      "source_path": "AGENTS.md",
+      "source_revision": "a1f6cadf4821407740f9de4436814f8c2f8ace5e",
+      "source_file_sha256": "bc23b90847144a519ad4e34478552716332bad98766a5537f755da1a5eb15e53",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": false,
+      "destination": "skills/notable-incident-workflow/references/repository-agents.md",
+      "destination_sha256": "bc23b90847144a519ad4e34478552716332bad98766a5537f755da1a5eb15e53"
+    },
+    {
+      "source_repository": "cursor-config",
+      "source_path": "skills/cursor-rules/references/api-project-checkpoints.md",
+      "source_revision": "087ebd566d7b3f64a585450a215ac606d6cd9c83",
+      "source_file_sha256": "52d4c17bd8d47ac355d054808dad57fc9df9859df1b055b047563bd10dd16a07",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": true,
+      "destination": "skills/notable-incident-workflow/references/production-http-checkpoint.md",
+      "destination_sha256": "ae509e36acc3c710decb623d7f309f87622fc1e3a79194d910a24d628bb63bc9"
+    },
+    {
+      "source_repository": "llm_notable_analysis",
+      "source_path": "docs/case-analysis-contract.md",
+      "source_revision": "a1f6cadf4821407740f9de4436814f8c2f8ace5e",
+      "source_file_sha256": "ec2896821ebf910a04284f21ce2b7897bd2aa2e089144cc0fd9927e9d57a44bd",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": false,
+      "destination": "skills/notable-incident-workflow/references/case-analysis-contract.md",
+      "destination_sha256": "ec2896821ebf910a04284f21ce2b7897bd2aa2e089144cc0fd9927e9d57a44bd"
+    },
+    {
+      "source_repository": "llm_notable_analysis",
+      "source_path": "docs/incident-response-ui-parity.md",
+      "source_revision": "a1f6cadf4821407740f9de4436814f8c2f8ace5e",
+      "source_file_sha256": "186f02f319571634b0ad43889a3249d27236910a77a78eca367703a82187f5a9",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": true,
+      "destination": "skills/notable-incident-workflow/references/incident-response-ui-parity.md",
+      "destination_sha256": "cd5a7d8fd7654fc3a3c0476b326ef754655357444101604a8bd8e640c6a435ec",
+      "adaptation": "Original app-relative document links expressed as explicit current project-root paths for portable installation."
+    },
+    {
+      "source_repository": "llm_notable_analysis",
+      "source_path": "s3_notable_pipeline_commercial/AGENTS.md",
+      "source_revision": "a1f6cadf4821407740f9de4436814f8c2f8ace5e",
+      "source_file_sha256": "91bbf453f4558e7831152456d5cb2f1cdfdacaffa10c9c3065401f7ce6b452fc",
+      "source_worktree_modified": false,
+      "selection": "full file",
+      "adapted": false,
+      "destination": "skills/notable-incident-workflow/references/commercial-aws-boundary.md",
+      "destination_sha256": "91bbf453f4558e7831152456d5cb2f1cdfdacaffa10c9c3065401f7ce6b452fc"
+    }
+  ],
+  "files": [
+    {
+      "path": "README.md",
+      "sha256": "1cf8a6f227ff5073d0dd8da5e82ae10c11ee1a223d0f7c36d896c29b2622dca7"
+    },
+    {
+      "path": "rules/notable-commercial-aws-boundary.mdc",
+      "sha256": "a0377fecd0d0b5d41c835f43a4140b980a89622c7911458dbea1bc41870c2144"
+    },
+    {
+      "path": "rules/notable-project-safeguards.mdc",
+      "sha256": "065f48937dbdbf341fa43c5f912d10c64be35105675f8c7101be1c3db211ccbc"
+    },
+    {
+      "path": "rules/production-http-checkpoints.mdc",
+      "sha256": "1e8ea48a61e011b5f097d9ef3c3f548d003fd8a114c675ab8fa195ff7f7bdb2f"
+    },
+    {
+      "path": "skills/notable-incident-workflow/SKILL.md",
+      "sha256": "70b7a04d30f3083580598652d2eec838302651e40fe83fdddd3ca5cd23a5450f"
+    },
+    {
+      "path": "skills/notable-incident-workflow/references/case-analysis-contract.md",
+      "sha256": "ec2896821ebf910a04284f21ce2b7897bd2aa2e089144cc0fd9927e9d57a44bd"
+    },
+    {
+      "path": "skills/notable-incident-workflow/references/commercial-aws-boundary.md",
+      "sha256": "91bbf453f4558e7831152456d5cb2f1cdfdacaffa10c9c3065401f7ce6b452fc"
+    },
+    {
+      "path": "skills/notable-incident-workflow/references/incident-response-ui-parity.md",
+      "sha256": "cd5a7d8fd7654fc3a3c0476b326ef754655357444101604a8bd8e640c6a435ec"
+    },
+    {
+      "path": "skills/notable-incident-workflow/references/production-http-checkpoint.md",
+      "sha256": "ae509e36acc3c710decb623d7f309f87622fc1e3a79194d910a24d628bb63bc9"
+    },
+    {
+      "path": "skills/notable-incident-workflow/references/repository-agents.md",
+      "sha256": "bc23b90847144a519ad4e34478552716332bad98766a5537f755da1a5eb15e53"
+    }
+  ]
+}

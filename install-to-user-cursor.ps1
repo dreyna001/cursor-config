@@ -21,7 +21,7 @@ New-Item -ItemType Directory -Force -Path $destRules, $destSkills, $destSkillsCu
 $utf8 = New-Object System.Text.UTF8Encoding($false)
 $startMarker = "<!-- BEGIN contextual-learning managed section -->"
 $endMarker = "<!-- END contextual-learning managed section -->"
-Get-ChildItem -Path (Join-Path $repoRoot "rules\*.mdc") -File | ForEach-Object {
+Get-ChildItem -Path (Join-Path $repoRoot "global\rules\*.mdc") -File | ForEach-Object {
     $content = [System.IO.File]::ReadAllText($_.FullName)
     if ($content.Contains($startMarker) -or $content.Contains($endMarker)) {
         if ([regex]::Matches($content, [regex]::Escape($startMarker)).Count -ne 1 -or
@@ -35,14 +35,14 @@ Get-ChildItem -Path (Join-Path $repoRoot "rules\*.mdc") -File | ForEach-Object {
     [System.IO.File]::WriteAllText((Join-Path $destRules $_.Name), $content, $utf8)
 }
 
-Get-ChildItem -Path (Join-Path $repoRoot "skills") -Directory -ErrorAction SilentlyContinue | ForEach-Object {
+Get-ChildItem -Path (Join-Path $repoRoot "global\skills") -Directory -ErrorAction SilentlyContinue | ForEach-Object {
     if ($_.Name -eq "contextual-learning") { return }
     $targetDir = Join-Path $destSkills $_.Name
     New-Item -ItemType Directory -Force -Path $targetDir | Out-Null
     Copy-Item -Path (Join-Path $_.FullName "*") -Destination $targetDir -Recurse -Force
 }
 
-Get-ChildItem -Path (Join-Path $repoRoot "skills-cursor") -Directory -ErrorAction SilentlyContinue | ForEach-Object {
+Get-ChildItem -Path (Join-Path $repoRoot "global\skills-cursor") -Directory -ErrorAction SilentlyContinue | ForEach-Object {
     if ($_.Name -eq "contextual-learning") { return }
     $targetDir = Join-Path $destSkillsCursor $_.Name
     New-Item -ItemType Directory -Force -Path $targetDir | Out-Null
