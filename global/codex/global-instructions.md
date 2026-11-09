@@ -136,3 +136,11 @@ record actual browser/role/state evidence and synthetic-versus-live test boundar
 ## Shared guidance and project boundaries
 
 For report/browser/export projections use `report-export-parity`. For evidence-to-field assignment use `evidence-field-mapping`. Shared frontend refactors must preserve independent app builds and deployments; route through engineering-guidance. Keep app field meanings, runtime settings, report exceptions and approval/release gates local. Generalizable analysis corrections use the existing llm-evidence-regression skill rather than a second policy or fixture-specific exception.
+
+## Waiting for long-running commands
+
+- For noninteractive commands expected to take a minute or longer, prefer blocking waits of 60-300 seconds, using 300000 ms for known multi-minute work when the tool supports it. Let completion return early.
+- Respect the configured code-mode `default_exec_yield_time_ms`. Avoid overriding it with short yields for long-running work. Nested command tools have separate limits, so request their longest suitable supported wait as well.
+- When a command returns a running session or cell ID, use its native wait/poll tool with a long wait. After an unchanged result, increase the wait toward 300 seconds. Avoid repeated one-second polling, short sleeps, or immediate status checks.
+- Use shorter waits when interactive input, a concrete diagnostic need, a time-sensitive event, or the user's requested update cadence requires them. Honor tool limits and cancellation. A wait expiring while work remains active is a reason to continue waiting, not to restart or duplicate the command.
+- During extended monitoring, report meaningful progress, completion, failures, or required user action. Avoid repetitive updates when the state is unchanged.
