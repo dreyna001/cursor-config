@@ -8,7 +8,7 @@ resource ownership and the user's execution permissions.
 
 - Draw the actual path from protected input or approved cloud secret store through
   every provider/API to its destination. Use the target cloud's native store
-  (for example Key Vault or Secrets Manager), with least-privilege identities and
+  (for example Azure Key Vault, AWS Secrets Manager or Google Cloud Secret Manager), with least-privilege identities and
   the established private networking. Independently choose existing/create for
   stores, keys, secret objects and consuming resources where their lifecycles differ.
 - `sensitive` is display redaction, not a storage guarantee. Ordinary secret data
@@ -18,7 +18,7 @@ resource ownership and the user's execution permissions.
 - Inspect the actual locked provider schema and versioned implementation. Use
   ephemeral input/reads into a genuine write-only destination, or a service-native
   secret reference whose value Terraform never reads. An ephemeral source cannot
-  safely feed an ordinary persisted argument. A normal Key Vault/Secrets Manager
+  safely feed an ordinary persisted argument. An ordinary secret-store
   read does not become safe just because the original value lives in a vault.
 - Trace refresh/readback as well as writes: a second resource or data source must
   not read the secret back into state. Check provider-private payloads, default API

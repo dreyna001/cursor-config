@@ -2,7 +2,7 @@
 
 Apply when adding, changing, or reviewing a production service, API, or public endpoint. Preserve existing local protections; production deployment controls do not require retrofitting developer/test instances unless requested.
 
-For detailed production HTTP quotas, health behavior, route exposure, and access controls, read [API abuse and exposure](api-abuse-and-exposure.md). Keep project-specific observations in that reference.
+For detailed production HTTP quotas, health behavior, route exposure, and access controls, read [API abuse and exposure](api-abuse-and-exposure.md). Keep project-specific checkpoints and observations in the app's own guidance.
 
 - Identify users uniquely. Recommend MFA for privileged and ordinary users. Outside a FedRAMP authorization, treat MFA as mandatory only when explicit customer policy requires it. Do not echo secrets or authenticators.
 - Outside a FedRAMP authorization, an absent MFA control is a recommendation or finding. Do not implement MFA or migrate the identity provider unless that change is requested. Confirm the approved identity architecture first.
@@ -14,11 +14,11 @@ For detailed production HTTP quotas, health behavior, route exposure, and access
 - Enforce production HTTP admission and resource bounds using the API abuse and exposure reference; keep quota breaches monitorable.
 - Use TLS. Use the platform's approved cryptographic module and at-rest encryption. Do not invent a cipher and treat it as approved. Bind a session to the authenticated caller.
 
-## FedRAMP levels on AWS GovCloud
+## FedRAMP scope across clouds
 
-Before creating or changing a GovCloud instance, ask whether the FedRAMP authorization is Low, Moderate, or High when that level is not already stated. Do not choose a level. Presence in the GovCloud partition is not a level.
+For government-cloud work, confirm the target environment and applicable compliance requirements. This applies across AWS, Azure, Google Cloud and other providers. Before provisioning or changing resources that affect FedRAMP scope, confirm the approved system baseline or impact level and authorization boundary. Ask the user if either is unclear. Do not choose a baseline or infer the workload's authorization from a provider, service, partition or region.
 
-Validate the applicable FedRAMP Rev 5 baseline and approved system control implementation before declaring a gap. Missing evidence is unverified coverage, not proof of absence. Do not add an identity provider or a second backup system unless that change is requested.
+Use the approved system documentation and applicable authorization path. For Rev. 5 work, verify the approved Low, Moderate or High baseline and the approved control implementation before declaring a gap. Missing evidence is unverified coverage, not proof of absence. Do not add an identity provider or a second backup system unless that change is requested.
 
 - MFA for both privileged and non-privileged access, with replay-resistant authentication.
 - FIPS-validated or NSA-approved cryptography for required cryptographic functions, including transmission and data at rest.

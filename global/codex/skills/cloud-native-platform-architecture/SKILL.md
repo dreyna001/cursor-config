@@ -15,9 +15,11 @@ Preserve product behavior and control outcomes across platforms while allowing e
 
 Treat provider references as decision prompts, not prescribed service mappings. Verify current service, region, partition, identity, networking, and feature availability from authoritative sources before making deployment decisions.
 
+For government-cloud or FedRAMP-scoped decisions, follow [authorization scope](../engineering-guidance/references/authorization-ready-apps.md#fedramp-scope-across-clouds). For provisioning, follow the [Terraform deployment standard](../terraform-cloud-deployment-standard/SKILL.md).
+
 ## Conditional data protection
 
-When the project uses persistent data, read [conditional backup and recovery decisions](references/data-protection.md) for only the technologies in use. Reuse verified native coverage before proposing additions.
+For designs that add or change persistent application data storage or its backup, restore, retention or recovery coverage, read [conditional backup and recovery decisions](references/data-protection.md) for only the affected technologies. Reuse verified native coverage before proposing additions. Secret rotation or provisioning retry alone follows the Terraform skill's secret-safe provisioning guidance.
 
 ## Architecture Workflow
 

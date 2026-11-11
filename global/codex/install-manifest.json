@@ -1,6 +1,7 @@
 {
   "global_instructions": "global-instructions.md",
   "global_instructions_nonlinux": "global-instructions.nonlinux.md",
+  "independent_nonlinux_instructions": true,
   "linux_only_skills": [
     "contextual-learning"
   ],

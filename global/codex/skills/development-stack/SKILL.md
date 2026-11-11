@@ -201,6 +201,10 @@ When a portal or worker app is deployed to cloud, keep the app cloud-native:
 
 - **Splunk, ServiceNow, Elasticsearch, and similar systems:** thin integration adapters only; customer- and profile-specific, not personal stack defaults.
 
+## Presentation color profiles
+
+- When the user asks to reuse the AI-assisted triage executive slide colors, use the optional `Executive Navy + Orange` profile in [the palette reference](references/executive-navy-orange.json). Apply it to that deck or when requested, not to unrelated designs by default.
+
 ## Handoff
 
 When a new stack choice was necessary, state the deployment profile (shared, on-prem, or cloud path), what was selected, why existing mechanisms were insufficient, and how the choice was verified. Do not produce a stack recommendation for routine changes that introduced no technology decision.

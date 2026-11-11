@@ -1,6 +1,6 @@
 ---
 name: cybersecurity-workflow-design
-description: "Design bounded cybersecurity LLM workflow orchestration, validation, adapters, policy gates, approvals, and execution sequencing; use for multi-step workflow architecture, not standalone prompt authoring."
+description: "Design multi-step cybersecurity LLM workflows, including orchestration, validation, adapters, and approval gates."
 ---
 # Cybersecurity Workflow Design
 

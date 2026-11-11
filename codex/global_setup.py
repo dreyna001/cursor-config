@@ -124,8 +124,10 @@ def source_manifest_path(source_root: Path) -> Path:
     return source_root / SOURCE_MANIFEST
 
 
-def make_source_manifest(source_root: Path, skills: dict[str, dict[str, str]]) -> dict[str, Any]:
-    return {
+def make_source_manifest(
+    source_root: Path, skills: dict[str, dict[str, str]], *, independent_nonlinux: bool = False
+) -> dict[str, Any]:
+    manifest = {
         "schema_version": 1,
         "owner": OWNER,
         "global_instructions": "global-instructions.md",
@@ -140,6 +142,9 @@ def make_source_manifest(source_root: Path, skills: dict[str, dict[str, str]]) -
             "legacy_skill_root": "$CODEX_HOME/skills (preserved, conflicting managed skills backed up)",
         },
     }
+    if independent_nonlinux:
+        manifest["independent_nonlinux_instructions"] = True
+    return manifest
 
 
 def read_json(path: Path) -> dict[str, Any]:
@@ -152,20 +157,33 @@ def read_json(path: Path) -> dict[str, Any]:
     return value
 
 
+def validate_independent_nonlinux_instructions(source_root: Path) -> None:
+    instructions = source_root / "global-instructions.nonlinux.md"
+    if not instructions.is_file() or instructions.is_symlink():
+        raise SetupError(f"Missing regular independent non-Linux instruction file: {instructions}")
+    content = instructions.read_text(encoding="utf-8")
+    if not content.strip() or without_linux_learning(content) != content:
+        raise SetupError("Independent non-Linux instructions must be nonempty and exclude contextual learning")
+
+
 def load_source_manifest(source_root: Path, *, require_current: bool = True) -> tuple[dict[str, Any], dict[str, dict[str, str]]]:
     instructions = source_root / "global-instructions.md"
     if not instructions.is_file() or instructions.is_symlink():
         raise SetupError(f"Missing regular canonical global instruction file: {instructions}")
-    generated = source_root / "global-instructions.nonlinux.md"
-    expected_instructions = without_linux_learning(instructions.read_text(encoding="utf-8"))
-    if not generated.is_file() or generated.is_symlink() or generated.read_text(encoding="utf-8") != expected_instructions:
-        raise SetupError("Non-Linux instructions are stale; run refresh-manifest --apply")
-    skills = discover_skills(source_root)
-    expected = make_source_manifest(source_root, skills)
     path = source_manifest_path(source_root)
     if not path.is_file():
         raise SetupError(f"Missing source manifest: {path}; run `sync --apply` to create it")
     actual = read_json(path)
+    independent_nonlinux = actual.get("independent_nonlinux_instructions") is True
+    if independent_nonlinux:
+        validate_independent_nonlinux_instructions(source_root)
+    else:
+        generated = source_root / "global-instructions.nonlinux.md"
+        expected_instructions = without_linux_learning(instructions.read_text(encoding="utf-8"))
+        if not generated.is_file() or generated.is_symlink() or generated.read_text(encoding="utf-8") != expected_instructions:
+            raise SetupError("Non-Linux instructions are stale; run refresh-manifest --apply")
+    skills = discover_skills(source_root)
+    expected = make_source_manifest(source_root, skills, independent_nonlinux=independent_nonlinux)
     if require_current and actual != expected:
         raise SetupError(f"Source manifest is stale: {path}; run `sync --apply` after reviewing skill changes")
     return actual, skills
@@ -644,16 +662,20 @@ def verify_runtime(source_root: Path, codex_home: Path, agents_home: Path, cwd_l
 
 def write_source_manifest(source_root: Path, *, apply: bool) -> dict[str, Any]:
     skills = discover_skills(source_root.resolve())
-    data = make_source_manifest(source_root, skills)
     path = source_manifest_path(source_root)
+    independent_nonlinux = path.is_file() and read_json(path).get("independent_nonlinux_instructions") is True
+    data = make_source_manifest(source_root, skills, independent_nonlinux=independent_nonlinux)
     if not apply:
         return {"applied": False, "path": str(path), "skill_count": len(skills), "skill_names": sorted(skills)}
-    generated = source_root / "global-instructions.nonlinux.md"
-    rendered = without_linux_learning((source_root / "global-instructions.md").read_text(encoding="utf-8"))
-    if generated.is_symlink():
-        raise SetupError("Refusing a symlink for generated non-Linux instructions")
-    if not generated.is_file() or generated.read_text(encoding="utf-8") != rendered:
-        generated.write_text(rendered, encoding="utf-8")
+    if independent_nonlinux:
+        validate_independent_nonlinux_instructions(source_root)
+    else:
+        generated = source_root / "global-instructions.nonlinux.md"
+        rendered = without_linux_learning((source_root / "global-instructions.md").read_text(encoding="utf-8"))
+        if generated.is_symlink():
+            raise SetupError("Refusing a symlink for generated non-Linux instructions")
+        if not generated.is_file() or generated.read_text(encoding="utf-8") != rendered:
+            generated.write_text(rendered, encoding="utf-8")
     atomic_write_json(path, data)
     return {"applied": True, "path": str(path), "skill_count": len(skills), "skill_names": sorted(skills)}
 

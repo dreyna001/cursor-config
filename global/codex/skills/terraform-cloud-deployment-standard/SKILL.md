@@ -6,13 +6,15 @@ description: "Design or review customer cloud infrastructure in Terraform, inclu
 
 Apply this standard to every capability that creates or changes cloud resources. Preserve an established repository's Terraform conventions unless they conflict with a safety requirement below.
 
-Before creating or changing an AWS GovCloud instance, ask whether the FedRAMP authorization is Low, Moderate, or High when that level is not already stated. Do not choose a level. Apply the authorization-ready rule for the stated level.
+Apply this standard across AWS, Azure, Google Cloud and other providers. For service availability, region, partition, identity or provider-specific architecture, read the matching provider reference in [cloud-native platform architecture](../cloud-native-platform-architecture/SKILL.md#load-provider-guidance).
+
+For government-cloud work or changes affecting a FedRAMP-scoped workload, use [FedRAMP scope guidance](../engineering-guidance/references/authorization-ready-apps.md#fedramp-scope-across-clouds) before planning changes to the affected scope.
 
 For production HTTP ingress design, changes, or review, read [authorization-ready applications](../engineering-guidance/references/authorization-ready-apps.md) and [API abuse and exposure](../engineering-guidance/references/api-abuse-and-exposure.md). Verify per-client/per-route quotas at the edge and application; a shared stage throttle is not equivalent. Preserve local developer/test configurations and existing customer-owned resources; the checklist does not authorize deployment or infrastructure migration.
 
 ## Conditional data protection
 
-When the project uses persistent data, apply [conditional backup and recovery decisions](../cloud-native-platform-architecture/references/data-protection.md) through its existing deployment roots. This reference governs native coverage, justified additions and evidence; it does not authorize deployment or retention changes.
+When provisioning or changing persistent application data storage, or changing backup, restore, retention or recovery coverage, use [conditional backup and recovery decisions](../cloud-native-platform-architecture/references/data-protection.md) for the affected technologies through the existing deployment roots. Secret publication, rotation and setup retries use the secret-safe reference below. Open the backup guidance for secrets only when an actual backup, restore or retention control is in scope.
 
 ## Secrets and guided setup
 

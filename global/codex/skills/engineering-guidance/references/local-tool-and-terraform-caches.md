@@ -1,0 +1,10 @@
+## Local tool and Terraform provider caches
+
+- Before downloading or installing a tool or provider, inspect locally installed versions and caches for a package matching the required version and platform.
+- For Terraform, inspect the active CLI configuration and reuse a matching provider from its configured cache. On the current Linux profile, `/home/dreyna/.terraform.d/plugin-cache` is configured by `/home/dreyna/.terraformrc`; use `${HOME}/.terraform.d/plugin-cache` in portable guidance and honor existing `TF_CLI_CONFIG_FILE` and `TF_PLUGIN_CACHE_DIR` overrides.
+- Preserve provider version constraints and `.terraform.lock.hcl` checksum validation; never bypass pins or lockfile checks to reuse cached packages.
+- On Linux, Terraform 1.15.9 is stored at `/home/dreyna/.local/share/terraform/cli/1.15.9/terraform` and exposed at `/home/dreyna/.local/bin/terraform`; use it only when it matches the project's required version.
+- Serialize `terraform init` when it uses a shared provider cache because concurrent cache access is not guaranteed safe.
+- Never copy or commit provider binaries into project worktrees. Preserve `.tf`, `.terraform.lock.hcl`, `*.tfstate*`, credentials, and `.terraform` backend metadata.
+- Local Terraform state and cache data may use profile storage. In WSL, `/home/dreyna` is inside Ubuntu's current virtual disk; assess its free space separately from physical `C:` disk space. Keep valuable persistent files off temporary `D:`.
+- Do not delete `~/.cache` wholesale; it can contain custom recovery outputs and secrets. Use cache cleanup commands supported by the owning tool.

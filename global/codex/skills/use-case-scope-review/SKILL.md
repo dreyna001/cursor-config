@@ -1,6 +1,6 @@
 ---
 name: use-case-scope-review
-description: "Clarify a use case into a bounded MVP block without forcing a shared architecture or template."
+description: "Define the scope, outcomes, and boundaries of a new AI use case or MVP block."
 ---
 # Use Case Scope Review
 

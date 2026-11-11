@@ -1,6 +1,6 @@
 ---
 name: langgraph-engineering
-description: "Design, implement, migrate, or review LangGraph applications with explicit state, durable execution, model/tool boundaries, and recovery. Use for LangGraph workflow engineering and migration reviews, not unrelated application changes or general framework comparisons."
+description: "Design, implement, migrate, or review LangGraph applications with durable state, model/tool boundaries, and recovery."
 ---
 
 # LangGraph Engineering

@@ -1,30 +1,11 @@
 ---
 name: engineering-guidance
-description: "Use for code design, implementation, or review when this collection's Python, ML, API, cloud, security, LLM, frontend, or documentation standards apply; read only matching references."
+description: "Find shared engineering standards for architecture, production boundaries, security, or cross-cutting behavior changes."
 ---
 
 # Engineering Guidance
 
-For UI/UX work, start at the permanent local baseline:
-`$HOME/.agents/ui-baseline/README.md` (Windows:
-`%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,
-open [Windows](C:/Users/Daniel.Reyna/.agents/ui-baseline/README.md) or
-`$HOME/.agents/ui-baseline/README.md` (WSL).
-If absent, install the versioned `ui-baseline/` bundle from `cursor-config`;
-the app's `docs/suite-ui-standard.md` release copy is the fallback. No GitHub
-sign-in is required to read the installed reference. This is the single entry
-point for shared rules, adaptation, visual examples, exceptions and validation.
-For maintenance, preserve the current approved appearance. For an explicitly
-requested redesign or selected visual reference, follow that reference for the
-authorized visual scope; existing styles and older examples must not override it.
-Preserve functionality, accessibility, permissions and workflow guards separately.
-The baseline's **Design authority and redesign scope** section defines this distinction.
-
-For a shared production rollout, follow the baseline's **Keeping one baseline**
-procedure across the versioned standard, companion, all three apps (six frontends),
-reference bundle and permanent local baseline. Report unverified scope or drift.
-A scoped mockup or guidance-only change does not authorize a production rollout;
-label its scope and retain the production baseline until that rollout is requested.
+For UI/UX work, use the global `AGENTS.md` UI/UX route to the permanent baseline and its browser verification and shared rollout requirements.
 
 ## Cloud IaC policy
 
@@ -41,6 +22,8 @@ Use this skill as a conditional router for the user's migrated engineering stand
 For backup/recovery design or review of technologies actually used by the project, read [conditional backup and recovery decisions](../cloud-native-platform-architecture/references/data-protection.md).
 
 ## Reference index
+
+For local tool/provider installation, Terraform cache use, or cache cleanup, read [local tool and Terraform caches](references/local-tool-and-terraform-caches.md). Before post-merge worktree cleanup, read [worktree verification and removal](references/post-merge-worktree-cleanup.md). For WSL configuration, model routing, AI COE checkout hygiene or command waiting, read the applicable section of [WSL Codex operations](references/wsl-codex-operations.md).
 
 For cache, overlapping refresh, extraction reuse or repeated parsing/byte preparation changes, read [safe reuse and preparation](references/safe-reuse-and-preparation.md). Use the reliability reference for late cancellation/cleanup and the API reference for retry/save identity.
 
@@ -61,7 +44,7 @@ For traditional ML standards, read only the relevant parts of [ML foundations](r
 
 For procedural ML work, use the matching dedicated skill: [problem framing](../ml-problem-framing/SKILL.md), [EDA](../ml-eda/SKILL.md), [preprocessing and features](../ml-preprocessing-and-features/SKILL.md), [baselines](../ml-baselines/SKILL.md), [model training](../ml-model-training/SKILL.md), [imbalance](../ml-imbalance/SKILL.md), [hyperparameter tuning](../ml-hyperparameter-tuning/SKILL.md), [evaluation](../ml-evaluation/SKILL.md), [error analysis](../ml-error-analysis/SKILL.md), [interpretability](../ml-interpretability/SKILL.md), [packaging and inference](../ml-packaging-and-inference/SKILL.md), or [monitoring and drift](../ml-monitoring-and-drift/SKILL.md). The references define shared standards; the dedicated skills define workflow steps.
 
-For AWS work, read [local AWS testing](references/aws-local-testing.md) and/or [Lambda least privilege](references/aws-lambda-least-privilege.md). For built-image or runtime dependency changes, read [container and cloud security scans](references/security.md#container-and-cloud-security-scans). For containers or runtime changes, use [Docker and GHCR release workflow](references/docker-ghcr-release-workflow.md), [deployment runtime contract](references/deployment-runtime-contract.md), and [secure infrastructure operations](references/secure-infra-ops.md) as applicable. Use [environment awareness](references/environment-awareness.md) when deployment boundaries matter.
+For provider-dependent cloud work, start with the matching [AWS, Azure or Google Cloud architecture reference](../cloud-native-platform-architecture/SKILL.md#load-provider-guidance). For AWS local tests or Lambda permissions, use [local AWS testing](references/aws-local-testing.md) or [Lambda least privilege](references/aws-lambda-least-privilege.md), respectively. For built-image or runtime dependency changes, read [container and cloud security scans](references/security.md#container-and-cloud-security-scans). For containers or runtime changes, use [Docker and GHCR release workflow](references/docker-ghcr-release-workflow.md), [deployment runtime contract](references/deployment-runtime-contract.md), and [secure infrastructure operations](references/secure-infra-ops.md) as applicable. Use [environment awareness](references/environment-awareness.md) when deployment boundaries matter.
 
 For application-specific implementation and deployment requirements, read that application's local instructions and project-only rule package.
 
@@ -81,31 +64,9 @@ For documentation work, read [documentation layout and bootstrap](references/doc
 ## Scope boundaries
 
 - For LangGraph workflow engineering, use the separate `$langgraph-engineering` skill as the primary workflow guide; read this collection only for an additional, directly relevant standard.
-- The original `subagent-delegation.mdc` rule is intentionally superseded: Codex model and delegation routing belongs to the current global `AGENTS.md`.
+- The original `subagent-delegation.mdc` rule is intentionally superseded: Codex model and delegation routing follows the [WSL operating guidance](references/wsl-codex-operations.md#codex-model-and-subagent-routing).
 - Do not use Cursor-only actions or assume Cursor tools are available in Codex.
 
-## Shared UI change completion
-
-
-For shared UI work, complete the central baseline's **Interaction and accessibility**
-checks and its role/state coverage record. Exercise keyboard focus and bypass,
-modal/popup semantics, disabled/readonly/validation, loading/error announcements,
-loading-to-content consistency, field-boundary contrast, and scrolling/enlarged
-content in the affected apps. Preserve app-specific guards. Preserve layouts outside the authorized redesign scope. Record
-actual browser/route/state evidence and any unverified areas; source parity alone
-is not interaction or accessibility sign-off.
-
-For desktop zoom and assistant-feedback work, follow the central baseline's
-**Desktop zoom and conversational feedback** section. Verify actual browser zoom
-separately from root-font resizing, preserve the requested desktop/mobile scope,
-and test waiting/error/completion announcements, required states and guarded flows.
-Distinguish accessibility-tree evidence from actual screen-reader speech; record
-excluded apps and unavailable checks rather than claiming whole-suite coverage.
-
-For every UI/UX change, use Playwright to verify the affected surface and follow the central baseline's **Workflow and popup regression coverage**.
-Verify every dialog's accessible name, all constrained desktop confirmation actions,
-popup viewport fit, and relevant delayed/failed-request, retry, duplicate-submit and
-unsaved-navigation paths. Preserve each app's guards and desktop/mobile scope;
-record actual browser/role/state evidence and synthetic-versus-live test boundaries.
+## Shared frontend and report contracts
 
 For report projection changes, use [report and export parity](../report-export-parity/SKILL.md). For evidence assignment, use [evidence field mapping](../evidence-field-mapping/SKILL.md). For shared frontend foundations, read [the independent deployment contract](references/shared-frontend-foundations.md). Reuse [LLM evidence regression](../llm-evidence-regression/SKILL.md) for generalizable analysis fixes; do not add fixture-specific reasoning exceptions.

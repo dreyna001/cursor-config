@@ -42,6 +42,16 @@ notice treatment and independent control or panel surfaces.
 - Keep persistent context compact: show the current object or system, its relevant status, and the action needed to orient the user. Put detailed profile, version, or update metadata in a suitable overview or detail area rather than repeating it in the persistent header.
 - Choose widths for the content. Keep dense lists and detail forms readable instead of stretching them across an unnecessarily wide workspace. At narrow widths, let related regions stack and keep navigation and actions reachable.
 
+## Informational hints
+
+Informational field help, tooltips and info-icon hints must open on pointer hover
+and keyboard focus without requiring a click. Keep the hint open while the pointer
+is over its trigger or content. Support Escape dismissal, accessible tooltip
+semantics and a described-by connection to the trigger; keep enlarged content
+readable and inside the viewport. Verify pointer, keyboard and dismissal behavior
+in the browser. Menus, action buttons and expandable guidance keep their existing
+interactions; this rule applies to informational hints.
+
 ## Keep data and hierarchy clear
 
 - Give each editable value one canonical edit location. Other views can summarize it or link to that location, but should not invite duplicate entry of the same data.

@@ -1,6 +1,6 @@
 ---
 name: cybersecurity-prompt-engineering
-description: "Design cybersecurity LLM prompts, structured output schemas, repair prompts, and RAG context instructions; use for model-call contracts, not workflow orchestration."
+description: "Design cybersecurity LLM call contracts, including prompts, output schemas, RAG context, and repair prompts."
 ---
 # Cybersecurity Prompt Engineering
 

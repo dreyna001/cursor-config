@@ -1,6 +1,6 @@
 ---
 name: review-pr
-description: "Perform broad PR or code reviews covering correctness, security, reliability, maintainability, tests, docs, and deployment."
+description: "Review a PR or diff for findings across correctness, security, reliability, maintainability, and verification."
 ---
 # Review PR
 

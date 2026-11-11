@@ -1,6 +1,6 @@
 ---
 name: requirements-shaping-and-diff-planning
-description: "Shape fuzzy requirements into scoped acceptance criteria and small testable implementation diffs."
+description: "Plan implementation when requested or clarify requirements into acceptance criteria and small, testable diffs."
 ---
 # Requirements Shaping And Diff Planning
 

@@ -198,6 +198,31 @@ class GlobalSetupTests(unittest.TestCase):
         self.assertEqual(existing.read_text(), "keep existing work")
         self.assertFalse((self.codex_home / "AGENTS.md").exists())
 
+    def test_wsl_sync_preserves_independent_nonlinux_instructions(self):
+        self.learning_fixture()
+        manifest_path = global_setup.source_manifest_path(self.source)
+        manifest = global_setup.read_json(manifest_path)
+        manifest["independent_nonlinux_instructions"] = True
+        global_setup.atomic_write_json(manifest_path, manifest)
+        nonlinux = self.source / "global-instructions.nonlinux.md"
+        original = nonlinux.read_bytes()
+        linux = self.source / "global-instructions.md"
+        linux.write_text(linux.read_text() + "\n## WSL-only simplification\n")
+
+        with patch.object(global_setup.sys, "platform", "linux"):
+            global_setup.write_source_manifest(self.source, apply=True)
+            global_setup.install(self.source, self.codex_home, self.agents_home, apply=True)
+            self.assertIn("WSL-only simplification", (self.codex_home / "AGENTS.md").read_text())
+            self.assertTrue(global_setup.verify_static(self.source, self.codex_home, self.agents_home)["valid"])
+
+        self.assertEqual(nonlinux.read_bytes(), original)
+        with patch.object(global_setup.sys, "platform", "win32"):
+            plan = global_setup.plan_install(
+                self.source, self.root / "windows-codex", self.root / "windows-agents"
+            )
+            self.assertEqual(plan["instruction_source"], nonlinux)
+            self.assertNotIn("contextual-learning", plan["skill_metadata"])
+
     def test_stale_generated_nonlinux_harness_is_rejected(self):
         self.learning_fixture()
         (self.source / "global-instructions.nonlinux.md").write_text("incorrect learning activation")
