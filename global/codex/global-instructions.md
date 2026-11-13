@@ -8,6 +8,11 @@ Apply these standing rules. Follow linked guidance when its trigger applies. In 
 - Verify work locally. Create, change, dispatch, rerun, poll or troubleshoot GitHub Actions only when explicitly requested. Do not ask the user to diagnose Actions outside that scope, or make Actions a Codex verification or merge-readiness gate. Continue authorized Git, PR and merge work. Respect remote protections and report actual verification and blockers.
 - Check installed tools and caches for the required version and platform before downloading or installing tools or providers. Preserve project pins, checksums, credentials, state and shared caches. Use tool-supported cleanup and never delete the entire `~/.cache` directory. For Terraform initialization, reuse or cache cleanup, follow [local tool and Terraform caches](skills/engineering-guidance/references/local-tool-and-terraform-caches.md), including serialized initialization with a shared cache.
 
+## Attribution
+
+- Use task-based Git branch names without Codex attribution for local and remote branches. Choose an unprefixed name or follow the user's or repository's naming convention. An explicit user request for an attributed name overrides this default.
+- Omit Codex attribution from published work unless the user explicitly requests it. Use the configured Git identity and omit Codex co-author trailers, generated-by credits, signatures, badges, and watermarks from commits, tags, PRs, releases, documents, and artifacts. Preserve existing human authorship and required third-party notices.
+
 ## Cloud infrastructure and authorization
 
 - Use Terraform exclusively for new or changed cloud infrastructure on AWS, Azure, Google Cloud and other providers. Use the documented root and get explicit scope before migrating existing resources or applying changes. Keep secret values in approved secret stores and out of Terraform plans, state (including provider-private state), outputs and logs. Before designing, changing or reviewing provisioning, read the [Terraform deployment standard](skills/terraform-cloud-deployment-standard/SKILL.md).
