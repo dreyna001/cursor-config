@@ -34,13 +34,26 @@ When production ingress serves browser content or authenticated data, also apply
 3. Put reusable resources in focused leaf modules. Keep customer choices and composition in the root.
 4. Use encrypted remote state with locking, versioning, restricted access, and a documented bootstrap process. Never store secrets in committed state configuration.
 5. Make planning the default action. A normal deploy command must not apply changes automatically.
-6. Apply only an explicit saved plan after review. Make the account, region, workspace, and state target visible before apply.
+6. Apply only an explicitly authorized, reviewed saved plan through the [customer apply gate](#customer-apply-gate).
 7. Assign every resource to one Terraform owner. Import or reference existing resources explicitly; never silently replace customer-owned policies or resources.
 8. Deploy immutable application artifacts, such as digest-pinned container images.
 9. Use least-privilege identities, encrypted storage and transport, private networking where supported, and fail-closed security defaults. Document narrow scanner exceptions beside the resource with the check ID and reason.
 10. Automate required bootstrap dependencies, such as image repositories and remote-state storage, without creating a second infrastructure path.
 11. Validate customer inputs before planning and expose useful non-secret outputs needed for operation and troubleshooting.
 12. Keep code, examples, deployment instructions, rollback steps, and tests synchronized.
+
+## Customer apply gate
+
+Before applying to a customer environment, verify the execution identity, cloud account/project/subscription, region and partition as applicable, root, workspace, backend and state key. Bind approval to the exact saved plan or immutable managed run, target, configuration and input versions (including artifact references and provider lockfile), and affected resource actions. Protect plan data and record only safe identifiers and summaries.
+
+**Non-waivable stops.** Block apply when:
+
+- Authorization, target identity, scope, resource ownership or required state locking is missing or unresolved.
+- The reviewed plan identity cannot be verified, or the plan is stale or no longer matches the target, state, configuration, inputs, or pinned tool/provider versions. Material drift invalidates review. Generate and review a fresh plan.
+- A planned delete, replacement, import, state move, detach, or change to IAM, exposure, encryption or data protection is unexpected or out of scope. Intentional high-impact actions need explicit scope, exact-plan review and applicable cutover and recovery evidence.
+- Required checks fail or remain unverified, including applicable security and recovery checks. Unresolved secret exposure or material safety conditions that cannot be verified before apply also block it.
+
+Enforce the gate at the apply entry point. Never bypass it with a fresh unreviewed plan, disabled locking or an alternate apply path. Treat refresh-only apply as a state mutation. After a failed or interrupted apply, inspect live resources and state, reconcile the outcome, and review a fresh plan before retrying. Verify affected customer workflows and infrastructure after apply.
 
 ## Create-or-reference deployment contract
 
