@@ -4,6 +4,8 @@ description: "Create or review React interfaces, components, hooks, and explicit
 ---
 # React Skill
 
+For workflow transitions, effect cleanup and optimistic updates, follow the conditional routes in [React state guidance](../engineering-guidance/references/react.md).
+
 For UI/UX work, follow the global `AGENTS.md` UI/UX route for design authority, Playwright verification and shared production rollout requirements.
 
 Use when creating, editing, or reviewing React frontend code.

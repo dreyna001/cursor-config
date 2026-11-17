@@ -4,6 +4,8 @@ description: "Create or review React components, hooks, UI states, Vite builds, 
 ---
 # React Skill
 
+For workflow transitions, effect cleanup and optimistic updates, follow the conditional routes in [React state guidance](../cursor-rules/references/react.md).
+
 For UI/UX work, start at the permanent local baseline:
 `$HOME/.agents/ui-baseline/README.md` (Windows:
 `%USERPROFILE%\.agents\ui-baseline\README.md`). On the current workstation,

@@ -1,5 +1,5 @@
 ---
-description: Correctness and test quality requirements
+description: Correctness and test quality, including implicit workflow states and transition bugs
 alwaysApply: false
 ---
 

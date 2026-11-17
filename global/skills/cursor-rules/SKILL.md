@@ -42,6 +42,8 @@ For backup/recovery design or review of technologies actually used by the projec
 
 ## Reference index
 
+For a requested workflow or app-correctness audit, route implicit state transitions to [correctness](references/correctness-and-testing.md#implicit-state-machines), concurrency/lifecycles and failure isolation to [reliability](references/reliability-and-performance.md), and invariants, optimistic reconciliation and compatibility to [API and data](references/api-data-and-distributed.md). Read only the sections relevant to the requested audit.
+
 For cache, overlapping refresh, extraction reuse or repeated parsing/byte preparation changes, read [safe reuse and preparation](references/safe-reuse-and-preparation.md). Use the reliability reference for late cancellation/cleanup and the API reference for retry/save identity.
 
 For model-call, prompt/output-contract or embedding/indexing changes, apply [LLM efficiency with preserved analysis](references/llm-efficiency.md) alongside the relevant engineering references.

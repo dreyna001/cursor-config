@@ -46,3 +46,20 @@ Use [the existing boundary testing guidance](correctness-and-testing.md#test-sel
 for browser/API/authentication/storage journeys and explicit real-versus-mocked
 dependencies. For shared parsing or byte accounting, also read
 [safe preparation](safe-reuse-and-preparation.md).
+
+## Invariants and concurrent updates
+
+- State the relationship that must remain true across the affected records and side effects. Enforce it in the existing authoritative transaction, constraint, or conditional write, including concurrent requests. A read-then-check in application code alone does not prevent a competing write.
+- Define conflict behavior for edits to the same revision. Preserve deliberate merge or last-write semantics where required. Use the existing version/precondition mechanism where conflict detection is required. Test independent callers against the real storage boundary when locking or isolation matters.
+- For partial failure across services, inspect the existing durable status, reconciliation, or compensation path. Compensation is a new fallible operation, so preserve ownership and retry identity. Add distributed coordination only for a demonstrated invariant that existing boundaries cannot protect.
+
+## Optimistic updates and reconciliation
+
+- Identify the authoritative saved result and the pending local mutation. Reconcile affected detail, list, and cache views on success, and represent rejection or uncertain completion explicitly. Roll back only the failed mutation's contribution so a late failure cannot erase a newer edit.
+- Keep displayed stale content distinguishable from confirmed current state. Reuse the established cache and invalidation mechanisms. Verify overlapping saves, failure followed by a newer success, and reload through a fresh authorized read. For scope and late-result ownership, use [reliability guidance](reliability-and-performance.md#reuse-and-completion).
+
+## Contract evolution
+
+- Identify the producers, consumers, stored records, and supported versions affected by a contract change. Include older browser sessions, queued messages, and mixed application versions only where the deployment supports them.
+- Use the existing compatibility and migration strategy. Sequence schema expansion, backfill, reader/writer changes, and removal of old fields according to the actual rollout and rollback window. Preserve the meaning of omitted fields, defaults, nulls, enum values, and error shapes that supported callers rely on.
+- Exercise representative old and new payloads and records through the real decoder and write/read paths. Include replayed work and rollback compatibility when required. Report an unsupported transition rather than silently discarding data or inventing an indefinite compatibility layer.

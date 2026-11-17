@@ -23,7 +23,9 @@ For backup/recovery design or review of technologies actually used by the projec
 
 ## Reference index
 
-For local tool/provider installation, Terraform cache use, or cache cleanup, read [local tool and Terraform caches](references/local-tool-and-terraform-caches.md). Before post-merge worktree cleanup, read [worktree verification and removal](references/post-merge-worktree-cleanup.md). For WSL configuration, model routing, AI COE checkout hygiene or command waiting, read the applicable section of [WSL Codex operations](references/wsl-codex-operations.md).
+For local tool/provider installation, Terraform cache use, or cache cleanup, read [local tool and Terraform caches](references/local-tool-and-terraform-caches.md). Before post-merge worktree cleanup, read [worktree verification and removal](references/post-merge-worktree-cleanup.md). For WSL configuration, upgrades, model routing, AI COE checkout hygiene or command waiting, read the applicable section of [WSL Codex operations](references/wsl-codex-operations.md).
+
+For a requested workflow or app-correctness audit, route implicit state transitions to [correctness](references/correctness-and-testing.md#implicit-state-machines), concurrency/lifecycles and failure isolation to [reliability](references/reliability-and-performance.md), and invariants, optimistic reconciliation and compatibility to [API and data](references/api-data-and-distributed.md). Read only the sections relevant to the requested audit.
 
 For cache, overlapping refresh, extraction reuse or repeated parsing/byte preparation changes, read [safe reuse and preparation](references/safe-reuse-and-preparation.md). Use the reliability reference for late cancellation/cleanup and the API reference for retry/save identity.
 

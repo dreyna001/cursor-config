@@ -14,7 +14,7 @@ These are preferred technologies when their capability is required, not dependen
 - **OpenTelemetry:** production cross-service observability; not for small local utilities.
 - **gVisor:** untrusted or agent-generated container workloads with platform support.
 - **PostgreSQL / SQLAlchemy / Alembic / psycopg:** durable relational state for portal/worker apps.
-- **pgvector + PostgreSQL FTS:** hybrid semantic retrieval when PostgreSQL is an appropriate system of record; self-managed on-prem or provider-managed in cloud.
+- **PostgreSQL pgvector extension + pgvector-python + SQLAlchemy:** native vector storage and database-side similarity search for Python semantic retrieval when PostgreSQL is an appropriate system of record. Add PostgreSQL full-text search for hybrid retrieval. Use self-managed PostgreSQL on-prem or provider-managed PostgreSQL in cloud.
 - **React / Vite / TypeScript / Tailwind / Radix:** web UI when required.
 - **Shared UI baseline:** start at the permanent local UI/UX baseline; approved shared changes must synchronize its versioned bundle, installed copy and all three apps. Older theme notes cannot override newer approved UI.
 - **pytest / Pydantic Evals:** deterministic tests vs probabilistic LLM evaluation.

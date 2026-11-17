@@ -43,8 +43,23 @@ originating request, scope and generation. A late reply must not update the
 active conversation or new object. Reconcile unknown external completion
 through its durable status rather than replaying work.
 
+For overlapping operations on the same object, establish which result may commit or update the view, such as the latest requested read or every serialized mutation. Bind completion to the operation's captured identity and revision. Test reversed completion order, a failed earlier operation after a newer success, and a scope change while work is active. Preserve intentional concurrent work and enforce durable conflict rules at the server boundary.
+
 Clean up abandoned staged uploads using the existing bounded, retry-safe cleanup
 path only after verifying exact ownership and that the object is uncommitted and
 unreferenced. Preserve attachments already saved, shared or claimed by another
 operation. Surface failed cleanup and retain recoverable status; cancellation
 does not authorize broad deletion.
+
+## Resource ownership and cleanup
+
+- Identify who creates, owns, shares, and releases subscriptions, timers, sockets, tasks, streams, temporary files, and database sessions in the affected path. Pair acquisition with cleanup on success, error, cancellation, and repeated setup/teardown.
+- Release only resources owned by that lifecycle. A departing caller must not cancel work still needed by another subscriber. Keep in-flight work tracked until it settles before releasing the session, transaction, or lock it uses.
+- Verify repeated mount/unmount or connect/disconnect cycles and partial initialization failure using observable resource counts or effects where practical. Test idempotent cleanup and late completion without relying on arbitrary sleeps or adding a general resource manager for a local defect.
+
+## Observability and failure isolation
+
+- Preserve a logical operation's correlation across requests, retries, queued work, and completion while distinguishing individual attempts. Use existing logging/tracing facilities to record safe identifiers, outcomes, and failure causes at the boundary that owns recovery; avoid repeated logging of the same failure.
+- Verify that normal failure and cancellation paths produce a useful user or operator outcome. Preserve [security guidance](security.md) for sensitive content, credentials, and telemetry. Add infrastructure or broad instrumentation only when needed for a demonstrated diagnostic gap.
+- Identify which dependency failures may degrade optional behavior and which must fail the operation. Keep authorization, integrity, and required persistence checks fail-closed. Isolate a failing optional widget or integration without reporting a required operation as successful or losing its failure state.
+- Test dependency failure, recovery, and the unaffected required path. Use established timeouts, admission limits, and retry policy. Introduce circuit breakers or bulkheads only when measured failure propagation or resource contention justifies them.

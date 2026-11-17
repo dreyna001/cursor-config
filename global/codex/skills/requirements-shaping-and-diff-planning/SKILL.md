@@ -10,6 +10,9 @@ Use this skill when requirements are fuzzy, the user requests a plan, or unresol
 
 Shape only the parts of the task that remain unclear:
 
+Use the repository's existing requirements and task records, following
+[requirements and task records](../engineering-guidance/references/requirements-confidence.md#requirements-and-task-records).
+
 1. Determine whether the work is **greenfield** or a **change to an existing repo**.
 2. Collect only the environment pins that affect correctness and are still unknown.
 3. Restate the use case in 1-2 sentences.

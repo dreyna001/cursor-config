@@ -66,7 +66,8 @@ Applies to on-prem and cloud unless a profile below overrides it.
 ### Data (relational and ML)
 
 - **Relational store:** PostgreSQL when durable relational state, transactions, or concurrent access are required (portal/worker apps such as ATO and threat hunting).
-- **Semantic retrieval:** PostgreSQL full-text search plus pgvector hybrid retrieval when semantic retrieval is required and PostgreSQL is already an appropriate system of record; use self-managed PostgreSQL on-prem or provider-managed PostgreSQL in cloud.
+- **Semantic retrieval:** PostgreSQL with its `vector` extension (pgvector) for embedding storage and database-side similarity search when semantic retrieval is required and PostgreSQL is an appropriate system of record. Combine with PostgreSQL full-text search for hybrid retrieval. Use self-managed PostgreSQL on-prem or provider-managed PostgreSQL in cloud.
+- **Python vector integration:** use `pgvector-python` (the `pgvector` package) with SQLAlchemy 2 and psycopg 3. Store embeddings in native pgvector columns and execute vector similarity queries in PostgreSQL. Apply [data and retrieval practices](references/data-and-retrieval.md) for migrations, scope filters, and ranking verification.
 - **ORM and migrations:** SQLAlchemy 2 with Alembic when PostgreSQL persistence needs schema evolution.
 - **PostgreSQL driver:** psycopg 3 (sync or async); use `asyncpg` only for a demonstrated performance need.
 - **Dataframes (traditional ML):** Polars first; pandas only at a narrow compatibility boundary.

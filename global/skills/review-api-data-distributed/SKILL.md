@@ -4,6 +4,8 @@ description: "Review APIs, schemas, storage, queues, retries, replay behavior, a
 ---
 # Review API, Data, And Distributed Systems
 
+For invariant enforcement, optimistic reconciliation, or contract evolution, read the matching section of [API and data guidance](../cursor-rules/references/api-data-and-distributed.md). When implementation is requested, fix demonstrated failures within the established storage and compatibility contracts.
+
 ## Focus
 
 - breaking contract changes, weak schema validation, and inconsistent response or error shapes

@@ -4,6 +4,8 @@ description: "Review resilience, failure handling, efficiency, scaling, retries,
 ---
 # Review Reliability And Performance
 
+For overlapping completions, resource ownership, observability, or failure isolation, read the matching section of [reliability guidance](../cursor-rules/references/reliability-and-performance.md). When implementation is requested, repair demonstrated failures with focused lifecycle and recovery verification.
+
 Use this skill for resilience, scaling, and performance-focused review.
 
 For production HTTP quotas, readiness, or resource bounds review, read [API abuse and exposure](../cursor-rules/references/api-abuse-and-exposure.md) and the active application's local HTTP checkpoint. Apply their production scope and distinguish source/template findings from live deployment evidence.

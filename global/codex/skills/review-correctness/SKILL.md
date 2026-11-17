@@ -4,6 +4,8 @@ description: "Review logic, state, boundaries, replay behavior, validation paths
 ---
 # Review Correctness
 
+For implicit workflow state, use [correctness guidance](../engineering-guidance/references/correctness-and-testing.md#implicit-state-machines). Keep review findings evidence-backed. When fixes are requested, use the existing [debugging workflow](../debugging-and-error-recovery/SKILL.md) and make the smallest correction with relevant regression coverage.
+
 Use this skill for correctness-focused review.
 
 ## Focus

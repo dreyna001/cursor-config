@@ -21,6 +21,8 @@ Shared frontend changes use `shared-frontend-foundations` while keeping domain a
 Application labels, field meanings, runtime exceptions and approval/release gates stay in project packages.
 `scripts/check_scoped_guidance.py` checks the four scopes, app manifests, package links and the promoted shared mirrors.
 
+For focused app audits, use the [app correctness prompts and coverage map](docs/app-correctness-prompts.md).
+
 ### Codex installation
 
 Use Python 3.12 or newer. Preview, then install into the current profile:

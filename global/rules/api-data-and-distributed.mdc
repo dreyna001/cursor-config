@@ -1,5 +1,5 @@
 ---
-description: API, data, and distributed systems review rules
+description: API and data contracts, idempotency, invariants, optimistic reconciliation and compatibility
 alwaysApply: false
 ---
 

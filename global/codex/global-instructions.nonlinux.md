@@ -11,6 +11,7 @@ This file is the always-on Codex harness (`$CODEX_HOME/AGENTS.md`, default `~/.c
 
 ## Local verification and GitHub Actions
 
+- When upgrading a library, package, or runtime, review the official release notes or upstream changes from the current version through the target version. In the handoff, tell the user which changes the project could benefit from using and why. Distinguish benefits the upgrade provides automatically from changes that need adoption, and say when no project-relevant adoption opportunities were found.
 - Use local tests, lint, type checks, builds and other appropriate local verification for Codex work. Do not create, extend, dispatch, rerun, poll or troubleshoot GitHub Actions, or ask the user to diagnose them, unless the user explicitly requests GitHub Actions work. Do not make Actions results a Codex verification or merge-readiness gate.
 - Continue authorized Git operations, pull requests and merges. Existing workflows may trigger automatically on a push or merge; this does not authorize changing workflows or branch policies. Respect actual remote access and merge constraints, and report genuine blockers without fabricating successful checks or bypassing protections.
 

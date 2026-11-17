@@ -13,13 +13,17 @@ Apply only the sections for technologies the project actually uses. Inspect inst
 
 ## pgvector And Hybrid Retrieval
 
-- Use pgvector when PostgreSQL is already the appropriate system of record and semantic retrieval is required. Do not add a second vector store without demonstrated scale or query needs.
+- Use PostgreSQL's `vector` extension (pgvector) when PostgreSQL is the appropriate system of record and semantic retrieval is required. In Python, use `pgvector-python` (installed as `pgvector`) with SQLAlchemy and psycopg. Store embeddings in native pgvector columns and perform similarity scoring in PostgreSQL.
+- Verify extension availability and installed versions. Enable the extension and evolve vector columns through the project's migration mechanism. For an authorized migration from JSON embeddings, preserve source identity and embedding contracts, validate or rebuild existing vectors, and verify saved-data compatibility before switching reads.
 - Pin the embedding model, revision, vector dimension, normalization, and distance metric as one versioned contract.
 - Store source identity, chunk provenance, model version, and filterable metadata beside embeddings.
 - Start with exact search for small corpora. Add HNSW or IVFFlat only after measuring latency and recall on representative data.
 - Combine vector similarity with PostgreSQL full-text search when hybrid retrieval improves measured relevance; keep ranking logic explicit and tested.
+- Apply server-owned tenant, owner, document, and revision filters to vector queries before candidate selection. Preserve the existing lexical lane and fusion policy during a vector-storage migration unless their change is also requested.
 - Treat embedding changes as data migrations with coexistence or rebuild plans, not silent in-place replacements.
 - Evaluate retrieval with representative queries, relevance judgments, filters, empty results, and provenance checks.
+
+Integration details are in the [pgvector-python SQLAlchemy documentation](https://github.com/pgvector/pgvector-python#sqlalchemy) and the [pgvector extension documentation](https://github.com/pgvector/pgvector).
 
 ## Local Embeddings And Reranking
 

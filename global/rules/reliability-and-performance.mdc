@@ -1,5 +1,5 @@
 ---
-description: Reliability, resilience, and performance standards
+description: Reliability, concurrency, resource lifecycles, observability, failure isolation and performance
 alwaysApply: false
 ---
 

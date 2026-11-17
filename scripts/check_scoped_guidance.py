@@ -27,7 +27,7 @@ def check() -> dict:
                 raise AssertionError(f"Global route retains removed app-only contract: {path}: {link}")
     shared_refs = ("shared-frontend-foundations.md", "safe-reuse-and-preparation.md",
                    "llm-efficiency.md", "reliability-and-performance.md",
-                   "api-data-and-distributed.md")
+                   "api-data-and-distributed.md", "correctness-and-testing.md")
     for name in shared_refs:
         refs = Path("references") / name
         canonical = ROOT / "global/codex/skills/engineering-guidance" / refs

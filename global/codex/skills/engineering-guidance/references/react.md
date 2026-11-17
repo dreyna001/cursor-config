@@ -64,3 +64,5 @@ decision review** and shared-foundation contract. Keep apps independently
 buildable; cross-repository comparisons are development checks only.
 Use the existing source-driven, maintainability, reliability/performance and
 testing guidance for relevant concerns; do not create parallel policy skills.
+
+For contradictory workflow flags or invalid transitions, read [implicit state machines](correctness-and-testing.md#implicit-state-machines). For overlapping completions and effect/subscription cleanup, read the matching [reliability guidance](reliability-and-performance.md). For optimistic mutations, rollback and cache reconciliation, read [optimistic updates](api-data-and-distributed.md#optimistic-updates-and-reconciliation). Apply these contracts through existing hooks, reducers and query clients. Retain the app's current state-management stack.

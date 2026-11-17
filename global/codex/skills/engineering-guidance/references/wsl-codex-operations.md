@@ -23,6 +23,10 @@ The local copy and app release copy are readable without GitHub sign-in.
 Honor the authorized installation scope because the workstation can share the
 same physical baseline between Windows and WSL.
 
+## Dependency and runtime upgrades
+
+- When upgrading a library, package, or runtime, review the official release notes or upstream changes from the current version through the target version. In the handoff, tell the user which changes the project could benefit from using and why. Distinguish benefits the upgrade provides automatically from changes that need adoption, and say when no project-relevant adoption opportunities were found.
+
 ## Codex model and subagent routing
 
 - Use the user- or session-selected primary model and reasoning level. When no preference is set and model controls allow, prefer `gpt-6.1-sol` with `high` reasoning or `gpt-6-astra` with `high` reasoning. The primary may complete work directly, especially when the task is short or its steps depend on each other.
